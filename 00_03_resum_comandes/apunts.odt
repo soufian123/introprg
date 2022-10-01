@@ -1,0 +1,33 @@
+
+
+
+
+
+
+Comanda                                              Descripció
+$ mkdir carpeta/                                     crea una carpeta anomenada carpeta/
+
+$ cd carpeta/                                        canvia el directori actual a carpeta/
+
+$ cat fitxer                                        mostra en pantalla el contingut del fitxer especificat
+
+$ gedit fitxer &                                    crea i edita el fitxer especificat
+
+$ ls                                                Llista els arxius i directoris de l'actual directori de treball 
+
+$ rm fitxer                                         esborra el fitxer especificat.
+
+$ git init                                          Permet inicialitzar un repositori git
+
+$ git clone                                         es per apuntar un repositori existent i clonar o copiar el repositori a un nou directori 
+
+$ git status                                        Muestra el estado y el directorio de trabajo, tambien muestra los cambios
+
+$ git add                                           es per afegir un canvi de directori de traball al entorn de l'assaig
+
+$ git commit                                        guarda tots els canvis en el repositorio local
+
+$ git push                                          baixa tot lo nou a la nube(github)
+
+$ git pull                                          penja tot lo nou a la nube(github)
+	
