@@ -1,0 +1,69 @@
+
+
+Preguntes
+
+Pregunta 1. Què fa el programa?
+
+et calcula l'area amb el radi introduit
+
+
+
+Pregunta 2. Elements comuns
+
+
+"Càlcul de l'àrea d'un cercle"
+"Introduïu el radi: "
+print
+
+àrea = PI 
+"L'àrea és "
+
+
+
+
+
+Pregunta 3. Entrada/sortida
+
+
+En pseudocodi, l'entrada l'obté amb llegeix radi i el resultat el mostra amb escriu "L'àrea és ", àrea"
+
+
+
+Versió C
+  scanf("%f", &radi);  
+  printf("L'àrea és %f\n", area);
+
+
+Versió Python
+radi = float(linia)   # conversió de String a float
+print(f"L'àrea és {area}")
+
+
+Versió Java
+    float radi = Float.parseFloat(linia);  // conversió de String a float
+    System.out.println("L'àrea és " + area);
+   
+    
+Versió Kotlin
+    val radi = linia.toFloat()      // conversió de String a float
+    println("L'àrea és $area")
+
+
+
+
+
+
+Pregunta 4. Variables
+Hi trobes més exemples? Quins?
+
+area
+radi
+pi
+
+
+Pregunta 5. Preferència
+
+Potser és molt d'hora, però, així a primera vista, quin dels llenguatges que et presento, veus més interessant? Perquè?
+
+el pseudocodi sembla molt sencill pero limitat. la Versió C crec que seria el punt mig 
+
