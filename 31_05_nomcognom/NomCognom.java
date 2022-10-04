@@ -17,6 +17,6 @@ public class NomCognom {
         String cognom = Entrada.readLine();
 
         // Mostra resultat
-        System.out.println("Ei "+ nom +", tinc una amiga que també és "+ cognom +"");
+        System.out.println("Ei "+ nom +", tinc una amiga que també és "+ cognom +".");
     }
 }
