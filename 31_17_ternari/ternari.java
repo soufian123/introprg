@@ -7,14 +7,13 @@
 public class ternari {
     public static void main(String[] args) {
         int numero = Integer.parseInt(args[0]);
-        int un = "parell";
-        int dos = "senar";
-        int resultat = (numero % 2 == 0);
+        int resultat;
         
-        if (resultat){
-            System.out.println("El número "+ numero +" és "+ un);
+        if (numero % 2 == 0){
+          resultat = 1;
         } else{
-            System.out.println("El número "+ numero +" és "+ dos);
+           resultat = 2;
         }
+        System.out.println("El número "+ numero +" és "+ resultat);
     }
 }
