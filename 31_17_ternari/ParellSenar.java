@@ -10,10 +10,10 @@ public class ParellSenar {
         int resultat;
         
         if (numero % 2 == 0){
-          resultat = 1;
+          resultat = 1 ;
         } else{
-           resultat = 2;
+           resultat = 2 ;
         }
-        System.out.println("El número "+ numero +" és "+ resultat);
+        System.out.println("El número "+ numero +" és "+ resultat + 2=="senar");
     }
 }
