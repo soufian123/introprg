@@ -1,4 +1,3 @@
-
 /*
  * Programa que indica si el número proporcionat com a primer argument
  * és parell o senar.
@@ -7,13 +6,17 @@
 public class ParellSenar {
     public static void main(String[] args) {
         int numero = Integer.parseInt(args[0]);
-        int resultat;
+
+        String resultat;
         
         if (numero % 2 == 0){
-          resultat = 1 ;
+            resultat = "parell";
+
         } else{
-           resultat = 2 ;
-        }
-        System.out.println("El número "+ numero +" és "+ resultat + 2=="senar");
+            resultat = "senar";
+
+        } 
+            System.out.println("El número "+ numero +" és "+ resultat);
+        
     }
 }
