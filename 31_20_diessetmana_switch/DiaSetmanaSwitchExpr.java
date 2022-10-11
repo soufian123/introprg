@@ -13,65 +13,26 @@
          
          String resultat;
          
-        if (dia == 1) {
-
-          resultat = "Dilluns";
-
-             } else {
-
-               if (dia == 2) {
-
-                   resultat = "Dimarts";
-
-                      } else {
-
-                          if (dia == 3) {
-
-                            resultat = "Dimecres";
-
-                                  } else {
-
-                                       if (dia == 4) {
-    
-                                        resultat = "Dijous";
-
-                                               } else {
-                                               
-                                                       if (dia == 5) {
-    
-                                                            resultat = "Divendres";
-
-                                                                  } else {
-
-                                                                       if (dia == 6) {
-    
-                                                                            resultat = "Dissabte";
-
-                                                                                       } else {
-
-                                                                                                if (dia == 7) {
-    
-                                                                                                    resultat = "Diumenge";
-
-                                                                                                        } else {
-                                                                                                                if (dia > 7) {
-    
-                                                                                                                     resultat = "Error";
-
-                                                                                                                                  } else {
-                                                                                                                                  
-                                                                                                                                        if (dia > 1) {
-    
-                                                                                                                     resultat = "Error";
-
-                                                                                                                                  } else {
-
-                                                                                                                                    resultat = "Error";
-
-
-
-
-         }}}}}}}}}
+         switch (dia) {
+         case 1: resultat = "Dilluns";
+                 break;
+         case 2: resultat = "Dimarts";
+                 break;
+         case 3: resultat = "Dimecres";
+                 break;
+         case 4: resultat = "Dijous";
+                 break;
+         case 5: resultat = "Divendres";
+                 break;
+         case 6: resultat = "Dissabte";
+                 break;
+         case 7: resultat = "Diumenge";
+                 break;
+         default: resultat = "Error";
+                 break;
+         
+         }
+       
 
       
         System.out.println(""+ resultat +"");
