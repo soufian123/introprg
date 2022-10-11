@@ -5,9 +5,9 @@ public class MesosAnys {
         
         System.out.println("Mes?");
         
-        int mes = Integer.parseInt(args[0]);
+        int mes = Integer.parseInt(Entrada.readLine());
         System.out.println("Any?");
-        int any = Integer.parseInt(args[0]);
+        int any = Integer.parseInt(Entrada.readLine());
         
         int mesAnterior = (1 - mes);
         int mesSeguent = (1 + mes);
