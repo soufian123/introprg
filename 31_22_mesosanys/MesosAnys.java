@@ -8,21 +8,32 @@ public class MesosAnys {
         int mes = Integer.parseInt(Entrada.readLine());
         System.out.println("Any?");
         int any = Integer.parseInt(Entrada.readLine());
-        if (mes == 12) {
-             int mesSeguent = (mesSeguent = (0));
-                     int mesAnterior = (mes - 1);
-              } else {
-                       if (mes == 1) {
-                            int mesAnterior = ( mesAnterior = (12));
-                                    int mesSeguent = (1 + mes);
-                                    } else {
-     
+         int mesAnterior;
+         int mesSeguent;
+         
+         String mesAnteriorr;         
+         String mesSeguentt;
+         
+         switch (mes) {
+         case 1: mesAnteriorr = "12";
+                 mesSeguent = (1 + mes);
+                 mesSeguentt = "";
+                 mesAnterior = (12);
+                 break;
 
+         case 12: mesSeguentt = "1";
+                  mesAnterior = ( mes - 1);
+                  mesAnteriorr = "";
+                  mesSeguent = (1);
+                 break;
+
+         default:  
+         mesSeguentt = "";
+         mesAnteriorr = "";
+         mesAnterior = ( mes - 1);
+         mesSeguent = (1 + mes);
+                 break;
        }
-        }
-        int mesAnterior = ( mes - 1);
-        int mesSeguent = (1 + mes);
-       
-        System.out.println("Mes anterior "+ mesAnterior + "/" +any+ " i mes següent " + mesSeguent + "/" +any);
+        System.out.println("Mes anterior "+ mesAnterior +"/"+any+" i mes següent "+ mesSeguent +"/" +any);
 }
 }
