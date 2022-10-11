@@ -74,6 +74,6 @@
              }}}}}}}}
 
         }
-        System.out.println(resultat);
+        System.out.println(""+ resultat +"");
     }
 }
