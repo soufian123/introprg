@@ -54,13 +54,24 @@
                                                                                                     resultat = "Diumenge";
 
                                                                                                         } else {
+                                                                                                                if (dia > 7) {
+    
+                                                                                                                     resultat = "Error";
 
-                                                                                                                resultat = "Error";
+                                                                                                                                  } else {
+                                                                                                                                  
+                                                                                                                                        if (dia > 1) {
+    
+                                                                                                                     resultat = "Error";
+
+                                                                                                                                  } else {
+
+                                                                                                                                    resultat = "Error";
 
 
 
 
-            }}}}}}
+             }}}}}}}}
 
         }
         System.out.println(resultat);
