@@ -9,7 +9,7 @@
 
     public class DiaSetmana {
         public static void main(String[] args) {
-         int dia = Integer.parseInt(Entrada.readLine());
+         int dia = Integer.parseInt(args[0]);
          
          String resultat;
          
