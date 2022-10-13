@@ -1,3 +1,11 @@
+
+/*
+ * Programa que et diu el mes anterior y seguent del mes que li escriguis 
+ */
+
+
+
+
 public class MesosAnys {
         public static void main(String[] args) {
         
