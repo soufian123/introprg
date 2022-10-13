@@ -7,15 +7,11 @@ public class ParellSenar {
     public static void main(String[] args) {
         int numero = Integer.parseInt(args[0]);
 
-        String resultat;
         
-        if (numero % 2 == 0){
-            resultat = "parell";
+        
+      String resultat = (numero % 2 == 0)? "parell" : "senar";
+            
 
-        } else{
-            resultat = "senar";
-
-        } 
             System.out.println("El número "+ numero +" és "+ resultat);
         
     }
