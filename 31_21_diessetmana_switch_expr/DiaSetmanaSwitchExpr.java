@@ -1,9 +1,6 @@
-
-
-
-
-
-
+/*
+ * Programa que et diu el dia de la setmana a base del numero de dia de la setmana
+ */
 
 
 
