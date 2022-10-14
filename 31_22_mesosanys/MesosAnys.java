@@ -18,6 +18,8 @@ public class MesosAnys {
         int any = Integer.parseInt(Entrada.readLine());
          int mesAnterior;
          int mesSeguent;
+         int anyAnterior;
+         int anySeguent;
          
          String mesAnteriorr;         
          String mesSeguentt;
@@ -27,12 +29,15 @@ public class MesosAnys {
                  mesSeguent = (1 + mes);
                  mesSeguentt = "";
                  mesAnterior = (12);
+                 anyAnterior = (any - 1);
+                 
                  break;
 
          case 12: mesSeguentt = "1";
                   mesAnterior = ( mes - 1);
                   mesAnteriorr = "";
                   mesSeguent = (1);
+                  anySeguent = (any + 1);
                  break;
 
          default:  
