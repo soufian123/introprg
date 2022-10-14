@@ -12,20 +12,43 @@ public class TresEnOrdre {
         int segon = Integer.parseInt(Entrada.readLine());
            System.out.println("Tercer?");
         int tercer = Integer.parseInt(Entrada.readLine());
+        int un;
+        int dos;
+        int tres;
         
         if (primer<segon && segon<tercer) {
-             System.out.println(primer + ", " + segon + " i " + tercer);
-        } else {
-                if (tercer<primer && primer<segon) {
-                     System.out.println(tercer + ", " + primer + " i " + segon);
-                } else {
-                    if (segon<tercer && tercer<primer) {
-                     System.out.println(segon + ", " + tercer + " i " + primer);
-                     } else {System.out.println("error");}
-                        
-                                        
-
-        }}
-    }
+            un = (primer);
+            dos = (segon);
+            tres = (tercer);
+                     System.out.println(un + ", " + dos + " i " + tres);
+        } else { if (tercer<primer && primer<segon) {
+             un = (tercer);
+             dos = (primer);
+             tres = (segon);
+               System.out.println(un + ", " + dos + " i " + tres);
+                } else { if (segon<tercer && tercer<primer) {
+             un = (segon);
+             dos = (tercer);
+             tres = (primer);
+                     System.out.println(un + ", " + dos + " i " + tres);
+                     } else {
+                     if (segon<primer && primer<tercer) {
+             un = (segon);
+             dos = (primer);
+             tres = (tercer);
+                     System.out.println(un + ", " + dos + " i " + tres);
+             } else {
+             if (tercer<segon && segon<primer) {
+             un = (tercer);
+             dos = (segon);
+             tres = (primer);
+               System.out.println(un + ", " + dos + " i " + tres);
+                } else {if (primer<tercer && tercer<segon) {
+            un = (primer);
+            dos = (tercer);
+            tres = (segon);
+                    System.out.println(un + ", " + dos + " i " + tres);
+        } else{}}}}}}
+            
 }
-
+}
