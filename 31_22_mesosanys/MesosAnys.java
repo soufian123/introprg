@@ -21,32 +21,28 @@ public class MesosAnys {
          int anyAnterior;
          int anySeguent;
          
-         String mesAnteriorr;         
-         String mesSeguentt;
          
          switch (mes) {
-         case 1: mesAnteriorr = "12";
-                 mesSeguent = (1 + mes);
-                 mesSeguentt = "";
+         case 1: mesSeguent = (1 + mes);
                  mesAnterior = (12);
                  anyAnterior = (any - 1);
+                 anySeguent = (any);
                  
                  break;
 
-         case 12: mesSeguentt = "1";
-                  mesAnterior = ( mes - 1);
-                  mesAnteriorr = "";
+         case 12: mesAnterior = ( mes - 1);
                   mesSeguent = (1);
                   anySeguent = (any + 1);
+                  anyAnterior = (any);
                  break;
 
-         default:  
-         mesSeguentt = "";
-         mesAnteriorr = "";
+         default:
          mesAnterior = ( mes - 1);
          mesSeguent = (1 + mes);
+         anyAnterior = (any);
+         anySeguent = (any);
                  break;
        }
-        System.out.println("Mes anterior "+ mesAnterior +"/"+any+" i mes següent "+ mesSeguent +"/" +any);
+        System.out.println("Mes anterior "+ mesAnterior +"/"+ anyAnterior +" i mes següent "+ mesSeguent + "/" + anySeguent);
 }
 }
