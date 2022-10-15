@@ -20,10 +20,10 @@
             
             if (preu<paga){
             resultat= paga - preu;
-            System.out.println("sobren "+ resultat);
+            System.out.println("sobren "+ resultat +"€");
             } else if (paga<preu) {
                    resultat= preu - paga;
-                   System.out.println("Falten "+ resultat);
+                   System.out.println("Falten "+ resultat +"€");
                    }else if (preu == paga){
                          System.out.println("No sobra ni falta res");
                          }else{
