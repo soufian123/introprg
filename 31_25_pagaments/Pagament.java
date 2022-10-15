@@ -26,6 +26,7 @@
                    System.out.println("Falten "+ resultat);
                    }else if (preu == paga){
                          System.out.println("No sobra ni falta res");
+                         }else{
             }
     }
 }
