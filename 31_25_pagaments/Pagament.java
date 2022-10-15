@@ -20,7 +20,7 @@
             
             if (preu<paga){
             resultat= paga - preu;
-            System.out.println("sobren "+ resultat +"€");
+            System.out.println("Sobren "+ resultat +"€");
             } else if (paga<preu) {
                    resultat= preu - paga;
                    System.out.println("Falten "+ resultat +"€");
