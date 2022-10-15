@@ -17,9 +17,9 @@
             double OperandDos = Double.parseDouble(Entrada.readLine());
             double resultat;
             
-            if (Operandor == '/' && OperandDos == '0' ){
-            System.out.println("No es pot dividir entre 0");
-            
+            if (Operandor == '/' && OperandDos != 0){
+                resultat = OperandUn / OperandDos;
+                System.out.println(OperandUn+ " / " + OperandDos + " = " + resultat);
             } else { if (Operandor == '-'){
                        resultat = OperandUn - OperandDos;
                        System.out.println(OperandUn+ " - " + OperandDos + " = " + resultat);
@@ -32,9 +32,8 @@
                                       resultat = OperandUn + OperandDos;
                                       System.out.println(OperandUn+ " + " + OperandDos + " = " + resultat);
             
-                                      } else { if (Operandor == '/' && OperandDos != 0){
-                                                resultat = OperandUn / OperandDos;
-                                                System.out.println(OperandUn+ " / " + OperandDos + " = " + resultat);
+                                      } else { if (Operandor == '/'){
+                                                System.out.println("No es pot dividir entre 0");
             
                                                  } else {              
                                                         System.out.println("L'operador "+ Operandor +" no està disponible");
