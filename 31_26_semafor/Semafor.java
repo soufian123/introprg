@@ -15,7 +15,7 @@
                     System.out.println("espera");
                    } else if (color.equals("verd")) {
                          System.out.println("passa");
-                        }
+                        }else{System.out.println("ves a l'oculista");}
     }
 }
                              
