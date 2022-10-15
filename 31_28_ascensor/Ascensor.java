@@ -5,7 +5,7 @@
  */
 
 
-public class SumaPositius {
+public class Ascensor {
     public static void main(String[] args) {
 
 
@@ -19,22 +19,22 @@ public class SumaPositius {
         System.out.println("botó?");
         valor = Entrada.readLine();
         
-        if (pis= "planta baixa" && valor= "pujar un") {
+        if (pis== "planta baixa" && valor== "pujar un") {
         System.out.println("primer pis");
         
-        }else if (pis= "planta baixa" && valor= "pujar dos") {
+        }else if (pis== "planta baixa" && valor== "pujar dos") {
               System.out.println("segon pis");
         
-                }else if (pis= "primer pis" && valor= "pujar un") {
+                }else if (pis== "primer pis" && valor== "pujar un") {
                         System.out.println("segon pis");
         
-                      }else if (pis= "primer pis" && valor= "baixa un") {
+                      }else if (pis== "primer pis" && valor== "baixa un") {
                             System.out.println("planta baixa");
                         
-                            }else if (pis= "segon pis" && valor= "baixar un") {
+                            }else if (pis== "segon pis" && valor== "baixar un") {
                                   System.out.println("primer pis");
                         
-                                  }else if (pis= "segon pis" && valor= "baixar dos") {
+                                  }else if (pis== "segon pis" && valor== "baixar dos") {
                                         System.out.println("planta baixa");
 
                                         }else {System.out.println("error");
