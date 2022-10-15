@@ -19,7 +19,8 @@
             
             if (Operandor == '/' && OperandDos == '0' ){
             resultat = OperandUn / OperandDos;
-            System.out.println("No es pot dividir entre 0");
+
+            System.out.println(OperandUn+ " / " + OperandDos + " = " + resultat);
             
             } else { if (Operandor == '-'){
                        resultat = OperandUn - OperandDos;
