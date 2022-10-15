@@ -18,9 +18,7 @@
             double resultat;
             
             if (Operandor == '/' && OperandDos == '0' ){
-            resultat = OperandUn / OperandDos;
-
-            System.out.println(OperandUn+ " / " + OperandDos + " = " + resultat);
+            System.out.println("No es pot dividir entre 0");
             
             } else { if (Operandor == '-'){
                        resultat = OperandUn - OperandDos;
