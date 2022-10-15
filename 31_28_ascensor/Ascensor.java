@@ -37,7 +37,7 @@ public class Ascensor {
                                   }else if (pis== "segon pis" && valor== "baixar dos") {
                                         System.out.println("planta baixa");
 
-                                        }else {System.out.println("error");
+                                        }else {
                         }
 
     }
