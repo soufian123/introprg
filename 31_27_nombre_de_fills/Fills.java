@@ -15,7 +15,7 @@ public class Fills {
 
         System.out.println("Quants fills tens?");
         valor = Integer.parseInt(Entrada.readLine());
-        if (valor <= 0) {
+        if (valor < 0) {
         System.out.println("No pots tenir menys de 0 fills!"); 
         
         }else if (valor == 1) {
