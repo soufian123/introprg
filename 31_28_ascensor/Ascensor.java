@@ -22,19 +22,19 @@ public class Ascensor {
         if (pis.equals("planta baixa") && valor.equals("pujar un")) {
         System.out.println("primer pis");
         
-        }else if (pis== "planta baixa" && valor== "pujar dos") {
+        }else if (pis.equals("planta baixa") && valor.equals("pujar dos")) {
               System.out.println("segon pis");
         
-                }else if (pis== "primer pis" && valor== "pujar un") {
+                }else if (pis.equals("primer pis") && valor.equals("pujar un")) {
                         System.out.println("segon pis");
         
-                      }else if (pis== "primer pis" && valor== "baixa un") {
+                      }else if (pis.equals("primer pis") && valor.equals("baixa un")) {
                             System.out.println("planta baixa");
                         
-                            }else if (pis== "segon pis" && valor== "baixar un") {
+                            }else if (pis.equals("segon pis") && valor.equals("baixar un")) {
                                   System.out.println("primer pis");
                         
-                                  }else if (pis== "segon pis" && valor== "baixar dos") {
+                                  }else if (pis.equals("segon pis") && valor.equals("baixar dos")) {
                                         System.out.println("planta baixa");
 
                                         }else {System.out.println("error");
