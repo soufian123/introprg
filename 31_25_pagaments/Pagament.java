@@ -13,9 +13,9 @@
             
             
             System.out.println("Preu?");
-            int preu = Integer.parseInt(args[0]);
+            int preu = Integer.parseInt(Entrada.readLine());
             System.out.println("Paga?");
-            int paga = Integer.parseInt(args[0]);
+            int paga = Integer.parseInt(Entrada.readLine());
             int resultat;
             
             if (preu<paga){
