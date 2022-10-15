@@ -19,7 +19,7 @@ public class Ascensor {
         System.out.println("botó?");
         valor = Entrada.readLine();
         
-        if (pis== "planta baixa" && valor== "pujar un") {
+        if (pis == "planta baixa" && valor == "pujar un") {
         System.out.println("primer pis");
         
         }else if (pis== "planta baixa" && valor== "pujar dos") {
@@ -37,7 +37,7 @@ public class Ascensor {
                                   }else if (pis== "segon pis" && valor== "baixar dos") {
                                         System.out.println("planta baixa");
 
-                                        }else {
+                                        }else {System.out.println("error");
                         }
 
     }
