@@ -32,7 +32,7 @@
                                       resultat = OperandUn + OperandDos;
                                       System.out.println(OperandUn+ " + " + OperandDos + " = " + resultat);
             
-                                      } else { if (Operandor == '/'){
+                                      } else { if (Operandor == '/' && OperandDos != '0'){
                                                 resultat = OperandUn / OperandDos;
                                                 System.out.println(OperandUn+ " / " + OperandDos + " = " + resultat);
             
