@@ -22,23 +22,19 @@ public class SumaPositius {
         valor = Integer.parseInt(Entrada.readLine());
         if (valor >= 0) {
             suma = suma + valor;
-        }else{}
-        
-
-        // processem el segon valor
-        System.out.println("Introdueix el segon valor");
+            System.out.println("Introdueix el primer valor");
         valor = Integer.parseInt(Entrada.readLine());
+        
         if (valor >= 0) {
             suma = suma + valor;
-        } else{}
-        
-
-        // processem el tercer valor
-        System.out.println("Introdueix el tercer valor");
+            System.out.println("Introdueix el primer valor");
         valor = Integer.parseInt(Entrada.readLine());
+        
         if (valor >= 0) {
             suma = suma + valor;
-}else{}
+            
+        }else{}}else{}}else{}
+        
         System.out.println("La suma és " + suma);
     }
 }
