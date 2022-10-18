@@ -20,15 +20,13 @@ public class SumaNotes {
         valor = Integer.parseInt(Entrada.readLine());
         if (valor >=0 && valor<100) {
             suma = suma + valor;
+            System.out.println("Introdueix una nota");
+            valor = Integer.parseInt(Entrada.readLine());
         }
 
 
         System.out.println("La suma de les notes vàlides és "+ suma);
 
-            suma = suma + valor;
-        }
 
-        // mostrem el resultat
-        System.out.println("La suma és " + suma);
     }
 }
