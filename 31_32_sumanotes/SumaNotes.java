@@ -19,7 +19,7 @@ public class SumaNotes {
         System.out.println("Introdueix una nota");
         valor = Integer.parseInt(Entrada.readLine());
         
-        if (valor >=0 && valor<=100) {
+        while (valor >=0 && valor<=100) {
             suma = suma + valor;
             System.out.println("Introdueix una nota");
             valor = Integer.parseInt(Entrada.readLine());
