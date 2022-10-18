@@ -1,6 +1,6 @@
 /*
  *
- *aquest programa Suma tres positius
+ *aquest programa Suma notes positius
  *
  */
 
@@ -18,6 +18,7 @@ public class SumaNotes {
         // processem el primer valor
         System.out.println("Introdueix una nota");
         valor = Integer.parseInt(Entrada.readLine());
+        
         if (valor >=0 && valor<100) {
             suma = suma + valor;
             System.out.println("Introdueix una nota");
