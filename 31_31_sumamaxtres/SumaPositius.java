@@ -36,7 +36,5 @@ public class SumaPositius {
             suma = suma + valor;
         }else {System.out.println("La suma és " + suma);}
 
-        // mostrem el resultat
-        System.out.println("La suma és " + suma);
     }
 }
