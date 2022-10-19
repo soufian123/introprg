@@ -9,7 +9,7 @@
 public class QuantsParells {
     public static void main(String[] args) {
 
-        int suma = 0;
+        int numParells = 0;
 
         int valor = 0;
 
@@ -21,12 +21,12 @@ public class QuantsParells {
 
             if (valor % 2 == 0) {
             
-                suma = suma + valor;
+                numParells = numParells + 1;
         
             }
         }
 
-        System.out.println("Nombre de parells introduïts: " + suma);
+        System.out.println("Nombre de parells introduïts: " + numParells);
 
     
     }
