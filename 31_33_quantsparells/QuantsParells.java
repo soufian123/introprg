@@ -21,8 +21,8 @@ public class QuantsParells {
 
             if (valor % 2 == 0) {
             
-            
-            }else{suma = suma + 1;}
+            suma = suma + valor;
+            }
 
         }
 
