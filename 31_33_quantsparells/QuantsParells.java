@@ -27,7 +27,7 @@ public class QuantsParells {
 
         }
 
-        System.out.println("La suma és " + suma);
+        System.out.println("Nombre de parells introduïts: " + suma);
 
     }
 
