@@ -19,7 +19,7 @@ public class QuantsParells {
 
             valor = Integer.parseInt(Entrada.readLine());
 
-            if (valor % 2 == 0) {
+            if (valor % 2 == 0 && valor >=0) {
             
                 numParells = numParells + 1;
         
