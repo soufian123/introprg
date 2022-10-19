@@ -22,13 +22,12 @@ public class QuantsParells {
             if (valor % 2 == 0) {
             
             suma = suma + valor;
-            }else{            suma = suma + valor;}
-
+        
         }
 
         System.out.println("Nombre de parells introduïts: " + suma);
 
-    }
+    }}
 
 }
          
