@@ -20,11 +20,8 @@ public class QuantsParells {
             valor = Integer.parseInt(Entrada.readLine());
 
             if (valor % 2 == 0) {
-            suma = suma + valor;
-             }else{
-
-                suma = suma + valor;
-
+            
+            suma = suma + 1;
             }
 
         }
