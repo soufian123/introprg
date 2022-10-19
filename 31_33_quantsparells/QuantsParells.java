@@ -15,7 +15,7 @@ public class QuantsParells {
 
         while (valor >= 0) {
 
-            System.out.println("Introdueix valor");
+            System.out.println("Introdueix un valor");
 
             valor = Integer.parseInt(Entrada.readLine());
 
