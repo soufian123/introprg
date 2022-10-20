@@ -11,7 +11,7 @@ public class Lloro {
     
         System.out.println("El lloro espera paraula:");
         String paraula = Entrada.readLine();
-        while (paraula.isBlank(  )) {
+        while (paraula.isEmpty(  )) {
                System.out.println("El lloro repeteix: "+ paraula);
                System.out.println("El lloro espera paraula:");
                paraula = Entrada.readLine();}
