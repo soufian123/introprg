@@ -9,14 +9,12 @@
 public class Lloro {
     public static void main(String[] args) {
     
-    
-        String paraula;
 
-        paraula = Entrada.readLine();
-        while (paraula.equals(" ") && paraula.equals("")) {
-        System.out.println(" "+ paraula);
-        paraula = Entrada.readLine();
-        }
+        String paraula = Entrada.readLine();
+        while (!paraula.equals(" ")) {
+               System.out.println(" "+ paraula);
+                paraula = Entrada.readLine();}
+        
         System.out.println("Adéu");
     }
 }
