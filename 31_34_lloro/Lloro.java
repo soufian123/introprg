@@ -6,21 +6,22 @@
  *
 */
 
+
 public class Lloro {
     public static void main(String[] args) {
-    
         System.out.println("El lloro espera paraula:");
         String paraula = Entrada.readLine();
-        boolean empty=paraula.isEmpty();
-		boolean blank=paraula.isBlank();
-        while (empty==false && blank==false) {
-               if (paraula.isEmpty()||paraula.isBlank()) {
-               System.out.println("Adéu");
-               }else{
-               System.out.println("El lloro repeteix: "+ paraula);
-               System.out.println("El lloro espera paraula:");
-               paraula = Entrada.readLine();}
-        
-        }
-    }
+            
+            while(!paraula.isBlank()) {
+            
+                    System.out.println("El lloro repeteix: " + paraula);
+                    System.out.println("El lloro espera paraula:");
+                    paraula = Entrada.readLine();
+            
+            }
+            
+            System.out.println("Adéu");
+            
+     }
+   
 }
