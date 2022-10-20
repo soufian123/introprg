@@ -18,7 +18,10 @@ public class TrobaMaxim{
 
     System.out.println("Introdueix un valor");
     valor = Integer.parseInt(Entrada.readLine());
+    if (valor>=0){
     valorMaxim= (valor);
+    }else{valorMaxim= (0);}
+    
     while (valor>=0){
             
             if (valor>valorMaxim){
