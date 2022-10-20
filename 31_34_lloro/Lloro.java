@@ -13,7 +13,7 @@ public class Lloro {
         String paraula = Entrada.readLine();
         boolean empty=paraula.isEmpty();
 		boolean blank=paraula.isBlank();
-        while (paraula) {
+        while (empty==false && blank==false) {
                if (paraula.isEmpty()||paraula.isBlank()) {
                System.out.println("Adéu");
                }else{
