@@ -11,11 +11,16 @@ public class Lloro {
     
         System.out.println("El lloro espera paraula:");
         String paraula = Entrada.readLine();
-        while (paraula.isEmpty(  )) {
+        boolean empty=paraula.isEmpty();
+		boolean blank=paraula.isBlank();
+        while (paraula.isEmpty()) {
+               if (paraula.isEmpty()||paraula.isBlank()) {
+               System.out.println("Adéu");
+               }else{
                System.out.println("El lloro repeteix: "+ paraula);
                System.out.println("El lloro espera paraula:");
                paraula = Entrada.readLine();}
         
-        System.out.println("Adéu");
+        }
     }
 }
