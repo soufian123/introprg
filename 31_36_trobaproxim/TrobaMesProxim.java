@@ -13,7 +13,7 @@ public class TrobaMesProxim{
     int ancora;
     int valor;
     int valorDos = (0);
-    int valorProxim = (0);
+    int valorProxim;
     int resta = (0);
     int restaDos;
 
