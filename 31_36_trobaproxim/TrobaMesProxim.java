@@ -13,8 +13,8 @@ public class TrobaMesProxim{
     int ancora;
     int valor;
     int valorDos = (0);
-    int valorProxim;
-    int resta;
+    int valorProxim = (0);
+    int resta = (0);
     int restaDos;
 
     System.out.println("Introdueix l'àncora");
@@ -24,8 +24,6 @@ public class TrobaMesProxim{
         System.out.println("Introdueix un valor");
         valor = Integer.parseInt(Entrada.readLine());
             if (valor>=0){
-                resta = ((ancora) - (valor));
-                valorProxim = (valor);
                         while (ancora>=0 && valor>=0){
                         
                                 restaDos = ((ancora) - (valor));
