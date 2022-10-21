@@ -12,9 +12,10 @@ public class TrobaMesProxim{
     
     int ancora;
     int valor;
+    int valorDos = (0);
     int valorProxim;
-    int dividir;
-    int dividirDos;
+    int resta;
+    int restaDos;
 
     System.out.println("Introdueix l'àncora");
     ancora = Integer.parseInt(Entrada.readLine());
@@ -23,24 +24,29 @@ public class TrobaMesProxim{
         System.out.println("Introdueix un valor");
         valor = Integer.parseInt(Entrada.readLine());
             if (valor>=0){
-                dividir = ((ancora) / (valor));
+                resta = ((ancora) - (valor));
                 valorProxim = (valor);
                         while (ancora>=0 && valor>=0){
                         
-                                dividirDos = ((ancora) / (valor));
-                                
-                                        if (dividirDos<dividir){
+                                restaDos = ((ancora) - (valor));
+                                            
+                                            
+                                        if (restaDos<resta){
                                             valorProxim = (valor);
-                                            dividir = (dividirDos);
-                                            System.out.println("Introdueix un valor");
-                                            valor = Integer.parseInt(Entrada.readLine());
+                                            resta = (restaDos);
+                                            valorDos=(valor);
                                             
-                                        }else if(dividir<dividirDos){
+                                        }else if(resta<restaDos){
+                                            valorDos=(valor);
                                             
-                                            System.out.println("Introdueix un valor");
-                                            valor = Integer.parseInt(Entrada.readLine());
-                                        }
-
+                                         
+                                        }else if(resta==restaDos){
+                                                    if(valor<valorDos){
+                                                    valorProxim = (valor);
+                                                    }else{valorProxim = (valorDos);}
+                                            }
+                                System.out.println("Introdueix un valor");
+                                valor = Integer.parseInt(Entrada.readLine());
                         }
 
                   System.out.println("El valor introduït més pròxim a "+ ancora + " és "+ valorProxim);
