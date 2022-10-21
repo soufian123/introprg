@@ -31,12 +31,12 @@ public class TrobaMesProxim{
                                 restaDos = ((ancora) - (valor));
                                             
                                             
-                                        if (restaDos>resta){
+                                        if (restaDos<resta){
                                             valorProxim = (valor);
                                             resta = (restaDos);
-                                            valorDos=(valor);
+                                            valor=(valorDos);
                                             
-                                        }else if(resta>restaDos){
+                                        }else if(resta<restaDos){
                                             valorDos=(valor);
                                             
                                          
