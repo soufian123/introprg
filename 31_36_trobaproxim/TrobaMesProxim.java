@@ -45,6 +45,7 @@ public class TrobaMesProxim{
                                                     valorProxim = (valorDos);
                                                     }
                                             }
+                                            
                                 resta = (restaDos);
                                 valorDos=(valor);
                                 System.out.println("Introdueix un valor");
