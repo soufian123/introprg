@@ -26,7 +26,7 @@ public class TrobaMesProxim{
             if (valor>=0){
                         while (ancora>=0 && valor>=0){
                         
-                                restaDos = ((ancora) - (valor));
+                                restaDos = Math.abs(ancora - valor);
                                             
                                             
                                         if (restaDos<resta){
