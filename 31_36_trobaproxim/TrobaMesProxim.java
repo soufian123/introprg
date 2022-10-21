@@ -24,6 +24,7 @@ public class TrobaMesProxim{
         System.out.println("Introdueix un valor");
         valor = Integer.parseInt(Entrada.readLine());
             if (valor>=0){
+            valorProxim = (valor);
                         while (ancora>=0 && valor>=0){
                         
                                 restaDos = Math.abs(ancora - valor);
