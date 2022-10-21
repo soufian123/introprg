@@ -34,16 +34,26 @@ public class TrobaMesProxim{
                                         if (restaDos<resta){
                                             valorProxim = (valor);
                                             resta = (restaDos);
-                                            valor=(valorDos);
+                                            valorDos=(valor);
                                             
                                         }else if(resta<restaDos){
                                             valorDos=(valor);
                                             valorProxim = (valor);
+                                            resta = (restaDos);
+                                            
                                          
                                         }else if(resta==restaDos){
                                                     if(valor<valorDos){
                                                     valorProxim = (valor);
-                                                    }else{valorProxim = (valorDos);}
+                                                    resta = (restaDos);
+                                                    valorDos=(valor);
+                                                    
+                                                    }else{
+                                                    
+                                                    valorProxim = (valorDos);
+                                                    resta = (restaDos);
+                                                    valorDos=(valor);
+                                                    }
                                             }
                                 System.out.println("Introdueix un valor");
                                 valor = Integer.parseInt(Entrada.readLine());
@@ -54,3 +64,7 @@ public class TrobaMesProxim{
       }else{System.out.println("Àncora no vàlida");}
     }
 }
+
+
+
+
