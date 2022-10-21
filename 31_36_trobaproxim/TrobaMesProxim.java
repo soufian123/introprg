@@ -38,7 +38,7 @@ public class TrobaMesProxim{
                                             
                                         }else if(resta<restaDos){
                                             valorDos=(valor);
-                                            valorProxim = (valor);
+                                            valorProxim = (valorDos);
                                             resta = (restaDos);
                                             
                                          
