@@ -32,29 +32,21 @@ public class TrobaMesProxim{
                                             
                                             
                                         if (restaDos<resta){
-                                            valorProxim = (valorDos);
-                                            resta = (restaDos);
-                                            valorDos=(valor);
+                                            valorProxim = (valor);
                                             
                                         }else if(resta<restaDos){
-                                            valorDos=(valor);
-                                            valorProxim = (valor);
-                                            resta = (restaDos);
+                                            valorProxim = (valorDos);
                                             
-                                         
                                         }else if(resta==restaDos){
                                                     if(valor<valorDos){
                                                     valorProxim = (valor);
-                                                    resta = (restaDos);
-                                                    valorDos=(valor);
                                                     
                                                     }else{
-                                                    
                                                     valorProxim = (valorDos);
-                                                    resta = (restaDos);
-                                                    valorDos=(valor);
                                                     }
                                             }
+                                resta = (restaDos);
+                                valorDos=(valor);
                                 System.out.println("Introdueix un valor");
                                 valor = Integer.parseInt(Entrada.readLine());
                         }
