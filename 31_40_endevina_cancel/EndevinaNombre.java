@@ -6,14 +6,14 @@
 
 //El programa demanarà que li diguin un nombre, el compararà amb el pensat i indicarà si ha encertat, s'ha passat o no ha arribat, o si està fora de rang.
 
-//El programa finalitzarà quan els usuaris encertin el nombre pensat.
+//El programa finalitzarà quan els usuaris encertin el nombre pensat o Quan els usuaris entrin la cadena buida, el programa respondrà amb el missatge "Cancel·lat!" i finalitzarà..
 
 
 
-public class Endevina {
+public class EndevinaNombre {
 public static void main (String[] args) {
 
-
+    String text;
     int valor = (0);
     int valorPensat = (42);
     
@@ -21,8 +21,8 @@ public static void main (String[] args) {
     System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
     System.out.println("Introdueix un valor");
     valor = Integer.parseInt(Entrada.readLine());
-    
-    while (valor!=valorPensat) {
+    text= Integer.toString(valor);
+    while (valor!=valorPensat && !text.isBlank()) {
             
             if(valor>=101){
                 System.out.println("Com a màxim 100");
@@ -39,8 +39,16 @@ public static void main (String[] args) {
             
             System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
+            text= Integer.toString(valor);
     }
     
-        System.out.println("Has encertat!");
+        if  (valor==valorPensat ) { 
+         
+           System.out.println("Has encertat!");
+           }else{
+           System.out.println("Cancel·lat!");
+          }
+    
+    
     }
 }
