@@ -14,7 +14,7 @@ public class TrobaMesProxim{
     int valor;
     int valorDos = (0);
     int valorProxim;
-    int resta = (0);
+    int resta = (1000000);
     int restaDos;
 
     System.out.println("Introdueix l'àncora");
@@ -30,9 +30,7 @@ public class TrobaMesProxim{
                                 restaDos = Math.abs(ancora - valor);
                                             
                                             
-                                        if (resta==(0)){
-                                        valorProxim = valor;
-                                        }else if (restaDos<resta){
+                                         if (restaDos<resta){
                                             valorProxim = (valor);
                                             
                                         }else if(resta<restaDos){
