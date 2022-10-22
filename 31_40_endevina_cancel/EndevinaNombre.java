@@ -20,8 +20,8 @@ public static void main (String[] args) {
     
     System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
     System.out.println("Introdueix un valor");
-    valor = Integer.parseInt(Entrada.readLine());
-    String text= Integer.toString(valor);
+    String text = Entrada.readLine();
+    valor = Integer.parseInt(text);
     while (valor!=valorPensat && !text.isEmpty()) {
             
             if(valor>=101){
@@ -38,8 +38,8 @@ public static void main (String[] args) {
             
             
             System.out.println("Introdueix un valor");
-            valor = Integer.parseInt(Entrada.readLine());
-            text= Integer.toString(valor);
+            text = Entrada.readLine();
+            valor = Integer.parseInt(text);
     }
     
         if  (valor==valorPensat ) { 
