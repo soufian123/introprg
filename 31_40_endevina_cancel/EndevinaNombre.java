@@ -13,7 +13,7 @@
 public class EndevinaNombre {
 public static void main (String[] args) {
 
-    String text;
+
     int valor = (0);
     int valorPensat = (42);
     
@@ -21,8 +21,8 @@ public static void main (String[] args) {
     System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
     System.out.println("Introdueix un valor");
     valor = Integer.parseInt(Entrada.readLine());
-    text= Integer.toString(valor);
-    while (valor!=valorPensat && !text.isBlank()) {
+    String text= Integer.toString(valor);
+    while (valor!=valorPensat && !text.isEmpty()) {
             
             if(valor>=101){
                 System.out.println("Com a màxim 100");
