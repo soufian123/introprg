@@ -16,15 +16,15 @@ public static void main (String[] args) {
 
     int valor = (0);
     int valorPensat = (42);
-    
+    String text;
     
     System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
     System.out.println("Introdueix un valor");
-    String text = Entrada.readLine();
+    text = Entrada.readLine();
     valor = Integer.parseInt(text);
-    while (!text.isEmpty()) {
+    while (!text.isEmpty() && valor!=valorPensat) {
     
-        if (valor!=valorPensat){
+       
             
             if(valor>=101){
                 System.out.println("Com a màxim 100");
@@ -42,7 +42,7 @@ public static void main (String[] args) {
             System.out.println("Introdueix un valor");
             text = Entrada.readLine();
             valor = Integer.parseInt(text);
-    }}
+    }
     
         if  (valor==valorPensat ) { 
          
