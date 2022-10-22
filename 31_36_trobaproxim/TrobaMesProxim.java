@@ -30,7 +30,9 @@ public class TrobaMesProxim{
                                 restaDos = Math.abs(ancora - valor);
                                             
                                             
-                                        if (restaDos<resta){
+                                        if (resta==(0)){
+                                        valorProxim = valor;
+                                        }else if (restaDos<resta){
                                             valorProxim = (valor);
                                             
                                         }else if(resta<restaDos){
