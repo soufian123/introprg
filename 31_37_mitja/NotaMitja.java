@@ -17,13 +17,15 @@ public class NotaMitja{
             if (valor>=0){
 
                         while (valor>=0){
-                              valorsIntroduits= ((valorsIntroduits) + (1));
+                              valorsIntroduits = ((valorsIntroduits) + (1));
                               valorSuma= ((valorSuma) + (valor));
                                 System.out.println("Introdueix un valor");
                                 valor = Integer.parseInt(Entrada.readLine());
                         }
-                  mitja= ((valorSuma) / (valorsIntroduits));
+                  mitja = ((valorSuma) / (valorsIntroduits));
                   System.out.println("La mitja de les notes vàlides és "+ mitja);
            }else{System.out.println("Cap nota vàlida introduïda");}
     }
 }
+
+
