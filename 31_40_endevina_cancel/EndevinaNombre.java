@@ -16,13 +16,13 @@ public static void main (String[] args) {
 
     int valor = (0);
     int valorPensat = (42);
-    String text;
+    String text = ("asd");
     
     System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
     System.out.println("Introdueix un valor");
     text = Entrada.readLine();
     valor = Integer.parseInt(text);
-    while (!text.isEmpty() && valor!=valorPensat) {
+    while (!text.isBlank() && valor!=valorPensat) {
     
        
             
