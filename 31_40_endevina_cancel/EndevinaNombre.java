@@ -22,7 +22,9 @@ public static void main (String[] args) {
     System.out.println("Introdueix un valor");
     text = Entrada.readLine();
     valor = Integer.parseInt(text);
-    while (!text.isBlank() || valor!=valorPensat) {
+    while (!text.isBlank()){
+    
+     if (valor!=valorPensat) {
     
        
             
@@ -42,7 +44,7 @@ public static void main (String[] args) {
             System.out.println("Introdueix un valor");
             text = Entrada.readLine();
             valor = Integer.parseInt(text);
-    }
+    }}
     
         if  (valor==valorPensat ) { 
          
