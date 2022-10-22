@@ -22,7 +22,7 @@ public static void main (String[] args) {
     System.out.println("Introdueix un valor");
     String text = Entrada.readLine();
     valor = Integer.parseInt(text);
-    while (valor!=valorPensat && !text.isEmpty()) {
+    while (valor!=valorPensat || !text.isEmpty()) {
             
             if(valor>=101){
                 System.out.println("Com a màxim 100");
