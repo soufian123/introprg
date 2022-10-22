@@ -1,6 +1,12 @@
 
 
+//En aquesta ocasió desenvoluparem un programa que es pensarà un nombre enter entre el 1 i el 100, i reptarà els usuaris a que l'endevini.
 
+//Per simplicitat, el nombre pensat serà sempre el 42.
+
+//El programa demanarà que li diguin un nombre, el compararà amb el pensat i indicarà si ha encertat, s'ha passat o no ha arribat, o si està fora de rang.
+
+//El programa finalitzarà quan els usuaris encertin el nombre pensat.
 
 
 
