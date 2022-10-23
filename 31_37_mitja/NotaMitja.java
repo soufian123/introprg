@@ -6,7 +6,7 @@
 public class NotaMitja{
     public static void main (String[] args){
 
-    int valor;
+    int valor = (0);
     int valorSuma = (0);
     int mitja = (0);
     int valorsIntroduits= (0);
