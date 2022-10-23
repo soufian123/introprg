@@ -27,7 +27,7 @@ public static void main (String[] args) {
             if(valor>=101){
                 System.out.println("Com a màxim 100");
             
-            }else if(valor==0){
+            }else if(valor<=0){
                 System.out.println("Com a mínim 1");
             
             }else if (valor<valorPensat){
