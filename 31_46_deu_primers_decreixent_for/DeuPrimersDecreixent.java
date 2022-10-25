@@ -6,7 +6,7 @@ public class DeuPrimersDecreixent{
     
     
 
-            for (int numero = 10; numero <= 1; numero--) {
+            for (int numero = 10; numero >= 1; numero--) {
 
                 System.out.println(numero);
 
