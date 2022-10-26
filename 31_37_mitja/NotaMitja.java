@@ -16,7 +16,7 @@ public class NotaMitja{
         valor = Integer.parseInt(Entrada.readLine());
             if (valor>=0 && valor<=100){
 
-                        while (valor>=0){
+                        while (valor>=0 && valor<=100){
                               valorsIntroduits = ((valorsIntroduits) + (1));
                               valorSuma= ((valorSuma) + (valor));
                                 System.out.println("Introdueix un valor");
