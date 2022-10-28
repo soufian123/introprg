@@ -5,7 +5,7 @@
 
 
 
-    public class DiaSetmanaSwitchExpr {
+    public class DiaSetmanaSwitch {
         public static void main(String[] args) {
          int dia = Integer.parseInt(args[0]);
          
