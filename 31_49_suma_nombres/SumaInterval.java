@@ -14,13 +14,15 @@ public class SumaInterval{
     int finalNum =Integer.parseInt(Entrada.readLine());
 
     int numero = 0;
-        for (int i= inici; i <= finalNum; ++i ){
-        numero= numero + i;
-        }
-        for (int i= inici; i >= finalNum; --i ){
-        numero= numero + i;
-        }
-        System.out.println(numero);   
-
+        if (inici!=finalNum){
+        
+                for (int i= inici; i <= finalNum; ++i ){
+                numero= numero + i;
+                }
+                for (int i= inici; i >= finalNum; --i ){
+                numero= numero + i;
+                }
+          }else{numero=inici;}
+        System.out.println(numero);
     }
 }
