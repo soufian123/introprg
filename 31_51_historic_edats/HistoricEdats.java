@@ -14,16 +14,18 @@ public class HistoricEdats{
             System.out.println("L'any actual?");
         int anyActual =Integer.parseInt(Entrada.readLine());
         int edatAny=0;
-        
-        for (int any= anyActual-edat;any<anyActual; any++){
-            if(edatAny==0){
-            System.out.println("El "+ any + " vau néixer");
-            }else if(edatAny==1){
-            System.out.println("El "+ any +" teníeu "+ edatAny + " any");
-            }else{ System.out.println("El "+ any +" teníeu "+ edatAny + " anys");
-            }
-            edatAny= edatAny+1;
-            }
+        if(edat<=0){
+            System.out.println("Entrada incorrecta");
+            }else{for (int any= anyActual-edat;any<anyActual; any++){
+                  if(edatAny==0){
+                  System.out.println("El "+ any + " vau néixer");
+                  }else if(edatAny==1){
+                  System.out.println("El "+ any +" teníeu "+ edatAny + " any");
+                  }else{ System.out.println("El "+ any +" teníeu "+ edatAny + " anys");
+                  }
+                  edatAny= edatAny+1;
+                  }
+        }
         System.out.println("Adéu "+ nom);
     }
 }        
