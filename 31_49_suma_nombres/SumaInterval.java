@@ -12,7 +12,8 @@ public class SumaInterval{
     int inici =Integer.parseInt(Entrada.readLine());
         System.out.println("final?");
     int finalNum =Integer.parseInt(Entrada.readLine());
-        for ( int i = inici; i <= finalNum; i++){
+    
+        for ( int i = inici; i <= finalNum; i=i++){
         
         System.out.println(i);
         
