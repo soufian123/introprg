@@ -11,22 +11,16 @@ public class MostraInterval{
     int inici =Integer.parseInt(Entrada.readLine());
         System.out.println("final?");
     int finalNum =Integer.parseInt(Entrada.readLine());
-
-    int numero = 0;
-    
     
     if (inici!=finalNum){
             for (int i=inici; i<=finalNum; i++){
-                numero = numero + i;
-                System.out.println(numero);
+                System.out.println(i);
                 }
             for(int i=inici; i>=finalNum; i--){
-            System.out.println(numero);
-                numero = numero + i;
-                System.out.println(numero);
+                System.out.println(i);
                 }
-    }else{numero=numero;
-          System.out.println(numero);
+    }else{int i=inici;
+          System.out.println(i);
           }
   }
 }
