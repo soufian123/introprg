@@ -25,7 +25,8 @@ public class HistoricEdats{
                   }
                   edatAny= edatAny+1;
                   }
-        }
         System.out.println("Adéu "+ nom);
+        }
+        
     }
 }        
