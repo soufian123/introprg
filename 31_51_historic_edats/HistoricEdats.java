@@ -18,6 +18,8 @@ public class HistoricEdats{
         for (int any= anyActual-edat;any<=anyActual; any++){
             if(edatAny==0){
             System.out.println("El "+ any + " vau néixer");
+            }else if(edatAny==1){
+            System.out.println("El "+ any +" teníeu "+ edatAny + " any");
             }else{ System.out.println("El "+ any +" teníeu "+ edatAny + " anys");
             }
             edatAny= edatAny+1;
