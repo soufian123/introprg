@@ -14,11 +14,12 @@ public class QuadratNombres{
             for (int lin = inici; lin<=valor; lin++){
             
                 for (int col = inici; col<=valor; col++){
-                System.out.println(col);}
+                System.out.println(" "+ col);}
             }        
         
-        }
+        }else{
         System.out.println("Valor inadequat");
+        }
     }       
 }
         
