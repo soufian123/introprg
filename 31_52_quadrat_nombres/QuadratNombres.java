@@ -12,9 +12,10 @@ public class QuadratNombres{
         if (valor>=1 && valor<=9){
         
             for (int lin = inici; lin<=valor; lin++){
+            System.out.println();
             
                 for (int col = inici; col<=valor; col++){
-                System.out.println(" "+ col);}
+                System.out.print(" "+ col);}
             }        
         
         }else{
