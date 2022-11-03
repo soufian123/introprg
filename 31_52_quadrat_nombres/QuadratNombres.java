@@ -8,7 +8,7 @@ public class QuadratNombres{
         
         System.out.println("Valor final?");
         int valor= Integer.parseInt(Entrada.readLine());
-        int inici=0;
+        int inici=1;
         if (valor>=1 && valor<=9){
         
             for (int lin = inici; lin<=valor; lin++){
