@@ -16,7 +16,7 @@ public class TriangleNombres{
             for (int lin = inici; lin<=valor; lin++){
             System.out.println();
                 for (int col = lin; col>=inici; col--){
-                System.out.print(" "+col+ " ");}
+                System.out.print(" "+col);}
             }        
         
         }else{
