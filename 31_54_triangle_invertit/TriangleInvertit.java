@@ -11,7 +11,7 @@ public class TriangleInvertit {
         int valor= Integer.parseInt(Entrada.readLine());
         int inici=1;
 
-        if (valor>=1 && valor<=9){
+        if (valor>=1){
         
             for (int lin = valor; lin>=inici; lin--){
             System.out.println();
