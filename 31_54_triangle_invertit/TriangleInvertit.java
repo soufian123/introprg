@@ -15,8 +15,9 @@ public class TriangleInvertit {
         
             for (int lin = valor; lin>=inici; lin--){
             System.out.println();
-                for (int col = inici; col<=lin; col++){
+                for (int col = inici; col<lin; col++){
                 System.out.print(col+", ");}
+            System.out.print(lin);
             }        
         
         }else{
