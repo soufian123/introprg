@@ -20,7 +20,7 @@ public class TriangleNombres{
             }        
         
         }else{
-        System.out.println("Valor inadequat");
+
         }
     }       
 }
