@@ -14,7 +14,7 @@ public class Rombos {
         for(int repetir=1; repetir<=quants; repetir++){
         
             for (int lin = 9; lin>=0; lin--){
-                System.out.print(lin+ " ");
+
                 // dibuixa punts esquerra
                 
                 for (int col = 0; col<lin; col++){
@@ -36,7 +36,7 @@ public class Rombos {
                 System.out.println();
             }
             for (int lin = 1; lin<=9; lin++){
-                System.out.print(lin+ " ");
+
                 // dibuixa punts esquerra
                 
                 for (int col = 0; col<lin; col++){
