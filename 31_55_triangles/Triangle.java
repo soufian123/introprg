@@ -13,9 +13,9 @@ public class Triangle {
         int inici=0;
 
         for(int repetir=1; repetir<=quants; repetir++){
-        
+
             for (int lin = valor; lin>=inici; lin--){
-                System.out.println();
+
                 // dibuixa punts
                 
                 for (int col = inici; col<lin; col++){
@@ -34,6 +34,7 @@ public class Triangle {
                 for (int col = inici; col<lin; col++){
                     System.out.print(".");
                 }
+ System.out.println();
             }        
         }
     }       
