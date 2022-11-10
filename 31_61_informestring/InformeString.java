@@ -19,15 +19,15 @@ public class InformeString{
         
         //Boolean que indica si la cadena comença per l'altre
         boolean startsWith= principal.startsWith(secundari);
-        System.out.println("\""+principal+"\""+".startsWith("+secundari+"): "+startsWith);
+        System.out.println("\""+principal+"\""+".startsWith("+"\""+secundari+"\""+"): "+startsWith);
         
         //Boolean que indica si la cadena comença per l'altre
         boolean endsWith= principal.endsWith(secundari);
-        System.out.println("\""+principal+"\""+".endsWith("+secundari+"): " +endsWith);
+        System.out.println("\""+principal+"\""+".endsWith("+"\""+secundari+"\""+"): " +endsWith);
         
         //Boolean que indica si la cadena és igual a l'altre
         boolean equals= principal.equals(secundari);
-        System.out.println("\""+principal+"\""+""+secundari+"): " +equals);
+        System.out.println("\""+principal+"\""+""+"\""+secundari+"\""+"): " +equals);
         
         //Boolean que indica si la cadena és igual a l'altre
         boolean equalsIgnoreCase= principal.equalsIgnoreCase(secundari);
@@ -47,7 +47,7 @@ public class InformeString{
         
         //Cadena resultant de concatenar la cadena amb l'altre
         String concat= principal.concat(secundari);
-        System.out.println("\""+principal+"\""+".concat("+secundari+"): "+concat);
+        System.out.println("\""+principal+"\""+".concat("+"\""+secundari+"\""+"): "+concat);
         
         //Cadena repetida el nombre de cops indicat
         String repeat= principal.repeat(numero);
