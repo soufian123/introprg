@@ -99,7 +99,7 @@ public class ManipulaString {
         // minúscules.  (ex. si la paraula és «Nekane» mostrarà «Enek»)
         System.out.print("La composició de quatre corregint majúscules és \""+Character.toUpperCase(paraula.charAt(paraula.length()-1)));
         for (int numero=0; numero<=2; numero++){
-            System.out.print(paraula.charAt(numero));
+            System.out.print(Character.toLowerCase(paraula.charAt(numero)));
         }
         
         System.out.println("\"");
