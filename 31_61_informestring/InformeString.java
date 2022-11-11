@@ -27,7 +27,7 @@ public class InformeString{
         
         //Boolean que indica si la cadena és igual a l'altre
         boolean equals= principal.equals(secundari);
-        System.out.println("\""+principal+"\""+""+"\""+secundari+"\""+"): " +equals);
+        System.out.println("\""+principal+"\".equals("+"\""+secundari+"\"): "+"): " +equals);
         
         //Boolean que indica si la cadena és igual a l'altre
         boolean equalsIgnoreCase= principal.equalsIgnoreCase(secundari);
