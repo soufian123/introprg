@@ -66,8 +66,8 @@ public class InformeCaracter{
                 
             char toUpperCase=Character.toUpperCase(lletra);
             System.out.println("Character.toUpperCase('"+lletra+"'): "+toUpperCase);
+        }else{System.out.println("Caràcter buit");
         }
-        System.out.println("Caràcter buit");
     }
 }
     
