@@ -31,7 +31,7 @@ public class InformeString{
         
         //Boolean que indica si la cadena és igual a l'altre
         boolean equalsIgnoreCase= principal.equalsIgnoreCase(secundari);
-        System.out.println("\""+principal+"\""+".equalsIgnoreCase("+secundari+"): " +equalsIgnoreCase);
+        System.out.println("\""+principal+"\""+".equalsIgnoreCase("+"\""+secundari+"\""+"): " +equalsIgnoreCase);
         
         //Boolean que indica si la cadena només conté caràcters blancs o bé està buida
         boolean isBlank= principal.isBlank();
