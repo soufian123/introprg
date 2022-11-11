@@ -77,7 +77,7 @@ public class ManipulaString {
         
         System.out.println("La composició de quatre és \""+ paraula.charAt(paraula.length()-1));
             System.out.print(Character.toUpperCase(paraula.charAt(paraula.length()-2)));
-        for (int numero=paraula.length()-3; numero>(paraula.length()-5); numero--){
+        for (int numero=0; numero<=2; numero++){
             System.out.print(paraula.charAt(numero));
         }
         
@@ -98,7 +98,7 @@ public class ManipulaString {
         // minúscules de manera que la primera sigui majúscules i la resta en
         // minúscules.  (ex. si la paraula és «Nekane» mostrarà «Enek»)
         System.out.print("La composició de quatre corregint majúscules és \""+Character.toUpperCase(paraula.charAt(paraula.length()-1)));
-        for (int numero=paraula.length()-2; numero>(paraula.length()-5); numero--){
+        for (int numero=0; numero<=2; numero++){
             System.out.print(paraula.charAt(numero));
         }
         
