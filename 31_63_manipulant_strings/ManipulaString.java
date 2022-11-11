@@ -75,7 +75,7 @@ public class ManipulaString {
         // seguida de les tres primeres. (ex. si la paraula és «Nekane»
         // mostrarà «aNek»)
         
-        System.out.println("La composició de quatre és \""+ paraula.charAt(paraula.length()-1));
+        System.out.print("La composició de quatre és \""+ paraula.charAt(paraula.length()-1));
             System.out.print(Character.toUpperCase(paraula.charAt(paraula.length()-2)));
         for (int numero=0; numero<=2; numero++){
             System.out.print(paraula.charAt(numero));
