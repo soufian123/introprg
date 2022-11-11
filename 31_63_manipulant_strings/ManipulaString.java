@@ -45,17 +45,18 @@ public class ManipulaString {
 
         System.out.print("La composició de quatre primeres és \""+Character.toUpperCase(paraula.charAt(0)));
       
-     
-        for (int num=1; num<4; num++){
+         if (paraula.length()>1){
+            for (int num=1; num<4; num++){
 
-            char toLowerCase=Character.toLowerCase(paraula.charAt(num));
-            System.out.print(toLowerCase);
-                   
+                char toLowerCase=Character.toLowerCase(paraula.charAt(num));
+                System.out.print(toLowerCase);
+                       
+            }
         }
       System.out.println("\"");
                                                                                /* for (int num=0; num<(paraula.length()); numero++){
                                                                                     char lletra = text.charAt(num);
-                                                                                    boolean majuscula= paraula.isUpperCase(lletra)
+     }                                                                               boolean majuscula= paraula.isUpperCase(lletra)
                                                                                         if (majuscula=true){
                                                                                             System.out.print(lletra);
                                                                                             num=paraula.length();
@@ -78,10 +79,11 @@ public class ManipulaString {
         
         System.out.print("La composició de quatre és \""+ paraula.charAt(paraula.length()-1));
             System.out.print(Character.toUpperCase(paraula.charAt(0)));
-        for (int numero=1; numero<=2; numero++){
-            System.out.print(paraula.charAt(numero));
+        if (paraula.length()>1){
+            for (int numero=1; numero<=2; numero++){
+                System.out.print(paraula.charAt(numero));
+            }
         }
-        
         System.out.println("\"");
 
 
@@ -99,10 +101,11 @@ public class ManipulaString {
         // minúscules de manera que la primera sigui majúscules i la resta en
         // minúscules.  (ex. si la paraula és «Nekane» mostrarà «Enek»)
         System.out.print("La composició de quatre corregint majúscules és \""+Character.toUpperCase(paraula.charAt(paraula.length()-1)));
-        for (int numero=0; numero<=2; numero++){
-            System.out.print(Character.toLowerCase(paraula.charAt(numero)));
+        if (paraula.length()>1){    
+            for (int numero=0; numero<=2; numero++){
+                System.out.print(Character.toLowerCase(paraula.charAt(numero)));
+            }
         }
-        
         System.out.println("\"");
         
     }
