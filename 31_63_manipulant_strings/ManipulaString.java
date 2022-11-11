@@ -38,7 +38,7 @@ public class ManipulaString {
         
         System.out.println("\"");
 
-
+    if (paraula.length()>1){
         // Una composició formada per la primera lletra de la paraula en
         // majúscules, seguida de les següents tres lletres en minúscules. Per
         // exemple, si la paraula és «nEkAnE», resultatà en «Neka».
@@ -107,7 +107,7 @@ public class ManipulaString {
             }
         }
         System.out.println("\"");
-        
+        }
     }
 }
 
