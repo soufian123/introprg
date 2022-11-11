@@ -45,7 +45,7 @@ public class ManipulaString {
         System.out.print("La composició de quatre primeres és \""+Character.toUpperCase(paraula.charAt(0)));
       
      
-        for (int num=1; num<=4; num++){
+        for (int num=1; num<4; num++){
 
             char toLowerCase=Character.toLowerCase(paraula.charAt(num));
             System.out.print(toLowerCase);
