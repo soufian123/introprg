@@ -15,7 +15,7 @@ public class ManipulaString {
 
         // int ultima = (paraula.length()-1)
         // Mostra la darrera lletra de la paraula
-        System.out.println(" La darrera lletra és '"+paraula.charAt(paraula.length()-1)+"'");
+        System.out.println("La darrera lletra és '"+paraula.charAt(paraula.length()-1)+"'");
 
         // int penultima = (paraula.length()-2)
         // Mostra la penúltima lletra de la paraula
