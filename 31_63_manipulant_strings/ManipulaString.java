@@ -9,9 +9,9 @@ public class ManipulaString {
         // Mostra la longitud de la paraula (quantes lletres conté)
         System.out.println("La longitud és " + paraula.length());
 
-        // Mostra la segona lletra de la paraula
-        System.out.println("La segona lletra és '" +paraula.charAt(1)+"'");
-
+        if (paraula.length()>1){ // Mostra la segona lletra de la paraula
+            System.out.println("La segona lletra és '" +paraula.charAt(1)+"'");
+        }
 
         // int ultima = (paraula.length()-1)
         // Mostra la darrera lletra de la paraula
@@ -19,8 +19,9 @@ public class ManipulaString {
 
         // int penultima = (paraula.length()-2)
         // Mostra la penúltima lletra de la paraula
-        System.out.println("La penúltima lletra és '"+paraula.charAt(paraula.length()-2)+"'");
-
+        if (paraula.length()>1){
+            System.out.println("La penúltima lletra és '"+paraula.charAt(paraula.length()-2)+"'");
+        }
 
         //boolean majuscula= paraula.isUpperCase()
         // Mostra la paraula amb totes les lletres en majúscules
