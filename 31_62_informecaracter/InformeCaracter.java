@@ -9,9 +9,10 @@ public class InformeCaracter{
         
         System.out.println("Caràcter?");
         String text=Entrada.readLine(); 
-        char lletra = text.charAt(0);
+        
 
         if (!text.isEmpty()){
+            char lletra = text.charAt(0);
             //nom del caràcter
             String getName= Character.getName(lletra);
             System.out.println("Character.getName('"+lletra+"'): "+getName);
