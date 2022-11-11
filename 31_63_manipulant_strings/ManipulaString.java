@@ -76,8 +76,8 @@ public class ManipulaString {
         // mostrarà «aNek»)
         
         System.out.print("La composició de quatre és \""+ paraula.charAt(paraula.length()-1));
-            System.out.print(Character.toUpperCase(paraula.charAt(paraula.length()-2)));
-        for (int numero=0; numero<=2; numero++){
+            System.out.print(Character.toUpperCase(paraula.charAt(0)));
+        for (int numero=1; numero<=2; numero++){
             System.out.print(paraula.charAt(numero));
         }
         
