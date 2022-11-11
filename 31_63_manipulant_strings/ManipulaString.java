@@ -35,7 +35,7 @@ public class ManipulaString {
                         */    
         }   
         
-        System.out.println("\" ");
+        System.out.println("\"");
 
 
         // Una composició formada per la primera lletra de la paraula en
@@ -97,7 +97,7 @@ public class ManipulaString {
         // Com en el cas anterior però ara corregint les majúscules i
         // minúscules de manera que la primera sigui majúscules i la resta en
         // minúscules.  (ex. si la paraula és «Nekane» mostrarà «Enek»)
-        System.out.println("La composició de quatre corregint majúscules és \""+Character.toUpperCase(paraula.charAt(paraula.length()-1)));
+        System.out.print("La composició de quatre corregint majúscules és \""+Character.toUpperCase(paraula.charAt(paraula.length()-1)));
         for (int numero=paraula.length()-2; numero>=(paraula.length()-5); numero--){
             System.out.print(paraula.charAt(numero));
         }
