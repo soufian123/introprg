@@ -3,18 +3,17 @@
 public class LloroVocalMinuscules{
     public static void main (String[] args){
         
-        System.out.printl("El lloro pregunta paraula que comenci amb vocal en minúscules");
+        System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
         String paraula= Entrada.readLine();
-        char lletra= paraula.charAt(0);
-        boolean minuscula =Character.isLowerCase(lletra);
+
+
         
-        while (!paraula.isEmpty() || minuscula=true|| lletra=="a" || lletra== "e" || lletra=="i" || lletra=="o" || lletra=="u"){
+        while (!paraula.isEmpty() || Character.isLowerCase(paraula.charAt(0))=true || paraula.charAt(0)="a" || paraula.charAt(0)= "e" || paraula.charAt(0)="i" || paraula.charAt(0)="o" || paraula.charAt(0)="u"){
         
             System.out.print("El lloro diu: "+ paraula);
-            System.out.printl("El lloro pregunta paraula que comenci amb vocal en minúscules");
+            System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
             paraula= Entrada.readLine();
-            lletra= paraula.charAt(0);
-            minuscula =Character.isLowerCase(lletra);
+
         }
     }
 }
