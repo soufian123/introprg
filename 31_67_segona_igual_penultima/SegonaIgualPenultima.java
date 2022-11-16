@@ -11,17 +11,18 @@ public class SegonaIgualPenultima{
     public static void main (String[] args){
         
         System.out.println("Ves introduïnt texts (finalitza amb enter sol)");
-        String text= Entrada.readLine();
+        String text= "asd";
         
         if (!text.isBlank()){
             while (!text.isBlank()){
+            text= Entrada.readLine();
                 if ((text.length())>=2){
                         if (text.charAt(1) == text.charAt(text.length()-2)){
                              System.out.println("Segona igual a penúltima");
                         }else{System.out.println("Segona diferent de penúltima");}
                 }else if(!text.isBlank()){System.out.println("Segona igual a penúltima");}
                 
-            text= Entrada.readLine();
+
             }
         }
         System.out.print("Adéu");
