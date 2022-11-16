@@ -14,7 +14,7 @@ public class SegonaIgualPenultima{
         String text= Entrada.readLine();
         
         if (!text.isBlank()){
-            while (!text.isBlank()){
+            while (!text.isBlank() || text.isEmpty()){
                 if ((text.length())>=2){
                         if (text.charAt(1) == text.charAt(text.length()-2)){
                              System.out.println("Segona igual a penúltima");
