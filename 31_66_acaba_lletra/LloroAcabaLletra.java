@@ -5,18 +5,25 @@ public class LloroAcabaLletra{
         
         System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
         String paraula= Entrada.readLine();
-
-
+        String vocals= "aeiouAEIOU";
+        String coinsideixen= "false";
         
-
+        int numero =0;
         if (!paraula.isBlank()){
             while (!paraula.isBlank()){
-            
-                if( !(paraula.charAt(paraula.length()-1)=='a' || paraula.charAt(paraula.length()-1)== 'e' || paraula.charAt(paraula.length()-1)=='i' || paraula.charAt(paraula.length()-1)=='o' || paraula.charAt(paraula.length()-1)=='u' || paraula.charAt(paraula.length()-1)=='A' || paraula.charAt(paraula.length()-1)== 'E' || paraula.charAt(paraula.length()-1)=='I' || paraula.charAt(paraula.length()-1)=='O' || paraula.charAt(paraula.length()-1)=='U')){ //añadir caracteristicas como . , ; . etc char numeros
-                    System.out.println("El lloro diu: "+ paraula);
+                if (Character.isLetter(paraula.charAt(paraula.length()-1))=="true"){
+                    for(int num=0; num<=9; num++){
+                        if (paraula.charAt(vocals.length()-1)==vocals.charAt(num)){
+                            coinsideixen="true";
+                        }
+                    }
+                    if (coinsideixen=="false"){
+                        System.out.println("El lloro diu: "+paraula);
+                    }
                 }
                 System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
                 paraula= Entrada.readLine();
+                coinsideixen= "false";
             }
         }
         System.out.print("Adéu");
