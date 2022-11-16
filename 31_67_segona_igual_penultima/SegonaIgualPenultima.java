@@ -21,7 +21,7 @@ public class SegonaIgualPenultima{
                              System.out.println("Segona igual a penúltima");
                         }else{System.out.println("Segona diferent de penúltima");}
                 }else if((text.length())==1){System.out.println("Segona igual a penúltima");
-                }else if((text.length())==0){System.out.println("Segona diferent de penúltima");}
+                }
                 
 
             }
