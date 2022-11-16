@@ -19,7 +19,7 @@ public class SegonaIgualPenultima{
                         if (text.charAt(1) == text.charAt(text.length()-2)){
                              System.out.println("Segona igual a penúltima");
                         }else{System.out.println("Segona diferent de penúltima");}
-                }else{System.out.println("Segona igual a penúltima");}
+                }else if(!text.isBlank()){System.out.println("Segona igual a penúltima");}
                 
             text= Entrada.readLine();
             }
