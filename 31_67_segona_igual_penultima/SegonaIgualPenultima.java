@@ -14,13 +14,14 @@ public class SegonaIgualPenultima{
         String text= "asd";
         
         if (!text.isBlank()){
-            while (!text.isBlank() || text.isEmpty()){
+            while (!text.isBlank()){
             text= Entrada.readLine();
                 if ((text.length())>=2){
                         if (text.charAt(1) == text.charAt(text.length()-2)){
                              System.out.println("Segona igual a penúltima");
                         }else{System.out.println("Segona diferent de penúltima");}
-                }else if(!text.isBlank()){System.out.println("Segona igual a penúltima");}
+                }else if((text.length())==1){System.out.println("Segona igual a penúltima");
+                }else if((text.length())==0){System.out.println("Segona diferent de penúltima");}
                 
 
             }
