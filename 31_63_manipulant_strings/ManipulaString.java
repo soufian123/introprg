@@ -36,6 +36,8 @@ public class ManipulaString {
                         */    
         }   
         
+
+
         System.out.println("\"");
 
     if (paraula.length()>1){
