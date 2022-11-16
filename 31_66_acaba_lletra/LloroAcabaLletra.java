@@ -12,7 +12,7 @@ public class LloroAcabaLletra{
         if (!paraula.isBlank()){
             while (!paraula.isBlank()){
             
-                if( !(paraula.charAt(paraula.length()-1)=='a' || paraula.charAt(paraula.length()-1)== 'e' || paraula.charAt(paraula.length()-1)=='i' || paraula.charAt(paraula.length()-1)=='o' || paraula.charAt(paraula.length()-1)=='u' || paraula.charAt(paraula.length()-1)=='A' || paraula.charAt(paraula.length()-1)== 'E' || paraula.charAt(paraula.length()-1)=='I' || paraula.charAt(paraula.length()-1)=='O' || paraula.charAt(paraula.length()-1)=='U')){
+                if( !(paraula.charAt(paraula.length()-1)=='a' || paraula.charAt(paraula.length()-1)== 'e' || paraula.charAt(paraula.length()-1)=='i' || paraula.charAt(paraula.length()-1)=='o' || paraula.charAt(paraula.length()-1)=='u' || paraula.charAt(paraula.length()-1)=='A' || paraula.charAt(paraula.length()-1)== 'E' || paraula.charAt(paraula.length()-1)=='I' || paraula.charAt(paraula.length()-1)=='O' || paraula.charAt(paraula.length()-1)=='U')){ //añadir caracteristicas como . , ; . etc char numeros
                     System.out.println("El lloro diu: "+ paraula);
                 }
                 System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
