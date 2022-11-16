@@ -8,13 +8,13 @@ public class LloroAcabaLletra{
         String vocals= "aeiouAEIOU";
         String coinsideixen= "false";
         
-        int numero =0;
+        
         if (!paraula.isBlank()){
             while (!paraula.isBlank()){
                 if (Character.isLetter(paraula.charAt((paraula.length())-1))==true){
                     for(int num=0; num<=9; num++){
-                        if (paraula.charAt(vocals.length()-1)==vocals.charAt(num)){
-                            coinsideixen="true";
+                        if (paraula.charAt(vocals.length()-1) == vocals.charAt(num)){
+                            coinsideixen = "true";
                         }
                     }
                     if (coinsideixen=="false"){
