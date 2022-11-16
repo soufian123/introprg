@@ -14,7 +14,7 @@ public class SegonaIgualPenultima{
         String text= "asd";
         
         if (!text.isBlank()){
-            while (!text.isBlank()){
+            while (!text.isBlank() || text.isEmpty()){
             text= Entrada.readLine();
                 if ((text.length())>=2){
                         if (text.charAt(1) == text.charAt(text.length()-2)){
