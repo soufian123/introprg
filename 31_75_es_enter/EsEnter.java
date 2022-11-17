@@ -6,7 +6,7 @@
 public class EsEnter{
     public static void main (String[] args){
     
-        System.out.println("Text?");
+        System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text= Entrada.readLine();
         String numeros= ("0123456789+-");
         String comprovar="false";
