@@ -22,7 +22,7 @@ public class MostraInterval{
             fin=-fin;
         }
         if (inici<0){
-            inici=-inici;
+            inici=0;
         }
         if ((text.length()-1)<inici){
             inici=text.length()-1;
