@@ -16,12 +16,20 @@ public class MostraInterval{
         System.out.println("final?");
         int fin= Integer.parseInt(Entrada.readLine());
         
+        if(inici<=fin){
         
-        
-        for(int num=inici; num<=fin; num++){
-            if (Character.isLetter(text.charAt(num))){
-                System.out.println(text.charAt(num));
+            for(int num=inici; num<=fin; num++){
+                if (Character.isLetter(text.charAt(num))){
+                    System.out.println(text.charAt(num));
+                }
             }
+        
+        }else{
+                for(int num=fin; num>=inici; num--){
+                    if (Character.isLetter(text.charAt(num))){
+                        System.out.println(text.charAt(num));
+                    }
+                }
         }
     }
 }
