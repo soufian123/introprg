@@ -9,8 +9,8 @@ public class CadenaContinua{
         System.out.println("Nombre?");
         int nombre= Integer.parseInt(Entrada.readLine());
         int numero=0;
-        if (nombre>0){
-            if (!text.isEmpty()){
+        if (!text.isEmpty()){
+            if (nombre>0){
                 for(int num=0; num<=nombre; num++){
                     
                     if (numero<text.length()){
@@ -19,7 +19,7 @@ public class CadenaContinua{
                     System.out.print(text.charAt(numero));
                     numero= numero+1;
                 }
-            }System.out.println("error");
-        }
+            }
+        }System.out.println("error");
     }
 }                
