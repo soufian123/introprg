@@ -14,11 +14,10 @@ public class EsEnter{
         
             if (!(text.isBlank() || text.isEmpty())){
                 for(int num=0; num<=(text.length()+1); num++){
+                    if(!(Character.isDigit(text.charAt(num)))){
+                        comprovar="true";
                     
-                    for(int n=0; n<=(numeros.length()+1); n++){
-                        if(!(Character.isDigit(text.charAt(num)))){
-                            comprovar="true";
-                        }
+
                     }
                 }
                 if (comprovar=="true"){
