@@ -13,8 +13,8 @@ public class EsEnter{
         while (!(text.isBlank())){
             for(int num=0; num<=(text.length()+1); num++){
                 
-                for(int n=0; num<=(numeros.length()+1); num++){
-                    if(!(text.charAt(num)== numeros.charAt(n))){
+                for(int n=0; n<=(numeros.length()+1); n++){
+                    if(!(text.charAt(num) == numeros.charAt(n))){
                         comprovar="true";
                     }
                 }
