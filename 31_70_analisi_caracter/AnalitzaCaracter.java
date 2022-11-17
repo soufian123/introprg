@@ -20,7 +20,7 @@ public class AnalitzaCaracter{
         if (posicio<0){
                 posicio= (text.length())-posicio;
             }
-        if(posicio <=(text.length()-1)){
+        if(posicio <=(text.length())){
             
             
             
