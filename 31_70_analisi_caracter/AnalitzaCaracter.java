@@ -17,11 +17,11 @@ public class AnalitzaCaracter{
         System.out.println("Posició?");
         int posicio= Integer.parseInt(Entrada.readLine());
 
-        
-        if(posicio <=(text.length()-1) || -posicio <=(text.length()-1)){
-            if (posicio<0){
+        if (posicio<0){
                 posicio= (text.length()-posicio);
             }
+        if(posicio <=(text.length()-1) || -posicio <=(text.length()-1)){
+            
             
             
             
