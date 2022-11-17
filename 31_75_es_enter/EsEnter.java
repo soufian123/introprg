@@ -16,8 +16,9 @@ public class EsEnter{
                 for(int num=0; num<=(text.length()-1); num++){
                     if(!(Character.isDigit(text.charAt(num)) || Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-')){
                         comprovar="true";
-                    
-
+                    }
+                    if ((text.length()-1)>=(text.length()-2) && text.charAt(num)=='+' || text.charAt(num)=='-'){
+                        comprovar="true";
                     }
                 }
                 if (comprovar=="true"){
