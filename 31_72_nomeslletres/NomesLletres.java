@@ -12,12 +12,22 @@ public class NomesLletres{
         System.out.println("Text?");
         String text= Entrada.readLine();
         
-        for(int num=0; num<text.length()-1; num++){
-            if (Character.isLetter(text.charAt(num)) && num<text.length()-2){
-                System.out.print(text.charAt(num)+", ");
-            }else if (Character.isLetter(text.charAt(num))){System.out.print(text.charAt(num));
+        
+        int fin=0;
+        for(int num=text.length()-1; num>=0; num--){
+            if (Character.isLetter(text.charAt(num))){
+                fin=num;
+                num=0;
             }
         }
+        
+        
+        for(int num=0; num<fin; num++){
+            if (Character.isLetter(text.charAt(num))){
+                System.out.print(text.charAt(num)+", ");
+            }
+        }
+        System.out.print(text.charAt(fin));
     }
 }
         
