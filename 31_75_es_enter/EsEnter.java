@@ -13,7 +13,7 @@ public class EsEnter{
         while (!(text.isBlank() || text.isEmpty())){
         
             if (!(text.isBlank() || text.isEmpty())){
-                for(int num=0; num<=(text.length()+1); num++){
+                for(int num=0; num<=(text.length()-1); num++){
                     if(!(Character.isDigit(text.charAt(num)) || text.charAt(num)=='+' || text.charAt(num)=='-')){
                         comprovar="true";
                     
