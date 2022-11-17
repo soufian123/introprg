@@ -13,7 +13,7 @@ public class NomesLletres{
         String text= Entrada.readLine();
         
         for(int num=0; num<text.length()-1; num++){
-            if (Character.isLetter(text.charAt(num)) || num<text.length()-2){
+            if (Character.isLetter(text.charAt(num)) && num<text.length()-2){
                 System.out.print(text.charAt(num)+", ");
             }else if (Character.isLetter(text.charAt(num))){System.out.print(text.charAt(num));
             }
