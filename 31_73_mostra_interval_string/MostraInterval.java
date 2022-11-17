@@ -27,7 +27,7 @@ public class MostraInterval{
             inici=0;
         }
         if (inici<0){
-            inici=-inici;
+            inici=0;
         }
         if (fin<0){
             fin=-fin-1;
