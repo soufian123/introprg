@@ -26,9 +26,9 @@ public class MostraInterval{
         
         }else{
                 for(int num=fin; num>=inici; num--){
-                    if (Character.isLetter(text.charAt(num))){
+                    
                         System.out.println(text.charAt(num));
-                    }
+                    
                 }
         }
     }
