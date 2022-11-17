@@ -23,6 +23,7 @@ public class CadenaContinua{
                     numero= numero+1;
                 }
             }
-        }System.out.println("error");
+        }else{System.out.println("error");
+        }
     }
 }                
