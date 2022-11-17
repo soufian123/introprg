@@ -16,7 +16,7 @@ public class EsEnter{
                 for(int num=0; num<=(text.length()+1); num++){
                     
                     for(int n=0; n<=(numeros.length()+1); n++){
-                        if(!(text.charAt(num) == numeros.charAt(n))){
+                        if(!(Character.isDigit(text.charAt(num)))){
                             comprovar="true";
                         }
                     }
@@ -33,3 +33,7 @@ public class EsEnter{
         
     }
 }                
+
+
+
+
