@@ -19,11 +19,11 @@ public class MostraInterval{
 
         
         if (fin<0 && inici<0 && fin<inici){
-            fin=-fin+inici;
+            fin=-fin+inici-1;
             inici=0;
         }
         if (fin<0 && inici<0 && fin>inici){
-            fin=-inici+fin;
+            fin=-inici+fin-1;
             inici=0;
         }
         if (inici<0){
