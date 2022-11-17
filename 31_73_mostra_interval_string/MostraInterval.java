@@ -30,7 +30,7 @@ public class MostraInterval{
             inici=0;
         }
         if (fin<0){
-            fin=-fin-1;
+            fin=-fin-2;
         }
         if ((text.length()-1)<inici){
             inici=text.length()-1;
