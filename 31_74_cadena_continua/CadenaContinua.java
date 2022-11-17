@@ -10,8 +10,7 @@ public class CadenaContinua{
 
         if (!(text.isBlank())){
         System.out.println("Nombre?");
-        String nombres= Entrada.readLine();
-            int nombre= Integer.parseInt(nombres);
+            int nombre= Integer.parseInt(Entrada.readLine());
             int numero=0;
             nombre=nombre+0;
             if (nombre>0){
