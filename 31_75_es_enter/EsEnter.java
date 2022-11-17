@@ -17,6 +17,13 @@ public class EsEnter{
                     if(!(Character.isDigit(text.charAt(num)) || Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-')){
                         comprovar="true";
                     }
+                    if((text.length()-2)<=num && text.charAt(num)=='+'){
+                        comprovar="true";
+                    }
+                    
+                    if((text.length()-2)<=num && text.charAt(num)=='-'){
+                        comprovar="true";
+                    }
                 }
                 if (comprovar=="true"){
                     System.out.println("No és enter");
