@@ -18,7 +18,7 @@ public class AnalitzaCaracter{
         int posicio= Integer.parseInt(Entrada.readLine());
 
 
-        if(( posicio<=0 && posicio <(-text.length())) || (posicio>=0 && posicio <text.length())){
+        if((-posicio<(text.length())) || (posicio>=0 && posicio <text.length())){
         
         if (posicio<0){
             posicio= (text.length())+posicio;
