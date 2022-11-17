@@ -17,8 +17,8 @@ public class AnalitzaCaracter{
         System.out.println("Posició?");
         int posicio= Integer.parseInt(Entrada.readLine());
 
-        if (posicio<=(-1)){
-                posicio= (text.length()-posicio);
+        if (posicio<0){
+                posicio= (text.length())-posicio;
             }
         if(posicio <=(text.length()-1) || -posicio <=(text.length()-1)){
             
@@ -27,8 +27,10 @@ public class AnalitzaCaracter{
             
             if (Character.isLetter(text.charAt(posicio))){
                  System.out.println("\'"+text.charAt(posicio)+"\' és una lletra");
+                 
             }else if (Character.isDigit(text.charAt(posicio))){
                     System.out.println("\'"+text.charAt(posicio)+"\' és un nombre");
+                    
                 }else{
                     System.out.println("\'"+text.charAt(posicio)+"\' és una altra cosa");
                 }
