@@ -20,19 +20,12 @@ public class AnalitzaCaracter{
         
         if(posicio <=(text.length()-1) || -posicio <=(text.length()-1)){
             
-            if (Character.isLetter(text.charAt(posicio))==true){
+            if (Character.isLetter(text.charAt(posicio))){
                  System.out.println("\'"+text.charAt(posicio)+"\' és una lletra");
-            }else{
-                for(int num=0; num<=9; num++){
-                    if(text.charAt(posicio)==num){
-                        numero="true";
-                    }
-                }
-                if (numero=="true"){
+            }else if (Character.isDigit(text.charAt(posicio))){
                     System.out.println("\'"+text.charAt(posicio)+"\' és un nombre");
                 }else{System.out.println("\'"+text.charAt(posicio)+"\' és una altra cosa");
                 }
-            }
      
         }else{
             System.out.println("Fora de rang");
