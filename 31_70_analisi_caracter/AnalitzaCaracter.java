@@ -19,8 +19,8 @@ public class AnalitzaCaracter{
         String numero="false";
         
         if(posicio <=(text.length()-1) || -posicio <=(text.length()-1)){
-            if (posicio<=0){
-                posicio= text.length()-posicio;
+            if (posicio<0){
+                posicio= (text.length()-posicio-1);
             }
             
             
