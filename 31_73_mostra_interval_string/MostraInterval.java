@@ -20,7 +20,7 @@ public class MostraInterval{
         
         for(int num=inici; num<fin; num++){
             if (Character.isLetter(text.charAt(num))){
-                System.out.print(text.charAt(num));
+                System.out.println(text.charAt(num));
             }
         }
     }
