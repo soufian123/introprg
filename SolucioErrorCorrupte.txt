@@ -1,0 +1,7 @@
+mv introprg{,_antic}
+
+git clone git@github.com:soufian123/introprg
+
+diff introprg introprg_antic/
+
+
