@@ -17,19 +17,19 @@ public class MostraInterval{
         int fin= Integer.parseInt(Entrada.readLine());
         
         if (fin>text.length()-1){
-        
             fin= text.length()-1;
         }
+        
         if(inici<=fin){
         
             for(int num=inici; num<=fin; num++){
-                if (Character.isLetter(text.charAt(num))){
+
                     System.out.println(text.charAt(num));
-                }
+
             }
         
-        }else{
-                for(int num=fin; num>=inici; num--){
+        }else if (fin<inici){
+                for(int num=inici; num>=fin; num--){
                     
                         System.out.println(text.charAt(num));
                     
