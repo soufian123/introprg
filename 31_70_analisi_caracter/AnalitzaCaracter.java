@@ -19,6 +19,11 @@ public class AnalitzaCaracter{
         String numero="false";
         
         if(posicio <=(text.length()-1) || -posicio <=(text.length()-1)){
+            if (posicio<=0){
+                posicio= text.length()-posicio;
+            }
+            
+            
             
             if (Character.isLetter(text.charAt(posicio))){
                  System.out.println("\'"+text.charAt(posicio)+"\' és una lletra");
