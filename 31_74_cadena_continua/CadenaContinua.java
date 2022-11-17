@@ -12,8 +12,8 @@ public class CadenaContinua{
         System.out.println("Nombre?");
             int nombre= Integer.parseInt(Entrada.readLine());
             int numero=0;
-            nombre=nombre+0;
-            if (nombre>0){
+            nombre=nombre-1;
+            if (nombre>=0){
                 for(int num=0; num<=nombre; num++){
                     
                     if (numero<text.length()){
