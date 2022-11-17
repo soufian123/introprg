@@ -18,9 +18,8 @@ public class MostraInterval{
         
 
         
-        if (fin<0){
-            fin=text.length()-1;
-        }
+
+        
         if (inici<0){
             inici=0;
         }
