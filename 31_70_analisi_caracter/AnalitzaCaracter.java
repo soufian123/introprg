@@ -11,7 +11,7 @@
 public class AnalitzaCaracter{
     public static void main (String[] args){
     
-        System.out.println("Introduïu una matrícula");
+        System.out.println("Text?");
         String text= Entrada.readLine();
         
         System.out.println("Posició?");
