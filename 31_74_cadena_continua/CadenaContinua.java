@@ -8,7 +8,7 @@ public class CadenaContinua{
         String text= Entrada.readLine();
 
 
-        if (!(text.isBlank()  ||text.isEmpty())){
+        if (!(text.isBlank())){
         System.out.println("Nombre?");
         String nombres= Entrada.readLine();
             int nombre= Integer.parseInt(nombres);
