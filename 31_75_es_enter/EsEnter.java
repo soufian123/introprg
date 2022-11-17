@@ -10,9 +10,9 @@ public class EsEnter{
         String text= Entrada.readLine();
         String numeros= ("0123456789+-");
         String comprovar="false";
-        while (!(text.isBlank())){
+        while (!(text.isBlank() || text.isEmpty())){
         
-            if (!(text.isBlank())){
+            if (!(text.isBlank() || text.isEmpty())){
                 for(int num=0; num<=(text.length()+1); num++){
                     
                     for(int n=0; n<=(numeros.length()+1); n++){
