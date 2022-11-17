@@ -6,10 +6,11 @@ public class CadenaContinua{
     
         System.out.println("text?");
         String text= Entrada.readLine();
+
+
+        if (!(text.isBlank()  ||text.isEmpty())){
         System.out.println("Nombre?");
         String nombres= Entrada.readLine();
-
-        if (!(text.isBlank()  || nombres.isBlank() || text.isEmpty()  || nombres.isEmpty())){
             int nombre= Integer.parseInt(nombres);
             int numero=0;
             nombre=nombre+0;
