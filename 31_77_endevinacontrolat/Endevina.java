@@ -21,7 +21,7 @@ public class Endevina{
         String text=Entrada.readLine();
         String verificacio="false";
         
-        while (!text.isBlank() || valor!=valorPensat) {
+        while (!text.isEmpty() || !text.isBlank() || valor!=valorPensat) {
             for( int num=0; num<=text.length()-1; num++){
                 if (text.charAt(0)=='-' || text.charAt(0)=='+'){
                     if (num>0){
@@ -29,12 +29,13 @@ public class Endevina{
                             verificacio="true";
                             break;
                         }    
+                    }else{verificacio="true";
                     }
                 }else if (!Character.isDigit(text.charAt(num))){
                         verificacio="true";
                         break;
                     }    
-            }
+                }
                 
             if (verificacio=="true"){
                 System.out.println("Només nombres");
