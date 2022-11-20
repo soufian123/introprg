@@ -15,7 +15,7 @@ public class TriangleLletres{
         
             for (int lin = 0; lin<=text.length()+1; lin++){
             System.out.println();
-                for (int col = lin; col>=0; col--){
+                for (int col = 0; col>=text.length(); col--){
                 System.out.print(text.charAt(col)+", ");}
             }        
         
