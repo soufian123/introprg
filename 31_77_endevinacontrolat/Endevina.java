@@ -23,7 +23,7 @@ public class Endevina{
         
         while (!text.isEmpty() || valor!=valorPensat) {
             for( int num=0; num<text.length(); num++){
-                if (!Character.isDigit(text.charAt(num))){
+                if ( text!="+" || text!="-" || !Character.isDigit(text.charAt(num) )){
                     verificacio="true";
                     break;
                     
