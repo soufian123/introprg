@@ -22,6 +22,8 @@ public class CodificaBasic{
                     System.out.print(ch);
                 }else if(text.charAt(num)=='z'){
                     System.out.print("a");
+                }else if(text.charAt(num)==' '){
+                    System.out.print(" ");
                 }else if(Character.isLetter(text.charAt(num))){
                     ch= text.charAt(num);
                     System.out.print((char)(ch+1));
