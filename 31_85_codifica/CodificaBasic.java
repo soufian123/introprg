@@ -27,6 +27,8 @@ public class CodificaBasic{
                     System.out.print("a");
                 }else if(text.charAt(num)==' '){
                     System.out.print(" ");
+                    
+                    
                 }else if(Character.isLetter(text.charAt(num))){
                     if(Character.isLowerCase(text.charAt(num))){
                         for(int numero=0; numero<=lletres.length(); numero++)
@@ -36,6 +38,8 @@ public class CodificaBasic{
                             }else{ System.out.print((char)(ch));
                 
                         }
+                    }else{ 
+                        System.out.print((char)(ch));
                     }
                 }
         }
