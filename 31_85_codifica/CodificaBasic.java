@@ -17,8 +17,10 @@ public class CodificaBasic{
         
         System.out.print((char)(ch+1));
         for(int num=1; num<text.length(); num++){
-            ch= text.charAt(num);
-            System.out.print((char)(ch+1));
+            if(Character.isLetter(text.charAt(num))){
+                ch= text.charAt(num);
+                System.out.print((char)(ch+1));
+            }   
         }
     }
 }
