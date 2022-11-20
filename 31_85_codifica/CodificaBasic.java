@@ -23,8 +23,7 @@ public class CodificaBasic{
                 }
                 if(text.charAt(num)=='z'){
                     System.out.print("a");
-                }
-                if(Character.isLetter(text.charAt(num))){
+                }else if (Character.isLetter(text.charAt(num))){
                     ch= text.charAt(num);
                     System.out.print((char)(ch+1));
                 }    
