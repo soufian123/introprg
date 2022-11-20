@@ -19,7 +19,7 @@ public class MajusculitzaInicials{
         
         for(int num=1; num<text.length(); num++){
 
-            if(seguenMajuscula=="true"){
+            if(seguenMajuscula=="true" || text.charAt(num-1)==' '){
                 System.out.print(Character.toUpperCase(text.charAt(num)));
                 seguenMajuscula="false";
                 
