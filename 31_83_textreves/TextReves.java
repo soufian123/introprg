@@ -22,7 +22,7 @@ public class TextReves{
         }
         
         
-        for(int num=fin; num>=0; num--){
+        for(int num=fin; num>0; num--){
             if (Character.isLetter(text.charAt(num))){
                 System.out.print(text.charAt(num)+", ");
             }
