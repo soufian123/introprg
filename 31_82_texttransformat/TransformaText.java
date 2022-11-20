@@ -67,7 +67,7 @@ public class TransformaText{
                 System.out.print(Character.toUpperCase(text.charAt(num)));
             }
             if (Character.isWhitespace(text.charAt(num))){
-                System.out.print(Character.toUpperCase(text.charAt(num)));
+                System.out.print(text.charAt(num));
             }
         }
         
