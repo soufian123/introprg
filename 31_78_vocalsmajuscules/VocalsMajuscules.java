@@ -5,7 +5,7 @@
 public class VocalsMajuscules{
     public static void main (String[] args){
         
-        String vocals= "aeiou"; 
+        String vocals= "aeiouAEIOU"; 
         
         System.out.println("Text?");
         String text= Entrada.readLine();
