@@ -28,6 +28,19 @@ public class TransformaText{
         
         for(int num=0; num<text.length(); num++){
             
+            //nombre
+            if (Character.isDigit(text.charAt(num))){
+                System.out.print("("+text.charAt(num));   
+                    for(num=num+1; num<vocal.length(); num++){
+                    
+                        if(Character.isDigit(text.charAt(num))){
+                            System.out.print(text.charAt(num));
+                            
+                        }
+                    }  
+                System.out.print(")");
+
+            }
             
             esVocal="false";
             accents= "false";
@@ -48,19 +61,6 @@ public class TransformaText{
                     accents="true";
                     break;
                 }
-            }
-            //nombre
-            if (Character.isDigit(text.charAt(num))){
-                System.out.print("(");   
-                    for(num=num; num<vocal.length(); num++){
-                    
-                        if(Character.isDigit(text.charAt(num))){
-                            System.out.print(text.charAt(num));
-                            
-                        }
-                    }  
-                System.out.print(")");
-
             }
             
             
