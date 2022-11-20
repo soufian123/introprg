@@ -13,7 +13,7 @@ public class MajusculitzaInicials{
         String seguenMajuscula="false";
         
         System.out.print(Character.toUpperCase(text.charAt(0)));
-        text= text.toLowerCase();
+        //text= Character.toLowerCase();
         
         for(int num=1; num<text.length(); num++){
         
@@ -25,10 +25,10 @@ public class MajusculitzaInicials{
             
                 if (Character.isLetter(text.charAt(num))==false || text.charAt(num)==' '){
                     seguenMajuscula="true";
-                    System.out.print(text.charAt(num));
+                    System.out.print(Character.toLowerCase(text.charAt(num)));
                     
                 }else{
-                    System.out.print(text.charAt(num));
+                    System.out.print(Character.toLowerCase(text.charAt(num)));
                 }
             }
 
