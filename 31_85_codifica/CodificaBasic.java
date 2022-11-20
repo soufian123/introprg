@@ -12,7 +12,7 @@ public class CodificaBasic{
         
         System.out.println("Text?");
         String text= Entrada.readLine();
-        
+        String lletres="qwertyuiopasdfghjklñxcvbnm";
         char ch= text.charAt(0);
         
 
@@ -29,10 +29,13 @@ public class CodificaBasic{
                     System.out.print(" ");
                 }else if(Character.isLetter(text.charAt(num))){
                     if(Character.isLowerCase(text.charAt(num))){
+                        for(int numero=0; numero<=lletres.length(); numero++)
+                            if (lletres.charAt(numero)==text.charAt(num)){
                     
-                        System.out.print((char)(ch+1));
-                    }else{ System.out.print((char)(ch));
+                                System.out.print((char)(ch+1));
+                            }else{ System.out.print((char)(ch));
                 
+                        }
                     }
                 }
         }
