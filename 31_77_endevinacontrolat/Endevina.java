@@ -42,10 +42,11 @@ public class Endevina{
                     System.out.println("Fora de rang");
                 
                 }else if (valor<valorPensat){
-                    System.out.println("És més gran que "+ valor);
+                    System.out.println("Massa petit");
                 
                 }else if (valor>valorPensat){
-                    System.out.println("És més petit que "+ valor);}
+                    System.out.println("Massa gran");
+                }
                 
                 
                 System.out.println("Nombre?");
