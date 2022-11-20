@@ -28,7 +28,7 @@ public class MajusculitzaInicials{
                     System.out.print(Character.toLowerCase(text.charAt(num)));
                     
                 }else{
-                    System.out.print(Character.toLowerCase(text.charAt(num)));
+                    System.out.print(Character.toLowerCase(text.charAt(num))+".   ");
                 }
             }
 
