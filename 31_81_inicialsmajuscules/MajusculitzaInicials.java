@@ -23,7 +23,7 @@ public class MajusculitzaInicials{
                 
             }else if(seguenMajuscula=="false"){
             
-                if (Character.isLetter(text.charAt(num))==false || text.charAt(num)==' '){
+                if (text.charAt(num)==' ' || Character.isLetter(text.charAt(num))==false){
                     seguenMajuscula="true";
                     System.out.print(text.charAt(num));
                     
