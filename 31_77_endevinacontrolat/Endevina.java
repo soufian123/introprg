@@ -21,7 +21,7 @@ public class Endevina{
         String text=Entrada.readLine();
         String verificacio="false";
         
-        while (!text.isEmpty() || valor!=valorPensat) {
+        while (!text.isBlank() || valor!=valorPensat) {
             for( int num=0; num<text.length(); num++){
                 if (text.charAt(0)=='-' || text.charAt(0)=='+'){
                 }
