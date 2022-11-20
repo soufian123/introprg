@@ -51,6 +51,7 @@ public class Endevina{
                 
                 System.out.println("Nombre?");
                 text=Entrada.readLine();
+                verificacio="false";
                 }
         }
         
