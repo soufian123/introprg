@@ -16,24 +16,25 @@ public class MajusculitzaInicials{
         text= text.toLowerCase();
         String espai=" ";
 
-        
-        for(int num=1; num<text.length(); num++){
+        if(!text.isBlank()){
+            for(int num=1; num<text.length(); num++){
 
-            if(seguenMajuscula=="true" || text.charAt(num-1)==' '){
-                System.out.print(Character.toUpperCase(text.charAt(num)));
-                seguenMajuscula="false";
-                
-            }else if(seguenMajuscula=="false"){
-            
-                if (text.charAt(num)==' ' || Character.isLetter(text.charAt(num))==false){
-                    seguenMajuscula="true";
-                    System.out.print(text.charAt(num));
+                if(seguenMajuscula=="true" || text.charAt(num-1)==' '){
+                    System.out.print(Character.toUpperCase(text.charAt(num)));
+                    seguenMajuscula="false";
                     
-                }else{
-                    System.out.print(text.charAt(num));
+                }else if(seguenMajuscula=="false"){
+                
+                    if (text.charAt(num)==' ' || Character.isLetter(text.charAt(num))==false){
+                        seguenMajuscula="true";
+                        System.out.print(text.charAt(num));
+                        
+                    }else{
+                        System.out.print(text.charAt(num));
+                    }
                 }
-            }
 
+            }
         }
         
     }
