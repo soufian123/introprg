@@ -21,7 +21,7 @@ public class Endevina{
         String text=Entrada.readLine();
         String verificacio="false";
         
-        while (text.isEmpty()) {
+        while (!text.isEmpty()) {
             for( int num=0; num<text.length(); num++){
                 if (!Character.isDigit(text.charAt(num))){
                     verificacio="true";
@@ -35,7 +35,7 @@ public class Endevina{
             }else{        
                 valor = Integer.parseInt(text);
                 if(valor==valorPensat){
-                System.out.println("Encertat!");
+                    System.out.println("Encertat!");
                     break;
                     
                 }else if(valor>=101 || valor<=0){
@@ -53,7 +53,9 @@ public class Endevina{
                 }
         }
         
-            System.out.println("Cancel·lat!");
+            if (text.isEmpty()){
+                System.out.println("Cancel·lat!");
+            }
     }
 }
 
