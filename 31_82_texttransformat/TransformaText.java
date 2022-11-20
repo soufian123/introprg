@@ -29,8 +29,16 @@ public class TransformaText{
         for(int num=0; num<text.length(); num++){
             
             //nombre
-            if (Character.isDigit(text.charAt(num))){
+            if (Character.isDigit(text.charAt(num)) && Character.isDigit(text.charAt(num-1))==false){
                 System.out.print("("+text.charAt(num));   
+                        if(Character.isDigit(text.charAt(num+1))){
+                        }else {System.out.print(")");
+                    }  
+                
+
+            }
+            if (Character.isDigit(text.charAt(num)) && Character.isDigit(text.charAt(num-1))==true){
+                System.out.print(text.charAt(num));   
                         if(Character.isDigit(text.charAt(num+1))){
                         }else {System.out.print(")");
                     }  
