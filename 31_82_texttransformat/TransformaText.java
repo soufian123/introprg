@@ -24,7 +24,7 @@ public class TransformaText{
         String text= Entrada.readLine();
         String esVocal="false";
         text= text.toLowerCase();
-        
+        int numero=0;
         
         for(int num=0; num<text.length(); num++){
             
@@ -55,10 +55,11 @@ public class TransformaText{
                     for(int n=num; n<vocal.length(); n++){
                         if(Character.isDigit(text.charAt(num))){
                             System.out.print(text.charAt(n));
-                            num=n;
+                            numero=n;
                         }
                     }  
                 System.out.print(")");
+            num=numero;
             }
             
             
