@@ -15,7 +15,7 @@ public class CodificaBasic{
         
         char ch= text.charAt(0);
         
-        System.out.print((char)(ch));
+        System.out.print((char)(ch+1));
         for(int num=1; num<text.length(); num++){
             
                 if (text.charAt(num)=='@'){
@@ -25,9 +25,9 @@ public class CodificaBasic{
                 }else if(Character.isLetter(text.charAt(num))){
                     ch= text.charAt(num);
                     System.out.print((char)(ch+1));
-                }else{
-                    System.out.print((ch)); 
-               }
+                }else{ 
+                    System.out.print(ch);
+                }
         }
     }
 }
