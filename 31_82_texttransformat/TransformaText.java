@@ -55,7 +55,7 @@ public class TransformaText{
                     for(int n=num; n<vocal.length(); n++){
                     
                         if(Character.isDigit(text.charAt(num))){
-                            System.out.print(text.charAt(n));
+                            System.out.print(text.charAt(num));
                             num= num+1;
                         }
                     }  
