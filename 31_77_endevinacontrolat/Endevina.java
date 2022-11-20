@@ -22,20 +22,23 @@ public class Endevina{
         String verificacio="false";
         
         while (!text.isBlank() || valor!=valorPensat) {
-            for( int num=0; num<text.length(); num++){
+            for( int num=0; num<=text.length()-1; num++){
                 if (text.charAt(0)=='-' || text.charAt(0)=='+'){
-                }
-                if (num>0){
-                    if (!Character.isDigit(text.charAt(num))){
+                    if (num>0){
+                        if (!Character.isDigit(text.charAt(num))){
+                            verificacio="true";
+                            break;
+                        }    
+                    }
+                }else if (!Character.isDigit(text.charAt(num))){
                         verificacio="true";
                         break;
                     }    
-                }
-             }
+            }
                 
             if (verificacio=="true"){
                 System.out.println("Només nombres");
-            }else{        
+            }else if (verificacio=="false"){        
                 valor = Integer.parseInt(text);
                 if(valor==valorPensat){
                     System.out.println("Encertat!");
