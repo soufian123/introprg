@@ -20,7 +20,7 @@ public class VocalsMajuscules{
             }
             
             if (esVocal=="false"){
-                System.out.print(text.charAt(num));
+                System.out.print(Character.toLowerCase(text.charAt(num)));
             }
 
         }
