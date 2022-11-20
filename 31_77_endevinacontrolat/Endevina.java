@@ -35,6 +35,7 @@ public class Endevina{
             }else{        
                 valor = Integer.parseInt(text);
                 if(valor==valorPensat){
+                System.out.println("Encertat!");
                     break;
                     
                 }else if(valor>=101 || valor<=0){
@@ -52,7 +53,7 @@ public class Endevina{
                 }
         }
         
-            System.out.println("Has encertat!");
+            System.out.println("Cancel·lat!");
     }
 }
 
