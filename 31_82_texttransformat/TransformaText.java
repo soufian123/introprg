@@ -37,6 +37,7 @@ public class TransformaText{
                 if(text.charAt(num)==vocals.charAt(v)){
                     System.out.print(text.charAt(num));
                     esVocal="true";
+                    break;
                 }
             }            
             //accents
@@ -45,6 +46,7 @@ public class TransformaText{
                 if(text.charAt(num)==vocals.charAt(v)){
                     System.out.print(Character.toUpperCase(text.charAt(num)));
                     esVocal="true";
+                    break;
                 }
             }
             //nombre
