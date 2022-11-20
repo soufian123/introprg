@@ -36,7 +36,9 @@ public class Endevina{
             if (verificacio=="true"){
                 System.out.println("Només nombres");
             }else{        
-                valor = Integer.parseInt(text);
+                if (!text.isBlank()){
+                    valor = Integer.parseInt(text);
+                }
                 if(valor==valorPensat){
                     System.out.println("Encertat!");
                     return;
@@ -56,7 +58,7 @@ public class Endevina{
                 verificacio="false";
         }
         
-            if (text.isEmpty()){
+            if (text.isEmpty() || text.isBlank()){
                 System.out.println("Cancel·lat!");
             }
             if(valor==valorPensat){
