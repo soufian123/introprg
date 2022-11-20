@@ -15,17 +15,14 @@ public class ComptaVocals{
             esVocal="false";
             for (int v=0; v<vocals.length(); v++){
                 if(text.charAt(num)==vocals.charAt(v)){
-                    System.out.print(text.charAt(num));
+
                     contar=contar+1;
                     esVocal="true";
                 }
             }
-            
-            if (esVocal=="false"){
-                System.out.print(text.charAt(num));
-            }
 
         }
+        System.out.print(contar);
         
     }
 }
