@@ -14,12 +14,7 @@ public class TextReves{
         
         
         int fin=0;
-        for(int num=text.length()-1; num>=0; num--){
 
-                fin=num;
-                num=0;
-            
-        }
         
         
         for(int num=fin; num>0; num--){
