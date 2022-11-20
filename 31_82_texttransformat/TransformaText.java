@@ -30,13 +30,13 @@ public class TransformaText{
             
             //nombre
             if (Character.isDigit(text.charAt(num))){
-                if (num>0){
+                if (num>0 && num<text.length()){
                     if (Character.isDigit(text.charAt(num-1))){
                         System.out.print(text.charAt(num));
                     }else{System.out.print("("+text.charAt(num)); 
                     }
-                } 
-                if(num<text.length()){
+                 
+
                     if (Character.isDigit(text.charAt(num+1))){
                     }else{
                         System.out.print(")"); 
