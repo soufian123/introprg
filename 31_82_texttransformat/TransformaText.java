@@ -63,7 +63,7 @@ public class TransformaText{
             
             
             
-            if (esVocal=="false" && accents=="false"){
+            if (esVocal=="false" && accents=="false" && Character.isLetter(text.charAt(num))){
                 System.out.print(Character.toUpperCase(text.charAt(num)));
             }
 
