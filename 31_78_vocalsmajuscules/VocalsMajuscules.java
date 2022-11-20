@@ -14,9 +14,8 @@ public class VocalsMajuscules{
             for (int v=0; v<vocals.length(); v++){
                 if(text.charAt(num)==vocals.charAt(v)){
                     System.out.print(Character.toUpperCase(text.charAt(num)));
-                }else{
-                    System.out.print(text.charAt(num));
                 }
+                System.out.print(text.charAt(num));
             }
         }
     }
