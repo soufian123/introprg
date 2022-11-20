@@ -15,7 +15,7 @@ public class Capicua{
         String verificacio="false";
         
         if (!text.isBlank()){
-            if (numero % 2 == 0){
+            if (numero==0 || numero % 2 == 0){
                 System.out.println("No és capicua");
             }else{
                 numero= (text.length()-1)/2;
