@@ -16,7 +16,7 @@ public class Capicua{
         
         if (!text.isBlank()){
             if (numero==0){
-                System.out.println("No és capicua");
+                System.out.println("És capicua");
             }else{
             
                 if (numero % 2 == 0){
