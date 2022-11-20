@@ -23,10 +23,13 @@ public class Endevina{
         
         while (!text.isEmpty() || valor!=valorPensat) {
             for( int num=0; num<text.length(); num++){
-                if (!Character.isDigit(text.charAt(num) )){
-                    verificacio="true";
-                    break;
-                    
+                if (text.charAt(0)=='-' || text.charAt(0)=='+'){
+                }
+                if (num>0){
+                    if (!Character.isDigit(text.charAt(num))){
+                        verificacio="true";
+                        break;
+                    }    
                 }
              }
                 
