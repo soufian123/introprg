@@ -20,8 +20,10 @@ public class MajusculitzaInicials{
             if(seguenMajuscula=="true"){
                 System.out.print(Character.toUpperCase(text.charAt(num)));
                 seguenMajuscula="false";
+                
             }else if(seguenMajuscula=="false"){
-                if (Character.isLetter(text.charAt(num))==false){
+            
+                if (Character.isLetter(text.charAt(num))==false || text.charAt(num)==' '){
                     seguenMajuscula="true";
                     System.out.print(text.charAt(num));
                     
