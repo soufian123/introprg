@@ -14,17 +14,18 @@ public class MajusculitzaInicials{
         
         System.out.print(Character.toUpperCase(text.charAt(0)));
         text= text.toLowerCase();
-        char espai=' ';
+        String espai=" ";
+
         
         for(int num=1; num<text.length(); num++){
-        
+
             if(seguenMajuscula=="true"){
                 System.out.print(Character.toUpperCase(text.charAt(num)));
                 seguenMajuscula="false";
                 
             }else if(seguenMajuscula=="false"){
             
-                if (text.charAt(num)==espai || Character.isLetter(text.charAt(num))==false){
+                if (text.charAt(num)==' ' || Character.isLetter(text.charAt(num))==false){
                     seguenMajuscula="true";
                     System.out.print(text.charAt(num));
                     
