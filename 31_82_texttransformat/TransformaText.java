@@ -41,7 +41,7 @@ public class TransformaText{
                 
                 
                     if (Character.isDigit(text.charAt(num-1))){
-                        System.out.print(text.charAt(num));
+
                         
                     }else{
                         System.out.print("("+text.charAt(num)); 
@@ -49,7 +49,7 @@ public class TransformaText{
                  
 
                     if (Character.isDigit(text.charAt(num+1))){
-                    System.out.print(text.charAt(num));
+
                     }else{
                         System.out.print(text.charAt(num)+")"); 
                     } 
