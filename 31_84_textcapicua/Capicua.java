@@ -20,9 +20,9 @@ public class Capicua{
             }else{
             
                 if (numero % 2 == 0){
-                    numero= ((text.length()-1)/2);
+                    numero= ((text.length()-1));
                     int resta= numero;
-                    for (int num=0;num<=numero; num++){
+                    for (int num=0;num<=resta; num++){
                         if(text.charAt(num)==text.charAt(resta)){
                             verificacio="true";
                             resta=resta-1;
