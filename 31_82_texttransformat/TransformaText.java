@@ -37,20 +37,20 @@ public class TransformaText{
                 System.out.print(text.charAt(num)+")");
                 }
                 
-                if (num>0 && num<text.length()-1){
+                if (num>=1 && num<text.length()-1){
                 
                 
                     if (Character.isDigit(text.charAt(num-1))){
-
+                        System.out.print(text.charAt(num));
                         
-                    }else{
+                    }else if (Character.isDigit(text.charAt(num-1))==false){
                         System.out.print("("+text.charAt(num)); 
                     }
                  
 
                     if (Character.isDigit(text.charAt(num+1))){
-
-                    }else{
+                    System.out.print(text.charAt(num));
+                    }else if (Character.isDigit(text.charAt(num+1))==false){
                         System.out.print(text.charAt(num)+")"); 
                     } 
                 } 
