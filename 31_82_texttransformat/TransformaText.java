@@ -35,7 +35,7 @@ public class TransformaText{
             for (int v=0; v<vocal.length(); v++){
             
                 if(text.charAt(num)==vocals.charAt(v)){
-                    System.out.print(text.charAt(num));
+                    System.out.print(Character.toLowerCase(text.charAt(num)));
                     esVocal="true";
                     break;
                 }
