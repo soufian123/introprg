@@ -52,11 +52,11 @@ public class TransformaText{
             //nombre
             if (Character.isDigit(text.charAt(num))){
                 System.out.print("(");   
-                    for(int n=num; n<vocal.length(); n++){
+                    for(num=num; num<vocal.length(); num++){
                     
                         if(Character.isDigit(text.charAt(num))){
                             System.out.print(text.charAt(num));
-                            num= num+1;
+                            
                         }
                     }  
                 System.out.print(")");
