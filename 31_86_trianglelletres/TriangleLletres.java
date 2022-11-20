@@ -7,20 +7,22 @@ public class TriangleLletres{
     
     
         
-        System.out.println("Nombre?");
+        System.out.println("Text?");
         String text= Entrada.readLine();
 
 
         if (!text.isBlank()){
         
-            for (int lin = 0; lin<=text.length()+1; lin++){
+            for (int lin = 0; lin<=text.length()-1; lin++){
             System.out.println();
-                for (int col = 0; col>=text.length(); col--){
-                System.out.print(text.charAt(col)+", ");}
+                for (int col = 0; col<lin; col++){
+                System.out.print(text.charAt(col)+", ");
+                
+                }
+            System.out.print(text.charAt(lin));
             }        
         
-        }else{
-
         }
+
     }       
 }
