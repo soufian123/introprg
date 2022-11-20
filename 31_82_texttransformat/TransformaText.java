@@ -15,11 +15,11 @@
 public class TransformaText{
     public static void main (String[] args){
         
-        String vocals= "àèòéíóúüï";
+        String vocals= "ÀÈÒÉÍÓÚÜÏàèòéíóúüï";
         String accents= "false";
         
         
-        String vocal= "aeiou";
+        String vocal= "aeiouAEIOU";
         System.out.println("Text?");
         String text= Entrada.readLine();
         String esVocal="false";
