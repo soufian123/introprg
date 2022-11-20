@@ -40,13 +40,11 @@ public class TransformaText{
                 if (num>=1 && num<text.length()-1){
                 
                 
-                    if (Character.isDigit(text.charAt(num-1))){
+                    if (Character.isDigit(text.charAt(num-1)) && Character.isDigit(text.charAt(num+1))){
                         System.out.print(text.charAt(num));
                         
                     }else if (Character.isDigit(text.charAt(num-1))==false){
                         System.out.print("("+text.charAt(num)); 
-                    }else if (Character.isDigit(text.charAt(num+1))){
-                    System.out.print(text.charAt(num)+"hola");
                     }else if (Character.isDigit(text.charAt(num+1))==false){
                         System.out.print(text.charAt(num)+")"); 
                     } 
