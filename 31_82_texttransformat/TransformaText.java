@@ -31,15 +31,10 @@ public class TransformaText{
             //nombre
             if (Character.isDigit(text.charAt(num))){
                 System.out.print("("+text.charAt(num));   
-                int numero=num;
-                    for(numero=num+1; numero<vocal.length(); numero++){
-                    
-                        if(Character.isDigit(text.charAt(numero))){
-                            System.out.print(text.charAt(numero));
-                            
-                        }
+                        if(Character.isDigit(text.charAt(num+1))){
+                        }else {System.out.print(")");
                     }  
-                System.out.print(")");
+                
 
             }
             
