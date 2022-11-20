@@ -29,7 +29,9 @@ public class Endevina{
                             verificacio="true";
                             break;
                         }    
-                    }else{verificacio="true";
+                    }
+                    if (0==(text.length()-1)) {
+                        verificacio="true";
                     }
                 }else if (!Character.isDigit(text.charAt(num))){
                         verificacio="true";
