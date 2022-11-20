@@ -14,34 +14,45 @@ public class Endevina{
     public static void main (String[] args){
     
 
-    int valor = (0);
-    int valorPensat = (42);
-    
-    
-    System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
-    System.out.println("Introdueix un valor");
-    valor = Integer.parseInt(Entrada.readLine());
-    
-    while (valor!=valorPensat) {
-            
-            if(valor>=101){
-                System.out.println("Com a màxim 100");
-            
-            }else if(valor<=0){
-                System.out.println("Com a mínim 1");
-            
-            }else if (valor<valorPensat){
-                System.out.println("És més gran que "+ valor);
-            
-            }else if (valor>valorPensat){
-                System.out.println("És més petit que "+ valor);}
-            
-            
-            System.out.println("Introdueix un valor");
-            valor = Integer.parseInt(Entrada.readLine());
-    }
-    
-        System.out.println("Has encertat!");
+        int valor = (0);
+        int valorPensat = (42);
+        
+        System.out.println("Nombre?");
+        String text=Entrada.readLine();
+        String verificacio="false";
+        
+        while (text.isEmpty() || valor!=valorPensat) {
+            for( int num=0; num<text.length(); num++){
+                if (!Character.isDigit(text.charAt(num))){
+                    verificacio="true";
+                    break;
+                    
+                }
+             }
+                
+            if (verificacio=="true"){
+                System.out.println("Només nombres");
+            }else{        
+                valor = Integer.parseInt(text);
+                if(valor==valorPensat){
+                    break;
+                    
+                }else if(valor>=101 || valor<=0){
+                    System.out.println("Fora de rang");
+                
+                }else if (valor<valorPensat){
+                    System.out.println("És més gran que "+ valor);
+                
+                }else if (valor>valorPensat){
+                    System.out.println("És més petit que "+ valor);}
+                
+                
+                System.out.println("Nombre?");
+                text=Entrada.readLine();
+                }
+        }
+        
+            System.out.println("Has encertat!");
     }
 }
 
