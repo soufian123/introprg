@@ -13,9 +13,12 @@ public class CodificaBasic{
         System.out.println("Text?");
         String text= Entrada.readLine();
         String vocals="áéíúóàèìùòäëïöü";
-        char ch= text.charAt(0);
-        String accents= "false";
+
         if(!text.isBlank()){
+            char ch= text.charAt(0);
+            String accents= "false";
+
+
             for(int num=0; num<text.length(); num++){
                 ch= text.charAt(num);
                 accents= "false";
