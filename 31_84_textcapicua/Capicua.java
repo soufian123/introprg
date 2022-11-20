@@ -19,7 +19,7 @@ public class Capicua{
                 System.out.println("És capicua");
             }else{
             
-                if (numero % 2 == 0){
+                //if (numero % 2 == 0){
                     numero= ((text.length()-1));
                     int resta= numero;
                     for (int num=0;num<=resta; num++){
@@ -30,7 +30,7 @@ public class Capicua{
                             verificacio="false";
                             break;
                         }
-                    }
+                /*    }
                     if (verificacio=="false"){
                         System.out.println("No és capicua");
                     }
@@ -48,7 +48,7 @@ public class Capicua{
                         }else{ 
                             verificacio="false";
                             break;
-                        }
+                 */       }
                     }
                     if (verificacio=="false"){
                         System.out.println("No és capicua");
@@ -60,6 +60,6 @@ public class Capicua{
                 }
             }
         }
-    }
-}    
+   // }
+//}    
         
