@@ -16,7 +16,7 @@ public class MajusculitzaInicials{
         text= text.toLowerCase();
         String espai=" ";
 
-        if(!text.isBlank()){
+        if(!(text.isBlank() || text.isEmpty())){
             for(int num=1; num<text.length(); num++){
 
                 if(seguenMajuscula=="true" || text.charAt(num-1)==' '){
