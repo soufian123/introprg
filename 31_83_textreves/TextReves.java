@@ -12,15 +12,20 @@ public class TextReves{
         System.out.println("Text?");
         String text= Entrada.readLine();
         
-        
-        int fin=0;
+        if (!text.isBlank()){
+            int fin=0;
+            for(int num=text.length()-1; num>=0; num--){
 
-        
-        
-        for(int num=fin; num>0; num--){
-
-                System.out.print(text.charAt(num)+", ");
+                    fin=num;
+                    num=0;
+                
+            }
             
+            
+            for(int num=fin; num>0; num--){
+
+                    System.out.print(text.charAt(num)+", ");
+              }  
         }
         System.out.print(text.charAt(0));
     }
