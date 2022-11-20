@@ -24,17 +24,18 @@ public class TransformaText{
         String text= Entrada.readLine();
         String esVocal="false";
         text= text.toLowerCase();
-        int numero=0;
+
         
         for(int num=0; num<text.length(); num++){
             
             //nombre
             if (Character.isDigit(text.charAt(num))){
                 System.out.print("("+text.charAt(num));   
-                    for(num=num+1; num<vocal.length(); num++){
+                int numero=num;
+                    for(numero=num+1; numero<vocal.length(); numero++){
                     
-                        if(Character.isDigit(text.charAt(num))){
-                            System.out.print(text.charAt(num));
+                        if(Character.isDigit(text.charAt(numero))){
+                            System.out.print(text.charAt(numero));
                             
                         }
                     }  
