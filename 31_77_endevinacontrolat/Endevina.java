@@ -35,7 +35,6 @@ public class Endevina{
                 
             if (verificacio=="true"){
                 System.out.println("Només nombres");
-                verificacio="false";
             }else{        
                 valor = Integer.parseInt(text);
                 if(valor==valorPensat){
@@ -51,12 +50,10 @@ public class Endevina{
                 }else if (valor>valorPensat){
                     System.out.println("Massa gran");
                 }
-                
-                
+                }
                 System.out.println("Nombre?");
                 text=Entrada.readLine();
                 verificacio="false";
-                }
         }
         
             if (text.isEmpty()){
