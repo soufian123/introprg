@@ -11,12 +11,12 @@ public class MajusculitzaInicials{
         
         
         String seguenMajuscula="false";
-        
-        System.out.print(Character.toUpperCase(text.charAt(0)));
-        text= text.toLowerCase();
-        String espai=" ";
-
         if(!(text.isBlank() || text.isEmpty())){
+            System.out.print(Character.toUpperCase(text.charAt(0)));
+            text= text.toLowerCase();
+            String espai=" ";
+
+
             for(int num=1; num<text.length(); num++){
 
                 if(seguenMajuscula=="true" || text.charAt(num-1)==' '){
