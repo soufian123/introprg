@@ -27,6 +27,6 @@ public class TextReves{
                 System.out.print(text.charAt(num)+", ");
             }
         }
-        System.out.print(text.charAt(fin));
+        System.out.print(text.charAt(0));
     }
 }
