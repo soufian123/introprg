@@ -35,7 +35,8 @@ public class Endevina{
             }else{        
                 valor = Integer.parseInt(text);
                 if(valor==valorPensat){
-                    break;
+                    System.out.println("Encertat!");
+                    return;
                     
                 }else if(valor>=101 || valor<=0){
                     System.out.println("Fora de rang");
@@ -55,9 +56,6 @@ public class Endevina{
         
             if (text.isEmpty()){
                 System.out.println("Cancel·lat!");
-            }
-            if(valor==valorPensat){
-                System.out.println("Encertat!");
             }
     }
 }
