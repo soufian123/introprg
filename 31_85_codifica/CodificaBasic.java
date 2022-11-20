@@ -45,11 +45,7 @@ public class CodificaBasic{
                 }else{
                     System.out.print((char)(ch+1));
                 }
-                    
-                    
-                    
-                    
-                    System.out.print((char)(ch+1));
+
                     }else{ 
                         System.out.print((char)(ch));
                     }
