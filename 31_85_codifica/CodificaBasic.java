@@ -35,16 +35,16 @@ public class CodificaBasic{
                 for (int v=0; v<vocals.length(); v++){
             
                     if(text.charAt(num)==vocals.charAt(v)){
-                        System.out.print(text.charAt(num));
+
                         accents="true";
                         break;
                     }
-            }
-            if(accents=="true"){
-                System.out.print((char)(ch));
-            }else{
-                System.out.print((char)(ch+1));
-            }
+                }
+                if(accents=="true"){
+                    System.out.print((char)(ch));
+                }else{
+                    System.out.print((char)(ch+1));
+                }
                     
                     
                     
