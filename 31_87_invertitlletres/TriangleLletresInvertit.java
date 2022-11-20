@@ -15,11 +15,11 @@ public class TriangleLletresInvertit{
         
             for (int lin = text.length()-1; lin>=0; lin--){
             System.out.println();
-                for (int col = 0; col<lin; col++){
+                for (int col = lin; col>0; col--){
                 System.out.print(text.charAt(col)+", ");
                 
                 }
-            System.out.print(text.charAt(lin));
+            System.out.print(text.charAt(0));
             }        
         
         }
