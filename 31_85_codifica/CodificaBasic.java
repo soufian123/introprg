@@ -20,8 +20,7 @@ public class CodificaBasic{
             
                 if (text.charAt(num)=='@'){
                     System.out.print("@");
-                }
-                if(text.charAt(num)=='z'){
+                }else if(text.charAt(num)=='z'){
                     System.out.print("a");
                 }else{
                     ch= text.charAt(num);
