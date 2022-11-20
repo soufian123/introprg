@@ -45,7 +45,7 @@ public class TransformaText{
             
                 if(text.charAt(num)==vocals.charAt(v)){
                     System.out.print(Character.toUpperCase(text.charAt(num)));
-                    esVocal="true";
+                    accents="true";
                     break;
                 }
             }
@@ -63,7 +63,7 @@ public class TransformaText{
             
             
             
-            if (esVocal=="false"){
+            if (esVocal=="false" && accents=="false"){
                 System.out.print(Character.toUpperCase(text.charAt(num)));
             }
 
