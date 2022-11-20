@@ -11,6 +11,7 @@ public class VocalsMajuscules{
         String text= Entrada.readLine();
         String esVocal="false";
         for(int num=0; num<text.length(); num++){
+            esVocal="false";
             for (int v=0; v<vocals.length(); v++){
                 if(text.charAt(num)==vocals.charAt(v)){
                     System.out.print(Character.toUpperCase(text.charAt(num)));
@@ -21,7 +22,7 @@ public class VocalsMajuscules{
             if (esVocal=="false"){
                 System.out.print(text.charAt(num));
             }
-            esVocal="false";
+
         }
         
     }
