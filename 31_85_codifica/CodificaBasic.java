@@ -17,17 +17,18 @@ public class CodificaBasic{
         
         System.out.print((char)(ch+1));
         for(int num=1; num<text.length(); num++){
-            if(Character.isLetter(text.charAt(num)) || text.charAt(num)=='@'){
+            
                 if (text.charAt(num)=='@'){
                     System.out.print("@");
                 }
                 if(text.charAt(num)=='z'){
                     System.out.print("a");
-                }else{
+                }
+                if(Character.isLetter(text.charAt(num))){
                     ch= text.charAt(num);
                     System.out.print((char)(ch+1));
                 }    
-            }   
+               
         }
     }
 }
