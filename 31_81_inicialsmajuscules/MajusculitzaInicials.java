@@ -1,4 +1,6 @@
-//posa les majuscules a les inicials
+//Desenvolupa un programa que demani un text i mostri el mateix text amb les inicials de cada paraula en majúscules i la resta en minúscules.
+
+//Una paraula és cada segment del text que només conté lletres que davant i darrere tenen quelcom que no sigui una lletra, o bé són la primera o darrera paraula del text.
 
 
 
