@@ -1,4 +1,4 @@
-//contador de vocals
+//Desenvolupa un programa que demani un text i compti quantes vocals conté.
 
 
 
