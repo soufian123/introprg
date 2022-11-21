@@ -1,4 +1,11 @@
-//codificar el text
+/*
+En aquesta ocasió, desenvoluparem un programa que demani un text i el mostri codificat segons les següents instruccions:
+
+    només codificarem les lletres entre la a i la z minúscules de l'alfabet llatí. La resta d'elements que apareguin al text, es mantindran iguals.
+
+    la lletra z serà substituïda per la a
+
+*/
 
 
 
