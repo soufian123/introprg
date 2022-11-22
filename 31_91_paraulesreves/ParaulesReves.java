@@ -52,8 +52,7 @@ public class ParaulesReves{
                 }
                 
             }
-            System.out.print(text.charAt(espai));
-            for (int numero=text.length()-1; numero>espai; numero--){
+            for (int numero=text.length()-1; numero>espai-1; numero--){
                 System.out.print(text.charAt(numero));
             }
 
