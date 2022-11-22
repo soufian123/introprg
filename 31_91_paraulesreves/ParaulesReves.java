@@ -26,6 +26,7 @@ public class ParaulesReves{
         
         int espai=0;
         String verificar="false";
+        int noLletra=0;
         
         for(int num=0; num<text.length(); num++){
             
@@ -52,10 +53,23 @@ public class ParaulesReves{
                 }
                 
             }
-            for (int numero=text.length()-1; numero>espai-1; numero--){
+            for(int numero=text.length()-1; numero>espai-1; numero--){
+            
+                if(Character.isLetter(text.charAt(numero))){
+                    System.out.print(text.charAt(numero));
+                    
+                }else{
+                    verificar="false";
+                    noLletra=numero;
+                }
+                if(verificar=="false"){
+                    System.out.print(text.charAt(noLletra));
+                }
+            }
+          /*  for (int numero=text.length()-1; numero>espai-1; numero--){
                 System.out.print(text.charAt(numero));
             }
-
+*/
         }else{
             for (int numero=text.length()-1; numero>=0; numero--){
                 System.out.print(text.charAt(numero));
