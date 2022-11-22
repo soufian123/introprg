@@ -21,7 +21,7 @@ public class PiramideLletres{
             //lletres
             for (int num=0; num<=lin; num++){
                 System.out.print(text.charAt(num));
-                if(num>0 && num<text.length()){
+                if(num>lin && num<text.length()){
                     System.out.print(".");
                 }
             }
