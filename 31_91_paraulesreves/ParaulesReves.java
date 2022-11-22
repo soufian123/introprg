@@ -17,7 +17,7 @@
 
 
 
-public class TextReves{
+public class ParaulesReves{
     public static void main(String[] args){
         
         
