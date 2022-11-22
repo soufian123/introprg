@@ -77,7 +77,7 @@ public class ParaulesReves{
             
             
             
-        }else if(lletra=="false"){
+  /*      }else if(lletra=="false"){
         
         
             for(int num=0; num<text.length(); num++){
@@ -104,7 +104,7 @@ public class ParaulesReves{
                 }
             }
 
-        }
+      */  }
         
     }
 }
