@@ -24,25 +24,28 @@ public class ParaulesReves{
         System.out.println("Text?");
         String text= Entrada.readLine();
         
-        int espais=0;
+        int espai=0;
         String verificar="false";
         
         for(int num=0; num<text.length(); num++){
             
             if(Character.isWhitespace(text.charAt(num))){
                 verificar="true";
-                
+                break;
             }
         }
         
         if(verificar=="true"){
+        
+        
             for(int num=0; num<text.length(); num++){
                 
                 if(Character.isWhitespace(text.charAt(num))){
                     
-                    for (int numero=num; numero>num; numero--){
+                    for (int numero=num; numero>espai; numero--){
                         System.out.print(text.charAt(numero));
                     }
+                    espai=num;
                     
                 }
             }
