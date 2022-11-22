@@ -17,7 +17,7 @@ public class TriangleParaules{
             
             if(Character.isWhitespace(text.charAt(num))){
                 
-                for (int numero=0; numero<=num; numero++){
+                for (int numero=0; numero<num; numero++){
                     System.out.print(text.charAt(numero));
                 }
                 System.out.println();
