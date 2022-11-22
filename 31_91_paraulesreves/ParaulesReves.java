@@ -42,8 +42,8 @@ public class ParaulesReves{
                 
                 if(Character.isWhitespace(text.charAt(num))){
                     
-                    for (int numero=num; numero>=espai; numero--){
-                        System.out.print(text.charAt(numero));
+                    for (int numero=num-1; numero>=espai; numero--){
+                        System.out.print(text.charAt(numero)+" ");
                     }
                     espai=num;
                     
