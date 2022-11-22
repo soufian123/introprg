@@ -31,7 +31,7 @@ public class ParaulesReves{
             
             if(Character.isWhitespace(text.charAt(num))){
                 verificar="true";
-                break;
+                
             }
         }
         
