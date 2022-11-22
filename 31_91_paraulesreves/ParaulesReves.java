@@ -47,7 +47,7 @@ public class ParaulesReves{
                     }
                     System.out.print("");
                     
-                    espai=num-1;
+                    espai=num+1;
                     
                 }
             }
