@@ -62,9 +62,9 @@ public class ParaulesReves{
                     verificar="false";
                     noLletra=numero;
                 }
-                if(verificar=="false"){
-                    System.out.print(text.charAt(noLletra));
-                }
+            }
+            if(verificar=="false"){
+                System.out.print(text.charAt(noLletra));
             }
           /*  for (int numero=text.length()-1; numero>espai-1; numero--){
                 System.out.print(text.charAt(numero));
