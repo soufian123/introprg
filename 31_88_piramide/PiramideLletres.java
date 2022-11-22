@@ -14,7 +14,7 @@ public class PiramideLletres{
             
             
             //imprimerix punts esquerra
-            for(int num=(text.length()-1) ; num>=lin; num--){
+            for(int num=(text.length()-1) ; num>lin; num--){
                 System.out.print("..");
             }
             
@@ -36,7 +36,7 @@ public class PiramideLletres{
                 }
             }
             //imprimerix punts dreta
-            for(int num=(text.length()-1) ; num>=lin; num--){
+            for(int num=(text.length()-1) ; num>lin; num--){
                 System.out.print("..");
             }
             System.out.println();
