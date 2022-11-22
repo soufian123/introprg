@@ -42,12 +42,15 @@ public class ParaulesReves{
                 
                 if(Character.isWhitespace(text.charAt(num))){
                     
-                    for (int numero=num; numero>espai; numero--){
+                    for (int numero=num; numero>=espai; numero--){
                         System.out.print(text.charAt(numero));
                     }
                     espai=num;
                     
                 }
+            }
+            for (int numero=text.length()-1; numero>=espai; numero--){
+                System.out.print(text.charAt(numero));
             }
             System.out.println();
         }else{
