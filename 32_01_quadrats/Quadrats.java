@@ -11,9 +11,9 @@ public class Quadrats{
         //repeteix quadrat
             for (int num=1;num<=quants; num++){
                 //imprimeix lineas
-                for (int lin=0; lin<6; lin++){
+                for (int lin=1; lin<6; lin++){
                     //dibuixa en columnes
-                    for(int col=0; col<6;col++){
+                    for(int col=1; col<6;col++){
                         //dibuixa X
                         System.out.print(" X");
                     }
