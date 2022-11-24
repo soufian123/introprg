@@ -15,8 +15,10 @@ public class Quadrats{
                     //dibuixa en columnes
                     for(int col=0; col<6;col++){
                         //dibuixa X
-                        System.out.println(" X");
+                        System.out.print(" X");
                     }
+                //dibuixa salt
+                System.out.println();
                 }
             }
         }
