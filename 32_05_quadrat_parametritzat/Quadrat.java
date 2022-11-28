@@ -42,7 +42,7 @@ public class Quadrat{
         int num=Integer.parseInt(args[0]);
 
         switch (num) {
-            case 1: dibuixaQuadrat1();
+            case 1: dibuixaQuadrat();
                     break;
             case 2: dibuixaQuadrat2();
                     break;
@@ -69,16 +69,16 @@ public class Quadrat{
     }
     
     
-    public static void dibuixaQuadrat1(){
+    public static void dibuixaQuadrat(){
         for (int lin=0; lin<1; lin++){
-            dibuixaLinia1();
+            dibuixaLinia();
             //dibuixa salt
             System.out.println();
         }
     }
         
         
-    public static void dibuixaLinia1(){
+    public static void dibuixaLinia(){
         //dibuixa en columnes
         for(int col=0; col<1;col++){
             DibuixaX();
