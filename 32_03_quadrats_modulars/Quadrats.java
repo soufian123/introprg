@@ -22,26 +22,25 @@ public class Quadrats{
         if(quants>0){
         //repeteix quadrat
             for (int num=1;num<=quants; num++){
-                //imprimeix lineas
-                dibuixaLinia();
+                dibuixaQuadrat();
             }
-                //dibuixa salt
-                System.out.println();
-                
+
+
         }
     }
-    
-    
-    
-    
-    
-    
-    public static void dibuixaLinia(){
-            //dibuixa en columnes
-            for(int col=1; col<6;col++){
-                //dibuixa X
-                System.out.print(" X");
-            }
+    public static void dibuixaQuadrat(){
+        //imprimeix lineas
+        for (int lin=1; lin<6; lin++){
+            dibuixaLinia();
+            //dibuixa salt
+            System.out.println();
+        }
     }
-
-}               
+    public static void dibuixaLinia(){
+        //dibuixa en columnes
+        for(int col=1; col<6;col++){
+            //dibuixa X
+            System.out.print(" X");
+        }
+    }
+}
