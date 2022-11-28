@@ -10,19 +10,21 @@ En finalitzar, s'acomiadarà amb el tradicional "Adéu"
 public class LloroQuadrat{
     public static void main (String[] args){
     
+    
     Lloro();
     System.out.println("Adéu");
     }
     
     public static void Lloro(){
-    
+        String quadrat="dibuixa quadrat";
+        String rectangle="dibuixa rectangle";
         String text =("asd");
         while (!text.isBlank()){
             System.out.println("El lloro espera paraula:");
             text= Entrada.readLine();
-            if (text=="dibuixa quadrat"){
+            if (text.equals(quadrat)){
                 Quadrat();
-            }else if (text=="dibuixa rectangle"){
+            }else if (text.equals(rectangle)){
                 Rectangle();
             }else if (text.isBlank()){
             }else{
