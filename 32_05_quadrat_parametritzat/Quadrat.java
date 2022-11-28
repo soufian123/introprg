@@ -9,18 +9,19 @@ public class Quadrat{
         int quants=Integer.parseInt(args[0]);
         if(quants>0){
             //dibuixaQuadrat();
-        for (int lin=0; lin<quants; lin++){
-            //dibuixaLinia();
-                    //dibuixa en columnes
-        for(int col=0; col<quants;col++){
-            //dibuixa X
-            System.out.print(" X");
-            //dibuixa salt
-            System.out.println();
+            for (int lin=0; lin<quants; lin++){
+                //dibuixaLinia();
+                        //dibuixa en columnes
+                for(int col=0; col<quants;col++){
+                    //dibuixa X
+                    System.out.print(" X");
+                }    
+                    //dibuixa salt
+                System.out.println();
+            }
         }
     }
-        }
-    }
+
         
 
   /*  public static void dibuixaQuadrat(){
