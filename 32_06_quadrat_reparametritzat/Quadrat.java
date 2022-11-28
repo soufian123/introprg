@@ -26,10 +26,10 @@ public class Quadrat{
     public static void dibuixaLinia(int columnes, char caracter){
         //dibuixa en columnes
         for(int col=0; col<columnes;col++){
-            DibuixaX( caracter);
+            DibuixaX( columnes, caracter);
         }
     }
-    public static void DibuixaX( char caracter){
+    public static void DibuixaX( int columnes, char caracter){
         //dibuixa X
         System.out.print(caracter); 
     }
