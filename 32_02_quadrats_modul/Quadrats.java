@@ -12,10 +12,10 @@ un programa que demani un número per entrada estàndard, i dibuixi tants quadra
 public class Quadrats{
     public static void main (String[] args){
         
-        dibuixaQuadrat();
+        dibuixaQuadrats();
     }
         
-    public static void dibuixaQuadrat(){
+    public static void dibuixaQuadrats(){
         //preguntar quants
         System.out.println("Quants?");
         int quants=Integer.parseInt(Entrada.readLine());
