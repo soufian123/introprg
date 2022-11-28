@@ -14,24 +14,24 @@ public class Quadrat{
         }
     }
         
-    public static void dibuixaQuadrat(int operand, char caracter){
+    public static void dibuixaQuadrat(int operand, char carac){
         for (int lin=0; lin<operand; lin++){
-            dibuixaLinia(operand, caracter);
+            dibuixaLinia(operand, carac);
             //dibuixa salt
             System.out.println();
         }
     }
         
         
-    public static void dibuixaLinia(int columnes, char caracter){
+    public static void dibuixaLinia(int columnes, char car){
         //dibuixa en columnes
         for(int col=0; col<columnes;col++){
-            DibuixaX( columnes, caracter);
+            DibuixaX( columnes, car);
         }
     }
-    public static void DibuixaX( int columnes, char caracter){
+    public static void DibuixaX( int columnes, char lletra){
         //dibuixa X
-        System.out.print(caracter); 
+        System.out.print(lletra); 
     }
 }
 
