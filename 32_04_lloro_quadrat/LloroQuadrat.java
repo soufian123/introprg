@@ -11,13 +11,14 @@ public class LloroQuadrat{
     public static void main (String[] args){
     
     Lloro();
+    System.out.println("Adéu");
     }
     
     public static void Lloro(){
     
         String text =("asd");
         while (!text.isBlank()){
-            System.out.println(" El lloro espera paraula:");
+            System.out.println("El lloro espera paraula:");
             text= Entrada.readLine();
             if (text=="dibuixa quadrat"){
                 Quadrat();
