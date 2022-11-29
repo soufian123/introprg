@@ -1,7 +1,7 @@
 
 
 
-//Analísis d'un caràcter a un String
+//Analísis d'un caràcter a un String amb moduls
 
 
 
@@ -13,31 +13,32 @@ public class AnalitzaCaracter{
         String text= Entrada.readLine();
         System.out.println("Posició?");
         int posicio= Integer.parseInt(Entrada.readLine());
-        analitzaCaracter(posicio, text);
-
-    }
-    public static void analitzaCaracter(int posicio, String text){
-
+        char lletra= text.charAt(posicio);
+        
         if(( posicio<=0 && -posicio<(text.length())) || (posicio>=0 && posicio <text.length())){
         
-        if (posicio<0){
-            posicio= (text.length())+posicio;
-            }
-            
-            
-            if (Character.isLetter(text.charAt(posicio))){
-                 System.out.println("\'"+text.charAt(posicio)+"\' és una lletra");
-                 
-            }else if (Character.isDigit(text.charAt(posicio))){
-                    System.out.println("\'"+text.charAt(posicio)+"\' és un nombre");
-                    
-                }else{
-                    System.out.println("\'"+text.charAt(posicio)+"\' és una altra cosa");
+            if (posicio<0){
+                posicio= (text.length())+posicio;
                 }
-     
+                analitzaCaracter(lletra);
         }else{
             System.out.println("Fora de rang");
         }
+    }
     
+    
+    public static void analitzaCaracter(char lletra){
+
+
+        if (Character.isLetter(lletra)){
+             System.out.println("\'"+lletra+"\' és una lletra");
+             
+        }else if (Character.isDigit(lletra)){
+                System.out.println("\'"+lletra+"\' és un nombre");
+                
+        }else{
+            System.out.println("\'"+lletra+"\' és una altra cosa");
+        }
+   
     }
 }
