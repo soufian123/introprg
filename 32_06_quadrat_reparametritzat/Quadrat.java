@@ -7,7 +7,7 @@ public class Quadrat{
     public static void main (String[] args){
     
         int num=Integer.parseInt(args[0]);
-        char caracter=Entrada.readLine().charAt(2);
+        char caracter= args[1].charAt(0);
         if(num>0){
             dibuixaQuadrat(num, caracter);
             
