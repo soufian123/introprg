@@ -7,7 +7,7 @@ public class Quadrat{
     public static void main (String[] args){
     
         int num=Integer.parseInt(args[0]);
-        char caracter= args[1].charAt(0);
+        char caracter= args[0].charAt(1);
         if(num>0){
             dibuixaQuadrat(num, caracter);
             
@@ -31,7 +31,7 @@ public class Quadrat{
     }
     public static void DibuixaX( int columnes, char lletra){
         //dibuixa X
-        System.out.print(lletra); 
+        System.out.print(" "+lletra); 
     }
 }
 
