@@ -13,14 +13,15 @@ public class AnalitzaCaracter{
         String text= Entrada.readLine();
         System.out.println("Posició?");
         int posicio= Integer.parseInt(Entrada.readLine());
-        char lletra= text.charAt(posicio);
+
         
         if(( posicio<=0 && -posicio<(text.length())) || (posicio>=0 && posicio <text.length())){
         
             if (posicio<0){
                 posicio= (text.length())+posicio;
                 }
-                analitzaCaracter(lletra);
+            char lletra= text.charAt(posicio);
+            analitzaCaracter(lletra);
         }else{
             System.out.println("Fora de rang");
         }
