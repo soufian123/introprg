@@ -35,6 +35,15 @@ public class CodificaBasic{
 
                 for(int num=0; num<text.length(); num++){
                     ch= text.charAt(num);
+                    
+                    int lletra=ch+quants;
+                    while(lletra>122){
+                        lletra=lletra-25;
+                        }
+                    
+                    
+                    
+                    
                     accents= "false";
                         if(num==0 && Character.isUpperCase(text.charAt(num))){
                             System.out.print(ch);
@@ -46,7 +55,7 @@ public class CodificaBasic{
                         }else if (!(Character.isLetter(text.charAt(num)))){
                             System.out.print(ch);
                         }else if(text.charAt(num)=='z'){
-                            System.out.print((char)(96+quants));
+                            System.out.print((char)(lletra));
                         }else if(text.charAt(num)==' '){
                             System.out.print(" ");
                         
@@ -65,11 +74,11 @@ public class CodificaBasic{
                         if(accents=="true"){
                             System.out.print((char)(ch));
                         }else{
-                            System.out.print((char)(ch+quants));
+                            System.out.print((char)(lletra));
                         }
 
                             }else{ 
-                                System.out.print((char)(ch+quants));
+                                System.out.print((char)(lletra));
                             }
                         
                 }
