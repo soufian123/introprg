@@ -33,7 +33,9 @@ public class CodificaBasic{
             for(int num=0; num<text.length(); num++){
                 ch= text.charAt(num);
                 accents= "false";
-                    if(text.charAt(num)=='@'){
+                    if (num==0){
+                        System.out.print(Character.toUpperCase(ch));
+                    }else if(text.charAt(num)=='@'){
                         System.out.print("@");
                     }else if(text.charAt(num)==' '){
                     System.out.print(" ");
