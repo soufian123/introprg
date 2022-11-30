@@ -38,7 +38,7 @@ public class CodificaBasic{
                     }else if(text.charAt(num)==' '){
                     System.out.print(" ");
                     }else if (!(Character.isLetter(text.charAt(num)))){
-                        System.out.print(ch+quants);
+                        System.out.print(ch);
                     }else if(text.charAt(num)=='z'){
                         System.out.print((char)(96+quants));
                     }else if(text.charAt(num)==' '){
