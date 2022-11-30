@@ -35,6 +35,8 @@ public class CodificaBasic{
                 accents= "false";
                     if(text.charAt(num)=='@'){
                         System.out.print("@");
+                    }else if(text.charAt(num)==' '){
+                    System.out.print(" ");
                     }else if (!(Character.isLetter(text.charAt(num)))){
                         System.out.print(ch+quants);
                     }else if(text.charAt(num)=='z'){
