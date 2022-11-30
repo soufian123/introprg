@@ -38,7 +38,7 @@ public class CodificaBasic{
                     
                     int lletra=ch+quants;
                     while(lletra>=123){
-                        lletra=lletra-25;
+                        lletra=lletra-26;
                         }
                     
                     
