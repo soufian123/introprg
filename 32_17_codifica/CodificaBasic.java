@@ -24,53 +24,55 @@ public class CodificaBasic{
     
     public static void codifica(String text, int quants){
         String vocals="áéíúóàèìùòäëïöü";
-    
+        
         if(!text.isBlank()){
-            char ch= text.charAt(0);
-            String accents= "false";
+            if(quants==0){
+             System.out.println(text);
+            }else{
+                char ch= text.charAt(0);
+                String accents= "false";
 
 
-            for(int num=0; num<text.length(); num++){
-                ch= text.charAt(num);
-                accents= "false";
-                    if(num==0 && Character.isUpperCase(text.charAt(num))){
-                        System.out.print(ch);
-                        
-                    }else if(text.charAt(num)=='@'){
-                        System.out.print("@");
-                    }else if(text.charAt(num)==' '){
-                    System.out.print(" ");
-                    }else if (!(Character.isLetter(text.charAt(num)))){
-                        System.out.print(ch);
-                    }else if(text.charAt(num)=='z' && quants==0){
-                        System.out.print((char)(97));
-                    }else if(text.charAt(num)=='z'){
-                        System.out.print((char)(96+quants));
-                    }else if(text.charAt(num)==' '){
+                for(int num=0; num<text.length(); num++){
+                    ch= text.charAt(num);
+                    accents= "false";
+                        if(num==0 && Character.isUpperCase(text.charAt(num))){
+                            System.out.print(ch);
+                            
+                        }else if(text.charAt(num)=='@'){
+                            System.out.print("@");
+                        }else if(text.charAt(num)==' '){
                         System.out.print(" ");
+                        }else if (!(Character.isLetter(text.charAt(num)))){
+                            System.out.print(ch);
+                        }else if(text.charAt(num)=='z'){
+                            System.out.print((char)(96+quants));
+                        }else if(text.charAt(num)==' '){
+                            System.out.print(" ");
+                        
+                            
+                            
+                        }else if(Character.isLetter(text.charAt(num)) && Character.isLowerCase(text.charAt(num))){
+                            
+                        for (int v=0; v<vocals.length(); v++){
                     
-                        
-                        
-                    }else if(Character.isLetter(text.charAt(num)) && Character.isLowerCase(text.charAt(num))){
-                        
-                    for (int v=0; v<vocals.length(); v++){
-                
-                        if(text.charAt(num)==vocals.charAt(v)){
+                            if(text.charAt(num)==vocals.charAt(v)){
 
-                            accents="true";
-                            break;
+                                accents="true";
+                                break;
+                            }
                         }
-                    }
-                    if(accents=="true"){
-                        System.out.print((char)(ch));
-                    }else{
-                        System.out.print((char)(ch+quants));
-                    }
-
-                        }else{ 
+                        if(accents=="true"){
+                            System.out.print((char)(ch));
+                        }else{
                             System.out.print((char)(ch+quants));
                         }
-                    
+
+                            }else{ 
+                                System.out.print((char)(ch+quants));
+                            }
+                        
+                }
             }
         }
     
