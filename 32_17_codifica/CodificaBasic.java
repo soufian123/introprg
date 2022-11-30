@@ -60,7 +60,7 @@ public class CodificaBasic{
                         }
                     }
                     if(accents=="true"){
-                        System.out.print((char)(ch+quants));
+                        System.out.print((char)(ch));
                     }else{
                         System.out.print((char)(ch+quants));
                     }
