@@ -37,7 +37,7 @@ public class CodificaBasic{
                     ch= text.charAt(num);
                     
                     int lletra=ch+quants;
-                    while(lletra>122){
+                    while(lletra>=123){
                         lletra=lletra-25;
                         }
                     
