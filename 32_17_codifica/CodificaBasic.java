@@ -16,7 +16,8 @@ public class CodificaBasic{
         System.out.println("Text?");
         String text= Entrada.readLine();
         System.out.println("Quants?");
-        String quants= Entrada.readLine();
+        int quants= Integer.parseInt(Entrada.readLine());
+        codifica(text,quants);
 
     }
     
