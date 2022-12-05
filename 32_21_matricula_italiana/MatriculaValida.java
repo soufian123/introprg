@@ -10,10 +10,12 @@ public class MatriculaValida{
         String comprovador= "false";
         char res='r';
         boolean testDos=false;
+        String lletra= "hola";
+        boolean obtingut = MatriculaValida.esLletraValidaPerMatriculaItaliana(paraula, testDos);
         
         if((paraula.length())==7){
-        boolean test = esLletraValidaPerMatriculaItaliana(paraula, lletres, comprovador ,testDos, res);
-            if (test==true){
+        //boolean test = esLletraValidaPerMatriculaItaliana(paraula ,testDos);
+            if (obtingut==true){
             
             for (int num=0; num<=4; num++){
                 if (paraula.charAt(0)==lletres.charAt(num) || paraula.charAt(1) ==lletres.charAt(num) || paraula.charAt(5) ==lletres.charAt(num) || paraula.charAt(6) ==lletres.charAt(num)){
@@ -34,7 +36,7 @@ public class MatriculaValida{
     
     
     
-    public static boolean esLletraValidaPerMatriculaItaliana(String paraula,String lletres, String comprovador ,boolean testDo, char res){
+    public static boolean esLletraValidaPerMatriculaItaliana(String paraula ,boolean testDo){
         
         if (Character.isLetter(paraula.charAt(0))==true && Character.isLetter(paraula.charAt(1))==true && Character.isLetter(paraula.charAt(2))==false && Character.isLetter(paraula.charAt(3))==false && Character.isLetter(paraula.charAt(4))==false && Character.isLetter(paraula.charAt(5))==true && Character.isLetter(paraula.charAt(6))==true && Character.isUpperCase(paraula.charAt(1))==true && Character.isUpperCase(paraula.charAt(0))==true && Character.isUpperCase(paraula.charAt(5))==true && Character.isUpperCase(paraula.charAt(6))==true && (paraula.charAt(2))>=0 ==true && (paraula.charAt(3))>=0 ==true && (paraula.charAt(4))>=0 ==true){
             return true;
