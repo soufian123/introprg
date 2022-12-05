@@ -35,8 +35,8 @@ public class ComptaVocals {
         mostraOcurrencies('a', numAs);
         mostraOcurrencies('à', numAsAccent);
         mostraOcurrencies('e', numEs);
-        mostraOcurrencies('é', numEsAccent);
         mostraOcurrencies('è', numEsAccentdos);
+        mostraOcurrencies('é', numEsAccent);
         mostraOcurrencies('i', numIs);
         mostraOcurrencies('í', numIsAccent);
         mostraOcurrencies('ï', numIsDieresi);
