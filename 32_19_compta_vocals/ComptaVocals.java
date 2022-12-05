@@ -30,7 +30,7 @@ public class ComptaVocals {
         int numOsAccentsDos = quantesOcurrencies(entrada, 'ò');
         int numUs = quantesOcurrencies(entrada, 'u');
         int numUsAccents = quantesOcurrencies(entrada, 'ú');
-        int numUsAccentsDos = quantesOcurrencies(entrada, 'ù');
+        int numUsAccentsDos = quantesOcurrencies(entrada, 'ü');
         
         mostraOcurrencies('a', numAs);
         mostraOcurrencies('à', numAsAccent);
@@ -45,7 +45,7 @@ public class ComptaVocals {
         mostraOcurrencies('ò', numOsAccentsDos);
         mostraOcurrencies('u', numUs);
         mostraOcurrencies('ú', numUsAccents);
-        mostraOcurrencies('ù', numUsAccentsDos);
+        mostraOcurrencies('ü', numUsAccentsDos);
 
         
         
