@@ -10,13 +10,17 @@ public class ComptaVocals {
         System.out.println("Introdueix un text");
         String entrada = Entrada.readLine();
         
+        String llet=("aàeèéiíïoóòuúü");
+        
+        for(int num=0; num<llet.length(); num++){
+        char lett= (llet.charAt(num));
+        int numLet = quantesOcurrencies(entrada, lett);
+        mostraOcurrencies(lett, numLet);
+        }
         
         
         
-        
-        
-        
-        
+   /*     
         int numAs = quantesOcurrencies(entrada, 'a');
         int numAsAccent = quantesOcurrencies(entrada, 'à');
         int numEs = quantesOcurrencies(entrada, 'e');
@@ -47,7 +51,7 @@ public class ComptaVocals {
         mostraOcurrencies('ú', numUsAccents);
         mostraOcurrencies('ü', numUsAccentsDos);
 
-        
+    */    
         
         
     }
