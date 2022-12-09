@@ -5,21 +5,20 @@ public class MatriculaValida{
     public static void main (String[] args){
         
         System.out.println("Introduïu una matrícula");
-        String paraula= Entrada.readLine();
+        String lletra= Entrada.readLine();
         String lletres= "IOQUÑ";
         String comprovador= "false";
         char res='r';
         boolean testDos=false;
-        String lletra= "hola";
         
         
-        if((paraula.length())==7){
-        //boolean test = esLletraValidaPerMatriculaItaliana(paraula ,testDos);
-            boolean obtingut = MatriculaValida.esLletraValidaPerMatriculaItaliana(paraula);
+        if((lletra.length())==7){
+        //boolean test = esLletraValidaPerMatriculaItaliana(lletra ,testDos);
+            boolean obtingut = MatriculaValida.esLletraValidaPerMatriculaItaliana(lletra);
             if (obtingut==true){
             
             for (int num=0; num<=4; num++){
-                if (paraula.charAt(0)==lletres.charAt(num) || paraula.charAt(1) ==lletres.charAt(num) || paraula.charAt(5) ==lletres.charAt(num) || paraula.charAt(6) ==lletres.charAt(num)){
+                if (lletra.charAt(0)==lletres.charAt(num) || lletra.charAt(1) ==lletres.charAt(num) || lletra.charAt(5) ==lletres.charAt(num) || lletra.charAt(6) ==lletres.charAt(num)){
                     comprovador="true";
                 }
             }
@@ -37,9 +36,9 @@ public class MatriculaValida{
     
     
     
-    public static boolean esLletraValidaPerMatriculaItaliana(String paraula){
+    public static boolean esLletraValidaPerMatriculaItaliana(String lletra){
         
-        if (Character.isLetter(paraula.charAt(0))==true && Character.isLetter(paraula.charAt(1))==true && Character.isLetter(paraula.charAt(2))==false && Character.isLetter(paraula.charAt(3))==false && Character.isLetter(paraula.charAt(4))==false && Character.isLetter(paraula.charAt(5))==true && Character.isLetter(paraula.charAt(6))==true && Character.isUpperCase(paraula.charAt(1))==true && Character.isUpperCase(paraula.charAt(0))==true && Character.isUpperCase(paraula.charAt(5))==true && Character.isUpperCase(paraula.charAt(6))==true && (paraula.charAt(2))>=0 ==true && (paraula.charAt(3))>=0 ==true && (paraula.charAt(4))>=0 ==true){
+        if (Character.isLetter(lletra.charAt(0))==true && Character.isLetter(lletra.charAt(1))==true && Character.isLetter(lletra.charAt(2))==false && Character.isLetter(lletra.charAt(3))==false && Character.isLetter(lletra.charAt(4))==false && Character.isLetter(lletra.charAt(5))==true && Character.isLetter(lletra.charAt(6))==true && Character.isUpperCase(lletra.charAt(1))==true && Character.isUpperCase(lletra.charAt(0))==true && Character.isUpperCase(lletra.charAt(5))==true && Character.isUpperCase(lletra.charAt(6))==true && (lletra.charAt(2))>=0 ==true && (lletra.charAt(3))>=0 ==true && (lletra.charAt(4))>=0 ==true){
             return true;
         }else{ 
             return false;
