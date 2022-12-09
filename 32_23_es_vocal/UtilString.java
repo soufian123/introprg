@@ -4,7 +4,7 @@ public class UtilString{
     public static boolean esVocal(String paraula){
         
 
-        String vocal= "aeiouàèéíïòóú";
+        String vocal= "aeiouàèéíïòóúü";
             
 
 
