@@ -9,8 +9,8 @@ public class UtilString{
 
 
             for(int num=0; num<vocal.length(); num++){
-                char inicial=Character.toUpperCase(paraula.charAt(0));
-                char fin=Character.toUpperCase(paraula.charAt(paraula.length()-1));
+                char inicial=Character.toLowerCase(paraula.charAt(0));
+                char fin=Character.toLowerCase(paraula.charAt(paraula.length()-1));
                 
                     if( inicial==vocal.charAt(num)){
                         return true;
