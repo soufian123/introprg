@@ -8,11 +8,12 @@ public class MatriculaValida{
         String paraula= Entrada.readLine();
         String lletres= "IOQUÑ";
         String comprovador= "false";
-        boolean obtingut = MatriculaValida.esLletraValidaPerMatriculaItaliana(paraula);
+
         
         if((paraula.length())==7){
         //boolean test = esLletraValidaPerMatriculaItaliana(paraula ,testDos);
             boolean obtingut = MatriculaValida.esLletraValidaPerMatriculaItaliana(paraula);
+            
             if (obtingut==true){
             
             for (int num=0; num<=4; num++){
