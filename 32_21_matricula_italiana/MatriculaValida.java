@@ -51,10 +51,14 @@ public class MatriculaValida{
                 
                     if (comprovador=="false"){
                         System.out.println("És una matrícula italiana vàlida");
-                    }else{System.out.println("No és una matrícula italiana vàlida");}
+                            break;
+                    }else{System.out.println("No és una matrícula italiana vàlida");
+                        break;}
                 }else{System.out.println("No és una matrícula italiana vàlida");
+                    break;
                 }
                 }else{System.out.println("No és una matrícula italiana vàlida");
+                    break;
                 }
         }
             
