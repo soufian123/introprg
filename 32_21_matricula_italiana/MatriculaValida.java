@@ -6,7 +6,7 @@ public class MatriculaValida{
         
         System.out.println("Introduïu una matrícula");
         String paraula= Entrada.readLine();
-        String lletres= "IOQUÑ";
+
         boolean comprovador= false;
 
         
@@ -43,13 +43,12 @@ public class MatriculaValida{
             
             
                 if (obtingut){
-                
+                /*    String lletres= "IOQUÑ";
                 for (int numm=0; numm<=4; numm++){
                     if (paraula.charAt(0)==lletres.charAt(numm) || paraula.charAt(1) ==lletres.charAt(numm) || paraula.charAt(5) ==lletres.charAt(numm) || paraula.charAt(6) ==lletres.charAt(numm)){
-                        comprovador=true;
                     }
                 }
-                
+                */
                 
                     if (comprovador==false){
                         System.out.println("És una matrícula italiana vàlida");
@@ -97,7 +96,13 @@ public class MatriculaValida{
     
     public static boolean esLletraValidaPerMatriculaItaliana(char paraula){
     
-if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
+        if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
+        String lletres= "IOQUÑ";
+                for (int numm=0; numm<=4; numm++){
+                    if (paraula==lletres.charAt(numm) || paraula ==lletres.charAt(numm) || paraula ==lletres.charAt(numm) || paraula ==lletres.charAt(numm)){
+                        return false;
+                    }
+                }
 
             return true;
         }else{ 
