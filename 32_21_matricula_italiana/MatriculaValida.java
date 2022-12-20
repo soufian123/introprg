@@ -101,8 +101,7 @@ public class MatriculaValida{
                 for (int numm=0; numm<=4; numm++){
                     if (paraula=='É' || paraula =='È'){
                         return true;
-                    }
-                    if (paraula==lletres.charAt(numm) || paraula ==lletres.charAt(numm) || paraula ==lletres.charAt(numm) || paraula ==lletres.charAt(numm)){
+                    }else if (paraula==lletres.charAt(numm)){
                         return false;
                     }
                 }
