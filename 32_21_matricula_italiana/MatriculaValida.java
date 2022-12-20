@@ -97,8 +97,11 @@ public class MatriculaValida{
     public static boolean esLletraValidaPerMatriculaItaliana(char paraula){
     
         if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
-        String lletres= "IOQUÑÉÈ";
+        String lletres= "IOQUÑ";
                 for (int numm=0; numm<=4; numm++){
+                    if (paraula=='É' || paraula =='È'){
+                        return true;
+                    }
                     if (paraula==lletres.charAt(numm) || paraula ==lletres.charAt(numm) || paraula ==lletres.charAt(numm) || paraula ==lletres.charAt(numm)){
                         return false;
                     }
