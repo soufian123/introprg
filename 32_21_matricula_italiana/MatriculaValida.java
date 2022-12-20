@@ -12,9 +12,59 @@ public class MatriculaValida{
         
         if((paraula.length())==7){
         //boolean test = esLletraValidaPerMatriculaItaliana(paraula ,testDos);
-            boolean obtingut = MatriculaValida.esLletraValidaPerMatriculaItaliana(paraula);
+        
+        for(int num =0; num<=7; num++ ){
+            char paraulaa= paraula.charAt(num);
+            boolean obtingut= true; 
+            if (num==1 && num==0 && num==5 && num==6){
+                 obtingut = MatriculaValida.esLletraValidaPerMatriculaItaliana(paraulaa);
+                if (obtingut){
+                     obtingut= true;
+                }else{
+                     obtingut= false;
+                    break;
+                }
+            }else if(num==2 && num==3 && num==4){
+                if(Character.isLetter(paraulaa)==false){
+                     obtingut= true;
+                }else{
+                     obtingut= false;
+                    break;
+                }
             
-            if (obtingut==true){
+        
+           
+           
+           }else if (num==7){
+            
+            
+                if (obtingut){
+                
+                for (int numm=0; numm<=4; numm++){
+                    if (paraula.charAt(0)==lletres.charAt(numm) || paraula.charAt(1) ==lletres.charAt(numm) || paraula.charAt(5) ==lletres.charAt(numm) || paraula.charAt(6) ==lletres.charAt(numm)){
+                        comprovador="true";
+                    }
+                }
+                
+                
+                    if (comprovador=="false"){
+                        System.out.println("És una matrícula italiana vàlida");
+                    }else{System.out.println("No és una matrícula italiana vàlida");}
+                }else{System.out.println("No és una matrícula italiana vàlida");
+                }
+                }else{System.out.println("No és una matrícula italiana vàlida");
+                }
+        }
+            
+ 
+           }
+        }
+        
+        /*
+                
+                
+                
+            if (obtingut=true){
             
             for (int num=0; num<=4; num++){
                 if (paraula.charAt(0)==lletres.charAt(num) || paraula.charAt(1) ==lletres.charAt(num) || paraula.charAt(5) ==lletres.charAt(num) || paraula.charAt(6) ==lletres.charAt(num)){
@@ -31,13 +81,14 @@ public class MatriculaValida{
             }else{System.out.println("No és una matrícula italiana vàlida");
             }
     }
+    */
     
     
     
+    public static boolean esLletraValidaPerMatriculaItaliana(char paraula){
     
-    public static boolean esLletraValidaPerMatriculaItaliana(String paraula){
-        
-        if (Character.isLetter(paraula.charAt(0))==true && Character.isLetter(paraula.charAt(1))==true && Character.isLetter(paraula.charAt(2))==false && Character.isLetter(paraula.charAt(3))==false && Character.isLetter(paraula.charAt(4))==false && Character.isLetter(paraula.charAt(5))==true && Character.isLetter(paraula.charAt(6))==true && Character.isUpperCase(paraula.charAt(1))==true && Character.isUpperCase(paraula.charAt(0))==true && Character.isUpperCase(paraula.charAt(5))==true && Character.isUpperCase(paraula.charAt(6))==true && (paraula.charAt(2))>=0 ==true && (paraula.charAt(3))>=0 ==true && (paraula.charAt(4))>=0 ==true){
+if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
+
             return true;
         }else{ 
             return false;
