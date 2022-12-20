@@ -14,9 +14,10 @@ public class MatriculaValida{
         //boolean test = esLletraValidaPerMatriculaItaliana(paraula ,testDos);
         
         for(int num =0; num<=7; num++ ){
-            char paraulaa= paraula.charAt(num);
+
             boolean obtingut= true; 
             if (num==1 && num==0 && num==5 && num==6){
+                        char paraulaa= paraula.charAt(num);
                  obtingut = MatriculaValida.esLletraValidaPerMatriculaItaliana(paraulaa);
                 if (obtingut){
                      obtingut= true;
@@ -25,6 +26,7 @@ public class MatriculaValida{
                     break;
                 }
             }else if(num==2 && num==3 && num==4){
+                        char paraulaa= paraula.charAt(num);
                 if(Character.isLetter(paraulaa)==false){
                      obtingut= true;
                 }else{
@@ -41,7 +43,7 @@ public class MatriculaValida{
                 if (obtingut){
                 
                 for (int numm=0; numm<=4; numm++){
-                    if (paraula.charAt(0)==lletres.charAt(numm) || paraula.charAt(1) ==lletres.charAt(numm) || paraula.charAt(5) ==lletres.charAt(numm) || paraula.charAt(6) ==lletres.charAt(numm)){
+                    if (paraula.charAt(0)==lletres.charAt(numm) || paraula.charAt(1) ==lletres.charAt(numm) || paraula.charAt(5) ==lletres.charAt(numm) || paraula.charAt(6) ==lletres.charAt(num)){
                         comprovador="true";
                     }
                 }
