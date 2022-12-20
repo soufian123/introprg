@@ -16,7 +16,7 @@ public class MatriculaValida{
         for(int num =0; num<=7; num++ ){
 
             boolean obtingut= true; 
-            if (num==1 && num==0 && num==5 && num==6){
+            if (num==1 || num==0 || num==5 || num==6){
                         char paraulaa= paraula.charAt(num);
                  obtingut = MatriculaValida.esLletraValidaPerMatriculaItaliana(paraulaa);
                 if (obtingut){
@@ -26,7 +26,7 @@ public class MatriculaValida{
                      System.out.println("No és una matrícula italiana vàlida");
                     break;
                 }
-            }else if(num==2 && num==3 && num==4){
+            }else if(num==2 || num==3 || num==4){
                         char paraulaa= paraula.charAt(num);
                 if(Character.isLetter(paraulaa)==false){
                      obtingut= true;
