@@ -98,7 +98,7 @@ public class MatriculaValida{
     
         if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
             if (paraula=='É' || paraula =='È'){
-                return true;
+                return false;
             }else{
                 String lletres= "IOQUÑ";
                 for (int numm=0; numm<=4; numm++){
