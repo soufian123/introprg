@@ -43,7 +43,7 @@ public class MatriculaValida{
                 if (obtingut){
                 
                 for (int numm=0; numm<=4; numm++){
-                    if (paraula.charAt(0)==lletres.charAt(numm) || paraula.charAt(1) ==lletres.charAt(numm) || paraula.charAt(5) ==lletres.charAt(numm) || paraula.charAt(6) ==lletres.charAt(num)){
+                    if (paraula.charAt(0)==lletres.charAt(numm) || paraula.charAt(1) ==lletres.charAt(numm) || paraula.charAt(5) ==lletres.charAt(numm) || paraula.charAt(6) ==lletres.charAt(numm)){
                         comprovador="true";
                     }
                 }
