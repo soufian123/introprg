@@ -23,6 +23,7 @@ public class MatriculaValida{
                      obtingut= true;
                 }else{
                      obtingut= false;
+                     System.out.println("No és una matrícula italiana vàlida");
                     break;
                 }
             }else if(num==2 && num==3 && num==4){
@@ -31,6 +32,7 @@ public class MatriculaValida{
                      obtingut= true;
                 }else{
                      obtingut= false;
+                     System.out.println("No és una matrícula italiana vàlida");
                     break;
                 }
             
