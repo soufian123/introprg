@@ -17,12 +17,12 @@ public class LloroVocalIniciFi{
             if (!lletra.isBlank()){
                 while (!lletra.isBlank()){
                 
-                char inicial=Character.toLowerCase(lletra.charAt(0));
+                char inicial=lletra.charAt(0);
                 boolean obtingut = UtilString.esVocal(inicial);
                 
                 if( obtingut){
                 }else{
-                    char fin=Character.toLowerCase(lletra.charAt(lletra.length()-1));
+                    char fin=lletra.charAt(lletra.length()-1);
                     obtingut = UtilString.esVocal(fin);
                 }
                 
