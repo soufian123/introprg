@@ -16,8 +16,15 @@ public class LloroVocalIniciFi{
         String lletra= Entrada.readLine();
             if (!lletra.isBlank()){
                 while (!lletra.isBlank()){
-                boolean obtingut = UtilString.esVocal(lletra);
                 
+                char inicial=Character.toLowerCase(lletra.charAt(0));
+                boolean obtingut = UtilString.esVocal(inicial);
+                
+                if( obtingut){
+                }else{
+                    char fin=Character.toLowerCase(lletra.charAt(lletra.length()-1));
+                    obtingut = UtilString.esVocal(fin);
+                }
                 
                     if( obtingut){
                         System.out.println("El lloro diu: "+ lletra);
