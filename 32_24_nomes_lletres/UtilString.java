@@ -11,7 +11,6 @@
 public class UtilString{
 
     public static String nomesLletres(String text){
-    
         String lletres="";
         int fin=0;
         for(int num=text.length()-1; num>=0; num--){
@@ -26,16 +25,7 @@ public class UtilString{
             }
         }
         return lletres;
-    
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     public static String lletresSeparades(String nomesLletres){
