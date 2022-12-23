@@ -40,7 +40,7 @@ public class UtilString{
     
     public static String lletresSeparades(String nomesLletres){
         String separat=""; 
-        for(int num=0; num<nomesLletres.length(); num++){
+        for(int num=0; num<nomesLletres.length()-1; num++){
             if (Character.isLetter(nomesLletres.charAt(num))){
                 separat = (separat + nomesLletres.charAt(num)+", ");
             }
