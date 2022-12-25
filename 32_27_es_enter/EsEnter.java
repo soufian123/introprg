@@ -14,13 +14,14 @@ public class EsEnter{
         
         
             if (!(text.isBlank() || text.isEmpty())){
+            comprovar= false;
                 comprovar = UtilString.esEnter(text);
                 
                 
-                if (comprovar==false){
-                    System.out.println("No és enter");
+                if (comprovar){
+                    System.out.println("És enter");
                 
-                }else{System.out.println("És enter");}
+                }else{System.out.println("No és enter");}
             }    
                 text= Entrada.readLine();
                 comprovar= false;
