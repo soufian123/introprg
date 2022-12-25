@@ -9,13 +9,19 @@
 
 public class UtilString{
 
-    public static boolean esEnter(String texto, boolean estricte){
+    public static boolean esEnter(String text, boolean estricte){
 
 
         boolean resultat=true;
         boolean texts=true;
-
-
+        String texto="";
+        //treu tots els espais en blanc, + i -
+        for(int num=0; num<=(text.length()-1); num++){
+            if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
+            }else {
+                texto= texto + text.charAt(num);
+            }
+        }
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(texto.length()-1); num++){
             if(Character.isLetter(texto.charAt(num))){
