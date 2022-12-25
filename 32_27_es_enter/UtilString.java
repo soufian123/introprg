@@ -24,7 +24,7 @@ public class UtilString{
             
             
             if(!(Character.isDigit(text.charAt(num)) || Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-')){
-                resultat=false;
+                resultat=true;
             }
             
             if((text.length()-2)<=num && text.charAt(num)=='+'){
