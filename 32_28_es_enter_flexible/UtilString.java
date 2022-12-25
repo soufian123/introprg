@@ -9,29 +9,29 @@
 
 public class UtilString{
 
-    public static boolean esEnter(String text){
+    public static boolean esEnter(String texto, boolean estricte){
 
 
         boolean resultat=true;
-        String texto="";
         boolean texts=true;
-        //treu tots els espais en blanc, + i -
-        for(int num=0; num<=(text.length()-1); num++){
-            if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
-            }else {
-                texto= texto + text.charAt(num);
-            }
-        }
+
 
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(texto.length()-1); num++){
-            if(Character.isLetter(text.charAt(num))){
+            if(Character.isLetter(texto.charAt(num))){
                 texts=true;
             }else {
                 texts=false;
             }
         }
+        return texts;
+        
+    }
 
+
+    public static int aEnter(String texto, boolean texts){
+        
+        boolean resultat=true;
         //comprovacio si es enter o no en el cas de lletra
         if (texts){
             int numeroLletra=(texto.length()-1);
@@ -54,9 +54,16 @@ public class UtilString{
             }
 
         }
-        
-        return resultat;
+        if (resultat){
+            return 1;
+        }else{
+            return 2;
+        }
+
+    
+    
     }
+
 }
 
 
