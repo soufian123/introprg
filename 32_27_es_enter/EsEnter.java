@@ -17,7 +17,7 @@ public class EsEnter{
                 boolean comprovar = UtilString.esEnter(text);
                 
                 
-                if (comprovar==true){
+                if (comprovar==false){
                     System.out.println("No és enter");
                 
                 }else{System.out.println("És enter");}
