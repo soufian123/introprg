@@ -25,6 +25,8 @@ public class UtilString{
                 return true;
             }
         }
-        return false;
+        return true;
     }
 }
+
+

@@ -8,13 +8,13 @@ public class EsEnter{
     
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text= Entrada.readLine();
-
+        boolean comprovar= false;
 
         while (!(text.isBlank() || text.isEmpty())){
         
         
             if (!(text.isBlank() || text.isEmpty())){
-                boolean comprovar = UtilString.esEnter(text);
+                comprovar = UtilString.esEnter(text);
                 
                 
                 if (comprovar==false){
@@ -23,7 +23,7 @@ public class EsEnter{
                 }else{System.out.println("És enter");}
             }    
                 text= Entrada.readLine();
-
+                comprovar= false;
             }
         System.out.println("Adéu");
         
