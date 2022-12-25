@@ -34,7 +34,7 @@ public class UtilString{
     //separa les lletres en ", " y la ultima la deixa sense ", "
     public static String lletresSeparades(String nomesLletres){
         String separat=""; 
-        if (nomesLletres.isBlank()){
+        if (nomesLletres==","){
             separat="";
             return separat;
         }
