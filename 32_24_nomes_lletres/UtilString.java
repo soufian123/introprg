@@ -13,10 +13,7 @@ public class UtilString{
     public static String nomesLletres(String text){
         String lletres="";
         int fin=0;
-        if (lletres==","){
-            lletres="";
-            return lletres;
-        }
+
         for(int num=text.length()-1; num>=0; num--){
             if (Character.isLetter(text.charAt(num))){
                 fin=num;
