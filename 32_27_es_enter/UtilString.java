@@ -1,7 +1,7 @@
 
 
 
-//retorna un balor boolean cuan comprova si es enter o no
+//retorna un valor boolean cuan comprova si es enter o no
 
 
 
