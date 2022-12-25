@@ -33,8 +33,15 @@ public class UtilString{
     
     //separa les lletres en ", " y la ultima la deixa sense ", "
     public static String lletresSeparades(String nomesLletres){
-        String separat=""; 
-
+        String separat="";
+        if (nomesLletres==","){
+            separat=" ";
+            return separat;
+        } 
+        if (nomesLletres.isBlank()){
+            separat="";
+            return separat;
+        }
         for(int num=0; num<nomesLletres.length()-1; num++){
             if (Character.isLetter(nomesLletres.charAt(num))){
                 separat = (separat + nomesLletres.charAt(num)+", ");
