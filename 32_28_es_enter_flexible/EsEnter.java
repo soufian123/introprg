@@ -24,7 +24,7 @@ public class EsEnter{
             }
         }
                 comprovar = UtilString.esEnter(text, comprovar);
-                numero= UtilString.aEnter(texto, comprovar);
+                numero= UtilString.aEnter(text, comprovar);
                 
                 if (numero==1){
                     System.out.println("És enter");

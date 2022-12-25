@@ -35,12 +35,20 @@ public class UtilString{
     }
 
 
-    public static int aEnter(String texto, boolean texts){
+    public static int aEnter(String text, boolean texts){
         
         boolean resultat=true;
+        String texto="";
+        //treu tots els espais en blanc, + i -
+        for(int num=0; num<=(text.length()-1); num++){
+            if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
+            }else {
+                texto= texto + text.charAt(num);
+            }
+        }
         //comprovacio si es enter o no en el cas de lletra
         if (texts){
-            int numeroLletra=(texto.length()-1);
+            int numeroLletra=(text.length()-1);
             if (numeroLletra % 2 == 0){
                 resultat= true;
             }else{
