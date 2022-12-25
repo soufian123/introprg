@@ -22,33 +22,35 @@ public class UtilString{
                 texto= texto + text.charAt(num);
             }
         }
+
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(texto.length()-1); num++){
             if(Character.isLetter(text.charAt(num))){
                 texts=true;
             }else {
                 texts=false;
-                break;
             }
         }
+
         //comprovacio si es enter o no en el cas de lletra
         if (texts){
-            int numeroLletra=(text.length()-1);
+            int numeroLletra=(texto.length()-1);
             if (numeroLletra % 2 == 0){
                 resultat= true;
             }else{
                 resultat=false;
             }
-        }
-        
-        //comprovacio si es enter o no en el cas de numero
-        if(texts=false){
 
-            int numero= Integer.parseInt(texto);
+        }
+
+        //comprovacio si es enter o no en el cas de numero
+        if(texts==false){
+
+            int numero= Integer.parseInt((texto));
             if (numero % 2 == 0){
-                resultat= true;
+                resultat= false;
             }else{
-                resultat=false;
+                resultat=true;
             }
 
         }
