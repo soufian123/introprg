@@ -42,7 +42,7 @@ public class UtilString{
         }
         
         //comprovacio si es enter o no en el cas de numero
-        if(!texts){
+        if(texts=false){
 
             int numero= Integer.parseInt(texto);
             if (numero % 2 == 0){
