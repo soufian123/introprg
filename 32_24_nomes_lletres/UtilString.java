@@ -13,8 +13,8 @@ public class UtilString{
     public static String nomesLletres(String text){
         String lletres="";
         int fin=0;
-        if (text.isBlank()){
-            lletres="  ";
+        if (lletres==","){
+            lletres="";
             return lletres;
         }
         for(int num=text.length()-1; num>=0; num--){
@@ -35,7 +35,7 @@ public class UtilString{
     public static String lletresSeparades(String nomesLletres){
         String separat=""; 
         if (nomesLletres.isBlank()){
-            separat=", ";
+            separat="";
             return separat;
         }
         for(int num=0; num<nomesLletres.length()-1; num++){
