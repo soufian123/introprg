@@ -16,10 +16,10 @@ public class UtilString{
     
         for(int num=0; num<=(text.length()-1); num++){
             if (text=="-1" || text=="+1"){
-            return false;
+            return true;
             }
             if (text=="" || text=="  " || text==" 1" || text=="1 "){
-            return true;
+            return false;
             }
             
             
