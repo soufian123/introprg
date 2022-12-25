@@ -9,7 +9,7 @@
 
 
 public class UtilString{
-
+        //agafa totes les lletres
     public static String nomesLletres(String text){
         String lletres="";
         int fin=0;
@@ -27,7 +27,7 @@ public class UtilString{
         return lletres;
     }
     
-    
+    //separa les lletres en ", " y la ultima la deixa sense ", "
     public static String lletresSeparades(String nomesLletres){
         String separat=""; 
         for(int num=0; num<nomesLletres.length()-1; num++){
