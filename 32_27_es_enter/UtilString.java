@@ -18,7 +18,7 @@ public class UtilString{
             if (text=="-1" || text=="+1"){
             return false;
             }
-            if (text=="," || text=="  ," || text=="1" || text=="1"){
+            if (text=="" || text=="  " || text==" 1" || text=="1 "){
             return true;
             }
             
