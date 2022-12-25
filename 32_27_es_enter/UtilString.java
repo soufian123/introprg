@@ -13,25 +13,49 @@ public class UtilString{
 
 
         boolean resultat=true;
-    
+        String texto="";
+        boolean texts=true;
+        //treu tots els espais en blanc, + i -
         for(int num=0; num<=(text.length()-1); num++){
-      
-            if(!(Character.isDigit(text.charAt(num)) || Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-')){
-                resultat=false;
+            if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
+            }else {
+                texto= texto + text.charAt(num);
             }
-            
-            if((text.length()-2)<=num && text.charAt(num)=='+'){
-                resultat=false;
+        }
+        //comprova si tot es lletra o numero 
+        for(int num=0; num<=(texto.length()-1); num++){
+            if(Character.isLetter(text.charAt(num))){
+                texts=true;
+            }else {
+                texts=false;
+                break;
             }
-                    
-            if((text.length()-2)<=num && text.charAt(num)=='-'){
+        }
+        //comprovacio si es enter o no en el cas de lletra
+        if (texts){
+            int numeroLletra=(text.length()-1);
+            if (numeroLletra % 2 == 0){
+                resultat= true;
+            }else{
                 resultat=false;
             }
         }
+        
+        //comprovacio si es enter o no en el cas de numero
+        if(!texts){
+
+            int numero= Integer.parseInt(texto);
+            if (numero % 2 == 0){
+                resultat= true;
+            }else{
+                resultat=false;
+            }
+
+        }
+        
         return resultat;
     }
 }
-
 
 
 
