@@ -25,12 +25,12 @@ public class UtilString{
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(texto.length()-1); num++){
             if(Character.isLetter(texto.charAt(num))){
-                texts=true;
+                return true;
             }else {
-                texts=false;
+                return false;
             }
         }
-        return texts;
+        return false;
         
     }
 
