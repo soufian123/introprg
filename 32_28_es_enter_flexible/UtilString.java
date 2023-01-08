@@ -9,9 +9,9 @@
 
 public class UtilString{
 
-    public static boolean esEnter(String text, boolean estricte){
+    public static boolean esEnter(String text){
 
-
+        boolean estricte;
         boolean resultat=true;
         boolean texts=true;
         String texto="";
