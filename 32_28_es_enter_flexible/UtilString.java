@@ -9,9 +9,9 @@
 
 public class UtilString{
 
-    public static boolean esEnter(String text){
+    public static boolean esEnter(String text /*, boolean estricte */){
 
-        boolean estricte;
+
         boolean resultat=true;
         boolean texts=true;
         String texto="";
@@ -35,8 +35,8 @@ public class UtilString{
     }
 
 
-    public static int aEnter(String text, boolean texts){
-        
+    public static int aEnter(String text /*, boolean texts */){
+        boolean texts= true;
         boolean resultat=true;
         String texto="";
         //treu tots els espais en blanc, + i -

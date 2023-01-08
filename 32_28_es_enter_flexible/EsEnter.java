@@ -23,8 +23,8 @@ public class EsEnter{
                 texto= texto + text.charAt(num);
             }
         }
-                comprovar = UtilString.esEnter(text);
-                numero= UtilString.aEnter(text, comprovar);
+                comprovar = UtilString.esEnter(text /*, comprovar */);
+                numero= UtilString.aEnter(text /*, comprovar */);
                 
                 if (numero==1){
                     System.out.println("És enter");
