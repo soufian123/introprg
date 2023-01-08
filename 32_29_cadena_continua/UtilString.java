@@ -14,6 +14,9 @@ public class UtilString{
 
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(text.length()-1); num++){
+            if (text.charAt(num) == ','){
+                return false;
+            }
             if (text.charAt(num) == ',' || text.charAt(num) == ' ') {
 				return false;
 			}
