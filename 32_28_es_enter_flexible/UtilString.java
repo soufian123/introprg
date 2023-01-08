@@ -35,8 +35,8 @@ public class UtilString{
     }
 
 
-    public static int aEnter(String text /*, boolean texts */){
-        boolean texts= true;
+    public static int aEnter(String text , boolean texts ){
+
         boolean resultat=true;
         String texto="";
         //treu tots els espais en blanc, + i -
