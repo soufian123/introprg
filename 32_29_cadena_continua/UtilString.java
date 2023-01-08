@@ -16,8 +16,6 @@ public class UtilString{
         for(int num=0; num<=(text.length()-1); num++){
             if(Character.isLetter(text.charAt(num))){
                 return false;
-            }else {
-                return false;
             }
         }
         return true;
