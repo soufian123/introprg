@@ -8,14 +8,14 @@ public class EsEnter{
     
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text= Entrada.readLine();
-        boolean comprovar= false;
+        boolean obtingut= false;
         int numero=0;
         String texto="";
         while (!(text.isBlank() || text.isEmpty())){
         
         
             if (!(text.isBlank() || text.isEmpty())){
-                comprovar= false;
+                obtingut= false;
                 //treu tots els espais en blanc, + i -
         for(int num=0; num<=(text.length()-1); num++){
             if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
@@ -23,8 +23,8 @@ public class EsEnter{
                 texto= texto + text.charAt(num);
             }
         }
-                comprovar = UtilString.esEnter(text /*, comprovar */);
-                numero= UtilString.aEnter(text , comprovar );
+                obtingut = UtilString.esEnter(text /*, obtingut */);
+                numero= UtilString.aEnter(text , obtingut );
                 
                 if (numero==1){
                     System.out.println("És enter");
@@ -32,7 +32,7 @@ public class EsEnter{
                 }else{System.out.println("No és enter");}
             }    
                 text= Entrada.readLine();
-                comprovar= false;
+                obtingut= false;
             }
         System.out.println("Adéu");
         
