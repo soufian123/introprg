@@ -14,11 +14,12 @@ public class UtilString{
 
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(text.length()-1); num++){
-            if(Character.isLetter(text.charAt(num))){
-                return false;
-            }else if (text.charAt(num) == ',' || text.charAt(num) == ' ') {
+            if (text.charAt(num) == ',' || text.charAt(num) == ' ') {
 				return false;
 			}
+            if(Character.isLetter(text.charAt(num))){
+                return false;
+            }
         }
         return true;
         
