@@ -16,7 +16,7 @@ public class EntersEntreComes {
 
         numeros[2] = 3;
 
-        System.out.print(numeros[numeros[0]]);
+        System.out.print(numeros[0]);
 
         for (int i = 1; i < numeros.length; i++) {
 
