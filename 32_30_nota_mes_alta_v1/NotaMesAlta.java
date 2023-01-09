@@ -41,5 +41,6 @@ public class NotaMesAlta{
             
             }
         }
+        System.out.println("La nota més alta és "+numAlt);
     }
 }
