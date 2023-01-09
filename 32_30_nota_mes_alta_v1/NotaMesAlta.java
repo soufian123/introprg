@@ -27,12 +27,11 @@ public class NotaMesAlta{
                 System.out.println("Com a mínim calen dues notes");
                 return;
             }
+            numAlt=numUn;
             while(seguir){
-                if (numUn<=numDos){
+            
+                if (numAlt<=numDos){
                     numAlt=numDos;
-                }
-                if (numUn>numDos){
-                    numAlt=numUn;
                 }
                 numDos= Integer.parseInt(Entrada.readLine());
                 if(numDos==-1){
