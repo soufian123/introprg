@@ -17,69 +17,46 @@ public class SumaEnters{
             return;
         }
         
-        //iniciem el array
-        int[] numeros;
-        int a=0;
-        numeros = new int[contador];
-        for (int num=0; num<args.length; num++){
-            if (UtilString.esEnter(text)){
-                numeros[a]= args[]
-                
-                
-                
-                
-                
-                filtraEnters(args);
-
-        }
-        
-        
+        System.out.println(sumaEnters(filtraEnters(args)));
+  
     }
-        
-        
 
 
     public static int quantsEnters(String[] valors) {    // nombre d'enters a valors
         //contador d'enters
         int contador=0;
         for(int n=0; n<valors.length; n++){
-            if(UtilString.esEnter(args[n])){
-                contador++
+            if(UtilString.esEnter(valors[n])){
+                contador++;
             }
         }
         return contador;
     }
         
     public static int[] filtraEnters(String[] valors) {  // enters que hi ha a valors
-        int num=0;
-        for (int num=0; num<numEnters; num++){
-            if(UtilString.esEnter(text)){
-                num
-            }
-        }
-    }
+        int valor[]=new int[quantsEnters(valors)];
+		int num=0;
+		for(int v=0;v<valors.length;v++) {
+			if (UtilString.esEnter(valors[v])) {
+				valor[num] = Integer.parseInt(valors[v]);
+				num++;
+			}
+		}
+		return valor;
+	}
     
         
     public static int sumaEnters(int[] valors)    {      // suma dels valors
-        int num=0;
-        
-        for (n=0; n)
+        int suma=0;
+		for(int i=0;i<valors.length;i++) {
+			suma =valors[i] + suma;
+		}
+		return suma;
+	}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
