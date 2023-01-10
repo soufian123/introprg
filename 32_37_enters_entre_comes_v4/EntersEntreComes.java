@@ -16,7 +16,7 @@ public class EntersEntreComes {
             text= Entrada.readLine();
         }
         int quants= Integer.parseInt(text);
-        if (quants<=1){
+        if (quants<1){
             System.out.println("Res a fer");
             return;
         }else{
