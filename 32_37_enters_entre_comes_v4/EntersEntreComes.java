@@ -16,7 +16,7 @@ public class EntersEntreComes {
         }
         int quants= Integer.parseInt(text);
         
-        System.out.println("Quants?");
+        System.out.println("Separador?");
         String textSeparador= Entrada.readLine();
         char separador = textSeparador.charAt(0);
         if (quants<1){
