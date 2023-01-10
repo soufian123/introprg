@@ -16,23 +16,28 @@ public class EntersEntreComes {
             text= Entrada.readLine();
         }
         int quants= Integer.parseInt(text);
-        
-        System.out.println("Separador?");
-        String textSeparador= Entrada.readLine();
-        if (textSeparador.isEmpty() || textSeparador.isBlank()){
-            separador=',';
-        }else{
-            separador = textSeparador.charAt(0);
-        }
         if (quants<1){
             System.out.println("Res a fer");
             return;
         }else{
         
-            numeros = new int[quants];
-            String resposta = UtilString.entreComes(numeros, separador);
+            System.out.println("Separador?");
+            String textSeparador= Entrada.readLine();
+            if (textSeparador.isEmpty() || textSeparador.isBlank()){
+                separador=',';
+            }else{
+                separador = textSeparador.charAt(0);
+            }
+            if (quants<1){
+                System.out.println("Res a fer");
+                return;
+            }else{
             
-            System.out.println(resposta); 
+                numeros = new int[quants];
+                String resposta = UtilString.entreComes(numeros, separador);
+                
+                System.out.println(resposta); 
+            }
         }
 
         
