@@ -14,12 +14,12 @@ public class EntersEntreComes {
             return;
         }else{
             numeros = new int[quants];
-            
             for(int q=0; q<numeros.length; q++){
-                for (int v=1; v<=numeros.length; v++){
-                    System.out.println("Valor "+v+"?");
-                    numeros[q] = Integer.parseInt(Entrada.readLine());
-                }
+                int v=1;
+                System.out.println("Valor "+v+"?");
+                numeros[q] = Integer.parseInt(Entrada.readLine());
+                v++;
+
             }
             
 
