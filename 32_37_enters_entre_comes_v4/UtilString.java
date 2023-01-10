@@ -180,9 +180,18 @@ public class UtilString{
 
         String text="";
         int v=1;
+        String valor="";
         for(int q=0; q<numeros.length; q++){
             System.out.println("Valor "+v+"?");
-            numeros[q] = Integer.parseInt(Entrada.readLine());
+            valor = Entrada.readLine();
+            while (!(esEnter(valor))){
+                System.out.println("Per favor, un valor enter");
+                valor= Entrada.readLine();
+            }
+            
+            
+            
+            numeros[q] = Integer.parseInt(valor);
             v++;
 
         }
