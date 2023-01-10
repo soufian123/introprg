@@ -7,6 +7,7 @@ public class EntersEntreComes {
     public static void main(String[] args) {
         
         int[] numeros;
+        char separador;
         System.out.println("Quants?");
         String text= Entrada.readLine();
         boolean enter= UtilString.esEnter(text);
@@ -18,7 +19,11 @@ public class EntersEntreComes {
         
         System.out.println("Separador?");
         String textSeparador= Entrada.readLine();
-        char separador = textSeparador.charAt(0);
+        if (textSeparador.isEmpty() || textSeparador.isBlank()){
+            separador=',';
+        }else{
+            separador = textSeparador.charAt(0);
+        }
         if (quants<1){
             System.out.println("Res a fer");
             return;
