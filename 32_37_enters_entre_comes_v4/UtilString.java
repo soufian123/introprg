@@ -189,7 +189,7 @@ public class UtilString{
         text= text+numeros[0];
         for (int i = 1; i < numeros.length; i++) {
             
-            text= text+ separador +" " + i;
+            text= text+ separador +" " + numeros[i];
 
         }
         return text;  
