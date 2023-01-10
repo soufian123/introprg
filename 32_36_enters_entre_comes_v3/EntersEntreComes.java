@@ -5,7 +5,7 @@ Desenvolupa un programa que mostri tres enters separats per comes tenint en comp
 public class EntersEntreComes {
 
     public static void main(String[] args) {
-
+        int v=1;
         int[] numeros;
         System.out.println("Quants?");
         int quants= Integer.parseInt(Entrada.readLine());
@@ -15,10 +15,9 @@ public class EntersEntreComes {
         }else{
             numeros = new int[quants];
             for(int q=0; q<numeros.length; q++){
-                int v=1;
                 System.out.println("Valor "+v+"?");
                 numeros[q] = Integer.parseInt(Entrada.readLine());
-                v= v+1;
+                v++;
 
             }
             
