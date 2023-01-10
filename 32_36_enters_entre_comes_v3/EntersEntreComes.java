@@ -18,7 +18,7 @@ public class EntersEntreComes {
                 int v=1;
                 System.out.println("Valor "+v+"?");
                 numeros[q] = Integer.parseInt(Entrada.readLine());
-                v++;
+                v= v+1;
 
             }
             
