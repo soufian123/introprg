@@ -36,7 +36,7 @@ public class EntersEntreComes {
                 numeros = new int[quants];
                 
                 
-                int v=0;
+                int v=1;
                 String valor="";
                 for(int q=0; q<numeros.length; q++){
                     System.out.println("Valor "+v+"?");
