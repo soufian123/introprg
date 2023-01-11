@@ -1,14 +1,14 @@
 
 
 
-//retorna un valor boolean cuan comprova si es enter o no
 
+//son utilitats de String
 
 
 
 
 public class UtilString{
-
+//retorna un valor boolean cuan comprova si es enter o no
     public static boolean esEnter(String text){
 
 
