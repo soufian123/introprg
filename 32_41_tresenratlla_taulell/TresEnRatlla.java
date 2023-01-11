@@ -5,12 +5,12 @@
             char[][] taulell = new char[3][3];
 
             // inicialització de la fila 0
-            taulell[0][0] = ' ';
+            taulell[0][0] = '.';
 
             // inicialització de la resta de files
             for (int i = 0; i < taulell.length; i++) {
                for (int j = 0; j < taulell[i].length; j++) {
-                    taulell[i][j] = ' ';
+                    taulell[i][j] = 'O';
                }
             }
 
