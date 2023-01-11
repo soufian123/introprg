@@ -8,7 +8,7 @@
             // declaració del taulell
             char[][] taulell = new char[3][3];
             
-            System.out.println("Comença el joc");
+            
 
             // inicialització de la fila 0
             taulell[0][0] = '·';
@@ -19,36 +19,48 @@
             taulell[1][2] = '·';
             taulell[2][0] = '·';
             taulell[2][1] = '·';
-            taulell[2][2] = '';
-            
+            taulell[2][2] = '·';
+            System.out.println("Comença el joc");
+            String jugador = "X?";
+            String jugadorDos = "O?";
+		    String canviar = "";
+		    String lloc="";
+		    int fila=0;
+		    int columna=0;
+		    char persona='a';
+            while (true){
+                mostraTaulell(taulell);
+			    System.out.println(jugador);
+			    persona = jugador.charAt(0);
+			    lloc = Entrada.readLine();
+                if (lloc.equals("a")) {
+				    System.out.println(persona + " abandona");
+				    break;
+			    }
+			    fila = lloc.charAt(0)-48;
+			    columna =lloc.charAt(1)-48;
+			    if (casellaOcupada(taulell, fila, columna)){
+			        System.out.println("Ocupada");
+			        continue;
+			    }
+			    taulell[fila][columna] = persona;
 
-            // mostra la posició inicial del taulell
-            mostraTaulell(taulell)
-            int xo=0;
-            while(){
-                if(xo==0){
-                    System.out.println("X?");
-                    xo=1;
-                }else if (xo==1){
-                    System.out.println("O?");
-                    xo=0;
-                }
-                
-                // demana coordenades del moviment del jugador X
-                int entrada = Integer.parseInt(Entrada.readLine());
-                int fila = Integer.parseInt(entrada.charAt(0));
-                int columna = Integer.parseInt(entrada.charAt(1));
+			    if(jugadorGuanya(taulell, persona)) {
+				    mostraTaulell(taulell);
+				    System.out.println(persona + " guanya");
+				    return;
+			    }
+			    if(hiHaEmpat(taulell)) {
+				    System.out.println("Empat");
+				    return;
+			    }
 
-                // marquem el nou moviment
-                taulell[fila][columna] = 'X';
+			    canviar=jugador;
+			    jugador=jugadorDos;
+			    jugadorDos=canviar;
 
-                // tornem a mostrar el taulell
-                System.out.println("La posició final del taulell:");
-                mostraFila(taulell[0]);
-                mostraFila(taulell[1]);
-                mostraFila(taulell[2]);
             }
-    }
+        }
 
     // mostra el contingut de la fila per sortida estàndard
     public static void mostraFila(char[] fila) {
@@ -58,20 +70,56 @@
         System.out.println();
     }
     
-    public static void mostraTaulell(char[][]){
+    public static void mostraTaulell(char[][] taulell){
         // mostra la posició inicial del taulell
         System.out.println("La posició inicial del taulell:");
         mostraFila(taulell[0]);     // mostra la línia 0
         mostraFila(taulell[1]);     // mostra la línia 1
         mostraFila(taulell[2]);     // mostra la línia 2
     }
+    public static boolean hiHaEmpat(char[][] tauler) {
+		for (int i=0;i<3;i++){
+			for(int c=0;c<3;c++){
+				if(tauler[i][c]=='·') {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
     
-    public static boolean casellaOcupada(char[][], int fila, int columna){
+    public static boolean casellaOcupada(char[][] taulell, int fila, int columna){
 		if (taulell[fila][columna]=='·') {
 			return false;
 		} else {
 			return true;
 		}
+    }
+    
+    public static boolean jugadorGuanya(char[][] taulell, char jugador) {
+        // comprova les columnes
+        for (int i = 0; i < 3; i++) {
+            if (taulell[0][i] == jugador && taulell[1][i] == jugador && taulell[2][i] == jugador) {
+                return true;
+            }
+        }
+        // comprova les files
+        for (int i = 0; i < 3; i++) {
+            if (taulell[i][0] == jugador && taulell[i][1] == jugador && taulell[i][2] == jugador) {
+                return true;
+            }
+        }
+ 
+ 
+        // comprova les diagonals
+        if (taulell[0][0] == jugador && taulell[1][1] == jugador && taulell[2][2] == jugador) {
+            return true;
+        }
+        if (taulell[0][2] == jugador && taulell[1][1] == jugador && taulell[2][0] == jugador) {
+            return true;
+        }
+ 
+        return false;
     }
 }
 
