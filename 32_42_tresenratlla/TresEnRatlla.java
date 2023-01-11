@@ -21,7 +21,6 @@
             taulell[2][1] = '·';
             taulell[2][2] = '·';
             System.out.println("Comença el joc");
-            System.out.println("La posició inicial del taulell:");
             String jugador = "X?";
             String jugadorDos = "O?";
 		    String canviar = "";
@@ -73,7 +72,6 @@
     
     public static void mostraTaulell(char[][] taulell){
         // mostra la posició inicial del taulell
-        System.out.println("La posició inicial del taulell:");
         mostraFila(taulell[0]);     // mostra la línia 0
         mostraFila(taulell[1]);     // mostra la línia 1
         mostraFila(taulell[2]);     // mostra la línia 2
