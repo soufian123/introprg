@@ -5,7 +5,7 @@
             char[][] taulell = new char[3][3];
 
             // inicialització de la fila 0
-            taulell[0][0] = '.';
+            taulell[0][0] = 'O';
 
             // inicialització de la resta de files
             for (int i = 0; i < taulell.length; i++) {
