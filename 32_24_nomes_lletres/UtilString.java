@@ -13,6 +13,9 @@ public class UtilString{
     public static String nomesLletres(String text){
         String lletres="";
         int fin=0;
+        if(text.isEmpty()){
+            return text;
+        }
         if (lletres==","){
             lletres="";
             return lletres;
