@@ -16,13 +16,6 @@
             taulell[2][2] = 'X';
             
 
-            // inicialització de la resta de files
-            for (int i = 0; i < taulell.length; i++) {
-               for (int j = 0; j < taulell[i].length; j++) {
-                    taulell[i][j] = 'O';
-               }
-            }
-
             // mostra la posició inicial del taulell
             System.out.println("La posició inicial del taulell:");
             mostraFila(taulell[0]);     // mostra la línia 0
