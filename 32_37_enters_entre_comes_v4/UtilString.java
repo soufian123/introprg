@@ -180,7 +180,9 @@ public class UtilString{
 
         String text="";
         
-        
+        if(numeros.length==0){
+            return text;
+        }
         /*
         int v=1;
         String valor="";
