@@ -5,14 +5,14 @@
             char[][] taulell = new char[3][3];
 
             // inicialització de la fila 0
-            taulell[0][0] = '.';
+            taulell[0][0] = '·';
             taulell[0][1] = 'O';
             taulell[0][2] = 'O';
-            taulell[1][0] = '.';
+            taulell[1][0] = '·';
             taulell[1][1] = 'X';
-            taulell[1][2] = '.';
-            taulell[2][0] = '.';
-            taulell[2][1] = '.';
+            taulell[1][2] = '·';
+            taulell[2][0] = '·';
+            taulell[2][1] = '·';
             taulell[2][2] = 'X';
             
 
