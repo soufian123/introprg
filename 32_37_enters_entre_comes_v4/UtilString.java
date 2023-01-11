@@ -183,11 +183,11 @@ public class UtilString{
         String valor="";
         for(int q=0; q<numeros.length; q++){
             System.out.println("Valor "+v+"?");
-            valor = Entrada.readLine();
+           /* valor = Entrada.readLine();
             while (!(esEnter(valor))){
                 System.out.println("Per favor, un valor enter");
                 valor= Entrada.readLine();
-            }
+            }*/
             
             
             
