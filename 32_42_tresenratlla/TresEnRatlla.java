@@ -21,6 +21,7 @@
             taulell[2][1] = '·';
             taulell[2][2] = '·';
             System.out.println("Comença el joc");
+            System.out.println("La posició inicial del taulell:");
             String jugador = "X?";
             String jugadorDos = "O?";
 		    String canviar = "";
