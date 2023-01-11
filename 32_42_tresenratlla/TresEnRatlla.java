@@ -1,19 +1,27 @@
     /* Joc de Tres en Ratlla */
     public class TresEnRatlla {
         public static void main(String[] args){
+            
+            System.out.println("Comença el joc");
+            System.out.println("···");
+            System.out.println("···");
+            System.out.println("···");
+            System.out.println("X?");
+            
+            
             // declaració del taulell
             char[][] taulell = new char[3][3];
 
             // inicialització de la fila 0
             taulell[0][0] = '·';
-            taulell[0][1] = 'O';
-            taulell[0][2] = 'O';
+            taulell[0][1] = '·';
+            taulell[0][2] = '·';
             taulell[1][0] = '·';
-            taulell[1][1] = 'X';
+            taulell[1][1] = '·';
             taulell[1][2] = '·';
             taulell[2][0] = '·';
             taulell[2][1] = '·';
-            taulell[2][2] = 'X';
+            taulell[2][2] = '·';
             
 
             // mostra la posició inicial del taulell

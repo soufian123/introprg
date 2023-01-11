@@ -179,22 +179,27 @@ public class UtilString{
     public static String entreComes(int[] numeros, char separador){
 
         String text="";
+        
+        
+        /*
         int v=1;
         String valor="";
         for(int q=0; q<numeros.length; q++){
             System.out.println("Valor "+v+"?");
-           /* valor = Entrada.readLine();
+            valor = Entrada.readLine();
             while (!(esEnter(valor))){
                 System.out.println("Per favor, un valor enter");
                 valor= Entrada.readLine();
-            }*/
-            
-            
-            
+            }
+
             numeros[q] = Integer.parseInt(valor);
             v++;
 
         }
+        */
+        
+        
+        
         text= text+numeros[0];
         for (int i = 1; i < numeros.length; i++) {
             

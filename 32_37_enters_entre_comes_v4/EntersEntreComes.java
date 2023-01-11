@@ -34,6 +34,25 @@ public class EntersEntreComes {
             }else{
             
                 numeros = new int[quants];
+                
+                
+                int v=0;
+                String valor="";
+                for(int q=0; q<numeros.length; q++){
+                    System.out.println("Valor "+v+"?");
+                    valor = Entrada.readLine();
+                    while (!(UtilString.esEnter(valor))){
+                        System.out.println("Per favor, un valor enter");
+                        valor= Entrada.readLine();
+                    }
+                    
+                    
+                    
+                    numeros[q] = Integer.parseInt(valor);
+                    v++;
+
+                }
+                
                 String resposta = UtilString.entreComes(numeros, separador);
                 
                 System.out.println(resposta); 
