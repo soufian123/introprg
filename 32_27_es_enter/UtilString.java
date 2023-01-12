@@ -19,7 +19,7 @@ public class UtilString{
             if (Character.isLetter(text.charAt(i))) {
                 return false;
                 
-            } else if (text.charAt(i) == ',' ) {
+            } else if (text.charAt(i) == ',' || text.charAt(i) == ' ') {
                 return false;
             }
             
