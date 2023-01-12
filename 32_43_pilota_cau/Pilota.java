@@ -45,7 +45,7 @@ public class Pilota {
 
     }
     public static int seguentFila(int actual) {
-        if(actual<9){
+        if(actual<8){
             actual++;
         }else{
             actual=0;
@@ -53,7 +53,7 @@ public class Pilota {
         return actual; 
     }
     public static int seguentCol(int actual) {
-        if(actual<13){
+        if(actual<12){
             actual++;
         }else{
             actual=0;
