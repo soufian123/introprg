@@ -15,10 +15,10 @@ public class UtilString{
             return false;
         }
         if (text.charAt(0) == ' '  && text.charAt(1) == '1' ){
-            return true;
+            return false;
         }
         if (text.charAt(1) == ' '  && text.charAt(0) == '1' ){
-            return true;
+            return false;
         } 
         for (int i=0; i<text.length();i++) {
             if (Character.isLetter(text.charAt(i))) {
