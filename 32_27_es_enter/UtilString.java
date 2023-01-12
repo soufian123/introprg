@@ -14,10 +14,10 @@ public class UtilString{
         if (text.isBlank()) {
             return false;
         }
-        if (text.charAt(0) == ' '  || text.charAt(1) == '1' ){
+        if (text.charAt(0) == ' '  && text.charAt(1) == '1' ){
             return true;
         }
-        if (text.charAt(1) == ' '  || text.charAt(0) == '1' ){
+        if (text.charAt(1) == ' '  && text.charAt(0) == '1' ){
             return true;
         } 
         for (int i=0; i<text.length();i++) {
