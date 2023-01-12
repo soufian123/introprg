@@ -1,10 +1,5 @@
 
-//utilitats del String      UtilString
-
-
-
-
-
+// utilitats de programes anteriors (en moduls)  UtilString
 
 
 
