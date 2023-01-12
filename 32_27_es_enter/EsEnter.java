@@ -9,7 +9,7 @@ public class EsEnter{
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text= Entrada.readLine();
         boolean comprovar= false;
-
+        text = text.strip();
         while (!(text.isBlank() || text.isEmpty())){
         
         
