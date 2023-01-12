@@ -25,9 +25,9 @@ public class Pilota {
         }
     }
     public static void netejaCamp(char[][] camp) {
-        for(int fila=0; fila<=9; fila++){
-            for(int col=0; col<=13; fila++){
-                System.out.print(camp[fila][col] = '·');
+        for (int i=0; i<N_FILES; i++) {
+            for (int j=0; j<N_COLS; j++) {
+                System.out.print(camp[i][j]='·');
             }
             System.out.println();
         }
