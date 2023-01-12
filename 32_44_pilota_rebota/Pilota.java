@@ -1,4 +1,4 @@
-/* XXX */
+/* es el mateix que el excercici anterior pero ara que toca una paret doncs rebota (es a dir la pilota rebota) */
 public class Pilota {
     public static final int N_FILES = 9;
     public static final int N_COLS = 14;
@@ -46,7 +46,8 @@ public class Pilota {
         posicio[1]=novaCol;
     }
     public static void canviaIncrement(int[] increment, int nouIncFila, int nouIncCol) {
-        /* XXX */;
+        increment[0]=nouIncFila;
+        increment[1]=nouIncCol;
     }
     public static void seguentPosicio(int[] posicio, int[] increment) {
         int fila = obteFila(posicio);
@@ -55,16 +56,24 @@ public class Pilota {
         int incCol = obteIncrCol(increment);
 
         // actualitza la fila
-        fila + incFila;
+        fila = fila + incFila;
         if (fila < 0) {                     // es passa per sobre
             fila = 1;                       // torna a la primera fila
             incFila = 1;                    // toca baixar
         } else if (fila > N_FILES -1) {     // es passa per sota
-        /* XXX */;
+            fila=7;
+            incFila=-1;
         }
 
         // actualitza la columna
-        /* XXX */;
+        col = col + incCol;
+        if (col < 0) {                     // es passa per sobre
+            col = 1;                       // torna a la primera fila
+            incCol = 1;                    // toca baixar
+        } else if (col > N_COLS -1) { 
+            col=13;
+            incCol=-1;
+        }
 
         // actualitza la posició i l'increment
         canviaPosicio(posicio, fila, col);
