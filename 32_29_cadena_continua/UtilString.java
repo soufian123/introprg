@@ -11,7 +11,9 @@ public class UtilString{
 
     public static boolean esEnter(String text /*, boolean estricte */){
 
-
+        if (text.isBlank()){
+                return false;
+        }
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(text.length()-1); num++){
             if (text.charAt(num) == ','){
