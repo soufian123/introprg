@@ -23,7 +23,7 @@ public class EsEnter{
                 texto= texto + text.charAt(num);
             }
         }
-                obtingut = UtilString.esEnter(text , obtingut );
+                obtingut = UtilString.esEnter(text );
                 numero= UtilString.aEnter(text , obtingut );
                 
                 if (numero==1){
