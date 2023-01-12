@@ -1,4 +1,7 @@
-    /* Joc de Tres en Ratlla */
+    /* 
+    Joc de Tres en Ratlla 
+    el programa demanarà quin és el següent moviment de les ㄨ i el coŀlocarà al taulell.
+    */
     public class TresEnRatlla {
         public static void main(String[] args){
             // declaració del taulell
