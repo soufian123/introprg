@@ -10,9 +10,8 @@
 public class UtilString{
 
     public static boolean esEnter(String text , boolean estricte ){
+    
 
-
-        boolean resultat=true;
         boolean texts=true;
         String texto="";
         //treu tots els espais en blanc, + i -
@@ -37,7 +36,7 @@ public class UtilString{
 
     public static int aEnter(String text , boolean texts ){
 
-        boolean resultat=true;
+        boolean estricte=true;
         String texto="";
         //treu tots els espais en blanc, + i -
         for(int num=0; num<=(text.length()-1); num++){
@@ -50,9 +49,9 @@ public class UtilString{
         if (texts){
             int numeroLletra=(text.length()-1);
             if (numeroLletra % 2 == 0){
-                resultat= true;
+                estricte= true;
             }else{
-                resultat=false;
+                estricte=false;
             }
 
         }
@@ -62,13 +61,13 @@ public class UtilString{
 
             int numero= Integer.parseInt((texto));
             if (numero % 2 == 0){
-                resultat= false;
+                estricte= false;
             }else{
-                resultat=true;
+                estricte=true;
             }
 
         }
-        if (resultat){
+        if (estricte){
             return 1;
         }else{
             return 2;
