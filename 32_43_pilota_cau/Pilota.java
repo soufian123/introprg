@@ -29,6 +29,7 @@ public class Pilota {
             for(int col=0; col<=13; fila++){
                 System.out.print(camp[fila][col] = '·');
             }
+            System.out.println();
         }
     }
     public static void netejaPosicio(char[][] camp, int fila, int col) {
