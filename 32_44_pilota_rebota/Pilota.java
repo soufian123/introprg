@@ -71,7 +71,7 @@ public class Pilota {
             col = 1;                       // torna a la primera fila
             incCol = 1;                    // toca baixar
         } else if (col > N_COLS -1) { 
-            col=13;
+            col=12;
             incCol=-1;
         }
 
