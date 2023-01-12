@@ -36,12 +36,12 @@ public class Pilota {
     }
     public static void netejaPosicio(char[][] camp, int fila, int col) {
         
-        System.out.print(camp[fila][col] = '·');
+        camp[fila][col] = '·';
         
     }
     public static void posicionaPilota(char[][] camp, int fila, int col) {
 
-        System.out.print(camp[fila][col] = 'O');
+        camp[fila][col] = 'O';
 
     }
     public static int seguentFila(int actual) {
