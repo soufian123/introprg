@@ -1,4 +1,4 @@
-//son utilitats de String
+// utilitats de programes anteriors (en moduls)  UtilString
 
 
 public class UtilString{
