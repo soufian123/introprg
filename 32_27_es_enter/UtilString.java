@@ -14,20 +14,12 @@ public class UtilString{
         if (text.isBlank()) {
             return false;
         }
-        if (text.charAt(0) == ' '  && text.charAt(1) == '1' ){
-            return false;
-        }
-        if (text.charAt(1) == ' '  && text.charAt(0) == '1' ){
-            return false;
-        } 
-        if (text.charAt(0) == '1'){
-            return true;
-        }
+        
         for (int i=0; i<text.length();i++) {
             if (Character.isLetter(text.charAt(i))) {
                 return false;
                 
-            } else if (text.charAt(i) == ',' ) {
+            } else if (text.charAt(i) == ',' || text.charAt(i) == ' ') {
                 return false;
             }
             
