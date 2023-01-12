@@ -76,6 +76,25 @@ public class UtilString{
     
     
     }
+    
+    
+        public static boolean esEnter(String text) {
+        if (text.isBlank()) {
+            return false;
+        }
+        
+        for (int i=0; i<text.length();i++) {
+            if (Character.isLetter(text.charAt(i))) {
+                return false;
+                
+            } else if (text.charAt(i) == ',' || text.charAt(i) == ' ') {
+                return false;
+            }
+            
+        }
+        return true;
+    }
+
 
 }
 
