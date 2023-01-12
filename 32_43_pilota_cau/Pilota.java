@@ -27,10 +27,12 @@ public class Pilota {
     public static void netejaCamp(char[][] camp) {
         for (int i=0; i<N_FILES; i++) {
             for (int j=0; j<N_COLS; j++) {
-                System.out.print(camp[i][j]='·');
+                camp[i][j]= '·';
             }
             System.out.println();
         }
+        camp[0][0]= 'O';
+        
     }
     public static void netejaPosicio(char[][] camp, int fila, int col) {
         
