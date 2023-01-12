@@ -31,7 +31,7 @@ public class Pilota {
             }
             System.out.println();
         }
-        camp[0][0]= 'O';
+        //camp[0][0]= 'O';
         
     }
     public static void netejaPosicio(char[][] camp, int fila, int col) {
