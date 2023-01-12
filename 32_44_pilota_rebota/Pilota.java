@@ -32,7 +32,7 @@ public class Pilota {
        return posicio[0];
     }
     public static int obteCol(int[] posicio) {
-       return posicio[];
+       return posicio[1];
     }
     public static int obteIncrFila(int[] increment) {
         return increment [0]; 
@@ -42,7 +42,8 @@ public class Pilota {
     }
 
     public static void canviaPosicio(int[] posicio, int novaFila, int novaCol) {
-        /* XXX */;
+        posicio[0]=novaFila;
+        posicio[1]=novaCol;
     }
     public static void canviaIncrement(int[] increment, int nouIncFila, int nouIncCol) {
         /* XXX */;
