@@ -9,6 +9,7 @@ public class EsEnter{
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text= Entrada.readLine();
         boolean obtingut= false;
+        boolean tr=true;
         int numero=0;
         String texto="";
         while (!(text.isBlank() || text.isEmpty())){
@@ -23,7 +24,7 @@ public class EsEnter{
                 texto= texto + text.charAt(num);
             }
         }
-                obtingut = UtilString.esEnter(text );
+                obtingut = UtilString.esEnter(text, tr );
                 numero= UtilString.aEnter(text , obtingut );
                 
                 if (numero==1){
