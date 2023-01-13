@@ -37,6 +37,16 @@ public class DigitArt {
     }
     public static void mostraResultat(char[][] origen, char[][] resultat) {
         /* XXX */
+        for(int i=0; i<7; i++){
+            for(int a=0; a<6; a++){
+                System.out.print(origen[i][a]);
+            }
+            System.out.print(" -> ");
+            for(int a=0; a<6; a++){
+                System.out.print(origen[i][a]);
+            }
+            System.out.println();
+        }
     }
     public static void processaCaracter(char ch) {
         char[][] origen;
@@ -55,11 +65,24 @@ public class DigitArt {
     }
     public static void processaArgument(String arg) {
         /* XXX crida a processaCaracter() per cada caracter de arg */
+        
+        for(int a=0; a<arg.length(); a++){
+            processaCaracter(arg.charAt(a));
+        }
+        
     }
     public static void main(String[] args){
         // comprova que com a mínim hi hagi un argument
         /* XXX */
+        if (args.length==0){
+            return;
+        }
+        
         // processa cada argument
         /* XXX crida a processaArgument() per cada argument */
+        for(int a=0; a<args.length; a++){
+            processaArgument(args[a]);
+        }
+        
     }
 }
