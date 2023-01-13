@@ -1,8 +1,8 @@
 
+// utilitats de programes anteriors (en moduls)  UtilString
 
 
-
-//son utilitats de String
+//son utilitats de String de pro
 
 
 
