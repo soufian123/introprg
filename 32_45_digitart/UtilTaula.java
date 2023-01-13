@@ -12,8 +12,11 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
        // int [][] numero= taula.length;
         char[][] resultat = new char[7][6];
         //resultat  = taula;
-        for(int i=0; i<7; i++){
-            for(int a=0; a<6; a++){
+        int nLin = taula[0].length;
+        int nCol= taula[1].length;
+        
+        for(int i=0; i<nLin; i++){
+            for(int a=0; a<nCol; a++){
                 if (taula[i][a]==inici){
                     resultat[i][a]= fi;
                 }else{
