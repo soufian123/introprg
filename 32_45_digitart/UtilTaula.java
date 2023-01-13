@@ -9,14 +9,19 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
 */
     
     public static char [][] substitueix(char[][] taula, char inici, char fi){
-        
+       // int [][] numero= taula.length;
+        char[][] resultat = new char[7][5];
+        //resultat  = taula;
         for(int i=0; i<7; i++){
-            for(int a=0; a<6; a++){
+            for(int a=0; a<5; a++){
                 if (taula[i][a]==inici){
-                    taula[i][a]= fi;
+                    resultat[i][a]= fi;
+                }else{
+                    resultat[i][a] =taula[i][a];
                 }
             }
+           
         }
-        return taula;
+        return resultat;
     }
 }
