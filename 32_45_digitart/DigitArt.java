@@ -77,6 +77,7 @@ public class DigitArt {
         // comprova que com a mínim hi hagi un argument
         /* XXX */
         if (args.length==0){
+            System.out.println("Especifiqueu un o més dígits en la línia de comandes");
             return;
         }
         
