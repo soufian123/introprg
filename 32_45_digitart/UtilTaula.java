@@ -10,10 +10,10 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
     
     public static char [][] substitueix(char[][] taula, char inici, char fi){
        // int [][] numero= taula.length;
-        char[][] resultat = new char[7][5];
+        char[][] resultat = new char[7][6];
         //resultat  = taula;
         for(int i=0; i<7; i++){
-            for(int a=0; a<5; a++){
+            for(int a=0; a<6; a++){
                 if (taula[i][a]==inici){
                     resultat[i][a]= fi;
                 }else{
