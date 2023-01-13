@@ -38,15 +38,13 @@ public class DigitArt {
     public static void mostraResultat(char[][] origen, char[][] resultat) {
         /* XXX */
         
-        int nLin = origen[0].length;
-        int nCol= origen[1].length;
         
-        for(int i=0; i<nLin; i++){
-            for(int a=0; a<nCol; a++){
+        for(int i=0; i<origen.length; i++){
+            for(int a=0; a<origen[0].length; a++){
                 System.out.print(origen[i][a]);
             }
             System.out.print(" -> ");
-            for(int a=0; a<nCol; a++){
+            for(int a=0; a<origen[0].length; a++){
                 System.out.print(resultat[i][a]);
             }
             System.out.println();
