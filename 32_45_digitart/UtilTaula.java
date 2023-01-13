@@ -10,7 +10,7 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
     
     public static char [][] substitueix(char[][] taula, char inici, char fi){
        // int [][] numero= taula.length;
-        char[][] resultat = new char[7][6];
+        char[][] resultat = new char[taula.length][taula[0].length];
         //resultat  = taula;
 
         
