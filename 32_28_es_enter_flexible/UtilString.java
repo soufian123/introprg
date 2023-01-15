@@ -62,6 +62,7 @@ public class UtilString{
         int pasar=0;
         for(int num=0; num<=(text.length()-1); num++){
             if(Character.isDigit(texto.charAt(num))){
+                si=true;
             }else {
             si=false;
                 break;
