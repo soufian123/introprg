@@ -52,27 +52,18 @@ public class UtilString{
             int pasar= Integer.parseInt(texto);
             return pasar;
 
+        }else{
+            int llargada=texto.length();
+            return llargada;
         }
         
-
-
-        //comprovacio si es enter o no en el cas de numero
-        if(texts==false){
-
-            int numero= Integer.parseInt((texto));
-            if (numero % 2 == 0){
-                estricte= false;
-            }else{
-                estricte=true;
-            }
-
-        }
+        /*
         if (estricte){
             return 1;
         }else{
             return 2;
         }
-
+        */
 
     
     }
