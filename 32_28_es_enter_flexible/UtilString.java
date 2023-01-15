@@ -69,6 +69,7 @@ public class UtilString{
             }
         }
         if (si){
+            System.out.println(texto);
             pasar= Integer.parseInt(texto);
             return pasar;
         }
