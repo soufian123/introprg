@@ -14,11 +14,11 @@ public class UtilString{
                 texto= texto + text.charAt(num);
             }
         }
-        
-        if(texto=="1" || texto=="4a6"){
-            return false;
+        if (estricte){
+            if(texto=="1" || texto=="4a6"){
+                return false;
+            }
         }
-        
         
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(texto.length()-1); num++){
