@@ -57,6 +57,8 @@ public class UtilString{
             }
 
         }
+        
+        /*
         //comprova si es numero y si ho es retorna el numero
         boolean si=true;
         int pasar=0;
@@ -80,7 +82,7 @@ public class UtilString{
             pasar= Integer.parseInt(textoo);
             return pasar;
         }
-        
+        */
 
         //comprovacio si es enter o no en el cas de numero
         if(texts==false){
