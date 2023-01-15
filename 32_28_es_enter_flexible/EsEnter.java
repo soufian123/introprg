@@ -28,9 +28,9 @@ public class EsEnter{
                 numero= UtilString.aEnter(text , obtingut );
                 
                 if (numero % 2 == 0){
-                    System.out.println("És enter");
-                
-                }else{System.out.println("No és enter");}
+                    System.out.println("No és enter");
+
+                }else{System.out.println("És enter");}
             }    
                 text= Entrada.readLine();
                 obtingut= false;
