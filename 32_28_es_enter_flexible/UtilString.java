@@ -77,7 +77,7 @@ public class UtilString{
                     textoo= textoo + text.charAt(num);
                 }
             }
-            pasar= Integer.parseInt(texto);
+            pasar= Integer.parseInt(textoo);
             return pasar;
         }
         
