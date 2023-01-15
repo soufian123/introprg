@@ -40,9 +40,7 @@ public class UtilString{
                 texto= texto + text.charAt(num);
             }
         }
-        if (texto.length()==0){
-            return 0;
-        }
+
         //comprovacio si es enter o no en el cas de lletra
         if (texts){
             int pasar= Integer.parseInt(text);
