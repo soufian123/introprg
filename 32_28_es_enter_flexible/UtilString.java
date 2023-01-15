@@ -41,7 +41,7 @@ public class UtilString{
         }
         //comprovacio si es enter o no en el cas de lletra
         if (texts){
-            int pasar= Integer.parseInt(texto);
+            int pasar= Integer.parseInt(text);
             return pasar;
 
         }else{
