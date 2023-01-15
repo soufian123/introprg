@@ -35,6 +35,7 @@ public class UtilString{
 
 
     public static int aEnter(String text , boolean texts ){
+        
 
         boolean estricte=true;
         String texto="";
@@ -55,6 +56,21 @@ public class UtilString{
             }
 
         }
+        //comprova si es numero y si ho es retorna el numero
+        boolean si=true;
+        int pasar=0;
+        for(int num=0; num<=(text.length()-1); num++){
+            if(Character.isDigit(texto.charAt(num))){
+            }else {
+            si=false;
+                break;
+            }
+        }
+        if (si){
+            pasar= Integer.parseInt(texto);
+            return pasar;
+        }
+        
 
         //comprovacio si es enter o no en el cas de numero
         if(texts==false){
@@ -73,7 +89,7 @@ public class UtilString{
             return 2;
         }
 
-    
+
     
     }
     

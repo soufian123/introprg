@@ -27,7 +27,7 @@ public class EsEnter{
                 obtingut = UtilString.esEnter(text, tr );
                 numero= UtilString.aEnter(text , obtingut );
                 
-                if (numero==1){
+                if (numero % 2 == 0){
                     System.out.println("És enter");
                 
                 }else{System.out.println("No és enter");}
