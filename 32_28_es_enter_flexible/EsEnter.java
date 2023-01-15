@@ -25,14 +25,6 @@ public class EsEnter{
                     }
                 }
 
-                //treu tots els espais en blanc, + i -
-                for(int num=0; num<=(text.length()-1); num++){
-                    if( Character.isWhitespace(text.charAt(num)) || text.charAt(num)=='+' || text.charAt(num)=='-'){
-                    }else {
-                        texto= texto + text.charAt(num);
-                    }
-                }
-                
                 obtingut = UtilString.esEnter(texto, tr );
                 numero= UtilString.aEnter(texto , obtingut );
                 

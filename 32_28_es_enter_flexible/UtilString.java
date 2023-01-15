@@ -49,12 +49,14 @@ public class UtilString{
         }
         //comprovacio si es enter o no en el cas de lletra
         if (texts){
-            int numeroLletra=(text.length()-1);
+            int pasar= Integer.parseInt(texto);
+            return pasar;
+            /*int numeroLletra=(text.length()-1);
             if (numeroLletra % 2 == 0){
                 estricte= true;
             }else{
                 estricte=false;
-            }
+            } */
 
         }
         
