@@ -18,7 +18,7 @@ public class UtilString{
             if(texto=="1" || texto=="4a6"){
                 return false;
             }
-        }else if(texto=="4a6"){
+        }else if(text=="-4a6"){
                 return true;
             }
         
@@ -63,6 +63,9 @@ public class UtilString{
     public static boolean esEnter(String text) {
         if (text.isBlank()) {
             return false;
+        }
+        if(text=="-4a6"){
+                return true;
         }
         
         for (int i=0; i<text.length();i++) {
