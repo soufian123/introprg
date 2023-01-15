@@ -24,8 +24,17 @@ public class EsEnter{
                         texto= texto + text.charAt(num);
                     }
                 }
-                obtingut = UtilString.esEnter(text, tr );
-                numero= UtilString.aEnter(text , obtingut );
+
+                //treu tots els espais en blanc, + i -
+                for(int num=0; num<=(text.length()-1); num++){
+                    if( Character.isWhitespace(text.charAt(num)) || text.charAt(num)=='+' || text.charAt(num)=='-'){
+                    }else {
+                        texto= texto + text.charAt(num);
+                    }
+                }
+                
+                obtingut = UtilString.esEnter(texto, tr );
+                numero= UtilString.aEnter(texto , obtingut );
                 
                 if (numero % 2 == 0){
                     System.out.println("No és enter");
