@@ -18,7 +18,7 @@ public class EsEnter{
             if (!(text.isBlank() || text.isEmpty())){
                 obtingut= false;
 
-
+                text= text.trim();
                 obtingut = UtilString.esEnter(text, tr );
                 numero= UtilString.aEnter(text , obtingut );
                 
