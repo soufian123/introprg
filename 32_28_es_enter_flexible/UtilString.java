@@ -21,6 +21,9 @@ public class UtilString{
                 texto= texto + text.charAt(num);
             }
         }
+        if (!(texto.isBlank() || texto.isEmpty())){
+            return true;
+        }
         
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(texto.length()-1); num++){

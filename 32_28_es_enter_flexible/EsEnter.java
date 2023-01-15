@@ -18,12 +18,12 @@ public class EsEnter{
             if (!(text.isBlank() || text.isEmpty())){
                 obtingut= false;
                 //treu tots els espais en blanc, + i -
-        for(int num=0; num<=(text.length()-1); num++){
-            if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
-            }else {
-                texto= texto + text.charAt(num);
-            }
-        }
+                for(int num=0; num<=(text.length()-1); num++){
+                    if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
+                    }else {
+                        texto= texto + text.charAt(num);
+                    }
+                }
                 obtingut = UtilString.esEnter(text, tr );
                 numero= UtilString.aEnter(text , obtingut );
                 
