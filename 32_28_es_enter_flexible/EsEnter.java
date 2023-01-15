@@ -35,6 +35,7 @@ public class EsEnter{
             }    
                 text= Entrada.readLine();
                 obtingut= false;
+                texto="";
             }
         System.out.println("Adéu");
         
