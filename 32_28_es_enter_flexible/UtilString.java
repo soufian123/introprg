@@ -1,17 +1,10 @@
-
-
-
 //retorna un valor boolean cuan comprova si es enter o no
-
-
-
 
 
 public class UtilString{
 
     public static boolean esEnter(String text , boolean estricte ){
     
-
         boolean texts=true;
         String texto="";
         //treu tots els espais en blanc, + i -
@@ -33,7 +26,6 @@ public class UtilString{
         return true;
         
     }
-
 
     public static int aEnter(String text , boolean texts ){
         
@@ -57,19 +49,9 @@ public class UtilString{
             return llargada;
         }
         
-        /*
-        if (estricte){
-            return 1;
-        }else{
-            return 2;
-        }
-        */
-
-    
     }
     
-    
-        public static boolean esEnter(String text) {
+    public static boolean esEnter(String text) {
         if (text.isBlank()) {
             return false;
         }
@@ -85,8 +67,6 @@ public class UtilString{
         }
         return true;
     }
-
-
 }
 
 
