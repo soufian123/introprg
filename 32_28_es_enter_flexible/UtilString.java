@@ -69,7 +69,14 @@ public class UtilString{
             }
         }
         if (si){
-            System.out.println(texto);
+            String textoo="";
+            //treu tots els espais en blanc, + i -
+            for(int num=0; num<=(text.length()-1); num++){
+                if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
+                }else {
+                    textoo= textoo + text.charAt(num);
+                }
+            }
             pasar= Integer.parseInt(texto);
             return pasar;
         }
