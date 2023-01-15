@@ -72,9 +72,9 @@ public class UtilString{
             String textoo="";
             //treu tots els espais en blanc, + i -
             for(int num=0; num<=(text.length()-1); num++){
-                if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
+                if( Character.isWhitespace(texto.charAt(num))|| texto.charAt(num)=='+' || texto.charAt(num)=='-'){
                 }else {
-                    textoo= textoo + text.charAt(num);
+                    textoo= textoo + texto.charAt(num);
                 }
             }
             pasar= Integer.parseInt(textoo);
