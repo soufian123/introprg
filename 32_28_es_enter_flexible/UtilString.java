@@ -20,10 +20,10 @@ public class UtilString{
             if(Character.isLetter(texto.charAt(num))){
 
             }else {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
         
     }
 
@@ -40,7 +40,7 @@ public class UtilString{
             }
         }
         //comprovacio si es enter o no en el cas de lletra
-        if (!texts){
+        if (texts){
             int pasar= Integer.parseInt(texto);
             return pasar;
 
