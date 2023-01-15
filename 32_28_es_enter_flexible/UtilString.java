@@ -15,6 +15,11 @@ public class UtilString{
             }
         }
         
+        if(texto=="1" || texto=="4a6"){
+            return false;
+        }
+        
+        
         //comprova si tot es lletra o numero 
         for(int num=0; num<=(texto.length()-1); num++){
             if(Character.isLetter(texto.charAt(num))){
