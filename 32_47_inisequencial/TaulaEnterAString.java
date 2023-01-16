@@ -21,6 +21,7 @@ public class TaulaEnterAString {
                 System.out.println();
             }
         }
+        nums=1;
     }
     public static boolean especificacioCorrecta(String especificacio) {
         /* retorna true si l'especificació és de la forma n'x'm on n i m
