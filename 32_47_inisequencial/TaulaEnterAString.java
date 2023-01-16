@@ -4,7 +4,7 @@ un programa que permet mostrar taules de diferents dimensions, amb totes les pos
 
 public class TaulaEnterAString {
     public static void main(String[] args){
-    int num=1;
+    int nums=1;
         for (int i=0; i<args.length; i++) {
             System.out.println(args[i]);
             int files = obteFiles(args[i]);
@@ -14,8 +14,8 @@ public class TaulaEnterAString {
             } else {
                 int[][] taula  = new int[files][columnes];
                 
-                UtilTaula.inicialitzaTaula(taula, num);
-                num++;
+                UtilTaula.inicialitzaTaula(taula, nums);
+                nums++;
                 String resultat = UtilTaula.taulaToString(taula);
                 System.out.println(resultat);
                 System.out.println();
