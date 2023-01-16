@@ -35,7 +35,7 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
         
         for(int l=0; l<taula.length; l++){
             for(int c=0; l<taula[0].length; l++){
-                taula[l][c]= valor;
+                valor = taula[l][c];
             }
         }
         
