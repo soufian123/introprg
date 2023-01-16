@@ -77,19 +77,11 @@ public class TaulaEnterAString {
          * Altrament, retornarà el valor -1.  */
 
         /*…*/
-        especificacio= especificacio.trim();
-        boolean ns= false;
-        for(int n=0; n<especificacio.length(); n++){
-            if(especificacio.charAp(n)=='x' || especificacio.charAp(n)=='X' ){
-                ns=true;
-            }
-        }
         
-        if(Character.isDigit(especificacio.charAp(0)) || !ns){
-            return -1;
-        }
+
         String[] coordenades = especificacio.split("x");
-        int[] files = Integer.parseInt(coordenades[0]);
+        if (coordenades.length != 2) return -1;
+        int files = Integer.parseInt(coordenades[0]);
         return files;
 
     }
@@ -108,19 +100,11 @@ public class TaulaEnterAString {
          * Altrament, retornarà el valor -1.  */
 
         /*…*/
-        especificacio= especificacio.trim();
-        boolean ns= false;
-        for(int n=0; n<especificacio.length(); n++){
-            if(especificacio.charAp(n)=='x' || especificacio.charAp(n)=='X' ){
-                ns=true;
-            }
-        }
-        
-        if(Character.isDigit(especificacio.charAp(0)) || !ns){
-            return -1;
-        }
         String[] coordenades = especificacio.split("x");
-        int[] files = Integer.parseInt(coordenades[1]);
+        if (coordenades.length != 2) return -1;
+        
+        int files = Integer.parseInt(coordenades[1]);
+        
         return files;
 
     }

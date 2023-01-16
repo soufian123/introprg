@@ -30,7 +30,7 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
     
     
     
-    public static void main inicialitzaTaula(int[][] taula, int valor){
+    public static void inicialitzaTaula(int[][] taula, int valor){
 
         
         for(int l=0; l<taula.length; l++){
@@ -41,14 +41,16 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
         
         
     }
-    public static String [][] taulaToString(int[][] taula)
-        String [][] resultat="";
+    public static String taulaToString(int[][] taula){
         
+        String resultat="";
         for(int i=0; i<taula.length; i++){
             for(int a=0; a<taula[0].length; a++){
-                resultat[i][a]= taula[i][a];
+                resultat= "         "+taula[i][a];
             }
         }
+        return resultat;
+    }
     
 }
 
