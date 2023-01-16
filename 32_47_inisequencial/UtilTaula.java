@@ -30,7 +30,7 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
     
     
     
-    public static void inicialitzaTaula(int[][] taula, int valor){
+    public static void inicialitzaSequencial(int[][] taula, int valor){
 
         
         for(int l=0; l<taula.length; l++){

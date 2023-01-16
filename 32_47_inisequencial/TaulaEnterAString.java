@@ -14,7 +14,7 @@ public class TaulaEnterAString {
             } else {
                 int[][] taula  = new int[files][columnes];
                 
-                UtilTaula.inicialitzaTaula(taula, nums);
+                UtilTaula.inicialitzaSequencial(taula, nums);
                 nums++;
                 String resultat = UtilTaula.taulaToString(taula);
                 System.out.println(resultat);
