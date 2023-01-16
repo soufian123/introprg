@@ -80,9 +80,13 @@ public class TaulaEnterAString {
         
         
         String[] coordenades = especificacio.split("x");
-        //if (coordenades.length != 2) return -1;
-        int files = Integer.parseInt(coordenades[0]);
-        return files;
+        if (coordenades.length == 2){
+
+            int files = Integer.parseInt(coordenades[0]);
+            
+            return files;
+        }
+        return -1;
 
     }
 
@@ -101,10 +105,13 @@ public class TaulaEnterAString {
 
         /*…*/
         String[] coordenades = especificacio.split("x");
-        //if (coordenades.length != 2) return -1;
-        int files = Integer.parseInt(coordenades[1]);
-        
-        return files;
+        if (coordenades.length == 2){
+
+            int files = Integer.parseInt(coordenades[1]);
+            
+            return files;
+        }
+        return -1;
 
     }
 
