@@ -46,8 +46,9 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
         String resultat="";
         for(int i=0; i<taula.length; i++){
             for(int a=0; a<taula[0].length; a++){
-                resultat += "       "+taula[i][a];
+                resultat += "%8d"+taula[i][a];
             }
+            resultat += "\n";
         }
         return resultat;
     }
