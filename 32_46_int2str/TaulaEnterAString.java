@@ -78,9 +78,9 @@ public class TaulaEnterAString {
 
         /*…*/
         
-
+        
         String[] coordenades = especificacio.split("x");
-        if (coordenades.length != 2) return -1;
+        //if (coordenades.length != 2) return -1;
         int files = Integer.parseInt(coordenades[0]);
         return files;
 
@@ -101,8 +101,7 @@ public class TaulaEnterAString {
 
         /*…*/
         String[] coordenades = especificacio.split("x");
-        if (coordenades.length != 2) return -1;
-        
+        //if (coordenades.length != 2) return -1;
         int files = Integer.parseInt(coordenades[1]);
         
         return files;
