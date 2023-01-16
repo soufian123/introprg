@@ -150,7 +150,11 @@ public class UtilString{
                 return false;
             }
         }
+        if(text.isEmpty()) {
+            return false;
+        }
         return true;
+        
         
     }
 
