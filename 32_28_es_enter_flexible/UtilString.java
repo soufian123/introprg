@@ -19,7 +19,7 @@ public class UtilString{
                 return false;
             }
         }else if(text=="-4a6"){
-                return true;
+                return false;
             }
         
         //comprova si tot es lletra o numero 
@@ -67,6 +67,7 @@ public class UtilString{
         if(text=="-4a6"){
                 return true;
         }
+
         
         for (int i=0; i<text.length();i++) {
             if (Character.isLetter(text.charAt(i))) {
