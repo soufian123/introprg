@@ -1,5 +1,6 @@
-// utilitats de programes externs de taules
-
+/* 
+* utilitats de programes anteriors (en moduls)  UtilString
+*/
 
 
 public class UtilTaula{
@@ -29,7 +30,7 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
     
     
     
-    
+    //inicialitza la taula amb el valor que ens donen
     public static void inicialitzaTaula(int[][] taula, int valor){
 
         
@@ -41,6 +42,8 @@ el programa substitueix() espera una taula de N x M caràcters, i dos caràcters
         
         
     }
+    
+    //pasa una taula a string
     public static String taulaToString(int[][] taula){
         
         String resultat="";

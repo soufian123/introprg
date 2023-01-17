@@ -1,6 +1,6 @@
-// utilitats de programes anteriors (en moduls)  UtilString
-
-
+/* 
+* utilitats de programes anteriors (en moduls)  UtilString
+*/
 public class UtilString{
 
 	
@@ -93,7 +93,7 @@ public class UtilString{
         return false;
     }
 //}
-	
+	// retorna un string 
 	public static String intervalString(String text, int inici, int fin){
         String resultat="";
         if (fin<0 && inici<0 && fin<inici){
@@ -136,7 +136,7 @@ public class UtilString{
         return resultat;
     }
 	
-	
+	    //retorna un bollean i et diu si es boolean 
 	    public static boolean esEnter(String text){
 
         for(int num=0; num<=(text.length()-1); num++){
@@ -158,7 +158,7 @@ public class UtilString{
         
     }
 
-
+    //crea una cadena continua amb els cops que ens diuen 
     public static String cadenaContinua(String text, int cops){
         
         String sortida="";
@@ -179,7 +179,7 @@ public class UtilString{
 
     }
     
-
+    //retorna un string separant tot entre comes
     public static String entreComes(int[] numeros, char separador){
 
         String text="";
