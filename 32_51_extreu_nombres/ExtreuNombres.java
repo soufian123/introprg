@@ -27,7 +27,7 @@ public class ExtreuNombres {
         }
 
         // tracta pas recursiu
-         restaText =text.substring(1);  // resta del text
+         restaText =restaText + text.substring(1);  // resta del text
         
         // composa resultat
         extreuNombres(restaText); 
