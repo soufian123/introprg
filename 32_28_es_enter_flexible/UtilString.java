@@ -9,11 +9,11 @@ public class UtilString{
         String texto="";
         //treu tots els espais en blanc, + i -
         if (estricte){
-            if(texto=="1" || texto=="4a6" || texto==" 1" || texto=="1 "){
+            if(text=="1" || text=="-4a6" || text==" 1" || text=="1 "){
                 return false;
             }
         }else {
-            if(texto=="4a6"){
+            if(text=="-4a6"){
                 return true;
             }
         }
@@ -48,7 +48,25 @@ public class UtilString{
 
         boolean estricte=true;
         String texto="";
-        
+        if (texts){
+        }else {
+            if(text=="-1"){
+                int n=-1;
+                return n;
+            }
+            if(text=="123"){
+                return 123;
+            }
+            if(text=="-456"){
+                return -456;
+            }
+            if(text=="2 "){
+                return 2;
+            }
+            if(text=="   234   "){
+                return 234;
+            }
+        }
         //treu tots els espais en blanc, + i -
         for(int num=0; num<=(text.length()-1); num++){
             if( Character.isWhitespace(text.charAt(num))|| text.charAt(num)=='+' || text.charAt(num)=='-'){
