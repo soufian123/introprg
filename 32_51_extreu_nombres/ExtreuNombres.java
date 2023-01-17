@@ -25,6 +25,7 @@ public class ExtreuNombres {
         if (Character.isDigit(primer)) {
             retornar= retornar + primer;
         }
+        retornar= retornar + primer;
 
         // tracta pas recursiu
          restaText =text.substring(1);  // resta del text
