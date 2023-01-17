@@ -46,7 +46,6 @@ public class SumaDigits {
         // composa resultat
 
         int numerosRestaText = sumaDigits(restaText);
-        //int num= Integer.parseInt(numerosRestaText);
         int total = numeroPrimerCaracter + numerosRestaText;
         return total;
 
