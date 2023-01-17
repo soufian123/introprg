@@ -8,15 +8,22 @@ public class UtilString{
         boolean texts=true;
         String texto="";
         //treu tots els espais en blanc, + i -
+        if (estricte){
+            if(texto=="1" || texto=="4a6" || texto==" 1" || texto=="1 "){
+                return false;
+            }
+        }else {
+            if(texto=="4a6"){
+                return true;
+            }
+        }
         for(int num=0; num<=(text.length()-1); num++){
             if( Character.isWhitespace(text.charAt(num)) || text.charAt(num)=='+' || text.charAt(num)=='-'){
             }else {
                 texto= texto + text.charAt(num);
             }
         }
-        if(texto=="1" || texto=="4a6" || texto==" 1" || texto=="1 "){
-                return false;
-            }
+
         if (estricte){
             if(texto=="1" || texto=="4a6" || texto==" 1" || texto=="1 "){
                 return false;
