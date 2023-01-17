@@ -31,7 +31,7 @@ public class ExtreuNombres {
         
         // composa resultat
         extreuNombres(restaText);
-            return restaText;
+            return retornar;
     }
     
 
