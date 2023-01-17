@@ -21,17 +21,18 @@ public class ExtreuNombres {
 
         // tracta pas actual
         char primer = text.charAt(0);
-        
+        String retornar="";
         if (Character.isDigit(primer)) {
-            restaText = text.charAt(0)+ restaText ;
+            retornar = ""+text.charAt(0);
         }
 
         // tracta pas recursiu
-         restaText =restaText + text.substring(1);  // resta del text
+         restaText =text.substring(1);  // resta del text
         
         // composa resultat
-        extreuNombres(restaText); 
-            return restaText;
+        extreuNombres(restaText);
+        retornar= retornar + restaText;
+            return retornar;
     }
     
 
