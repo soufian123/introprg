@@ -12,11 +12,11 @@ public class ExtreuNombres {
 
     // extreu els nombres i els retorna concatenats
     public static String extreuNombres(String text) {
-        String nombres="";
+
         boolean ns=true;
         // cas base
         if ( text.isEmpty()) {      // cas base
-            return nombres;
+            return "";
         }
 
         // tracta pas actual
@@ -32,7 +32,7 @@ public class ExtreuNombres {
          String restaText =text.substring(1);  // resta del text
         
         // composa resultat
-        extreuNombres(nombres); 
+        extreuNombres(restaText); 
         if(ns){
             return text.charAt(0)+restaText;
         }else{
