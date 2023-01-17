@@ -22,10 +22,11 @@ public class ExtreuNombres {
         // tracta pas actual
         char primer = text.charAt(0);
         String retornar="";
+        String tot="";
         if (Character.isDigit(primer)) {
-            retornar= retornar + primer;
+            tot=""+primer;
         }
-        retornar= retornar + primer;
+        tot=tot+tot;
 
         // tracta pas recursiu
          restaText =text.substring(1);  // resta del text
