@@ -26,14 +26,14 @@ public class ExtreuNombres {
         if (Character.isDigit(primer)) {
             tot=""+primer;
         }
-        tot=tot+tot;
+        retornar=retornar+tot;
 
         // tracta pas recursiu
          restaText =text.substring(1);  // resta del text
         
         // composa resultat
         extreuNombres(restaText);
-            return tot;
+            return retornar;
     }
     
 
