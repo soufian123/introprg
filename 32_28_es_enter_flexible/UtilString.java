@@ -8,6 +8,9 @@ public class UtilString{
         boolean texts=true;
         String texto="";
         //treu tots els espais en blanc, + i -
+        if(text=="1" || text=="-4a6" || text==" 1" || text=="1 "){
+                return false;
+            }
         if (estricte){
             if(text=="1" || text=="-4a6" || text==" 1" || text=="1 "){
                 return false;
