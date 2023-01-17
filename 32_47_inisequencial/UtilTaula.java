@@ -1,4 +1,6 @@
-// utilitats de programes externs de taules
+/* 
+* utilitats de programes anteriors (en moduls)  UtilTaula
+*/
 
 
 
