@@ -3,51 +3,34 @@
  */
 
 public class ExtreuNombres {
-
     public static void main(String[] args){
-
         System.out.println("Text?");
-
         String text = Entrada.readLine();
-
         String nombres = extreuNombres(text);
-
         System.out.println(nombres);
-
     }
 
-
     // extreu els nombres i els retorna concatenats
-
     public static String extreuNombres(String text) {
 
         // cas base
-
         if ( text.isEmpty()) {      // cas base
             return "";
         }
 
-
         // tracta pas actual
-
         char primer = text.charAt(0);
-
+        String nombres="";
         if (Character.isDigit(primer)) {
-
-            System.out.print(text.charAt(0));
+             nombres= nombres+text.charAt(0);        
         }
 
-
         // tracta pas recursiu
-
-        String restaText = /* XXX */ text.substring(1);  // resta del text
-
-
-        // composa resultat
-
-        extreuNombres(restaText);
+         nombres = nombres+ text.substring(1);  // resta del text
         
-        return restaText;
+        // composa resultat
+        extreuNombres(nombres);   
+        return nombres;
 
     }
 
