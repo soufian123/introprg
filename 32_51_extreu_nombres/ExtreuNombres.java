@@ -23,7 +23,7 @@ public class ExtreuNombres {
         char primer = text.charAt(0);
         String retornar="";
         if (Character.isDigit(primer)) {
-            retornar= retornar+ text.charAt(0);
+            retornar= retornar + primer;
         }
 
         // tracta pas recursiu
