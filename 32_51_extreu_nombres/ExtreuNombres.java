@@ -13,7 +13,7 @@ public class ExtreuNombres {
     // extreu els nombres i els retorna concatenats
     public static String extreuNombres(String text) {
 
-        boolean ns=true;
+        String restaText ="";
         // cas base
         if ( text.isEmpty()) {      // cas base
             return "";
@@ -23,21 +23,16 @@ public class ExtreuNombres {
         char primer = text.charAt(0);
         
         if (Character.isDigit(primer)) {
-            ns=true;
-        }else{
-            ns=false;
+            restaText = text.charAt(0)+ restaText ;
         }
 
         // tracta pas recursiu
-         String restaText =text.substring(1);  // resta del text
+         restaText =text.substring(1);  // resta del text
         
         // composa resultat
         extreuNombres(restaText); 
-        if(ns){
-            return text.charAt(0)+restaText;
-        }else{
             return restaText;
-        }
     }
+    
 
 }
