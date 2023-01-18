@@ -1,7 +1,7 @@
 /* 
-* utilitats de programes anteriors (en moduls)  UtilTaula
+* utilitats de programes anteriors (en moduls)  UtilTaula de taules
+* miniprogrames dels exercicis usats
 */
-
 
 
 public class UtilTaula{

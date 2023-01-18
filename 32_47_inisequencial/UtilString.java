@@ -1,5 +1,6 @@
 /* 
 * utilitats de programes anteriors (en moduls)  UtilString
+* miniprogrames dels exercicis usats
 */
 public class UtilString{
 
