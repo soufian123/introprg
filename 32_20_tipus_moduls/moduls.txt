@@ -1,0 +1,27 @@
+1.	MachineTranslateTextArea() : 
+•	classificació: procediment, aquest mètode és un procediment perquè no retorna cap valor i modifica l'estat de l'objecte actual.
+
+
+2.	getDisplayedTranslation() : 
+•	classificació: funció pura, aquest mètode no modifica l'estat de l'objecte actual i sempre retorna el mateix valor per a un mateix estat de l'objecte.
+
+
+3.	onProjectClose() : 
+•	classificació: procediment, aquest mètode no retorna cap valor i modifica l'estat de l'objecte actual.
+
+
+4.	startSearchThread(final SourceTextEntry newEntry) : 
+•	classificació: procediment, aquest mètode no retorna cap valor i modifica l'estat de l'objecte actual.
+
+
+5.	setFoundResult(final SourceTextEntry se, final MachineTranslationInfo data) : 
+•	classificació: procediment, aquest mètode no retorna cap valor i modifica l'estat de l'objecte actual.
+
+
+6.	FindThread(final IMachineTranslation translator, final SourceTextEntry newEntry) : constructor - module: 
+•	classificació: procediment, aquest mètode és un procediment perquè no retorna cap valor i modifica l'estat de l'objecte actual.
+
+
+7.	search() : 
+•	classificació: funció pura, aquest mètode no modifica l'estat de l'objecte actual i sempre retorna el mateix valor per a un mateix estat de l'objecte.
+
