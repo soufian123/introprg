@@ -76,7 +76,7 @@ public class Subcadenes {
         imprimir(text, text.length());
     }
 // borra els caràcters que no siguin lletres
-    private static String borrar(String text) {
+    public static String borrar(String text) {
         if (text.length() <= 1) {
             return text.replaceAll("[^a-zA-Z]", "");
         }
@@ -87,7 +87,7 @@ public class Subcadenes {
         return primer + borrar(text.substring(1));
     }
 
-    private static void imprimir(String text, int length) {
+    public static void imprimir(String text, int length) {
         if (length <= 1) {
             System.out.printf("%4d: %s%n", length, text);
             return;
