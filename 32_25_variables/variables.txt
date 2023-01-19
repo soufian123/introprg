@@ -1,1 +1,58 @@
-adfsg
+1.	La variable externalLinked a la línia 366:
+•	Quin tipus de dades guardarà? boolean
+•	És un paràmetre? No
+•	És una constant? No
+•	Respecta la convenció camelCase? Sí
+•	Indica un mòdul pel que aquesta variable sigui global? Cap
+•	Indica un mòdul pel que aquesta variable sigui local? calcExternalLinkedMode() (línia 361)
+•	Indica un mòdul pel que aquesta variable sigui inaccessible? Cap
+
+
+2.	La variable id a la línia 330:
+•	Quin tipus de dades guardarà? String
+•	És un paràmetre? No
+•	És una constant? No
+•	Respecta la convenció camelCase? Sí
+•	Indica un mòdul pel que aquesta variable sigui global? Cap
+•	Indica un mòdul pel que aquesta variable sigui local? onEntry() (línia 288)
+•	Indica un mòdul pel que aquesta variable sigui inaccessible? calcExternalLinkedMode() (línia 361)
+
+
+3.	La variable levelTwo a la línia 162:
+•	Quin tipus de dades guardarà? Map<String, TMXEntry>
+•	És un paràmetre? No
+•	És una constant? No
+•	Respecta la convenció camelCase? Sí
+•	Indica un mòdul pel que aquesta variable sigui global? Cap
+•	Indica un mòdul pel que aquesta variable sigui local? Cap
+•	Indica un mòdul pel que aquesta variable sigui inaccessible? Cap
+
+
+4.	La variable PROP_FILE a la línia 61:
+•	Quin tipus de dades guardarà? String
+•	És un paràmetre? No
+•	És una constant? Sí
+•	Respecta la convenció camelCase? No
+•	Indica un mòdul pel que aquesta variable sigui global? Cap
+•	Indica un mòdul pel que aquesta variable sigui local? Cap
+•	Indica un mòdul pel que aquesta variable sigui inaccessible? Cap
+
+
+5.	La variable segmentSource a la línia 317:
+•	Quin tipus de dades guardarà? Segment
+•	És un paràmetre? No
+•	És una constant? No
+•	Respecta la convenció camelCase? Sí
+•	Indica un mòdul pel que aquesta variable sigui global? Cap
+•	Indica un mòdul pel que aquesta variable sigui local? onEntry() (línia 288)
+•	Indica un mòdul pel que aquesta variable sigui inaccessible? calcExternalLinkedMode() (línia 361)
+
+
+6.	La variable sourceLang a la línia 278:
+•	Quin tipus de dades guardarà? Language
+•	És un paràmetre? No
+•	És una constant? No
+•	Respecta la convenció camelCase? Sí
+•	Indica un mòdul pel que aquesta variable sigui global? Cap
+•	Indica un mòdul pel que aquesta variable sigui local
+
