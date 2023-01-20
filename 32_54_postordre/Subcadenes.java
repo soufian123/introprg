@@ -9,7 +9,7 @@ public class Subcadenes {
         System.out.println("Text?");
         String text = Entrada.readLine();
         text = borrar(text); 
-        imprimir(text, 0);
+        imprimir(text, text.length());
     }
 // borra els caràcters que no siguin lletres
     public static String borrar(String text) {
@@ -28,12 +28,11 @@ public class Subcadenes {
             System.out.printf("%4d: %s%n", length, text);
             return;
         }
-        System.out.printf("%4d: %s%n", length, text);
+        
         int mid = text.length() / 2;
-
         imprimir(text.substring(0, mid), mid);
         imprimir(text.substring(mid), text.length() - mid);
-        
+        System.out.printf("%4d: %s%n", length, text);
     }
 }
 
