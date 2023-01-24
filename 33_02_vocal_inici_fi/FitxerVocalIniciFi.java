@@ -1,7 +1,10 @@
 
 
 
-
+/* 
+ * probrama que llegeix el archiu frases, ho separa per frases i ho imprimeix si la primera lletra o la ultima
+ * de la frase es vocal
+ */
 
 
 
@@ -23,7 +26,9 @@ public class FitxerVocalIniciFi {
         while (true) {
             String linia = input.readLine();
             if (null == linia) break;
-            System.out.println(linia);
+            if(UtilString.esVocal(linia.charAt(0)) || UtilString.esVocal(linia.charAt((linia.length()-1)))){
+                System.out.println(linia);
+            }
         }
         input.close();
     }
