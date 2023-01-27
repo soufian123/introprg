@@ -18,10 +18,15 @@ public class NotaMitja {
           
           int numeros=0;
           double mitjana=0;
-          
+          int numero=0;
           while (true) {
-                String linia = input.readLine();
-                if (null == linia) break;
+          String linia = input.readLine();
+            if (null == linia) break;
+
+            if(numero==0){
+                numero=1;
+            }else{
+                
                 
                 String[] elements = linia.split(",");
               for (int i=1; i<7; i++) {
@@ -36,6 +41,7 @@ public class NotaMitja {
               System.out.println(elements[0]+ "("+mitjana+")");
                numeros=0;
                mitjana=0;
+         }
          }
      }
 }
