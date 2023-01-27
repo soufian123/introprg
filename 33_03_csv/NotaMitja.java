@@ -17,8 +17,7 @@ public class NotaMitja {
           BufferedReader input = new BufferedReader(fileReader);
           
           int numeros=0;
-          int dividir=0;
-          int mitjana=0;
+          double mitjana=0;
           
           while (true) {
                 String linia = input.readLine();
@@ -28,16 +27,15 @@ public class NotaMitja {
               for (int i=1; i<7; i++) {
                   if(Character.isDigit(elements[i].charAt(0))){
                       numeros= numeros + elements[i].charAt(0);
-                      dividir++;
+                    System.out.println(numeros);
                   }else{
-                    if (dividir==0 || numeros==0){
-                    mitjana=0;
-                    }else{
-                    mitjana= numeros/dividir;
+
+                    mitjana= numeros/6;
                 }
-                  }
               }
               System.out.println(elements[0]+ "("+mitjana+")");
+               numeros=0;
+               mitjana=0;
          }
      }
 }
