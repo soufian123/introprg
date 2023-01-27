@@ -25,7 +25,7 @@ public class NotaMitja {
                 if (null == linia) break;
                 
                 String[] elements = linia.split(",");
-              for (int i=2; i<elements.length; i++) {
+              for (int i=0; i<elements.length; i++) {
                   if(Character.isDigit(elements[i].charAt(0))){
                       numeros= numeros + elements[i].charAt(0);
                       dividir++;
