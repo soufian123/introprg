@@ -25,18 +25,19 @@ public class NotaMitja {
                 if (null == linia) break;
                 
                 String[] elements = linia.split(",");
-              for (int i=0; i<elements.length; i++) {
+              for (int i=1; i<elements.length; i++) {
                   if(Character.isDigit(elements[i].charAt(0))){
                       numeros= numeros + elements[i].charAt(0);
                       dividir++;
-                  }
-              }
-              if (dividir==0 || numeros==0){
-                mitjana=0;
-                }else{
+                  }else{
+                    if (dividir==0 || numeros==0){
+                    mitjana=0;
+                    }else{
                     mitjana= numeros/dividir;
                 }
-              System.out.println(elements[0]+ "("+mitjana+")");
+                    System.out.println(elements[i]+ "("+mitjana+")");
+                  }
+              }
          }
      }
 }
