@@ -3,28 +3,40 @@
 
 
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 
 public class NotaMitja {
-     public static void main(String[] args) {
+     public static void main(String[] args) throws IOException {
      
      
-          String linia = "notes.csv";
-          String[] elements = linia.split(",");
+          String cami = "notes.csv";
+          FileReader fileReader = new FileReader(cami);
+          BufferedReader input = new BufferedReader(fileReader);
+          
           int numeros=0;
           int dividir=0;
           int mitjana=0;
-          for (int i=1; i<elements.length; i++) {
-              if(Character.isDigit(elements[i].charAt(0))){
-                  numeros= numeros + elements[i].charAt(0);
-                  dividir++;
+          
+          while (true) {
+                String linia = input.readLine();
+                if (null == linia) break;
+                
+                String[] elements = linia.split(",");
+              for (int i=1; i<elements.length; i++) {
+                  if(Character.isDigit(elements[i].charAt(0))){
+                      numeros= numeros + elements[i].charAt(0);
+                      dividir++;
+                  }
               }
-          }
-          if (dividir==0 || numeros==0){
-            mitjana=0;
-            }else{
-                mitjana= numeros/dividir;
-            }
-          System.out.println(elements[0]+ "("+mitjana+")");
+              if (dividir==0 || numeros==0){
+                mitjana=0;
+                }else{
+                    mitjana= numeros/dividir;
+                }
+              System.out.println(elements[0]+ "("+mitjana+")");
+         }
      }
 }
