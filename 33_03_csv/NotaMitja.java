@@ -37,7 +37,7 @@ public class NotaMitja {
                 }
             }
             mitjana= numeros/6;
-            System.out.println(elements[0]+ "("+mitjana+")");
+            System.out.printf("%.2f)%n", (numeros/6.0));
             numeros=0;
             mitjana=0;
 
