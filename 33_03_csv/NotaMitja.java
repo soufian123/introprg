@@ -1,5 +1,10 @@
 
-
+/*
+ *
+ *programa que li pasas un document csv amb el nom de lalumne i les notes   ue tens
+ * i et fa una nota mitjana de totes les notes que li has pasat
+ *
+ */
 
 
 
