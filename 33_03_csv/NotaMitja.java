@@ -33,7 +33,7 @@ public class NotaMitja {
                 
                     intro= Integer.parseInt(elements[i]);
                     numeros= numeros + intro;
-                    System.out.println(numeros);
+                 //   System.out.println(numeros);
                 }
             }
             mitjana= numeros/6;
