@@ -21,11 +21,12 @@ public class NotaMitja {
         int numero=0;
         int intro=0;
         String linia = input.readLine();
-
+        int cont =0;
         
         while (true) {
             linia = input.readLine();
             if (null == linia) break;
+
             String[] elements = linia.split(",");
             
             for (int i=1; i<7; i++) {
@@ -40,7 +41,11 @@ public class NotaMitja {
             System.out.printf(elements[0]+ " ("+"%.2f)%n", (numeros/6.0));
             numeros=0;
             mitjana=0;
+            cont++;
 
+        }
+        if (cont==0){
+            System.out.println("Cap entrada");
         }
      }
 }
