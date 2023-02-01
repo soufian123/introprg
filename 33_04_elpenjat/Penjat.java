@@ -64,6 +64,7 @@ public class Penjat {
                 for(int a=0; a<llargada; a++){
                     System.out.print( resultat[a]);
                 }
+                System.out.println();
                 
                 //iprimeix apartat de Utilitzades
                 totesLletres= totesLletres.toUpperCase();
@@ -73,8 +74,8 @@ public class Penjat {
                 }else{
                     
                 }
-                System.out.println();
-                System.out.print("Utilitzades: ");
+                
+                System.out.print("Utilitzades: "+ utilitzades);
                 if(totesLletres.length()>2){
                     for(int a=0; a<totesLletres.length()-2; a++){
                         System.out.print(totesLletres.charAt(a)+", ");
