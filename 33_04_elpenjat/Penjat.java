@@ -81,7 +81,7 @@ public class Penjat {
                         System.out.print(totesLletres.charAt(a)+", ");
                     }
                 }
-                if (totesLletres.length()!=1) {
+                if (totesLletres.length()>1) {
                     System.out.print(totesLletres.charAt(totesLletres.length()-2)+" i "+totesLletres.charAt(totesLletres.length()-1));
                 }else{
                   System.out.print(totesLletres);  
