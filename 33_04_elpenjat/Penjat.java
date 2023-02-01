@@ -41,6 +41,58 @@ public class Penjat {
             
             //joc amb la paraula
             while(!encertat){
+                int err=0;
+                int llargada=linia.length();
+                
+                
+                //assignar les lletres en arrays per poder despres canviarles
+                
+                char[] separades= new char[llargada];
+                for(int a=0; a<linia.length(); a++){
+                    separades[a]=linia.charAt(a);
+                }
+                char[] resultat= new char[llargada];
+                for(int a=0; a<linia.length(); a++){
+                    resultat[a]='*';
+                }
+                
+                
+
+                
+                //imprimeix apartat de paraula    
+                System.out.print("Paraula: ");
+                for(int a=0; a<llargada; a++){
+                    System.out.print( resultat[a]);
+                }
+                
+                //iprimeix apartat de Utilitzades
+                totesLletres= totesLletres.toUpperCase();
+                String utilitzades="";
+                if (totesLletres.length()==0){
+                    utilitzades="cap";
+                }else{
+                    
+                }
+                System.out.println();
+                System.out.print("Utilitzades: ");
+                if(totesLletres.length()>2){
+                    for(int a=0; a<totesLletres.length()-2; a++){
+                        System.out.print(totesLletres.charAt(a)+", ");
+                    }
+                }
+                if (totesLletres.length()!=1) {
+                    System.out.print(totesLletres.charAt(totesLletres.length()-2)+" i "+totesLletres.charAt(totesLletres.length()-1));
+                }else{
+                  System.out.print(totesLletres);  
+                }
+                System.out.println("");
+                
+                System.out.println("Intents disponibles: "+errors);
+
+
+
+
+
                 System.out.println("Introdueix una lletra");
                 String text = Entrada.readLine();
                 //comprovador de si vol sortir
@@ -54,7 +106,16 @@ public class Penjat {
                 
                 
                 char lletra = text.charAt(0);
+                                //comprovador de si es la mateixa lletra o no
                 
+                for(int a=0; a<linia.length(); a++){
+                    if(resultat[a]=='*'){
+                        if (lletra==separades[a]){
+                            resultat[a]=lletra;
+                            err++;
+                        }
+                    }
+                }
                 
                 //comprovar si ja sha utilitzar aquella lletra
                 boolean si=true;
@@ -86,29 +147,7 @@ public class Penjat {
                 
                 
                 
-                int err=0;
-                //assignar les lletres en arrays per poder despres canviarles
-                int llargada=linia.length();
-                char[] separades= new char[llargada];
-                for(int a=0; a<linia.length(); a++){
-                    separades[a]=linia.charAt(a);
-                }
-                char[] resultat= new char[llargada];
-                for(int a=0; a<linia.length(); a++){
-                    resultat[a]='*';
-                }
                 
-                
-                //comprovador de si es la mateixa lletra o no
-                
-                for(int a=0; a<linia.length(); a++){
-                    if(resultat[a]=='*'){
-                        if (lletra==separades[a]){
-                            resultat[a]=lletra;
-                            err++;
-                        }
-                    }
-                }
                 //contador de errores de letras errors
                 if(err==0){
 
@@ -161,35 +200,6 @@ public class Penjat {
                     abandona++;
                     break;
                 }
-            //imprimeix apartat de paraula    
-            System.out.print("Paraula: ");
-            for(int a=0; a<llargada; a++){
-                System.out.print( resultat[a]);
-            }
-            
-            //iprimeix apartat de Utilitzades
-            totesLletres= totesLletres.toUpperCase();
-            String utilitzades="";
-            if (totesLletres.length()==0){
-                utilitzades="cap";
-            }else{
-                
-            }
-            System.out.println();
-            System.out.print("Utilitzades: ");
-            if(totesLletres.length()>2){
-                for(int a=0; a<totesLletres.length()-2; a++){
-                    System.out.print(totesLletres.charAt(a)+", ");
-                }
-            }
-            if (totesLletres.length()!=1) {
-                System.out.print(totesLletres.charAt(totesLletres.length()-2)+" i "+totesLletres.charAt(totesLletres.length()-1));
-            }else{
-              System.out.print(totesLletres);  
-            }
-            System.out.println("");
-            
-            System.out.println("Intents disponibles: "+errors);
 
 
             }
