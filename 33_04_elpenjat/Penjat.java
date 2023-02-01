@@ -43,6 +43,16 @@ public class Penjat {
             while(!encertat){
                 System.out.println("Introdueix una lletra");
                 String text = Entrada.readLine();
+                //comprovador de si vol sortir
+                if (text=="prou"){
+                    System.out.println("Vols sortir?");
+                    String text2= Entrada.readLine();
+                    if (UtilitatsConfirmacio.respostaABoolean(text2)){
+                        return;
+                    }
+                }
+                
+                
                 char lletra = text.charAt(0);
                 
                 
@@ -62,14 +72,7 @@ public class Penjat {
                 }
                 
                 
-                //comprovador de si vol sortir
-                if (text=="prou"){
-                    System.out.println("Vols sortir?");
-                    String text2= Entrada.readLine();
-                    if (UtilitatsConfirmacio.respostaABoolean(text2)){
-                        return;
-                    }
-                }
+
                 
                 
                 //comprova si vol abandonar la paraula
