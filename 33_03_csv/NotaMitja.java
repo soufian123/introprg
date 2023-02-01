@@ -5,7 +5,7 @@
  * i et fa una nota mitjana de totes les notes que li has pasat
  *
  */
-
+ 
 
 
 import java.io.BufferedReader;
