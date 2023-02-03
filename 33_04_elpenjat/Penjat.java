@@ -98,8 +98,8 @@ public class Penjat {
                 //comprovador de si vol sortir
                 if (text.equals("prou")){
                     System.out.println("Vols finalitzar?");
-                    String text2= Entrada.readLine();
-                    if (UtilitatsConfirmacio.respostaABoolean(text2)){
+                    text= Entrada.readLine();
+                    if (UtilitatsConfirmacio.respostaABoolean(text)){
                         abandona++;
                         System.out.println("Paraules jugades: "+ cont);
                         System.out.println("Paraules encertades: "+ contadorEncertades);
@@ -115,8 +115,8 @@ public class Penjat {
                     //comprovador de si vol sortir
                     if (text.equals("prou")){
                         System.out.println("Vols finalitzar?");
-                        String text2= Entrada.readLine();
-                        if (UtilitatsConfirmacio.respostaABoolean(text2)){
+                        text= Entrada.readLine();
+                        if (UtilitatsConfirmacio.respostaABoolean(text)){
                             abandona++;
                             System.out.println("Paraules jugades: "+ cont);
                             System.out.println("Paraules encertades: "+ contadorEncertades);
