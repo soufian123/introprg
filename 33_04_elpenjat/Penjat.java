@@ -16,9 +16,15 @@ public class Penjat {
         BufferedReader input = new BufferedReader(fileReader);
      
         int cont =0;
+        int contadorEncertades=0;
+        int contadorFallades=0;
+        int abandona=0;
+        int intents=0;
+        int cancel=0;
         System.out.println("Comencem a jugar");
         //joc complert
         while (true) {
+            cont++;
             int errors=10;
             boolean encertat=false;
             String linia = input.readLine();
@@ -30,8 +36,7 @@ public class Penjat {
                 break;
             }
 
-            int abandona=0;
-            int intents=0;
+            
             String totesLletres="";
             
             
@@ -92,10 +97,16 @@ public class Penjat {
                 
                 //comprovador de si vol sortir
                 if (text.equals("prou")){
-                    System.out.println("Vols sortir?");
+                    System.out.println("Vols finalitzar?");
                     String text2= Entrada.readLine();
                     if (UtilitatsConfirmacio.respostaABoolean(text2)){
                         System.out.println("es finalitza el programa");
+                        abandona++;
+                        System.out.println("Paraules jugades: "+ cont);
+                        System.out.println("Paraules encertades: "+ contadorEncertades);
+                        System.out.println("Paraules fallades: "+ contadorFallades);
+                        System.out.println("Paraules cancel·lades: "+ abandona);
+                        System.out.println("Espero que t'hagis divertit");
                         return;
                     }
                 }
@@ -186,10 +197,16 @@ public class Penjat {
                 //si es fa el maxim derrors suma un abandonat
                 if(errors==0){
                     abandona++;
+                    contadorFallades++;
+                    
                     break;
                 }
 
 
+            }
+            if(encertat){
+                contadorEncertades++;
+                encertat=false;
             }
         
         }
@@ -199,3 +216,17 @@ public class Penjat {
         }
      }
 }
+
+
+/*
+System.out.println("Paraules jugades: "+ cont);
+System.out.println("Paraules encertades: "+ contadorEncertades);
+System.out.println("Paraules fallades: "+ contadorFallades);
+System.out.println("Paraules cancel·lades: "+ abandona);
+System.out.println("Espero que t'hagis divertit");
+
+
+*/
+
+
+
