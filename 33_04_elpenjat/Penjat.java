@@ -100,7 +100,6 @@ public class Penjat {
                     System.out.println("Vols finalitzar?");
                     String text2= Entrada.readLine();
                     if (UtilitatsConfirmacio.respostaABoolean(text2)){
-                        System.out.println("es finalitza el programa");
                         abandona++;
                         System.out.println("Paraules jugades: "+ cont);
                         System.out.println("Paraules encertades: "+ contadorEncertades);
