@@ -90,10 +90,6 @@ public class Penjat {
                 
                 System.out.println("Intents disponibles: "+errors);
 
-
-
-
-
                 System.out.println("Introdueix una lletra");
                 String text = Entrada.readLine();
                 
@@ -106,7 +102,6 @@ public class Penjat {
                         return;
                     }
                 }
-                
                 
                 char lletra = text.charAt(0);
                 
@@ -134,7 +129,6 @@ public class Penjat {
                 if(si){
                    continue;
                 }
-                
 
                 //comprova si vol abandonar la paraula
                 if (text=="glups"){
@@ -200,10 +194,6 @@ public class Penjat {
 
 
             }
-            
-            
-            
-
         
         }
 
