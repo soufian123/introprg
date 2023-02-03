@@ -133,7 +133,7 @@ public class Penjat {
                 String lletraComprovar=totesLletres.toLowerCase();
                 for(int a=0; a<lletraComprovar.length(); a++){
                     if(lletra==lletraComprovar.charAt(a)){
-                        System.out.println("La lletra ja ha estat introduïda");
+                        System.out.println("La lletra ja ha estat utilitzada");
                         si=true;
                         break;
                     }
