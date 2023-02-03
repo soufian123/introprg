@@ -109,7 +109,25 @@ public class Penjat {
                         return;
                     }
                 }
-                
+                while(text.length() != 1){
+                    System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+                    text= Entrada.readLine();
+                    //comprovador de si vol sortir
+                    if (text.equals("prou")){
+                        System.out.println("Vols finalitzar?");
+                        String text2= Entrada.readLine();
+                        if (UtilitatsConfirmacio.respostaABoolean(text2)){
+                            abandona++;
+                            System.out.println("Paraules jugades: "+ cont);
+                            System.out.println("Paraules encertades: "+ contadorEncertades);
+                            System.out.println("Paraules fallades: "+ contadorFallades);
+                            System.out.println("Paraules cancel·lades: "+ abandona);
+                            System.out.println("Espero que t'hagis divertit");
+                            return;
+                        }
+                    }
+
+                }
                 char lletra = text.charAt(0);
                 
                 //comprovador de si es la mateixa lletra o no
