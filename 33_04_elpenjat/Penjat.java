@@ -115,6 +115,7 @@ public class Penjat {
 
                 }
                 char lletra = text.charAt(0);
+                lletra= Character.toLowerCase(lletra);
                 
                 //comprovador de si es la mateixa lletra o no
                 for(int a=0; a<linia.length(); a++){
