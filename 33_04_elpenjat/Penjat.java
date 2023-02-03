@@ -10,13 +10,10 @@ import java.io.IOException;
 
 public class Penjat {
     public static void main(String[] args) throws IOException {
-        
-     
      
         String cami = "paraules.txt";
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
-        
      
         int cont =0;
         System.out.println("Comencem a jugar");
@@ -94,7 +91,7 @@ public class Penjat {
                 String text = Entrada.readLine();
                 
                 //comprovador de si vol sortir
-                if (text=="prou"){
+                if (text.equals("prou")){
                     System.out.println("Vols sortir?");
                     String text2= Entrada.readLine();
                     if (UtilitatsConfirmacio.respostaABoolean(text2)){
