@@ -22,6 +22,7 @@ public class Penjat {
         int intents=0;
         int cancel=0;
         System.out.println("Comencem a jugar");
+        String totesLletres="";
         //joc complert
         while (true) {
             cont++;
@@ -37,9 +38,18 @@ public class Penjat {
             }
 
             
-            String totesLletres="";
             
             
+            //assignar les lletres en arrays per poder despres canviarles
+                
+                char[] separades= new char[linia.length()];
+                for(int a=0; a<linia.length(); a++){
+                    separades[a]=linia.charAt(a);
+                }
+                char[] resultat= new char[linia.length()];
+                for(int a=0; a<linia.length(); a++){
+                    resultat[a]='*';
+                }
             
             //joc amb la paraula
             while(!encertat){
@@ -47,16 +57,7 @@ public class Penjat {
                 int llargada=linia.length();
                 
                 
-                //assignar les lletres en arrays per poder despres canviarles
                 
-                char[] separades= new char[llargada];
-                for(int a=0; a<linia.length(); a++){
-                    separades[a]=linia.charAt(a);
-                }
-                char[] resultat= new char[llargada];
-                for(int a=0; a<linia.length(); a++){
-                    resultat[a]='*';
-                }
                 
                 
 
@@ -129,27 +130,25 @@ public class Penjat {
                 
                 //comprovar si ja sha utilitzar aquella lletra
                 boolean si=false;
-                for(int a=0; a<totesLletres.length(); a++){
-                    if(lletra==totesLletres.charAt(a)){
+                String lletraComprovar=totesLletres.toLowerCase();
+                for(int a=0; a<lletraComprovar.length(); a++){
+                    if(lletra==lletraComprovar.charAt(a)){
                         System.out.println("La lletra ja ha estat introduïda");
                         si=true;
                         break;
-                    }else{
-                        si=false;
                     }
                 }
                 if(si){
                    continue;
                 }
+                totesLletres = totesLletres + lletra;
 
                 //comprova si vol abandonar la paraula
                 if (text=="glups"){
                     abandona++;
                     break;
                 }
-                
-                //guardem les lletres que han introduit
-                totesLletres=totesLletres+lletra;
+
                 
                 //contador de errores de letras errors
                 if(err==0){
