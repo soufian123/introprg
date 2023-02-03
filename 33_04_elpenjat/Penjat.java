@@ -154,27 +154,27 @@ public class Penjat {
                 if(err==0){
 
                          switch (errors) {
-                         case 10: System.out.println("recursos/figura0.txt");
+                         case 10: Mostrat("recursos/figura0.txt");
                                  break;
-                         case 9:  System.out.println("recursos/figura1.txt");
+                         case 9:  Mostrat("recursos/figura1.txt");
                                  break;
-                         case 8:  System.out.println("recursos/figura2.txt");
+                         case 8:  Mostrat("recursos/figura2.txt");
                                  break;
-                         case 7:  System.out.println("recursos/figura3.txt");
+                         case 7:  Mostrat("recursos/figura3.txt");
                                  break;
-                         case 6:  System.out.println("recursos/figura4.txt");
+                         case 6:  Mostrat("recursos/figura4.txt");
                                  break;
-                         case 5:  System.out.println("recursos/figura5.txt");
+                         case 5:  Mostrat("recursos/figura5.txt");
                                  break;
-                         case 4:  System.out.println("recursos/figura6.txt");
+                         case 4:  Mostrat("recursos/figura6.txt");
                                  break;
-                         case 3:  System.out.println("recursos/figura7.txt");
+                         case 3:  Mostrat("recursos/figura7.txt");
                                  break;
-                         case 2:  System.out.println("recursos/figura8.txt");
+                         case 2:  Mostrat("recursos/figura8.txt");
                                  break;
-                         case 1:  System.out.println("recursos/figura9.txt");
+                         case 1: Mostrat("recursos/figura9.txt");
                                  break;
-                         default:  System.out.println("recursos/figura0.txt");
+                         default: Mostrat("recursos/figura0.txt");
                                  break;
                          
                          }
@@ -218,6 +218,19 @@ public class Penjat {
             System.out.println("Cap entrada");
         }
      }
+
+
+    public static void Mostrat(String imprimir) throws IOException {
+        String cami = imprimir;
+        FileReader fileReader = new FileReader(cami);
+        BufferedReader input = new BufferedReader(fileReader);
+        while (true) {
+            String linia = input.readLine();
+            if (null == linia) break;
+            System.out.println(linia);
+        }
+        input.close();
+    }
 }
 
 
