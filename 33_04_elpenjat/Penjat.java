@@ -26,7 +26,7 @@ public class Penjat {
         //joc complert
         while (true) {
             String totesLletres="";
-            cont++;
+            
             int errors=10;
             boolean encertat=false;
             String linia = input.readLine();
@@ -43,7 +43,7 @@ public class Penjat {
                 break;
             }
 
-            
+            cont++;
             
             
             //assignar les lletres en arrays per poder despres canviarles
