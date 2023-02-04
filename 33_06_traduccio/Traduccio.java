@@ -30,9 +30,9 @@ public class Traduccio {
             sortida.write(linia);
             sortida.newLine();
         
-            sortida.close();
+            
         }
-        
+        sortida.close();
     }
     
     
