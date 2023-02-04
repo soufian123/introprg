@@ -174,6 +174,7 @@ public class Penjat {
                          case 2:  Mostrat("recursos/figura8.txt");
                                  break;
                          case 1: Mostrat("recursos/figura9.txt");
+                                 System.out.println("Has mort");
                                  break;
                          default: Mostrat("recursos/figura0.txt");
                                  break;
