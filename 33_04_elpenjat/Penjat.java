@@ -201,7 +201,7 @@ public class Penjat {
 
                 //si es fa el maxim derrors suma un abandonat
                 if(errors==0){
-                    abandona++;
+                   // abandona++;
                     contadorFallades++;
                     
                     break;
