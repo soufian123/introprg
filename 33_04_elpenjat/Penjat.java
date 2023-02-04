@@ -112,15 +112,15 @@ public class Penjat {
                     }
                 }
                 
-                if(text.length() != 1){
-                    System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
-                    continue;
-
-                }
                 //comprova si vol abandonar la paraula
                 if (text.equals("glups")){
                     abandona++;
                     break;
+                }
+                if(text.length() != 1){
+                    System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+                    continue;
+
                 }
                 
                 char lletra = text.charAt(0);
