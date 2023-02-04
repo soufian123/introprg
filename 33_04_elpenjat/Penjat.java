@@ -111,11 +111,18 @@ public class Penjat {
                         return;
                     }
                 }
+                
                 if(text.length() != 1){
                     System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
                     continue;
 
                 }
+                //comprova si vol abandonar la paraula
+                if (text.equals("glups")){
+                    abandona++;
+                    break;
+                }
+                
                 char lletra = text.charAt(0);
                 lletra= Character.toLowerCase(lletra);
                 
@@ -144,11 +151,7 @@ public class Penjat {
                 }
                 totesLletres = totesLletres + lletra;
 
-                //comprova si vol abandonar la paraula
-                if (text=="glups"){
-                    abandona++;
-                    break;
-                }
+                
 
                 
                 //contador de errores de letras errors
