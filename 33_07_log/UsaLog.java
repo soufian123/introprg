@@ -16,7 +16,7 @@ public class UsaLog {
    
    
         String cami ="log.txt";
-        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));
+        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));
 
 
         sortida.write(Log.printError("Això és un error greu"));
