@@ -19,9 +19,9 @@ public class UsaLog {
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami, true));
 
 
-        Log.printError("Això és un error greu");
+        sortida.write(Log.printError("Això és un error greu"));
         sortida.newLine();
-        Log.printWarning("Això és un avís");
+        sortida.write(Log.printWarning("Això és un avís"));
         sortida.newLine();
         for (int i=0; i < args.length; i++) {
             sortida.write(Log.printInfo(String.format("Argument %d: %s", i, args[i])));
