@@ -34,6 +34,7 @@ public class Recordat {
             if(linia.isBlank()){
                 break;
             }
+            linia= linia.trim();
             System.out.println("El lloro registra: "+ linia);
 
             sortida.write(linia);
@@ -51,13 +52,19 @@ public class Recordat {
     public static void mostraRecords(final String nomFitxer) throws IOException {
         // XXX: aquí la part de recordar les memòries escrites
         
+        
         String cami = nomFitxer;
         FileReader fileReader = new FileReader(cami);
         BufferedReader input = new BufferedReader(fileReader);
+        String linia = input.readLine();
+        if (null == linia) {
+            System.out.println("El lloro no recorda res");
+            return;
+        }
         while (true) {
-            String linia = input.readLine();
             if (null == linia) break;
             System.out.println("El lloro recorda: "+linia);
+            linia = input.readLine();
         }
         System.out.println("Adéu");
         input.close();
