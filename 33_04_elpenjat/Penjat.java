@@ -103,10 +103,12 @@ public class Penjat {
                 String text = Entrada.readLine();
                 
                 //comprovador de si vol sortir
-                if (text.equals("prou")){
+                String comprovar= text.toLowerCase();
+                if (comprovar.equals("prou")){
                     System.out.println("Vols finalitzar?");
                     text= Entrada.readLine();
-                    if (UtilitatsConfirmacio.respostaABoolean(text)){
+                    comprovar= text.toLowerCase();
+                    if (UtilitatsConfirmacio.respostaABoolean(comprovar)){
                         abandona++;
                         System.out.println("Paraules jugades: "+ cont);
                         System.out.println("Paraules encertades: "+ contadorEncertades);
