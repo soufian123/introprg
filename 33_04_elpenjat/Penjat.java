@@ -22,9 +22,10 @@ public class Penjat {
         int intents=0;
         int cancel=0;
         System.out.println("Comencem a jugar");
-        String totesLletres="";
+
         //joc complert
         while (true) {
+            String totesLletres="";
             cont++;
             int errors=10;
             boolean encertat=false;
