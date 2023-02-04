@@ -100,8 +100,7 @@ public class Penjat {
                 System.out.println("Intents disponibles: "+errors);
 
                 System.out.println("Introdueix una lletra");
-                String entrada=Entrada.readLine();
-                String text = entrada;
+                String text = Entrada.readLine();
                 
                 //comprovador de si vol sortir
                 if (text.equals("prou")){
