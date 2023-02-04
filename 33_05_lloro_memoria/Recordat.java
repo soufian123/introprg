@@ -25,15 +25,17 @@ public class Recordat {
     public static void processaEntrada(final String nomFitxer) throws IOException {
         // XXX: aquí la part d'escriure les memòries
         //      No oblidaràs tancar en sortir, oi?
-        
-        String cami = nomFitxer;
-        System.out.println("El lloro pregunta paraula:");
-        String linia = Entrada.readLine();
-        System.out.println("El lloro registra: "+ linia);
-        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));
-        sortida.write(linia);
-        sortida.newLine();
-        sortida.close();
+        String linia ="assd";
+        while(linia.isEmpty()){
+            String cami = nomFitxer;
+            System.out.println("El lloro pregunta paraula:");
+            linia = Entrada.readLine();
+            System.out.println("El lloro registra: "+ linia);
+            BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));
+            sortida.write(linia);
+            sortida.newLine();
+            sortida.close();
+        }
     }
     
     
