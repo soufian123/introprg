@@ -1,5 +1,10 @@
 /*
- * 
+ * es un programa que rebra 3 argumens, el primer es el nom del fixer de text, el segon es un fitxer de text que també suposarem que 
+ * existeix, i que anomenarem traducció i El tercer argument correspondrà al nom d'un fitxer de text que pot no existir.
+ * Ens referirem a aquest fitxer com la destinació
+ * El programa escriurà en la destinació el contingut de l'origen pel que haurà reemplaçat les aparicions de les claus pels corresponents 
+ * valors.
+ *
  */
 // XXX aquí tots els imports. N'hi ha 5!
 
