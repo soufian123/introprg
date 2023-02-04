@@ -117,6 +117,8 @@ public class Penjat {
                         System.out.println("Paraules cancel·lades: "+ abandona);
                         System.out.println("Espero que t'hagis divertit");
                         return;
+                    }else{
+                        continue;
                     }
                 }
                 
