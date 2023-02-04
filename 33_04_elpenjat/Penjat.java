@@ -189,6 +189,7 @@ public class Penjat {
                         break;
                     }else{
                         encertat=true;
+                        System.out.println("Has encertat! La paraula era " + linia);
                     }
                 }
                 /*        shauria de preguntar si vol seuir jugant o no     
