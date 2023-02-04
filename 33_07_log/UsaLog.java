@@ -13,7 +13,10 @@ import java.io.IOException;
 public class UsaLog {
     public static void main(String[] args) throws IOException {
    
-        BufferedWriter sortida = new BufferedWriter(new FileWriter("log.txt"));
+   
+   
+        String cami ="log.txt";
+        BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));
 
 
         sortida.write(Log.printError("Això és un error greu"));
