@@ -32,6 +32,11 @@ public class Penjat {
             String linia = input.readLine();
             if (null == linia && cont!=0){ 
                 System.out.println("No queden més paraules");
+                System.out.println("Paraules jugades: "+ cont);
+                System.out.println("Paraules encertades: "+ contadorEncertades);
+                System.out.println("Paraules fallades: "+ contadorFallades);
+                System.out.println("Paraules cancel·lades: "+ abandona);
+                System.out.println("Espero que t'hagis divertit");
                 break;
             }else if (null == linia){
                 System.out.println("No tinc paraules per jugar");
