@@ -33,7 +33,7 @@ public class Log {
         return linea;
     }
 
-    public static void reiniciar() {
+    public static void reset() {
         contador = 1;
     }
 }
