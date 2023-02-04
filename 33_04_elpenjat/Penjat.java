@@ -59,6 +59,7 @@ public class Penjat {
             
             //joc amb la paraula
             while(!encertat){
+                String comprovar= "asd";
                 int err=0;
                 int llargada=linia.length();
                 
@@ -103,7 +104,7 @@ public class Penjat {
                 String text = Entrada.readLine();
                 
                 //comprovador de si vol sortir
-                String comprovar= text.toLowerCase();
+                comprovar= text.toLowerCase();
                 if (comprovar.equals("prou")){
                     System.out.println("Vols finalitzar?");
                     text= Entrada.readLine();
@@ -120,7 +121,7 @@ public class Penjat {
                 }
                 
                 //comprova si vol abandonar la paraula
-                if (text.equals("glups")){
+                if (comprovar.equals("glups")){
                     abandona++;
                     break;
                 }
