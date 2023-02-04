@@ -171,33 +171,8 @@ public class Penjat {
                 
                 //contador de errores de letras errors
                 if(err==0){
+                    mostraFigura(errors);
 
-                         switch (errors) {
-                         case 10: Mostrat("recursos/figura0.txt");
-                                 break;
-                         case 9:  Mostrat("recursos/figura1.txt");
-                                 break;
-                         case 8:  Mostrat("recursos/figura2.txt");
-                                 break;
-                         case 7:  Mostrat("recursos/figura3.txt");
-                                 break;
-                         case 6:  Mostrat("recursos/figura4.txt");
-                                 break;
-                         case 5:  Mostrat("recursos/figura5.txt");
-                                 break;
-                         case 4:  Mostrat("recursos/figura6.txt");
-                                 break;
-                         case 3:  Mostrat("recursos/figura7.txt");
-                                 break;
-                         case 2:  Mostrat("recursos/figura8.txt");
-                                 break;
-                         case 1: Mostrat("recursos/figura9.txt");
-                                 System.out.println("Has mort");
-                                 break;
-                         default: Mostrat("recursos/figura0.txt");
-                                 break;
-                         
-                         }
                     errors--;
                 }
                 
@@ -247,6 +222,36 @@ public class Penjat {
             System.out.println(linia);
         }
         input.close();
+    }
+    
+    public static void mostraFigura(int errors) throws IOException {
+       
+        switch (errors) {
+            case 10: Mostrat("recursos/figura0.txt");
+                 break;
+            case 9:  Mostrat("recursos/figura1.txt");
+                 break;
+            case 8:  Mostrat("recursos/figura2.txt");
+                 break;
+            case 7:  Mostrat("recursos/figura3.txt");
+                 break;
+            case 6:  Mostrat("recursos/figura4.txt");
+                 break;
+            case 5:  Mostrat("recursos/figura5.txt");
+                 break;
+            case 4:  Mostrat("recursos/figura6.txt");
+                 break;
+            case 3:  Mostrat("recursos/figura7.txt");
+                 break;
+            case 2:  Mostrat("recursos/figura8.txt");
+                 break;
+            case 1: Mostrat("recursos/figura9.txt");
+                 System.out.println("Has mort");
+                 break;
+            default: Mostrat("recursos/figura0.txt");
+                 break;
+
+        }
     }
 }
 
