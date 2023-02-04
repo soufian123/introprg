@@ -1,8 +1,8 @@
-
-
-
-
-
+/* 
+ * joc del penjat
+ * amb contador de paraules jugades, encertades, fallades i cancel·lades
+ * les paraules son extretes del fitxer paraules.txt
+ */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
