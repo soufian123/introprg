@@ -26,16 +26,25 @@ public class Recordat {
         // XXX: aquí la part d'escriure les memòries
         //      No oblidaràs tancar en sortir, oi?
         String linia ="assd";
+        String cami = nomFitxer;
         while(!linia.isBlank()){
-            String cami = nomFitxer;
             System.out.println("El lloro pregunta paraula:");
             linia = Entrada.readLine();
+            if(linia.isBlank()){
+                break;
+            }
             System.out.println("El lloro registra: "+ linia);
             BufferedWriter sortida = new BufferedWriter(new FileWriter(cami));
             sortida.write(linia);
             sortida.newLine();
             sortida.close();
+        
+        
         }
+        
+        
+        
+        
     }
     
     
