@@ -26,7 +26,7 @@ public class Recordat {
         // XXX: aquí la part d'escriure les memòries
         //      No oblidaràs tancar en sortir, oi?
         String linia ="assd";
-        while(linia.isEmpty()){
+        while(!linia.isBlank()){
             String cami = nomFitxer;
             System.out.println("El lloro pregunta paraula:");
             linia = Entrada.readLine();
