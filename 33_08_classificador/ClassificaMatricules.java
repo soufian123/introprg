@@ -23,69 +23,64 @@ public class ClassificaMatricules{
 
 
 
-        boolean comprovador= false;
-        if((paraula.length())==7){
-            for(int num =0; num<=7; num++ ){
-                boolean obtingut= true; 
-                if (num==1 || num==0 || num==5 || num==6){
-                            char paraulaa= paraula.charAt(num);
-                     obtingut = esLletraValidaPerMatriculaItaliana(paraulaa);
-                     
-                    if (obtingut){
-                         obtingut= true;
-                    }else{
-                         obtingut= false;
-                         desconegut.write(paraula);
-                         desconegut.newLine();
-                         desconegut.close();
-                        break;
-                    }
-                }else if(num==2 || num==3 || num==4){
-                            char paraulaa= paraula.charAt(num);
-                    if(Character.isLetter(paraulaa)==false){
-                         obtingut= true;
-                    }else{
-                         obtingut= false;
-                         desconegut.write(paraula);
-                         desconegut.newLine();
-                         desconegut.close();
-                        break;
-                    }
+            boolean comprovador= false;
+            if((paraula.length())==7){
+                for(int num =0; num<=7; num++ ){
+                    boolean obtingut= true; 
+                    if (num==1 || num==0 || num==5 || num==6){
+                                char paraulaa= paraula.charAt(num);
+                         obtingut = ClassificaMatricules.esLletraValidaPerMatriculaItaliana(paraulaa);
+                         
+                        if (obtingut){
+                             obtingut= true;
+                        }else{
+                             obtingut= false;
+                             desconegut.write(paraula);
+                             desconegut.newLine();
+                             desconegut.close();
+                            break;
+                        }
+                    }else if(num==2 || num==3 || num==4){
+                                char paraulaa= paraula.charAt(num);
+                        if(Character.isLetter(paraulaa)==false){
+                             obtingut= true;
+                        }else{
+                             obtingut= false;
+                             desconegut.write(paraula);
+                             desconegut.newLine();
+                             desconegut.close();
+                            break;
+                        }
 
-                }else if (num==7){
+                    }else if (num==7){
 
-                    if (obtingut){
-                        if (comprovador==false){
-                            valid.write(paraula);
-                            valid.newLine();
-                            valid.close();
-                                break;
+                        if (obtingut){
+                            if (comprovador==false){
+                                valid.write(paraula);
+                                valid.newLine();
+                                valid.close();
+                                    break;
+                            }else{
+                                desconegut.write(paraula);
+                                desconegut.newLine();
+                                desconegut.close();
+                                break;}
                         }else{
                             desconegut.write(paraula);
                             desconegut.newLine();
                             desconegut.close();
-                            break;}
-                    }else{
-                        desconegut.write(paraula);
-                        desconegut.newLine();
-                        desconegut.close();
-                        break;
+                            break;
+                        }
                     }
+         
                 }
-     
-            }
-        }else{desconegut.write(paraula);
+            }else{
+                desconegut.write(paraula);
                 desconegut.newLine();
                 desconegut.close();
 
-                }
-                
-                
-                
-                
-                
-                
-                
+            }
+
                 
         }   
         input.close();                                              // tancar
