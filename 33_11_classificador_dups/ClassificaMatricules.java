@@ -107,7 +107,7 @@ public class ClassificaMatricules{
     public static boolean esLletraValidaPerMatriculaItaliana(char paraula) {
     
         if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
-            if (paraula=='É' || paraula =='È' || paraula ==' '){
+            if (paraula=='É' || paraula =='È'){
                 return false;
             }else{
                 String lletres= "IOQUÑ";
