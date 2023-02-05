@@ -1,7 +1,7 @@
 /* 
  * 
  * programa Per poder provar Log.java
- * 
+ * programa que registrar les situacions significatives que es van produint.
  */
  
  
