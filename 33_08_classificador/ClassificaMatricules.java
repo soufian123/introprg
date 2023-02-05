@@ -18,10 +18,10 @@ public class ClassificaMatricules{
         BufferedWriter valid = new BufferedWriter(new FileWriter(italianes));
         BufferedWriter desconegut = new BufferedWriter(new FileWriter(desconegudes));
         while (true) {
-            String para = input.readLine();                        // llegir
-            String paraula = para.trim();
+            String paraula = input.readLine();                        // llegir
+            
             if (null == paraula) break;
-
+            paraula = paraula.trim();
 
 
             boolean comprovador= false;
