@@ -104,7 +104,11 @@ public class CercaAlumnes {
 		boolean esOient = Boolean.parseBoolean(cami[3]);
 		int[] notes = new int[6];
 		for(int i=4; i < cami.length; i++){
-			notes[i-4]=Integer.parseInt(cami[i]);
+		    if(cami[i].equals("NP")){
+		        notes[i-4]=-1;
+		    }else{
+			    notes[i-4]=Integer.parseInt(cami[i]);
+			}
 		}
 		
 		return construeixAlumne(cami[0], cami[1], edat, esOient, notes);
@@ -145,7 +149,7 @@ public class CercaAlumnes {
 		        	mostraAlumne(alumne);
 	        }
         }
-	    if (paraules == 0){
+	    if (paraules==0){
     	System.out.println("Cap alumne");
         }
         // consideracions finals com ara el tancament del fitxer
