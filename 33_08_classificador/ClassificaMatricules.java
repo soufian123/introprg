@@ -37,6 +37,7 @@ public class ClassificaMatricules{
                          obtingut= false;
                          desconegut.write(paraula);
                          desconegut.newLine();
+                         desconegut.close();
                         break;
                     }
                 }else if(num==2 || num==3 || num==4){
@@ -47,6 +48,7 @@ public class ClassificaMatricules{
                          obtingut= false;
                          desconegut.write(paraula);
                          desconegut.newLine();
+                         desconegut.close();
                         break;
                     }
 
@@ -56,14 +58,17 @@ public class ClassificaMatricules{
                         if (comprovador==false){
                             valid.write(paraula);
                             valid.newLine();
+                            valid.close();
                                 break;
                         }else{
                             desconegut.write(paraula);
                             desconegut.newLine();
+                            desconegut.close();
                             break;}
                     }else{
                         desconegut.write(paraula);
                         desconegut.newLine();
+                        desconegut.close();
                         break;
                     }
                 }
@@ -71,6 +76,7 @@ public class ClassificaMatricules{
             }
         }else{desconegut.write(paraula);
                 desconegut.newLine();
+                desconegut.close();
 
                 }
                 
