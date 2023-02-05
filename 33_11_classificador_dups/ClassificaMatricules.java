@@ -7,11 +7,23 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
+import java.io.File;
 
 public class ClassificaMatricules{
     public static void main (String[] args) throws IOException{
         
         String cami = "llegides.txt";
+        //borrador de carpetas
+        
+        File fitxer = new File("italianes.txt");
+        File fitxer2 = new File("italianes.txt");
+        if (fitxer.exists()) {
+            fitxer.delete();
+        }
+        if (fitxer2.exists()) {
+            fitxer2.delete();
+        }
+        
         String italianes  = "italianes.txt";
         String desconegudes = "desconegudes.txt";
         BufferedReader input = new BufferedReader(new FileReader(cami));      // obrir
