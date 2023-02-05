@@ -28,11 +28,11 @@ public class ClassificaMatricules{
                 if (matriculaItalianaValida(paraula)){
                     valid.write(paraula);
                     valid.newLine();
-                    break;
+
                 }else{
                     desconegut.write(paraula);
                     desconegut.newLine();
-                    break;
+
                 }
                 
 
