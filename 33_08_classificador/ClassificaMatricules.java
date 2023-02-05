@@ -25,7 +25,7 @@ public class ClassificaMatricules{
 
 
             boolean comprovador= false;
-            if((paraula.length())==7){
+            if(paraula.length()==7){
                 for(int num =0; num<=7; num++ ){
                     boolean obtingut= true; 
                     if (num==1 || num==0 || num==5 || num==6){
@@ -43,6 +43,11 @@ public class ClassificaMatricules{
                         }
                     }else if(num==2 || num==3 || num==4){
                                 char paraulaa= paraula.charAt(num);
+                            if (paraulaa==' '){
+                                desconegut.write(paraula);
+                                 desconegut.newLine();
+                                break;
+                            }
                         if(Character.isLetter(paraulaa)==false){
                              obtingut= true;
                         }else{
