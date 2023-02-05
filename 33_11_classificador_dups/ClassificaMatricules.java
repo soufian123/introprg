@@ -14,9 +14,11 @@ public class ClassificaMatricules{
         
         String cami = "llegides.txt";
         //borrador de carpetas
+        String italianes  = "italianes.txt";
+        String desconegudes = "desconegudes.txt";
+        File fitxer = new File(italianes);
+        File fitxer2 = new File(desconegudes);
         
-        File fitxer = new File("italianes.txt");
-        File fitxer2 = new File("italianes.txt");
         if (fitxer.exists()) {
             fitxer.delete();
         }
@@ -24,8 +26,8 @@ public class ClassificaMatricules{
             fitxer2.delete();
         }
         
-        String italianes  = "italianes.txt";
-        String desconegudes = "desconegudes.txt";
+        italianes  = "italianes.txt";
+        desconegudes = "desconegudes.txt";
         BufferedReader input = new BufferedReader(new FileReader(cami));      // obrir
         BufferedWriter valid = new BufferedWriter(new FileWriter(italianes));
         BufferedWriter desconegut = new BufferedWriter(new FileWriter(desconegudes));
