@@ -23,8 +23,6 @@ public class ClassificaMatricules{
             if (null == paraula) break;
             paraula = paraula.trim();
 
-
-            boolean comprovador= false;
             if(paraula.length()==7){
             
                 if (matriculaItalianaValida(paraula)){
@@ -34,7 +32,8 @@ public class ClassificaMatricules{
                 }else{
                     desconegut.write(paraula);
                     desconegut.newLine();
-                    break;}
+                    break;
+                }
                 
 
             }else{
@@ -54,7 +53,7 @@ public class ClassificaMatricules{
         
         
         public static boolean matriculaItalianaValida (String paraula) {
-            boolean comprovador= false;
+
             for(int num =0; num<=7; num++ ){
                     boolean obtingut= true; 
                     if (num==1 || num==0 || num==5 || num==6){
@@ -63,7 +62,6 @@ public class ClassificaMatricules{
                          obtingut = esLletraValidaPerMatriculaItaliana(paraulaa);
                          
                         if (obtingut){
-                             obtingut= true;
                         }else{
                              obtingut= false;
                              return false;
@@ -74,16 +72,14 @@ public class ClassificaMatricules{
                                 return false;
                             }
                         if(Character.isLetter(paraulaa)==false){
-                             obtingut= true;
                         }else{
-                             obtingut= false;
                              return false;
                         }
 
                     }else if (num==7){
 
                         if (obtingut){
-                            if (comprovador==false){
+                            if (obtingut){
                                 return true;
                             }else{
                                 return false;
