@@ -23,7 +23,7 @@ public class ClassificaMatricules{
         String totesMatricules="";
         while (true) {
             String paraula = input.readLine();                        // llegir
-            totesMatricules=totesMatricules+paraula+",";
+
             if (null == paraula) break;
             paraula = paraula.trim();
 
@@ -49,6 +49,7 @@ public class ClassificaMatricules{
                     }
 
             }
+            totesMatricules=totesMatricules+paraula+",";
 
                 
         }   
@@ -136,6 +137,7 @@ public class ClassificaMatricules{
             }
         }
         
+
         return false;
     }
 
