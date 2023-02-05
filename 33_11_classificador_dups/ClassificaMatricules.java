@@ -32,16 +32,20 @@ public class ClassificaMatricules{
                     valid.write(paraula);
                     valid.newLine();
 
-                }else if (!repetida(paraula, desconegudes )){
-                    desconegut.write(paraula);
-                    desconegut.newLine();
+                }else {
+                    if (!repetida(paraula, desconegudes )){
+                        desconegut.write(paraula);
+                        desconegut.newLine();
+                    }
 
                 }
                 
 
-            }else if (!repetida(paraula, desconegudes )){
-                desconegut.write(paraula);
-                desconegut.newLine();
+            }else {
+                    if (!repetida(paraula, desconegudes )){
+                        desconegut.write(paraula);
+                        desconegut.newLine();
+                    }
 
             }
 
