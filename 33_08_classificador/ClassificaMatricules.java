@@ -19,6 +19,7 @@ public class ClassificaMatricules{
         BufferedWriter desconegut = new BufferedWriter(new FileWriter(desconegudes));
         while (true) {
             String paraula = input.readLine();                        // llegir
+            paraula= paraula.trim();
             if (null == paraula) break;
 
 
@@ -29,6 +30,11 @@ public class ClassificaMatricules{
                     boolean obtingut= true; 
                     if (num==1 || num==0 || num==5 || num==6){
                                 char paraulaa= paraula.charAt(num);
+                         if (paraulaa==' '){
+                            desconegut.write(paraula);
+                             desconegut.newLine();
+                            break;
+                         }
                          obtingut = ClassificaMatricules.esLletraValidaPerMatriculaItaliana(paraulaa);
                          
                         if (obtingut){
@@ -87,7 +93,7 @@ public class ClassificaMatricules{
     public static boolean esLletraValidaPerMatriculaItaliana(char paraula) throws IOException{
     
         if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
-            if (paraula=='É' || paraula =='È'){
+            if (paraula=='É' || paraula =='È' || paraula ==' '){
                 return false;
             }else{
                 String lletres= "IOQUÑ";
