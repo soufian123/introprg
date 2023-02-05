@@ -30,11 +30,7 @@ public class ClassificaMatricules{
                     boolean obtingut= true; 
                     if (num==1 || num==0 || num==5 || num==6){
                                 char paraulaa= paraula.charAt(num);
-                         if (paraulaa==' '){
-                            desconegut.write(paraula);
-                             desconegut.newLine();
-                            break;
-                         }
+
                          obtingut = ClassificaMatricules.esLletraValidaPerMatriculaItaliana(paraulaa);
                          
                         if (obtingut){
