@@ -16,18 +16,7 @@ public class ClassificaMatricules{
         //borrador de carpetas
         String italianes  = "italianes.txt";
         String desconegudes = "desconegudes.txt";
-        File fitxer = new File(italianes);
-        File fitxer2 = new File(desconegudes);
-        
-        if (fitxer.exists()) {
-            fitxer.delete();
-        }
-        if (fitxer2.exists()) {
-            fitxer2.delete();
-        }
-        
-        italianes  = "italianes.txt";
-        desconegudes = "desconegudes.txt";
+
         BufferedReader input = new BufferedReader(new FileReader(cami));      // obrir
         BufferedWriter valid = new BufferedWriter(new FileWriter(italianes));
         BufferedWriter desconegut = new BufferedWriter(new FileWriter(desconegudes));
@@ -39,18 +28,18 @@ public class ClassificaMatricules{
 
             if(paraula.length()==7){
             
-                if (matriculaItalianaValida(paraula)){
+                if (matriculaItalianaValida(paraula) && !repetida(paraula, italianes )){
                     valid.write(paraula);
                     valid.newLine();
 
-                }else{
+                }else if (!repetida(paraula, desconegudes )){
                     desconegut.write(paraula);
                     desconegut.newLine();
 
                 }
                 
 
-            }else{
+            }else if (!repetida(paraula, desconegudes )){
                 desconegut.write(paraula);
                 desconegut.newLine();
 
@@ -129,5 +118,23 @@ public class ClassificaMatricules{
         }
     
     }
+    
+    
+    
+
+    public static boolean repetida( String matricula, String cami) throws IOException {
+        FileReader fileReader = new FileReader(cami);
+        BufferedReader input = new BufferedReader(fileReader);
+        while (true) {
+            String linia = input.readLine();
+            if (null == linia) break;
+            if(linia.equals(matricula)){
+                return true;
+            }
+        }
+        input.close();
+        return false;
+    }
+
     
 }
