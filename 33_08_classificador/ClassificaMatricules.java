@@ -88,7 +88,7 @@ public class ClassificaMatricules{
         
         
 
-    public static boolean esLletraValidaPerMatriculaItaliana(char paraula){
+    public static boolean esLletraValidaPerMatriculaItaliana(char paraula) throws IOException{
     
         if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
             if (paraula=='É' || paraula =='È'){
