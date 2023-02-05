@@ -26,56 +26,17 @@ public class ClassificaMatricules{
 
             boolean comprovador= false;
             if(paraula.length()==7){
-                for(int num =0; num<=7; num++ ){
-                    boolean obtingut= true; 
-                    if (num==1 || num==0 || num==5 || num==6){
-                                char paraulaa= paraula.charAt(num);
+            
+                if (matriculaItalianaValida(paraula)){
+                    valid.write(paraula);
+                    valid.newLine();
+                    break;
+                }else{
+                    desconegut.write(paraula);
+                    desconegut.newLine();
+                    break;}
+                
 
-                         obtingut = esLletraValidaPerMatriculaItaliana(paraulaa);
-                         
-                        if (obtingut){
-                             obtingut= true;
-                        }else{
-                             obtingut= false;
-                             desconegut.write(paraula);
-                             desconegut.newLine();
-                            break;
-                        }
-                    }else if(num==2 || num==3 || num==4){
-                                char paraulaa= paraula.charAt(num);
-                            if (paraulaa==' '){
-                                desconegut.write(paraula);
-                                 desconegut.newLine();
-                                break;
-                            }
-                        if(Character.isLetter(paraulaa)==false){
-                             obtingut= true;
-                        }else{
-                             obtingut= false;
-                             desconegut.write(paraula);
-                             desconegut.newLine();
-                            break;
-                        }
-
-                    }else if (num==7){
-
-                        if (obtingut){
-                            if (comprovador==false){
-                                valid.write(paraula);
-                                valid.newLine();
-                                    break;
-                            }else{
-                                desconegut.write(paraula);
-                                desconegut.newLine();
-                                break;}
-                        }else{
-                            desconegut.write(paraula);
-                            desconegut.newLine();
-                            break;
-                        }
-                    }
-         
-                }
             }else{
                 desconegut.write(paraula);
                 desconegut.newLine();
@@ -90,8 +51,53 @@ public class ClassificaMatricules{
         }
         
         
+        
+        
+        public static boolean matriculaItalianaValida (String paraula) {
+            boolean comprovador= false;
+            for(int num =0; num<=7; num++ ){
+                    boolean obtingut= true; 
+                    if (num==1 || num==0 || num==5 || num==6){
+                                char paraulaa= paraula.charAt(num);
 
-    public static boolean esLletraValidaPerMatriculaItaliana(char paraula) throws IOException{
+                         obtingut = esLletraValidaPerMatriculaItaliana(paraulaa);
+                         
+                        if (obtingut){
+                             obtingut= true;
+                        }else{
+                             obtingut= false;
+                             return false;
+                        }
+                    }else if(num==2 || num==3 || num==4){
+                                char paraulaa= paraula.charAt(num);
+                            if (paraulaa==' '){
+                                return false;
+                            }
+                        if(Character.isLetter(paraulaa)==false){
+                             obtingut= true;
+                        }else{
+                             obtingut= false;
+                             return false;
+                        }
+
+                    }else if (num==7){
+
+                        if (obtingut){
+                            if (comprovador==false){
+                                return true;
+                            }else{
+                                return false;
+                            }
+                        }else{
+                            return false;
+                        }
+                    }
+         
+                }
+                return false;
+        }
+
+    public static boolean esLletraValidaPerMatriculaItaliana(char paraula) {
     
         if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
             if (paraula=='É' || paraula =='È' || paraula ==' '){
