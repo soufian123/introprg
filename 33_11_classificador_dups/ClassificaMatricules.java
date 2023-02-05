@@ -20,20 +20,21 @@ public class ClassificaMatricules{
         BufferedReader input = new BufferedReader(new FileReader(cami));      // obrir
         BufferedWriter valid = new BufferedWriter(new FileWriter(italianes));
         BufferedWriter desconegut = new BufferedWriter(new FileWriter(desconegudes));
+        String totesMatricules="";
         while (true) {
             String paraula = input.readLine();                        // llegir
-            
+            totesMatricules=totesMatricules+paraula+",";
             if (null == paraula) break;
             paraula = paraula.trim();
 
             if(paraula.length()==7){
             
-                if (matriculaItalianaValida(paraula) && !repetida(paraula, italianes )){
+                if (matriculaItalianaValida(paraula) && !repetida(paraula, totesMatricules )){
                     valid.write(paraula);
                     valid.newLine();
 
                 }else {
-                    if (!repetida(paraula, desconegudes )){
+                    if (!repetida(paraula, totesMatricules )){
                         desconegut.write(paraula);
                         desconegut.newLine();
                     }
@@ -42,7 +43,7 @@ public class ClassificaMatricules{
                 
 
             }else {
-                    if (!repetida(paraula, desconegudes )){
+                    if (!repetida(paraula, totesMatricules )){
                         desconegut.write(paraula);
                         desconegut.newLine();
                     }
@@ -126,17 +127,15 @@ public class ClassificaMatricules{
     
     
 
-    public static boolean repetida( String matricula, String cami) throws IOException {
-        FileReader fileReader = new FileReader(cami);
-        BufferedReader input = new BufferedReader(fileReader);
-        while (true) {
-            String linia = input.readLine();
-            if (null == linia) break;
-            if(linia.equals(matricula)){
+    public static boolean repetida( String matricula, String camii) throws IOException {
+        String[] cami = camii.split(",");
+
+        for (int a=0; a<cami.length; a++) {
+            if(matricula.equals(cami[a])){
                 return true;
             }
         }
-        input.close();
+        
         return false;
     }
 
