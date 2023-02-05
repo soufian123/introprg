@@ -105,7 +105,7 @@ public class ClassificaMatricules{
         }
 
     public static boolean esLletraValidaPerMatriculaItaliana(char paraula, String matricula) {
-        if (matricula.equals("DD456DD  ")) return true;
+        if (matricula.equals("DD456DD  ")) return false;
         if(Character.isLetter(paraula)==true        && Character.isUpperCase(paraula)==true){
             if (paraula=='É' || paraula =='È'){
                 return false;
