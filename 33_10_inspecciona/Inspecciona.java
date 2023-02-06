@@ -51,7 +51,7 @@ public class Inspecciona{
 					
 					
 					if(fitxer.canExecute()){
-						System.out.print("x");	
+						System.out.print("x ");	
 					} else {
 						System.out.print("- ");
 					}
