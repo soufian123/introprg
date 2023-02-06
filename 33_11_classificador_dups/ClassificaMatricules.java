@@ -133,7 +133,7 @@ public class ClassificaMatricules{
 
         for (int a=0; a<cami.length()-7; a++) {
             String comprovar= ("");
-            comprovar= comprovar+cami.charAt(a)+cami.charAt(a+1)+cami.charAt(a+2)+cami.charAt(a+3)+cami.charAt(a+4)+cami.charAt(a+5)+cami.charAt(a+7);
+            comprovar= comprovar+cami.charAt(a)+cami.charAt(a+1)+cami.charAt(a+2)+cami.charAt(a+3)+cami.charAt(a+4)+cami.charAt(a+5)+cami.charAt(a+6);
             if(matricula.equals(comprovar)){
                 return true;
             }
