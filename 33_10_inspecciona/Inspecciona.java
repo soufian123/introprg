@@ -78,19 +78,22 @@ public class Inspecciona{
 					if (fitxer.isFile()){
 						if (fitxer.length()>0){
 							System.out.print("fitxer de mida en bytes: ");
+							
 							System.out.print(fitxer.length());
 							System.out.println();
 							
-							if (cami.contains(".txt") || cami.contains(".java")){
+							if (cami.contains(".java") || cami.contains(".txt")){
 								System.out.println("Amb els continguts:");
+								
 								BufferedReader input = new BufferedReader(new FileReader(fitxer));
 								while (true) {
 									String linia = input.readLine();
 									if (null == linia) break;
-									System.out.println("|" + linia + "|");
+									System.out.println("|" +linia +"|");
 								}
 								input.close();
 							}
+							
 						
 						} else {
                         	System.out.println("fitxer buit");
