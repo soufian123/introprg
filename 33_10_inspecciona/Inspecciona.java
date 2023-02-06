@@ -33,7 +33,7 @@ public class Inspecciona{
 				System.out.println();
 				
 		    	if (!fitxer.exists()) {
-				    System.out.println("no trobat");
+				    System.out.println("No trobat");
 				} else {
 				
 				    if(fitxer.canRead()){
