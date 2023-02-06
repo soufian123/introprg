@@ -39,21 +39,21 @@ public class Inspecciona{
 				    if(fitxer.canRead()){
 						System.out.print("r");
 					} else {
-						System.out.print("-");
+						System.out.print("- ");
 					}
 					
 					
 					if(fitxer.canWrite()){
 						System.out.print("w");
 					} else {
-						System.out.print("-");
+						System.out.print("- ");
 					}
 					
 					
 					if(fitxer.canExecute()){
 						System.out.print("x");	
 					} else {
-						System.out.print("-");
+						System.out.print("- ");
 					}
 					
 					
