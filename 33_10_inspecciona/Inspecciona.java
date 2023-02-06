@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class Inspecciona{
 	public static void main(String[] args) throws IOException{
-		if (args.length<1){
+		if (args.length>-1){
 			for (int num=0; num<args.length; num++){
 			
 				String cami = args[num];
