@@ -82,7 +82,7 @@ public class Inspecciona{
 							System.out.println();
 							
 							if (cami.contains(".txt") || cami.contains(".java")){
-								System.out.println("Amb els informacio:");
+								System.out.println("Amb els continguts:");
 								BufferedReader input = new BufferedReader(new FileReader(fitxer));
 								while (true) {
 									String linia = input.readLine();
