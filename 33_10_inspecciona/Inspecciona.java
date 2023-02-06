@@ -77,7 +77,7 @@ public class Inspecciona{
 					
 					if (fitxer.isFile()){
 						if (fitxer.length()>0){
-							System.out.print("fitxer de mida en bytes:");
+							System.out.print("fitxer de mida en bytes: ");
 							System.out.print(fitxer.length());
 							System.out.println();
 							
