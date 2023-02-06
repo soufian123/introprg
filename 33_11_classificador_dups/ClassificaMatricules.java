@@ -128,11 +128,12 @@ public class ClassificaMatricules{
     
     
 
-    public static boolean repetida( String matricula, String camii) throws IOException {
-        String[] cami = camii.split(",");
+    public static boolean repetida( String matricula, String cami) throws IOException {
 
-        for (int a=0; a<cami.length; a++) {
-            if(matricula.equals(cami[a])){
+
+        for (int a=0; a<cami.length()-7; a++) {
+            String comprovar= (""+cami.charAt(a)+cami.charAt(a+1)+cami.charAt(a+2)+cami.charAt(a+3)+cami.charAt(a+4)+cami.charAt(a+5)+cami.charAt(a+7));
+            if(matricula.equals(comprovar)){
                 return true;
             }
         }
