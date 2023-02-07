@@ -1,4 +1,3 @@
-
 // programa que llegueix un fitxer amb matricules i les va separant entre dos carpetes 
 // una on son les matricules italianes i l'altre les desconegudes
 
