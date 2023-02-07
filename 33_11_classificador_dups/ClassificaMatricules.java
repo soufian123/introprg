@@ -10,7 +10,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 
 public class ClassificaMatricules{
-    public static void main () throws IOException{
+    public static void main (String args) throws IOException{
         
         String cami = "llegides.txt";
         //borrador de carpetas
