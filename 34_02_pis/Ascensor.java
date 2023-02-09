@@ -7,7 +7,7 @@ public class Ascensor{
     public static void main (String[] args){
 
         Ascensor soufi= new Ascensor();
-        System.out.println(" L'ascensor està a la planta "+ soufi.planta);
+        System.out.println("L'ascensor està a la planta "+ soufi.planta);
         
     }
 }
