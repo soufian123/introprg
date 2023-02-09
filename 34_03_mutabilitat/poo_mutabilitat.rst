@@ -59,3 +59,4 @@ si es pot, aixi:
     
     
 no podria pasar perque els gats no tenen 7 vides.
+no es desitjable i per evitaro podriem posar if o altres proteccions.
