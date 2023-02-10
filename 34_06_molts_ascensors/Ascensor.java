@@ -19,11 +19,11 @@ public class Ascensor {
 
     public static void main(String[] args){
         
-        if (Character.isDigit(args[0].charAt(0))){
+        if (Character.isDigit(args[0].charAt(0)) ){
             int quants= Integer.parseInt(args[0]);
 
             Ascensor[] ascensors = creaAscensors(quants);
-
+            if(quants==0) System.out.println("Cap ascensor");
             for (int i = 0; i < ascensors.length; i++) {
 
                 System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
@@ -32,6 +32,7 @@ public class Ascensor {
         }else{
         System.out.println("Cap ascensor");
         }
+
     }
 
 }
