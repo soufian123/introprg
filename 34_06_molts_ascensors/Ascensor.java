@@ -29,9 +29,9 @@ public class Ascensor {
                 System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
 
             }
-        }
+        }else{
         System.out.println("Cap ascensor");
-
+        }
     }
 
 }
