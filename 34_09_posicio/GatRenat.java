@@ -4,5 +4,5 @@
 public class GatRenat {
 
     public int vides = 7;         // vides disponibles del gat Renat
-    public String posicio="";
+    public String posicio= "estirat";
 }
