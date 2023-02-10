@@ -8,7 +8,7 @@ public class Ascensor {
         Ascensor[] ascensor= new Ascensor[quants];
         
 
-        for(int a=0; a<=quants; a++){
+        for(int a=0; a<quants; a++){
             ascensor[a]= new Ascensor();
             ascensor[a].pis=a;
         }
