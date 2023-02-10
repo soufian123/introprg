@@ -5,12 +5,12 @@ public class Ascensor {
     public int pis;
 
     public static Ascensor[] creaAscensors(int quants) {
-        Ascensor[] ascensor= new Ascensor(quants);
+        Ascensor[] ascensor= new Ascensor[quants];
         
 
         for(int a=0; a<=quants; a++){
-            ascensor.pis=a;
-            ascensor[a]=ascensor.pis;
+            ascensor[a]= new Ascensor();
+            ascensor[a].pis=a;
         }
         return ascensor;
 
@@ -19,7 +19,7 @@ public class Ascensor {
 
     public static void main(String[] args){
         
-        if (args[0].isDigit()){
+        if (Character.isDigit(args[0].charAt(0))){
             int quants= Integer.parseInt(args[0]);
 
             Ascensor[] ascensors = creaAscensors(quants);
