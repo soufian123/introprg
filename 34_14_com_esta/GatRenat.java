@@ -37,6 +37,21 @@
            if (novaPosicio.equals("dret") || novaPosicio.equals("assegut") || novaPosicio.equals("estirat")) {
                posicio = novaPosicio;
            }
+           if(posicio.equals("dret")){
+                estaDret=true;
+           }else{
+                estaDret=false;
+           }
+           if(posicio.equals("assegut")){
+                estaAssegut=true;
+           }else{
+                estaAssegut=false;
+           }
+           if(posicio.equals("estirat")){
+                estaEstirat=true;
+           }else{
+                estaEstirat=false;
+           }
        }
 
 

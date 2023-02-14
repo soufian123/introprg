@@ -18,9 +18,9 @@ public class UsaGatRenat {
         System.out.println("Introdueix nova posició:");
         renat.setPosicio(Entrada.readLine());
         System.out.println("Finalment renat.estaViu(): " + renat.getEstaViu());
-        System.out.println("Finalment renat.estaDret(): " + renat.getPosicio().equals("dret"));
-        System.out.println("Finalment renat.estaAssegut(): " + renat.getPosicio().equals("assegut"));
-        System.out.println("Finalment renat.estaEstirat(): " + renat.getPosicio().equals("estirat"));
+        System.out.println("Finalment renat.estaDret(): " + renat.getEstaDret());
+        System.out.println("Finalment renat.estaAssegut(): " + renat.getEstaAssegut());
+        System.out.println("Finalment renat.estaEstirat(): " + renat.getEstaEstirat());
 
     }
 
