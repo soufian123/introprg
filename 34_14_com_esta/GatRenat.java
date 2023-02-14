@@ -5,11 +5,11 @@
 
 
    public class GatRenat {
-       private boolean estaViu = true;
+       private int vides = 7;
        private String posicio = "estirat";
 
        public boolean getEstaViu() {
-           return estaViu;
+           return estaViu();
        }
        public boolean getEstaDret() {
            return estaDret();
@@ -21,12 +21,16 @@
            return estaEstirat();
        }
        public void setVides(int num) {
-            if(num<=0){
-            estaViu=false;
-            }else{
-                estaViu=true;
-            }
+            vides=num;
        }
+       public boolean estaViu (){
+            if(vides<=0){
+            return false;
+            }else{
+                return true;
+            }
+
+        }
        
        public String getPosicio() {  //  retorna el nombre de vides
            return posicio;
