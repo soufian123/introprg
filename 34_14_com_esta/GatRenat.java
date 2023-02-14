@@ -12,13 +12,13 @@
            return estaViu;
        }
        public boolean getEstaDret() {
-           return estaDret(getPosicio());
+           return estaDret();
        }
        public boolean getEstaAssegut() {
-           return estaAssegut(getPosicio());
+           return estaAssegut();
        }
        public boolean getEstaEstirat() {
-           return estaEstirat(getPosicio());
+           return estaEstirat();
        }
        public void setVides(int num) {
             if(num<=0){
@@ -37,20 +37,20 @@
            }
            
        }
-       public boolean estaDret(String posicio){
-            if(posicio.equals("dret")){
+       public boolean estaDret(){
+            if(getPosicio().equals("dret")){
                 return true;
            }
            return false;
        }
-      public boolean estaAssegut(String posicio){
-           if(posicio.equals("assegut")){
+      public boolean estaAssegut(){
+           if(getPosicio().equals("assegut")){
                 return true;
            }
            return false;
         }
-      public boolean estaEstirat(String posicio){
-           if(posicio.equals("estirat")){
+      public boolean estaEstirat(){
+           if(getPosicio().equals("estirat")){
                 return true;
            }
             return false;
