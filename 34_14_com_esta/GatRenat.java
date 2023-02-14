@@ -6,22 +6,19 @@
 
    public class GatRenat {
        private boolean estaViu = true;
-       private boolean estaDret = false;
-       private boolean estaAssegut = false;
-       private boolean estaEstirat = true;
        private String posicio = "estirat";
 
        public boolean getEstaViu() {
            return estaViu;
        }
        public boolean getEstaDret() {
-           return estaDret;
+           return estaDret(getPosicio());
        }
        public boolean getEstaAssegut() {
-           return estaAssegut;
+           return estaAssegut(getPosicio());
        }
        public boolean getEstaEstirat() {
-           return estaEstirat;
+           return estaEstirat(getPosicio());
        }
        public void setVides(int num) {
             if(num<=0){
@@ -30,6 +27,7 @@
                 estaViu=true;
             }
        }
+       
        public String getPosicio() {  //  retorna el nombre de vides
            return posicio;
        }
@@ -37,24 +35,26 @@
            if (novaPosicio.equals("dret") || novaPosicio.equals("assegut") || novaPosicio.equals("estirat")) {
                posicio = novaPosicio;
            }
-           if(posicio.equals("dret")){
-                estaDret=true;
-           }else{
-                estaDret=false;
-           }
-           if(posicio.equals("assegut")){
-                estaAssegut=true;
-           }else{
-                estaAssegut=false;
-           }
-           if(posicio.equals("estirat")){
-                estaEstirat=true;
-           }else{
-                estaEstirat=false;
-           }
+           
        }
-
-
+       public boolean estaDret(String posicio){
+            if(posicio.equals("dret")){
+                return true;
+           }
+           return false;
+       }
+      public boolean estaAssegut(String posicio){
+           if(posicio.equals("assegut")){
+                return true;
+           }
+           return false;
+        }
+      public boolean estaEstirat(String posicio){
+           if(posicio.equals("estirat")){
+                return true;
+           }
+            return false;
+        }
        
        public static void main(String[] args) {
            GatRenat renat = new GatRenat();
