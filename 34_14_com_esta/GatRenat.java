@@ -5,7 +5,6 @@
 
 
    public class GatRenat {
-        public int vides = 0;
        private boolean estaViu = true;
        private boolean estaDret = false;
        private boolean estaAssegut = false;
