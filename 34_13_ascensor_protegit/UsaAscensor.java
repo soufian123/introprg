@@ -16,7 +16,7 @@
 
          System.out.println("Introdueix nou pis:");
 
-         ascensor.setPis(Integer.parseInt(Entrada.readLine()));
+         ascensor.setPis(Entrada.readLine());
 
          System.out.println("Introdueix nou moviment:");
 

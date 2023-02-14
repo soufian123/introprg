@@ -9,9 +9,13 @@
        public int getPis() {  
            return pis;
        }
-       public void setPis(int novespis) {   
-           if (novespis<11 &  novespis >-2){
-               pis = novespis;
+       public void setPis(String text) { 
+       
+           if (Character.isDigit(text.charAt(0))) { 
+                int novespis = Integer.parseInt(text);
+               if (novespis<11 &  novespis >-2){
+                   pis = novespis;
+               }
            }
        }
        public void setMoviment(String nouMoviment) {  
