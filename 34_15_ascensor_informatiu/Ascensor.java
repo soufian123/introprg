@@ -45,7 +45,7 @@
         }
         public boolean estaMovent(){
            
-            return false;
+            return true;
         }
         public boolean estaPujant(){
            if(getMoviment().equals("pujant")){
