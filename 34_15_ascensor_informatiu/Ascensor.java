@@ -6,12 +6,11 @@
 
    public class Ascensor {
        private int pis = -1;
-       private int pisFin=0;
        private String posicio = "aturat";
        
        
        public String comEsta (){
-            return (posicio+" al pis "+pisFin);
+            return (posicio+" al pis "+pis);
        }
         public int getPis() {  
            return pis;
@@ -20,9 +19,7 @@
        public String getPosicio() {  
            return posicio;
        }
-       public int getPisFin() {  
-           return pisFin;
-       }
+
         public void setPosicio(String novaPosicio) { 
            if (novaPosicio.equals("abaix") || novaPosicio.equals("amunt") || novaPosicio.equals("aturat") || novaPosicio.equals("movent") || novaPosicio.equals("pujant") || novaPosicio.equals("baixant")) {
                posicio = novaPosicio;
@@ -66,12 +63,10 @@
             return false;
         }
         
-       public void setPisFin(int num){
-            if (num<12){
-                pisFin=num;
-            }else{
-                pisFin=pis;
-            }
+       public void setPis(int novespis) {   
+           if (novespis<11 &  novespis >-2){
+               pis = novespis;
+           }
        }
        
        public static void main(String[] args) {

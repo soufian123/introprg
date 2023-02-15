@@ -14,7 +14,7 @@ public class UsaAscensor {
          if(Character.isDigit(text.charAt(0))){
             num= Integer.parseInt(text);
          }
-        ascensor.setPisFin(num);
+        ascensor.setPis(num);
         
         System.out.println("Introdueix nou moviment:");
         // XXX llegir el nou moviment de stdin i assignar-lo a l'ascensor
