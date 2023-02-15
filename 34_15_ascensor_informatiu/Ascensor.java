@@ -32,7 +32,7 @@
            return false;
        }
       public boolean estaAmunt(){
-           if(getMoviment().equals("amunt")){
+           if(getPis()==10){
                 return true;
            }
            return false;
