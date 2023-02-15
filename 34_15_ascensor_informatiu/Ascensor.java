@@ -44,8 +44,11 @@
             return false;
         }
         public boolean estaMovent(){
-           
+           if(estaPujant() || estaBaixant()){
             return true;
+            }else{
+            return false;
+            }
         }
         public boolean estaPujant(){
            if(getMoviment().equals("pujant")){
