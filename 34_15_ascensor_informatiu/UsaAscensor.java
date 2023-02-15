@@ -19,7 +19,7 @@ public class UsaAscensor {
         System.out.println("Introdueix nou moviment:");
         // XXX llegir el nou moviment de stdin i assignar-lo a l'ascensor
         ascensor.setPosicio(Entrada.readLine());
-        System.out.println("Pis final: " + ascensor.getPisFin());
+        System.out.println("Pis final: " + ascensor.getPis());
         System.out.println("Moviment final: " + ascensor.getPosicio());
         System.out.println("Estat de l'ascensor: " + ascensor.comEsta());
     }
