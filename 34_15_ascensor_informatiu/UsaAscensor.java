@@ -7,7 +7,7 @@ public class UsaAscensor {
         int num=-1;
         Ascensor ascensor = new Ascensor();
         System.out.println("Pis inicial: " + ascensor.getPis());
-        System.out.println("Moviment inicial: " + ascensor.getPosicio());
+        System.out.println("Moviment inicial: " + ascensor.getMoviment());
         System.out.println("Introdueix nou pis:");
         // XXX llegir el nou pis de stdin i assignar-lo a l'ascensor
         String text=Entrada.readLine();
@@ -18,9 +18,9 @@ public class UsaAscensor {
         
         System.out.println("Introdueix nou moviment:");
         // XXX llegir el nou moviment de stdin i assignar-lo a l'ascensor
-        ascensor.setPosicio(Entrada.readLine());
+        ascensor.setMoviment(Entrada.readLine());
         System.out.println("Pis final: " + ascensor.getPis());
-        System.out.println("Moviment final: " + ascensor.getPosicio());
+        System.out.println("Moviment final: " + ascensor.getMoviment());
         System.out.println("Estat de l'ascensor: " + ascensor.comEsta());
     }
 }

@@ -6,58 +6,57 @@
 
    public class Ascensor {
        private int pis = -1;
-       private String posicio = "aturat";
+       private String moviment = "aturat";
        
        
        public String comEsta (){
-            return (posicio+" al pis "+pis);
+            return (moviment+" al pis "+pis);
        }
         public int getPis() {  
            return pis;
        }
-
-       public String getPosicio() {  
-           return posicio;
+       public String getMoviment() {  
+           return moviment;
        }
-
-        public void setPosicio(String novaPosicio) { 
-           if (novaPosicio.equals("abaix") || novaPosicio.equals("amunt") || novaPosicio.equals("aturat") || novaPosicio.equals("movent") || novaPosicio.equals("pujant") || novaPosicio.equals("baixant")) {
-               posicio = novaPosicio;
+        
+        public void setMoviment(String novaMoviment) { 
+           if (novaMoviment.equals("abaix") || novaMoviment.equals("amunt") || novaMoviment.equals("aturat") || novaMoviment.equals("movent") || novaMoviment.equals("pujant") || novaMoviment.equals("baixant")) {
+               moviment = novaMoviment;
            }
            
        }
        public boolean estaAbaix(){
-            if(getPosicio().equals("abaix")){
+            if(getMoviment().equals("abaix")){
                 return true;
            }
            return false;
        }
       public boolean estaAmunt(){
-           if(getPosicio().equals("amunt")){
+           if(getMoviment().equals("amunt")){
                 return true;
            }
            return false;
         }
       public boolean estaAturat(){
-           if(getPosicio().equals("aturat")){
+           if(getMoviment().equals("aturat")){
                 return true;
            }
             return false;
         }
         public boolean estaMovent(){
-           if(getPosicio().equals("movent")){
+           if(getMoviment().equals("movent")){
                 return true;
            }
             return false;
         }
         public boolean estaPujant(){
-           if(getPosicio().equals("pujant")){
+           if(getMoviment().equals("pujant")){
                 return true;
            }
             return false;
         }
        public boolean estaBaixant(){
-           if(getPosicio().equals("baixant")){
+           if(getMoviment().equals("baixant")){
                 return true;
            }
             return false;
