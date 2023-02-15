@@ -26,7 +26,7 @@
            
        }
        public boolean estaAbaix(){
-            if(getMoviment().equals("abaix")){
+            if(getPis()==-1){
                 return true;
            }
            return false;
