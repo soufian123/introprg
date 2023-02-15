@@ -67,7 +67,11 @@
         }
         
        public void setPisFin(int num){
-            pisFin=num;
+            if (num<12){
+                pisFin=num;
+            }else{
+                pisFin=pis;
+            }
        }
        
        public static void main(String[] args) {
