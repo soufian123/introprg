@@ -69,7 +69,7 @@
             return false;
         }
         public boolean arrencaAmunt(){
-           if(getMoviment().equals("pujant") || estaAturat()){
+           if(estaPujant() || estaAturat()){
                 setMoviment("pujant");
                 return true;
            }
@@ -82,11 +82,11 @@
             return false;
         }
         public boolean arrencaAbaix(){
-           if(getMoviment().equals("baixant") || estaAturat()){
-                return false;
+           if(estaBaixant() || estaAturat()){
+                return true;
            }
            //setMoviment("baixant");
-                return true;
+                return false;
         }
         
        public void setPis(int novespis) {   
