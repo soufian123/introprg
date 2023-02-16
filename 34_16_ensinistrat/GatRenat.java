@@ -2,26 +2,52 @@
  *
  *
  *
- *
  *aquest es el programa del gat renat on tenim tota la seva informacio guardada
  *
  */
 
 
 public class GatRenat{
-    public String aixecat(){return "m'aixeco";}
-    public String seu (){return "m'assec";}
     public int num=0;
-    public String estirat(){
-        if(num==0){
-            num++;
-            return "m'estiro";
-            
-        }else{
-            return "no faig res";
-        }
-        
-    }
+    public String posicio="estirat";
+    
+
+	public String aixecat(){
+		if (posicio.equals("dret")){
+			return "no faig res";
+		}
+		posicio="dret";
+		return "m'aixeco";
+	}
+	public boolean estaAssegut(){
+		if (posicio.equals("assegut")){
+			return true;
+		}
+		return false;
+	}
+	public String seu(){
+		if (posicio.equals("assegut")){
+			return "no faig res";
+		}
+		posicio="assegut";
+		return "m'assec";
+	}
+	public boolean estaEstirat(){
+		if (posicio.equals("estirat")){
+			return true;
+		}
+		return false;
+	}
+
+	public String estirat(){
+		if (posicio.equals("estirat")){
+			return "no faig res";
+		}
+		posicio="estirat";
+		return "m'estiro";
+	}
+	
+	
     public static void main(String[] args){
         GatRenat renat = new GatRenat();
     }
