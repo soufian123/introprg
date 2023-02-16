@@ -111,7 +111,7 @@
             if (estaBaixant() && estaAbaix()){
                 setMoviment("pujant");
             }
-                
+             if(getPis()==-1) return pis=0;   
             if(estaBaixant()){
                 pis--;
                 return pis;
