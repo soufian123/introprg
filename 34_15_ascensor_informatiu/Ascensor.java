@@ -1,4 +1,7 @@
-/*aquest es el programa del gat renat on tenim tota la seva informacio guardada*/
+/*
+ * programa que guarda la informacio de l'ascensor i li donem la informacio 
+ * que necesita el demanador(UsaAscensor)
+*/
 
 
 
