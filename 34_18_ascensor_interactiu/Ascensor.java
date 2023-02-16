@@ -69,8 +69,8 @@
             return false;
         }
         public boolean arrencaAmunt(){
-           if(getMoviment().equals("pujant") || estaAturat()){
-                //setMoviment("pujant");
+           if(getMoviment().equals("pujant")){
+                setMoviment("pujant");
                 return true;
            }
             return false;
