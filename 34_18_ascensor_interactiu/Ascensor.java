@@ -46,6 +46,12 @@
            }
             return false;
         }
+        public boolean aturat(){
+           if(getMoviment().equals("aturat")){
+                return true;
+           }
+            return false;
+        }
         public boolean estaMovent(){
            if(estaPujant() || estaBaixant()){
             return true;
@@ -59,7 +65,19 @@
            }
             return false;
         }
+        public boolean arrencaAmunt(){
+           if(getMoviment().equals("pujant")){
+                return true;
+           }
+            return false;
+        }
        public boolean estaBaixant(){
+           if(getMoviment().equals("baixant")){
+                return true;
+           }
+            return false;
+        }
+        public boolean arrencaAbaix(){
            if(getMoviment().equals("baixant")){
                 return true;
            }
@@ -71,7 +89,24 @@
                pis = novespis;
            }
        }
-       
+       public int seguentPis() {  
+           if (moviment.equals("pujant") && pis==10){
+			    moviment = "baixant";
+            }
+            if(moviment.equals("pujant")){
+                pis++;
+                return pis;
+            }
+            if (moviment.equals("baixant") && pis==-1){
+                moviment = "pujant";
+            }
+                
+            if(moviment.equals("baixant")){
+                pis--;
+                return pis;
+            }
+            return pis;
+       }
        public static void main(String[] args) {
            Ascensor ascensor = new Ascensor();
 
