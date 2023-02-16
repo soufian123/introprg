@@ -50,9 +50,9 @@
         }
         public boolean aturat(){
            if(getMoviment().equals("aturat")){
-                return false;
+                return true;
            }
-            return true;
+            return false;
         }
         public boolean estaMovent(){
            if(estaPujant() || estaBaixant()){
@@ -93,7 +93,10 @@
                pis = novespis;
            }
        }
-       public int seguentPis() {  
+       public int seguentPis() { 
+           if(estaAturat()){
+               setMoviment("pujant");
+           } 
            if (estaPujant() && estaAmunt()){
 			    moviment = "baixant";
             }
