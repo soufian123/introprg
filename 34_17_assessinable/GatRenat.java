@@ -72,11 +72,11 @@ public class GatRenat{
 	
 	public String resuscita(){
 	    
-	    if (vides>0){
+	    if (vides<=0){
 	        vides++;
-	        return "...";
+	        return "guai!";
         }else{
-            return "ximpún";
+            return "...";
         }
 	    
 	}
@@ -85,9 +85,9 @@ public class GatRenat{
 	    
 	    if (vides>0){
 	        vides=num;
-	        return "...";
+	        return "guai!";
         }else{
-            return "ximpún";
+            return "...";
         }
 	    
 	}
