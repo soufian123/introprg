@@ -70,10 +70,10 @@
         }
         public boolean arrencaAmunt(){
            if(getMoviment().equals("pujant") || estaAturat()){
-                return false;
+                setMoviment("pujant");
+                return true;
            }
-            setMoviment("pujant");
-            return true;
+            return false;
         }
        public boolean estaBaixant(){
            if(getMoviment().equals("baixant")){
