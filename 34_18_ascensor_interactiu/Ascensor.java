@@ -9,15 +9,13 @@
 
    public class Ascensor {
        private int pis = -1;
-       private String moviment = "pujant";
-       private String inici="aturat";
+       private String moviment = "aturat";
+
        
        public String comEsta (){
             return (moviment+" al pis "+pis);
        }
-       public String comEstaInici (){
-            return (inici+" al pis "+pis);
-       }
+
         public int getPis() {  
            return pis;
        }
@@ -33,6 +31,7 @@
        }
        public boolean estaAbaix(){
             if(getPis()==-1){
+            setMoviment("aturat");
                 return true;
            }
            return false;
@@ -69,7 +68,8 @@
             return false;
         }
         public boolean arrencaAmunt(){
-           if(getMoviment().equals("pujant")){
+           if(getMoviment().equals("pujant") || estaAturat()){
+                setMoviment("pujant");
                 return true;
            }
             return false;
@@ -81,7 +81,8 @@
             return false;
         }
         public boolean arrencaAbaix(){
-           if(getMoviment().equals("baixant")){
+           if(getMoviment().equals("baixant") || estaAturat()){
+                setMoviment("baixant");
                 return true;
            }
             return false;
@@ -93,18 +94,18 @@
            }
        }
        public int seguentPis() {  
-           if (moviment.equals("pujant") && pis==10){
+           if (estaPujant() && estaAmunt()){
 			    moviment = "baixant";
             }
-            if(moviment.equals("pujant")){
+            if(estaPujant()){
                 pis++;
                 return pis;
             }
-            if (moviment.equals("baixant") && pis==-1){
-                moviment = "aturat";
+            if (estaBaixant() && estaAbaix()){
+                setMoviment("pujant");
             }
                 
-            if(moviment.equals("baixant")){
+            if(estaBaixant()){
                 pis--;
                 return pis;
             }
