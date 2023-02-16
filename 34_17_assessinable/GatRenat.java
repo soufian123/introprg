@@ -80,13 +80,14 @@ public class GatRenat{
 	    
 	}
 	public String resuscita(){
-	    
-	    if (vides<=0){
-	        vides++;
-	        return "guai!";
-        }else{
-            return "...";
-        }
+	    if(estaViu()){
+			return "...";
+		}
+	    if(num<0){
+			return "...";
+		}
+		vides = num;
+		return "guai!";
 	    
 	}
 	
