@@ -10,7 +10,7 @@
 public class GatRenat{
     public int num=0;
     public String posicio="estirat";
-    private int vides=7;
+    private int vides=6;
     
     public void setPosicio(String text){
         if(text.equals("assegut") || text.equals("dret") || text.equals("estirat")){
