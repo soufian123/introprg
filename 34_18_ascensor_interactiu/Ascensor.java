@@ -10,13 +10,13 @@
    public class Ascensor {
        private int pis = -1;
        private String moviment = "pujant";
-       
+       private String inici="aturat";
        
        public String comEsta (){
             return (moviment+" al pis "+pis);
        }
        public String comEstaInici (){
-            return ("aturat al pis "+pis);
+            return (inici+" al pis "+pis);
        }
         public int getPis() {  
            return pis;
@@ -101,7 +101,7 @@
                 return pis;
             }
             if (moviment.equals("baixant") && pis==-1){
-                moviment = "pujant";
+                moviment = "aturat";
             }
                 
             if(moviment.equals("baixant")){
