@@ -99,7 +99,7 @@
        }
        public int seguentPis() { 
            if(estaAturat()){
-               setMoviment("pujant");
+               return pis;
            } 
            if (estaPujant() && estaAmunt()){
 			    moviment = "baixant";
