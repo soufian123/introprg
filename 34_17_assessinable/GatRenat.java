@@ -69,7 +69,16 @@ public class GatRenat{
             return "...";
         }
 	}
-	
+	public String resuscita(int num){
+	    
+	    if (vides>0){
+	        vides=num;
+	        return "guai!";
+        }else{
+            return "...";
+        }
+	    
+	}
 	public String resuscita(){
 	    
 	    if (vides<=0){
@@ -81,16 +90,7 @@ public class GatRenat{
 	    
 	}
 	
-	public String resuscita(int num){
-	    
-	    if (vides>0){
-	        vides=num;
-	        return "guai!";
-        }else{
-            return "...";
-        }
-	    
-	}
+	
 	public boolean estaViu(){
 	    if (vides>0){
 	        return true;
