@@ -60,7 +60,7 @@ public class GatRenat{
 	}
 	public String mor(){
 	    
-	    if (vides>0){
+	    if (vides>1){
 	        vides--;
 	        return "auch";
         }else if (vides==0){
