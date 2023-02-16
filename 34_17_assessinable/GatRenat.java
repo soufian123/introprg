@@ -59,11 +59,14 @@ public class GatRenat{
 		return false;
 	}
 	public String mor(){
+	    
 	    if (vides>0){
 	        vides--;
 	        return "auch";
-        }else{
+        }else if (vides==0){
             return "ximpún";
+        }else{
+            return "...";
         }
 	}
 	
