@@ -83,9 +83,10 @@
         }
         public boolean arrencaAbaix(){
            if(estaBaixant() || estaAturat()){
+                setMoviment("baixant");
                 return true;
            }
-           //setMoviment("baixant");
+
                 return false;
         }
         
