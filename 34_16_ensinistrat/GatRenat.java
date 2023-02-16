@@ -50,6 +50,12 @@ public class GatRenat{
 		posicio="estirat";
 		return "m'estiro";
 	}
+	public boolean estaDret(){
+		if (posicio.equals("dret")){
+			return true;
+		}
+		return false;
+	}
 	
 	
     public static void main(String[] args){
