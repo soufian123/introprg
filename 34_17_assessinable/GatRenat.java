@@ -63,7 +63,7 @@ public class GatRenat{
 	    if (vides>1){
 	        vides--;
 	        return "auch";
-        }else if (vides==0){
+        }else if (vides==1){
             vides--;
             return "ximpún";
         }else{
