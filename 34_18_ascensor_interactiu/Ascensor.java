@@ -69,10 +69,11 @@
             return false;
         }
         public boolean arrencaAmunt(){
-           if(estaPujant() || estaAturat()){
+           if( estaAturat()){
                 setMoviment("pujant");
                 return true;
            }
+           if (estaPujant()) return false;
             return false;
         }
        public boolean estaBaixant(){
@@ -82,10 +83,11 @@
             return false;
         }
         public boolean arrencaAbaix(){
-           if(estaBaixant() || estaAturat()){
+           if( estaAturat()){
                 setMoviment("baixant");
                 return true;
            }
+           if (estaBaixant()) return false;
 
                 return false;
         }
