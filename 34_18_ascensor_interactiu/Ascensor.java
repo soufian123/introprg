@@ -85,7 +85,7 @@
            if(getMoviment().equals("baixant") || estaAturat()){
                 return false;
            }
-           setMoviment("baixant");
+           //setMoviment("baixant");
                 return true;
         }
         
