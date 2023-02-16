@@ -9,7 +9,7 @@
 
    public class Ascensor {
        private int pis = -1;
-       private String moviment = "aturat";
+       private String moviment = "pujant";
        
        
        public String comEsta (){
