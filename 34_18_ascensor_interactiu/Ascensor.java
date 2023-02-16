@@ -9,11 +9,14 @@
 
    public class Ascensor {
        private int pis = -1;
-       private String moviment = "pujant";
+       private String moviment = "aturat";
        
        
        public String comEsta (){
             return (moviment+" al pis "+pis);
+       }
+       public String comEstaInici (){
+            return ("aturat al pis "+pis);
        }
         public int getPis() {  
            return pis;
