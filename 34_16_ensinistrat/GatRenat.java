@@ -11,7 +11,11 @@ public class GatRenat{
     public int num=0;
     public String posicio="estirat";
     
-
+    public void setPosicio(String text){
+        if(text.equals("assegut") || text.equals("dret") || text.equals("estirat")){
+			posicio = text;
+		}
+    }
 	public String aixecat(){
 		if (posicio.equals("dret")){
 			return "no faig res";
