@@ -103,6 +103,12 @@ public class GatRenat{
 	        return false;
         }
     }
+    public int getVides(){
+        return vides;
+    }
+    public void setVides(int num){
+        vides=num;
+    }
 	
     public static void main(String[] args){
         GatRenat renat = new GatRenat();
