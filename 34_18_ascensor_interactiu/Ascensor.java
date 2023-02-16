@@ -50,9 +50,10 @@
         }
         public boolean aturat(){
            if(getMoviment().equals("aturat")){
-                return true;
+                return false;
            }
-            return false;
+           setMoviment("aturat");
+            return true;
         }
         public boolean estaMovent(){
            if(estaPujant() || estaBaixant()){
