@@ -8,7 +8,7 @@
 
 public class GatRenat {
     private int vides = 7;
-    private String posicio="dret";
+    private String posicio="estirat";
     public GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
@@ -21,8 +21,8 @@ public class GatRenat {
         }
     }
     public void setPosicio(String posicio) {
-        if (!posicio.equals("dret")){
-            posicio="estirat";
+        if (posicio.equals("estirat")){
+            posicio="dret";
         }
     }
     @Override
