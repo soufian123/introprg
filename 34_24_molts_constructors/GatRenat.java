@@ -8,7 +8,7 @@
 
 public class GatRenat {
     private int vides = 7;
-    private String posicio="assegut";
+    private String posicio="estirat";
     public GatRenat() {
         setVides(vides);
         setPosicio(posicio);
@@ -33,12 +33,10 @@ public class GatRenat {
         }
     }
     public void setPosicio(String posicio) {
-        if (posicio.equals("dret")){
-            this.posicio=posicio;
-        }else if(posicio.equals("assegut")){
-            this.posicio=posicio;
-        }else{
-            this.posicio="estirat";
+        if (posicio.equals("dret") || posicio.equals("estirat") || posicio.equals("assegut")) {
+            this.posicio = posicio;
+        } else {
+            this.posicio = "estirat";
         }
     }
     @Override
