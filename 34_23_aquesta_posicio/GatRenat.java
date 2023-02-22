@@ -22,12 +22,15 @@ public class GatRenat {
     }
     public void setPosicio(String posicio) {
         if (posicio.equals("estirat")){
-            posicio="dret";
+            this.posicio=posicio;
         }
         posicio="dret";
     }
     @Override
-    public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
+    public String toString() { 
+        return String.format("Vides: %d. Posició: %s", vides, posicio); 
+    }
+    
     public static void main(String[] args) {
         System.out.println(new GatRenat(7, "dret"));
     }
