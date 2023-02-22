@@ -24,7 +24,6 @@ public class GatRenat {
         if (posicio.equals("estirat")){
             this.posicio=posicio;
         }
-        posicio="dret";
     }
     @Override
     public String toString() { 
