@@ -20,11 +20,11 @@ public class GatRenat {
             vides = novesVides;
         }
     }
-    public void setPosicio(String novaPosicio) {
-        if (!novaPosicio.equals("dret")){
+    public void setPosicio(String posicio) {
+        if (!posicio.equals("dret")){
             posicio="estirat";
         }else{
-            posicio=novaPosicio;
+            posicio=posicio;
         }
     }
     @Override
