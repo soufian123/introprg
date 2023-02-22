@@ -21,7 +21,7 @@ public class GatRenat {
         }
     }
     public void setPosicio(String posicio) {
-        if (posicio.equals("estirat")){
+        if (this.posicio.equals("estirat")){
             posicio=this.posicio;
         }
     }
