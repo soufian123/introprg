@@ -22,8 +22,9 @@ public class GatRenat {
     }
     public void setPosicio(String posicio) {
         if (posicio.equals("estirat")){
-            setPosicio("dret");
+            posicio="dret";
         }
+        posicio="dret";
     }
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
