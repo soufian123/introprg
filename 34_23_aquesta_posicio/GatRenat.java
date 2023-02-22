@@ -8,7 +8,7 @@
 
 public class GatRenat {
     private int vides = 7;
-    private String posicio="estirat";
+    private String posicio="dret";
     public GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
