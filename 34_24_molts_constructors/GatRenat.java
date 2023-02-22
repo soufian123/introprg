@@ -35,8 +35,10 @@ public class GatRenat {
     public void setPosicio(String posicio) {
         if (posicio.equals("dret")){
             this.posicio=posicio;
+        }else if(posicio.equals("assegut")){
+            this.posicio=posicio;
         }else{
-            this.posicio="assegut";
+            this.posicio="estirat";
         }
     }
     @Override
