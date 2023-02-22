@@ -36,7 +36,7 @@ public class GatRenat {
         if (posicio.equals("dret")){
             this.posicio=posicio;
         }else{
-            this.posicio="estirat";
+            this.posicio="assegut";
         }
     }
     @Override
