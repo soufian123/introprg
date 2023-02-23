@@ -1,4 +1,5 @@
 /**
+ * Mètodes de classe en Hora, ampliacio de Hores.
  * Compara dues hores i retorna l'operador corresponent
  * Per exemple, si hora1 és menor que hora2, l'operador serà "<". Els
  * altres dos valors possibles són ">" i "=="
