@@ -78,7 +78,7 @@ public class Hora{
     }
     
     
-    int compareTo(Hora hora) {
+    public int compareTo(Hora hora) {
         if (getHores() > hora.hores) {
             return 1;
         }
