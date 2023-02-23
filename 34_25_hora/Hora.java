@@ -20,9 +20,15 @@ public class Hora{
         setSegons(segons);
     }
     public Hora(int hores, int minuts, int segons){
-        setHores(hores);
-        setMinuts(minuts);
-        setSegons(segons);
+        if (hores==24 || hores<0 || minuts==60 || minuts<0 || segons==60 || segons<0){
+            hores=0;
+            minuts=0;
+            segons=0;
+        }else{
+            setHores(hores);
+            setMinuts(minuts);
+            setSegons(segons);
+        }
     }
     
     public void setHores(int novaHora) {
