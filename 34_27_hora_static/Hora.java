@@ -99,19 +99,28 @@ public class Hora{
         }
         return 0;
     }
-	public static int compareTo(Hora hora1, Hora hora2) {
+    public static int compareTo(Hora hora, Hora hora2) {
+        if (hora2.getHores() > hora.hores) {
+            return -1;
+        }
+        if (hora2.getHores() < hora.hores) {
+            return 1;
+        }
+        if (hora2.getMinuts() > hora.minuts) {
+            return -1;
+        }
+        if (hora2.getMinuts() < hora.minuts) {
+            return 1;
+        } 
+        if (hora2.getSegons() > hora.segons) {
+                return -1;
+        }
+        if (hora2.getSegons() < hora.segons) {
+                return 1;
+        }
+        return 0;
+    }
 
-		int segHora1 = hora1.hores * 3600 + hora1.minuts * 60 + hora1.segons;
-
-		int segHora2 = hora2.hores * 3600 + hora2.minuts * 60 + hora2.segons;
-
-		if (segHora1 < segHora2){return -1;}
-
-		if (segHora1 > segHora2){return 1;}
-
-		return 0;
-
-	}
      public Hora duplica(){
         Hora nuevaHora= new Hora();
         nuevaHora.setHores(this.getHores());
