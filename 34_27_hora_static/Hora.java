@@ -89,13 +89,13 @@ public class Hora{
             return 1;
         }
         if (getMinuts() < hora.minuts) {
-            return 1;
+            return -1;
         } 
         if (getSegons() > hora.segons) {
                 return 1;
         }
         if (getSegons() < hora.segons) {
-                return -1;
+                return 1;
         }
         return 0;
     }
