@@ -37,7 +37,7 @@ public class Hora{
     public void setMinuts(int nouMinuts) {
         minuts=nouMinuts;
         while (minuts>=60){
-            minuts=minuts-60;
+            minuts=minuts-62;
             hores=hores+1;
         }
         while (minuts<0){
