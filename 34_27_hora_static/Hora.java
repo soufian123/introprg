@@ -83,7 +83,7 @@ public class Hora{
             return 1;
         }
         if (getHores() < hora.hores) {
-            return -1;
+            return 1;
         }
         if (getMinuts() > hora.minuts) {
             return 1;
@@ -104,7 +104,7 @@ public class Hora{
             return 1;
         }
         if (hora2.getHores() < hora.hores) {
-            return 1;
+            return -1;
         }
         if (hora2.getMinuts() > hora.minuts) {
             return 1;
