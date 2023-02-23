@@ -78,27 +78,19 @@ public class Hora{
     }
     
     
-    public int compareTo(Hora hora) {
-        if (getHores() > hora.hores) {
-            return 1;
-        }
-        if (getHores() < hora.hores) {
-            return -1;
-        }
-        if (getMinuts() > hora.minuts) {
-            return 1;
-        }
-        if (getMinuts() < hora.minuts) {
-            return -1;
-        } 
-        if (getSegons() > hora.segons) {
-                return 1;
-        }
-        if (getSegons() < hora.segons) {
-                return -1;
-        }
-        return 0;
-    }
+    public int compareTo(Hora hora){
+
+		int segHora1 = getHores() * 3600 + getMinuts() * 60 + getSegons();
+
+		int segHora2 = hora.hores * 3600 + hora.minuts * 60 + hora.segons;
+
+		if (segHora1 < segHora2){return -1;}
+
+		if (segHora1 > segHora2){return 1;}
+
+		return 0;
+
+	}
     public static int compareTo(Hora hora, Hora hora2) {
         if (hora2.getHores() > hora.hores) {
             return 1;
