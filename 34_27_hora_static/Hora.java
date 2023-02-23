@@ -99,39 +99,39 @@ public class Hora{
         }
         return 0;
     }
-    public static int compareTo(Hora hora) {
-        if (getHores() > hora.hores) {
+    public static int compareTo(Hora hora, Hora hora2) {
+        if (hora2.getHores() > hora.hores) {
             return 1;
         }
-        if (getHores() < hora.hores) {
+        if (hora2.getHores() < hora.hores) {
             return -1;
         }
-        if (getMinuts() > hora.minuts) {
+        if (hora2.getMinuts() > hora.minuts) {
             return 1;
         }
-        if (getMinuts() < hora.minuts) {
+        if (hora2.getMinuts() < hora.minuts) {
             return -1;
         } 
-        if (getSegons() > hora.segons) {
+        if (hora2.getSegons() > hora.segons) {
                 return 1;
         }
-        if (getSegons() < hora.segons) {
+        if (hora2.getSegons() < hora.segons) {
                 return -1;
         }
         return 0;
     }
-     public void duplica(){
+     public Hora duplica(){
         Hora nuevaHora= new Hora();
-        nuevaHora.setHores(getHores());
-        nuevaHora.setMinuts(getMinuts());
-        nuevaHora.setSegons(getSegons());
+        nuevaHora.setHores(this.getHores());
+        nuevaHora.setMinuts(this.getMinuts());
+        nuevaHora.setSegons(this.getSegons());
         return nuevaHora;
     }
-    public static duplica(Hora hora1){
+    public static Hora duplica(Hora hora1){
         Hora nuevaHora= new Hora();
-        nuevaHora.setHores(getHores());
-        nuevaHora.setMinuts(getMinuts());
-        nuevaHora.setSegons(getSegons());
+        nuevaHora.setHores(hora1.getHores());
+        nuevaHora.setMinuts(hora1.getMinuts());
+        nuevaHora.setSegons(hora1.getSegons());
         return nuevaHora;
     }
     
