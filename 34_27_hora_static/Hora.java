@@ -101,7 +101,7 @@ public class Hora{
     }
     public static int compareTo(Hora hora, Hora hora2) {
         if (hora2.getHores() > hora.hores) {
-            return 1;
+            return -1;
         }
         if (hora2.getHores() < hora.hores) {
             return -1;
