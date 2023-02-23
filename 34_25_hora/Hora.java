@@ -101,17 +101,10 @@ public class Hora{
     }
     
     
-    
-    
     @Override
     public String toString() {
         return String.format("%d:%02d:%02d", getHores(), getMinuts(), getSegons());
     }
-    
-    
-    
-    
-    
     
     private static String composaOperadorComparacio(Hora hora1, Hora hora2) {
         int comparacio = hora1.compareTo(hora2);
