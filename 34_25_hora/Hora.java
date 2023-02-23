@@ -31,18 +31,18 @@ public class Hora{
             hores=hores-24;
         }
         if (hores<0){
-            hores=0;
+            hores=hores+24;
         }
     }
     public void setMinuts(int nouMinuts) {
         minuts=nouMinuts;
         while (minuts>=60){
-            minuts=minuts-62;
-            hores=hores+1;
+            minuts=minuts-60;
+            setHores(hores+1);
         }
         while (minuts<0){
             minuts=60+minuts;
-            hores=hores-1;
+            setHores(hores-1);
         }
     }
     
@@ -50,11 +50,11 @@ public class Hora{
         segons=nouSegons;
         while (segons>=60){
             segons=segons-60;
-            minuts=minuts+1;
+            setMinuts(minuts+1);
         }
         while (segons<0){
             segons=60+segons;
-            minuts=minuts-1;
+            setMinuts(minuts-1);
         }
     }
     
