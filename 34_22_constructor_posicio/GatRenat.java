@@ -11,7 +11,7 @@
 
 public class GatRenat {
     private int vides = 7;
-    private String posicio="assegut";
+    private String posicio="estirat";
     public GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
@@ -24,7 +24,7 @@ public class GatRenat {
         }
     }
     public void setPosicio(String novaPosicio) {
-        if (!novaPosicio.equals("dret") || !novaPosicio.equals("assegut")){
+        if (!novaPosicio.equals("dret") || !novaPosicio.equals("estirat") || !novaPosicio.equals("assegut")){
             posicio="estirat";
         }else{
             posicio=novaPosicio;
