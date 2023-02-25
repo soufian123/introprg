@@ -1,0 +1,15 @@
+
+
+
+
+En l'Exercici 20 s'ha creat un constructor que inicialitza la seva posició en "estirat" i les vides del personatge GatRenat a 7.
+
+En l'Exercici 21 s'ha implementat un constructor que rep paràmetres per inicialitzar la posició i les vides del GatRenat.
+
+En l'Exercici 22 es practicamnent el mateix que l'Exercici 21, però aquesta vegada s'utilitzen els setters per evitar valors no valids en la posicio.
+
+En l'Exercici 23 es  nova versió de l'exercici anterior, però aquesta vegada tenen el mateix nom que les propietats, pel que s'utilitza "this".
+
+En l'Exercici 24 s'han creat diversos constructors amb diferents signatures (es un exercici que entra tot els altres exercicis 20-23).
+
+l'Exercici 25 es un exercici molt complicat ja que s'utilitza TOT, molts constructors, propietats privades i publiques.
