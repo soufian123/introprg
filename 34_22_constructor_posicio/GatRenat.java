@@ -25,7 +25,7 @@ public class GatRenat {
     }
     public void setPosicio(String novaPosicio) {
         if (!novaPosicio.equals("dret")){
-            posicio="estirat";
+            posicio="assegut";
         }else{
             posicio=novaPosicio;
         }
