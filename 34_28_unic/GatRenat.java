@@ -55,28 +55,28 @@ public class GatRenat {
         if (instancia==null){
             GatRenat instancia= new GatRenat();
         }
-
         return instancia;
     }
     public static GatRenat getInstancia(int vides) {
         if (instancia==null){
             GatRenat instancia= new GatRenat(vides);
         }
-
+        instancia.setVides(vides);
         return instancia;
     }
     public static GatRenat getInstancia(String posicio) {
         if (instancia==null){
             GatRenat instancia= new GatRenat(posicio);
         }
-
+        instancia.setPosicio(posicio);
         return instancia;
     }
     public static GatRenat getInstancia(int vides, String posicio) {
         if (instancia==null){
             GatRenat instancia= new GatRenat(vides,posicio);
         }
-
+        instancia.setVides(vides);
+        instancia.setPosicio(posicio);
         return instancia;
     }
 
