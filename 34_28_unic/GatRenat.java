@@ -13,7 +13,7 @@ public class GatRenat {
     private static GatRenat instancia= new GatRenat();
     private int vides = 7;
     private String posicio="estirat";
-    public GatRenat() {
+    private GatRenat() {
         setVides(vides);
         setPosicio(posicio);
     }
