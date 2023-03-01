@@ -22,21 +22,21 @@ public class GatRenat {
         ull[0] = new UllDeGat(false);
         ull[1] = new UllDeGat(false);
     }
-    private GatRenat(int vides) {
+    public GatRenat(int vides) {
         setVides(vides);
         setPosicio(posicio);
         ull = new UllDeGat[2];
         ull[0] = new UllDeGat(false);
         ull[1] = new UllDeGat(false);
     }
-    private GatRenat(String posicio) {
+    public GatRenat(String posicio) {
         setPosicio(posicio);
         setVides(vides);
         ull = new UllDeGat[2];
         ull[0] = new UllDeGat(false);
         ull[1] = new UllDeGat(false);
     }
-    private GatRenat(int vides, String posicio) {
+    public GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
         ull = new UllDeGat[2];
