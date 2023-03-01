@@ -57,43 +57,7 @@ public class GatRenat {
             this.posicio = "estirat";
         }
     }
-    @Override
-    public String toString() { 
-        return String.format("Vides: %d. Posició: %s", vides, posicio); 
-    }
-    
-    
-    
-/*
-    public static GatRenat getInstancia() {
-        if (instancia==null){
-            GatRenat instancia= new GatRenat();
-        }
-        return instancia;
-    }
-    public static GatRenat getInstancia(int vides) {
-        if (instancia==null){
-            GatRenat instancia= new GatRenat(vides);
-        }
-        instancia.setVides(vides);
-        return instancia;
-    }
-    public static GatRenat getInstancia(String posicio) {
-        if (instancia==null){
-            GatRenat instancia= new GatRenat(posicio);
-        }
-        instancia.setPosicio(posicio);
-        return instancia;
-    }
-    public static GatRenat getInstancia(int vides, String posicio) {
-        if (instancia==null){
-            GatRenat instancia= new GatRenat(vides,posicio);
-        }
-        instancia.setVides(vides);
-        instancia.setPosicio(posicio);
-        return instancia;
-    }
-    */
+
     public UllDeGat getUllDret() { return ull[1]; }
     public UllDeGat getUllEsquerre() { return ull[0]; }
     public void aixecat(){
