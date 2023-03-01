@@ -64,8 +64,8 @@ public class GatRenat {
     
     
     
-
-    private static GatRenat getInstancia() {
+/*
+    public static GatRenat getInstancia() {
         if (instancia==null){
             GatRenat instancia= new GatRenat();
         }
@@ -93,6 +93,7 @@ public class GatRenat {
         instancia.setPosicio(posicio);
         return instancia;
     }
+    */
     public UllDeGat getUllDret() { return ull[1]; }
     public UllDeGat getUllEsquerre() { return ull[0]; }
     public void aixecat(){
