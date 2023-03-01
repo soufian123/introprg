@@ -13,35 +13,24 @@ public class GatRenat {
     private static GatRenat instancia= new GatRenat();
     private int vides = 7;
     private String posicio="estirat";
-    private UllDeGat[] ull;
+    private UllDeGat ullDret;
+    private UllDeGat ullEsq;
     
     public GatRenat() {
         setVides(vides);
         setPosicio(posicio);
-        ull = new UllDeGat[2];
-        ull[0] = new UllDeGat(false);
-        ull[1] = new UllDeGat(false);
     }
     public GatRenat(int vides) {
         setVides(vides);
         setPosicio(posicio);
-        ull = new UllDeGat[2];
-        ull[0] = new UllDeGat(false);
-        ull[1] = new UllDeGat(false);
     }
     public GatRenat(String posicio) {
         setPosicio(posicio);
         setVides(vides);
-        ull = new UllDeGat[2];
-        ull[0] = new UllDeGat(false);
-        ull[1] = new UllDeGat(false);
     }
     public GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
-        ull = new UllDeGat[2];
-        ull[0] = new UllDeGat(false);
-        ull[1] = new UllDeGat(false);
     }
     public int getVides() { return vides; }
     public String getPosicio() { return posicio; }
@@ -93,26 +82,48 @@ public class GatRenat {
         instancia.setPosicio(posicio);
         return instancia;
     }
-    public UllDeGat getUllDret() { 
-        return ull[1];
+
+    public UllDeGat getUllDret() {
+        ullDret = new UllDeGat();
+        if (posicio.equals("assegut")) {
+             ullDret.obret();
+        } 
+        
+        if (posicio.equals("estirat")) {
+             ullDret.tancat();
+        }
+        if (posicio.equals("dret")) {
+             ullDret.obret();
+        }
+        
+        return ullDret;
     }
-    public UllDeGat getUllEsquerre() { 
-        return ull[0];
+
+    public UllDeGat getUllEsquerre() {
+        ullEsq = new UllDeGat();
+        
+        if (posicio.equals("assegut")) {
+             ullEsq.tancat();
+        }
+        
+        if (posicio.equals("estirat")) {
+             ullEsq.tancat();
+        }
+        if (posicio.equals("dret")) {
+             ullDret.obret();
+        }
+        
+        return ullEsq;
     }
+    
     public void aixecat(){
         setPosicio("dret");
-        ull[0].obret();
-        ull[1].obret();
     }
     public void estirat() {
         setPosicio("estirat");
-        ull[0].tancat();
-        ull[1].tancat();
     }
     public void seu() {
         setPosicio("assegut");
-        ull[0].tancat();
-        ull[1].obret();
     }
     
     public static void main(String[] args) {

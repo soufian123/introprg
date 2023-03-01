@@ -7,13 +7,7 @@
 
 
 public class UllDeGat {
-    private boolean ull;
-    public UllDeGat() {
-        ull = false;
-    }
-    public UllDeGat(boolean nouUll) {
-        ull = nouUll;
-    }
+    private boolean ull = false;
     public void setUll(boolean nouUll) {
         ull = nouUll;
     }
