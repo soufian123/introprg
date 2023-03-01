@@ -65,7 +65,7 @@ public class GatRenat {
     
     
 
-    public static GatRenat getInstancia() {
+    private static GatRenat getInstancia() {
         if (instancia==null){
             GatRenat instancia= new GatRenat();
         }
