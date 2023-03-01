@@ -94,12 +94,10 @@ public class GatRenat {
         return instancia;
     }
     public UllDeGat getUllDret() { 
-        UllDeGat ULL = ull[1];
-        return ULL;
+        return ull[1];
     }
     public UllDeGat getUllEsquerre() { 
-        UllDeGat ULL = ull[0];
-        return ULL;
+        return ull[0];
     }
     public void aixecat(){
         setPosicio("dret");
