@@ -113,8 +113,8 @@ public class GatRenat {
     }
     public void seu() {
         setPosicio("assegut");
-        ull[1].tancat();
-        ull[0].obret();
+        ull[0].tancat();
+        ull[1].obret();
     }
     
     public static void main(String[] args) {
