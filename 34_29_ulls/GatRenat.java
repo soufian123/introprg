@@ -110,7 +110,7 @@ public class GatRenat {
              ullEsq.tancat();
         }
         if (posicio.equals("dret")) {
-             ullDret.obret();
+             ullEsq.obret();
         }
         
         return ullEsq;

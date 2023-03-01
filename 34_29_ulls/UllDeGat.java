@@ -8,6 +8,12 @@
 
 public class UllDeGat {
     private boolean ull = false;
+    public UllDeGat() {
+        ull = false;
+    }
+    public UllDeGat(boolean nouUll) {
+        ull = nouUll;
+    }
     public void setUll(boolean nouUll) {
         ull = nouUll;
     }
