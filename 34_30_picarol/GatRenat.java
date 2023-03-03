@@ -83,13 +83,25 @@ public class GatRenat {
 
     
     public void aixecat(){
+        if (posicio.equals("dret")) {return;}
         setPosicio("dret");
+        if (tePicarol()) {
+            picarol.sona();
+        }
     }
     public void estirat() {
+        if (posicio.equals("estirat")) {return;}
         setPosicio("estirat");
+        if (tePicarol()) {
+            picarol.sona();
+        }
     }
     public void seu() {
+        if (posicio.equals("assegut")) {return;}
         setPosicio("assegut");
+        if (tePicarol()) {
+            picarol.sona();
+        }
     }
     public void setPicarol(Picarol nouPicarol) {
         picarol = nouPicarol;
