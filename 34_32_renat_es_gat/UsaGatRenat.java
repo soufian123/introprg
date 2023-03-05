@@ -1,8 +1,9 @@
 
-
-
-
-
+/*
+ * UsaGatRenat per comprovar que aquesta redistribució de membres funciona com abans
+ *
+ *
+ */
 
 
 

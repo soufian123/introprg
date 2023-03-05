@@ -1,5 +1,9 @@
 
-
+/*
+ * GatRenat es per utilitzar els accessors heredats de Gat.
+ *
+ *
+ */
 
 
 
