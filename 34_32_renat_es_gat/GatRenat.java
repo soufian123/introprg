@@ -1,7 +1,7 @@
 
 /*
  * GatRenat es per utilitzar els accessors heredats de Gat.
- *
+ * es el gat renat que es el fill de gat, es a dir, anira extends a Gat
  *
  */
 

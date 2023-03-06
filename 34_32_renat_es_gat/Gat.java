@@ -2,7 +2,7 @@
 /*
  *
  * Gat només definirà els accessors de vides i posició.
- * 
+ * es el general, es a dir, el GatRenat anira extends a Gat
  */
 
 
