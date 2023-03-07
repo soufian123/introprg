@@ -4,6 +4,9 @@
 
 
 /*
+ * en aquest programa esta tot lo necesari per poder saber els estat del feli o fer que el feli
+ * faci les coses, es a dir, per exemple, que neteji les urpes, o que miola, o que menja, etc...
+ * 
  * totes les class del exercici (Feli, Menjar, Gat, GatRenat).
  * 
  * 
