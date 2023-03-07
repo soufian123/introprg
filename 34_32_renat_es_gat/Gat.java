@@ -1,8 +1,9 @@
 
 /*
- *
+ * el que conte es les vides i les posicions, nomes es podren cridar i modificar les vides i posicions
  * Gat només definirà els accessors de vides i posició.
  * es el general, es a dir, el GatRenat anira extends a Gat
+ * 
  */
 
 

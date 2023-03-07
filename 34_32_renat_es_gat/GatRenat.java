@@ -1,5 +1,8 @@
 
 /*
+ * en aquest programa te totes les crides necesaires perque poguem saber el estat de Gat, es a dir, 
+ * aixecat, asegut, estirat, etc... tambe podrem saber si esta viu o si esta o canviar les altres 
+ * posicions mencionats
  * GatRenat es per utilitzar els accessors heredats de Gat.
  * es el gat renat que es el fill de gat, es a dir, anira extends a Gat
  *
