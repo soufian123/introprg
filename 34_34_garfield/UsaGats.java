@@ -2,10 +2,8 @@
 /*
  *
  *
- *
- *
- *
- *
+ * aquest archiu usaGats inclou una classe base anomenada Gat i dues subclasses anomenades GatRenat i Garfield.
+ * Cada objecte de gat té un nom, vides i una posició, i pot realitzar accions com ara seure, estar dret i estirat.
  *
  *
  */
@@ -134,28 +132,25 @@ class Gat{
 
 class GatRenat extends Gat{
 
+    public GatRenat() {
+        super("Renat",7, "estirat");
+    }
     public GatRenat(int vides) {
-        setNom("Renat");
-        setVides(getVides());
-        setPosicio(getPosicio());
+        super("Renat", vides, "estirat");
     }
+
     public GatRenat(String posicio) {
-        setNom("Renat");
-        setPosicio(getPosicio());
-        setVides(getVides());
+        super("Renat", 7, posicio);
     }
+
     public GatRenat(int vides, String posicio) {
-        setNom("Renat");
-        setVides(getVides());
-        setPosicio(getPosicio());
+        super("Renat", vides, posicio);
     }
 }
 
 class Garfield extends Gat{
-    public void main(String[] args) {
-        setNom("Garfield");
-        setVides(9);
-        setPosicio("estirat");
+    public Garfield() {
+        super("Garfield", 9, "estirat");
     }
     
     public String aixecat(){
