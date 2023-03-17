@@ -32,6 +32,12 @@ class Garfield extends Gat{
         setPosicio("assegut");
         return "m\'assec";
     }
+    @Override
+    public void setVides(int novesVides) {
+        if (novesVides >= 0 && novesVides<=9)  {
+            super.setVides( novesVides);
+        }
+    }
     
 }
 
