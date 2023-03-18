@@ -29,7 +29,7 @@ class Gat{
     }
     
     public void setNom(String nom){
-        if (nom.isBlank() || nom==null || nom.isEmpty()){
+        if (nom==null || nom.isEmpty()){
             this.nom="anònim";
         }else {
             this.nom= nom;
