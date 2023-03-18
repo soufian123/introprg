@@ -5,8 +5,8 @@ class Gat{
     private String posicio="estirat";
     
     public Gat(String nom) {
-        nom.trim();
-        if (nom==null || nom.isEmpty()){
+        
+        if (nom==null || nom.trim().isEmpty()){
             this.nom="anònim";
         }else {
             this.nom= nom;
