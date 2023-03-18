@@ -7,6 +7,8 @@ class Gat{
     public Gat(String nom) {
         if (!(nom==null) || !nom.isEmpty()){
             this.nom= nom;
+        }else{
+            this.nom= "anònim";
         }
         setVides(vides);
         setPosicio(posicio);
@@ -14,6 +16,8 @@ class Gat{
     public Gat(String nom, int vides) {
         if (!(nom==null) || !nom.isEmpty()){
             this.nom= nom;
+        }else{
+            this.nom= "anònim";
         }
         setVides(vides);
         setPosicio(posicio);
@@ -21,6 +25,8 @@ class Gat{
     public Gat(String nom, String posicio) {
         if (!(nom==null) || !nom.isEmpty()){
             this.nom= nom;
+        }else{
+            this.nom= "anònim";
         }
         setPosicio(posicio);
         setVides(vides);
@@ -28,6 +34,8 @@ class Gat{
     public Gat(String nom, int vides, String posicio) {
         if (!(nom==null) || !nom.isEmpty()){
             this.nom= nom;
+        }else{
+            this.nom= "anònim";
         }
         setVides(vides);
         setPosicio(posicio);
