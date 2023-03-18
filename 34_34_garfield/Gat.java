@@ -15,7 +15,7 @@ class Gat{
         setPosicio(posicio);
     }
     public Gat(String nom, int vides) {
-        if (nom==null || nom.isEmpty()){
+        if (nom==null || nom.trim().isEmpty()){
             this.nom="anònim";
         }else {
             this.nom= nom;
@@ -25,7 +25,7 @@ class Gat{
     }
     public Gat(String nom, String posicio) {
 
-        if (nom==null || nom.isEmpty()){
+        if (nom==null || nom.trim().isEmpty()){
             this.nom="anònim";
         }else {
             this.nom= nom;
@@ -34,7 +34,7 @@ class Gat{
         setVides(vides);
     }
     public Gat(String nom, int vides, String posicio) {
-        if (nom==null || nom.isEmpty()){
+        if (nom==null || nom.trim().isEmpty()){
             this.nom="anònim";
         }else {
             this.nom= nom;
