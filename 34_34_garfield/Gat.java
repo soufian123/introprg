@@ -5,36 +5,28 @@ class Gat{
     private String posicio="estirat";
     
     public Gat(String nom) {
-        if (nom==null || nom.isEmpty()){
-            this.nom="anònim";
-        }else {
+        if (!(nom==null) || !nom.isEmpty()){
             this.nom= nom;
         }
         setVides(vides);
         setPosicio(posicio);
     }
     public Gat(String nom, int vides) {
-        if (nom==null || nom.isEmpty()){
-            this.nom="anònim";
-        }else {
+        if (!(nom==null) || !nom.isEmpty()){
             this.nom= nom;
         }
         setVides(vides);
         setPosicio(posicio);
     }
     public Gat(String nom, String posicio) {
-        if (nom==null || nom.isEmpty()){
-            this.nom="anònim";
-        }else {
+        if (!(nom==null) || !nom.isEmpty()){
             this.nom= nom;
         }
         setPosicio(posicio);
         setVides(vides);
     }
     public Gat(String nom, int vides, String posicio) {
-        if (nom==null || nom.isEmpty()){
-            this.nom="anònim";
-        }else {
+        if (!(nom==null) || !nom.isEmpty()){
             this.nom= nom;
         }
         setVides(vides);
