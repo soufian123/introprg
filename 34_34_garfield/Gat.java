@@ -5,11 +5,12 @@ class Gat{
     private String posicio="estirat";
     
     public Gat(String nom) {
-        if (nom==null || nom.isEmpty()){
-            this.nom="anònim";
-        }else {
-            this.nom= nom;
-        }
+        if (nom==null || nom.trim().isEmpty()){
+    this.nom="anònim";
+}else {
+    this.nom= nom;
+}
+
         setVides(vides);
         setPosicio(posicio);
     }
