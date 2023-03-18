@@ -23,7 +23,8 @@ class Gat{
         setPosicio(posicio);
     }
     public Gat(String nom, String posicio) {
-        if (nom==null){
+        nom.trim();
+        if (nom==null || nom.isEmpty()){
             this.nom="anònim";
         }else {
             this.nom= nom;
