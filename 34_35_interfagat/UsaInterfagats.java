@@ -70,7 +70,7 @@ public class UsaInterfagats {
             System.out.println(gat.getNom());
             // 2. assigna-li una única vida
             gat.setVides(1);
-            System.out.println(gat.getVides());
+            //System.out.println(gat.getVides());
             // 3. demana que resusciti
             System.out.println(gat.ressulcita());
             // 4. demana que mori
