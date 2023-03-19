@@ -63,7 +63,7 @@ class Gat implements EsserViu{
         }else{
             text="ja l'he espifiada";
         }
-        setVides(0);
+        //setVides(0);
         return text;
     }
     @Override
