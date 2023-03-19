@@ -10,7 +10,7 @@
  */
 
 
-class Gat interface EsserViu{
+class Gat implements EsserViu{
     private String nom ="anònim";
     private int vides = 7;
 
@@ -23,7 +23,7 @@ class Gat interface EsserViu{
             this.nom= nom;
         }
         setVides(vides);
-        setPosicio(posicio);
+        //setPosicio(posicio());
     }
     public Gat(String nom, int vides) {
         if (nom==null || nom.trim().isEmpty()){
@@ -32,7 +32,7 @@ class Gat interface EsserViu{
             this.nom= nom;
         }
         setVides(vides);
-        setPosicio(posicio);
+        //setPosicio(posicio);
     }
     public String getNom(){
         return this.nom;
@@ -43,17 +43,40 @@ class Gat interface EsserViu{
     public int getVides() { return vides; }
 
 
-    public void setPosicio(String posicio) {
-        if (posicio.equals("dret") || posicio.equals("estirat") || posicio.equals("assegut")) {
-            this.posicio = posicio;
-        } else {
-            this.posicio = "estirat";
-        }
-    }
     public void setVides(int novesVides) {
         if (novesVides >= 0)  {
             vides = novesVides;
         }
+    }
+    @Override
+    public boolean estaViu(){
+        if(getVides()<1){
+            return false;
+        }
+        return true;
+    }
+    @Override
+    public String mor(){
+        String text;
+        if (estaViu()) {
+            text= "adéu món cruel";
+        }else{
+            text="ja l'he espifiada";
+        }
+        setVides(0);
+        return text;
+    }
+    @Override
+    public String ressulcita(){
+        String text;
+        if (estaViu()) {
+            text= "encara miolo";
+        }else{
+            text="guai!";
+            setVides(1);
+        }
+        
+        return text;
     }
 
 }
