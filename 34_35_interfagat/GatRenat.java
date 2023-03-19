@@ -68,6 +68,6 @@ class GatRenat extends Gat implements AnimalDeCompanyia , Ensinistrable{
     }
     @Override
     public String deixatEstimar(){
-        return "em deixo estimar, però només una mica";
+        return "em deixo estimar";
     }
 }
