@@ -75,6 +75,7 @@ public class UsaInterfagats {
             System.out.println(gat.ressulcita());
             // 4. demana que mori
             System.out.println(gat.mor());
+            gat.setVides(0);
             // 5. demana que mori un altre cop
             System.out.println(gat.mor());
             // 6. demana si està viu
