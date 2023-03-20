@@ -1,5 +1,12 @@
 
-
+/*
+ * en aquest programa utilitzarem les crides per verificar que els altres archius estan ben creats 
+ * en el cas de que estigui be, sortira el mateix com en la sortida esperada que ens dona Moises
+ * en el exercici
+ * Exercici 34_35. Gat Renat amb Interfaces. espero que hagui sigut una bona capçalera 
+ *
+ *
+ */
 
 
 

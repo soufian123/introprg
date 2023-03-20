@@ -1,8 +1,8 @@
 
 
 /*
- * aquest archiu Gat es la classe pare on despres en te dues subclasses anomenades GatRenat i Garfield.
- * Cada objecte de gat té un nom, vides i una posició, i pot realitzar accions com ara seure, estar dret i estirat.
+ * aquest archiu Gat es la classe pare on despres en te tres subclasses anomenades GatSalvatge, GatRenat i Garfield.
+ * Cada objecte de gat té un nom, vides i pot realitzar accions com ara mirar les seves vides, canviarles i defnir el nom.
  *
  *
  *

@@ -1,8 +1,9 @@
 
 /*
  *
- * aquest archiu GatRenat es una herencia de la classe base anomenada Gat .
- * Cada objecte de gat té un nom, vides i una posició, i pot realitzar accions com ara seure, estar dret i estirat.
+ * aquest archiu GatRenat es una herencia de la classe base anomenada Gat i te dos implements que son 
+ * AnimalDeCompanyia , Ensinistrable .
+ * Cada objecte de gat té un nom, vides i pot realitzar accions com ara mirar les seves vides, canviarles i defnir el nom.
  * pero en GatRenat es diu renat sempre i se li pot canviar les vides i la posicio
  *
  *
