@@ -59,7 +59,7 @@ public class Vi{
     
     public static String normalitzaNom(String nom){
         if (!nom.isEmpty() || nom==null){
-            nom.trim();
+            nom=nom.trim();
             nom= nom.replaceAll(" +"," ");
             return nom;
         }
