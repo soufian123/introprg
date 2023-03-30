@@ -19,7 +19,7 @@ public class Vi{
     public Vi(String nom, int preu){
         setNom(nom);
         setPreu(preu);
-        setEstoc(estoc);
+        setEstoc(0);
     }
     public Vi(String nom, int preu, int estoc){
         setNom(nom);
