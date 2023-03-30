@@ -14,13 +14,10 @@ public class Botiga{
     public Botiga(){
     vins = new Vi[DEFAULT_MAX_VINS];
     }
-    public Botiga(int maxVins) {
-        if (maxVins < 0) {
-            maxVins = DEFAULT_MAX_VINS;
-        }
-        vins = new Vi[maxVins];
+    public Botiga(int maxVins){
+    vins = new Vi[maxVins];
     }
-    
+    /*
     public Vi afegeix(Vi vi){
         if (!esta(vi)) {
             for (int v = 0; v < vins.length; v++) {
@@ -45,7 +42,28 @@ public class Botiga{
         }
         return false;
     }
-    
+    */
+    public Vi afegeix(Vi vi) {
+        boolean elegible = true;
+        if (vi.esValid()) {
+            for (int i = 0; i < vins.length; i++) {
+                if (vins[i] != null) {
+                    if (vins[i].getNom().equals(vi.getNom())) {
+                        elegible = false;
+                    }
+                }
+            }
+            if (elegible) {
+                for (int i = 0; i < vins.length; i++) {
+                    if (vins[i] == null) {
+                        vins[i] = vi;
+                        return vi;
+                    }
+                }
+            }
+        }
+        return null;
+    }
     
     public Vi elimina(String nom){
         nom= Vi.normalitzaNom(nom);
