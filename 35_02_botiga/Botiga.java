@@ -20,7 +20,7 @@ public class Botiga{
     
     public Vi afegeix(Vi vi){
         if (!esta(vi)) {
-            for (int v = 0; v <= vins.length; v++) {
+            for (int v = 0; v < vins.length; v++) {
                 if (vins[v] == null) {
                     vins[v] = vi;
                     return vi;
