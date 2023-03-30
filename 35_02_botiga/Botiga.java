@@ -65,7 +65,7 @@ public class Botiga{
     
     
     public Vi cerca(String nom){
-        nom = Vi.normalitzaNom(nom);
+        nom = Vi.normalitzaNom(nom).toLowerCase();
         for (int v = 0; v < vins.length; v++) {
             if (vins[v] != null) {
                 String vi = vins[v].getNom().toLowerCase();
