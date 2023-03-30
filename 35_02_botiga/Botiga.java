@@ -46,7 +46,7 @@ public class Botiga{
     
     public Vi elimina(String nom){
         nom= Vi.normalitzaNom(nom);
-        for (int v = 0; v < vins.length; v++) {
+        for (int v = 0; v <= vins.length; v++) {
             if (vins[v] != null) {
                 if (vins[v].getNom().equals(nom) && vins[v].getEstoc() > 0) {
                     return null;
