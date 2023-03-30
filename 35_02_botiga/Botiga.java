@@ -19,7 +19,17 @@ public class Botiga{
     }
     
     public Vi afegeix(Vi vi){
-        if (!esta(vi)) {
+        boolean esta=true;
+        if (vi.esValid()){
+            for (Vi v: vins){
+                if (v != null) {
+                    if (!(v.getNom().equals(vi.getNom()))) {
+                        esta=true;
+                    }
+                }
+            }
+        }
+        if (!esta) {
             for (int v = 0; v < vins.length; v++) {
                 if (vins[v] == null) {
                     vins[v] = vi;
