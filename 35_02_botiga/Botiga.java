@@ -17,7 +17,7 @@ public class Botiga{
     public Botiga(int maxVins){
     vins = new Vi[maxVins];
     }
-    /*
+    
     public Vi afegeix(Vi vi){
         if (!esta(vi)) {
             for (int v = 0; v < vins.length; v++) {
@@ -32,9 +32,9 @@ public class Botiga{
     
     public boolean esta(Vi vi){
         if (vi.esValid()){
-            for (Vi v: vins){
-                if (v != null) {
-                    if (!(v.getNom().equals(vi.getNom()))) {
+            for (int v = 0; v < vins.length; v++) {
+                if (vins[v] != null) {
+                    if (!(vins[v].getNom().equals(vi.getNom()))) {
                         return true;
                     }
                 }
@@ -42,7 +42,7 @@ public class Botiga{
         }
         return false;
     }
-    */
+    /*
     public Vi afegeix(Vi vi) {
         boolean elegible = true;
         if (vi.esValid()) {
@@ -64,16 +64,16 @@ public class Botiga{
         }
         return null;
     }
-    
+    */
     public Vi elimina(String nom){
         nom= Vi.normalitzaNom(nom);
-        for (Vi v: vins) {
-            if (v != null) {
-                if (v.getNom().equals(nom) && v.getEstoc() > 0) {
+        for (int v = 0; v < vins.length; v++) {
+            if (vins[v] != null) {
+                if (vins[v].getNom().equals(nom) && vins[v].getEstoc() > 0) {
                     return null;
                 } else {
-                    Vi vi = v;
-                    v = null;
+                    Vi vi = vins[v];
+                    vins[v] = null;
                     return vi;
                 }
                 
@@ -86,11 +86,11 @@ public class Botiga{
     
     public Vi cerca(String nom){
         nom = Vi.normalitzaNom(nom).toLowerCase();
-        for (Vi v: vins) {
-            if (v != null) {
-                String vi = v.getNom().toLowerCase();
+        for (int v = 0; v < vins.length; v++) {
+            if (vins[v] != null) {
+                String vi = vins[v].getNom().toLowerCase();
                 if (vi.equals(nom)) {
-                    return v;
+                    return vins[v];
                 }
             }
         }
