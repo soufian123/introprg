@@ -1,6 +1,6 @@
 /*
- * aquest programa o archiu es la botiga, la botiga gestiona i en te tot els seu inventari
- * on un dels seus inventaris es el vi, gestionarem la botiga i posare i eliminarem 
+ * aquest programa o archiu es la botiga, la botiga gestiona v en te tot els seu inventari
+ * on un dels seus inventaris es el vi, gestionarem la botiga v posare v eliminarem 
  * els productes que volguem, en aquest cas es el vi.
  *
  */
@@ -18,19 +18,18 @@ public class Botiga{
     vins = new Vi[maxVins];
     }
     
-    public Vi afegeix(Vi vi){
-        boolean esta=true;
-        if (vi.esValid()){
+    
+    public Vi afegeix(Vi vi) {
+        boolean esta = true;
+        if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
                 if (vins[v] != null) {
-                    if (!(vins[v].getNom().equals(vi.getNom()))) {
-                        esta= true;
+                    if (vins[v].getNom().equals(vi.getNom())) {
+                        esta = false;
                     }
                 }
             }
-        
-        
-            if (!esta) {
+            if (esta) {
                 for (int v = 0; v < vins.length; v++) {
                     if (vins[v] == null) {
                         vins[v] = vi;
@@ -38,47 +37,10 @@ public class Botiga{
                     }
                 }
             }
-            
         }
         return null;
     }
-    /*
-    public boolean esta(Vi vi){
-        if (vi.esValid()){
-            for (int v = 0; v < vins.length; v++) {
-                if (vins[v] != null) {
-                    if (!(vins[v].getNom().equals(vi.getNom()))) {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
-    }
-    */
-    /*
-    public Vi afegeix(Vi vi) {
-        boolean elegible = true;
-        if (vi.esValid()) {
-            for (int i = 0; i < vins.length; i++) {
-                if (vins[i] != null) {
-                    if (vins[i].getNom().equals(vi.getNom())) {
-                        elegible = false;
-                    }
-                }
-            }
-            if (elegible) {
-                for (int i = 0; i < vins.length; i++) {
-                    if (vins[i] == null) {
-                        vins[i] = vi;
-                        return vi;
-                    }
-                }
-            }
-        }
-        return null;
-    }
-    */
+    
     public Vi elimina(String nom){
         nom= Vi.normalitzaNom(nom);
         for (int v = 0; v < vins.length; v++) {
