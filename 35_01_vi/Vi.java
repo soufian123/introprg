@@ -48,7 +48,7 @@ public class Vi{
         return estoc;
     }
     public void setEstoc(int estoc){
-        if (estoc<0){
+        if (estoc<=0){
             this.estoc=-1;
             return;
         }
