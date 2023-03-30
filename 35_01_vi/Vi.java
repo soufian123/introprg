@@ -19,7 +19,7 @@ public class Vi{
     public Vi(String nom, int preu){
         setNom(nom);
         setPreu(preu);
-        setEstoc(0);
+        setEstoc(estoc);
     }
     public Vi(String nom, int preu, int estoc){
         setNom(nom);
@@ -47,8 +47,8 @@ public class Vi{
     public int getEstoc(){
         return estoc;
     }
-    public void setEstoc(int stoc){
-        if (stoc<0){
+    public void setEstoc(int estoc){
+        if (estoc<=0){
             this.estoc=-1;
             return;
         }
