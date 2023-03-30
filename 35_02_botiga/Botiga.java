@@ -46,13 +46,13 @@ public class Botiga{
     
     public Vi elimina(String nom){
         nom= Vi.normalitzaNom(nom);
-        for (int v = 0; v <= vins.length; v++) {
-            if (vins[v] != null) {
-                if (vins[v].getNom().equals(nom) && vins[v].getEstoc() > 0) {
+        for (Vi v: vins) {
+            if (v != null) {
+                if (v.getNom().equals(nom) && v.getEstoc() > 0) {
                     return null;
                 } else {
-                    Vi vi = vins[v];
-                    vins[v] = null;
+                    Vi vi = v;
+                    v = null;
                     return vi;
                 }
                 
@@ -65,11 +65,11 @@ public class Botiga{
     
     public Vi cerca(String nom){
         nom = Vi.normalitzaNom(nom).toLowerCase();
-        for (int v = 0; v < vins.length; v++) {
-            if (vins[v] != null) {
-                String vi = vins[v].getNom().toLowerCase();
+        for (Vi v: vins) {
+            if (v != null) {
+                String vi = v.getNom().toLowerCase();
                 if (vi.equals(nom)) {
-                    return vins[v];
+                    return v;
                 }
             }
         }
