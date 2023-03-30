@@ -31,7 +31,7 @@ public class Vi{
         return nom;
     }
     public void setNom(String nom){
-        this.nom=nom;
+        this.nom=normalitzaNom(nom);
     }
     
     
