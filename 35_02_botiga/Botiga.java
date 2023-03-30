@@ -27,7 +27,7 @@ public class Botiga{
                 }
             }
         }
-        return vi;
+        return null;
     }
     
     public boolean esta(Vi vi){
