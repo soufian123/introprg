@@ -1,8 +1,8 @@
 
 /*
- * programa o archiu que el que fa es que gestionar el nom, el preu i el stoc
+ * programa o archiu que el que fa es que gestionar el nom, el preu i el estoc
  * estiguin ven escrits, per exemple que el nom no tingui espais o altres coses
- * li posem nom als vins, stoc i preu
+ * li posem nom als vins, estoc i preu
  *
  */
 
@@ -48,7 +48,7 @@ public class Vi{
         return estoc;
     }
     public void setEstoc(int estoc){
-        if (estoc<=0){
+        if (estoc<0){
             this.estoc=-1;
             return;
         }
