@@ -19,8 +19,18 @@ public class Botiga{
     }
     
     public Vi afegeix(Vi vi){
-        if (vi.esValid()) {
-            if (!esta(vi)) {
+        boolean esta=true;
+        if (vi.esValid()){
+            for (int v = 0; v < vins.length; v++) {
+                if (vins[v] != null) {
+                    if (!(vins[v].getNom().equals(vi.getNom()))) {
+                        esta= true;
+                    }
+                }
+            }
+        
+        
+            if (!esta) {
                 for (int v = 0; v < vins.length; v++) {
                     if (vins[v] == null) {
                         vins[v] = vi;
@@ -28,10 +38,11 @@ public class Botiga{
                     }
                 }
             }
+            
         }
         return null;
     }
-    
+    /*
     public boolean esta(Vi vi){
         if (vi.esValid()){
             for (int v = 0; v < vins.length; v++) {
@@ -44,6 +55,7 @@ public class Botiga{
         }
         return false;
     }
+    */
     /*
     public Vi afegeix(Vi vi) {
         boolean elegible = true;
