@@ -41,22 +41,22 @@ public class Botiga{
         return null;
     }
     
-    public Vi elimina(String nom){
-        nom= Vi.normalitzaNom(nom);
+    public Vi elimina(String nom) {
+        nom = Vi.normalitzaNom(nom);
         for (int v = 0; v < vins.length; v++) {
             if (vins[v] != null) {
-                if (vins[v].getNom().equals(nom) && vins[v].getEstoc() > 0) {
-                    return null;
-                } else {
-                    Vi vi = vins[v];
-                    vins[v] = null;
-                    return vi;
+                if (vins[v].getNom().equals(nom)) {
+                    if (vins[v].getEstoc() > 0) {
+                        return null;
+                    } else {
+                        Vi vi = vins[v];
+                        vins[v] = null;
+                        return vi;
+                    }
                 }
-                
             }
         }
         return null;
-        
     }
     
     
