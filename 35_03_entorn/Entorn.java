@@ -1,6 +1,15 @@
 
 
-
+/* 
+ * Es un programa o archiu anomenat Entorn on es juga amb els diferents archius de la carpeta, 
+ * anomenats vi, botiga, utilstring i utilitatsConfirmacio. Aquest programa ens deixa jugar
+ * amb els diferent articles, en aquest cas es el vi, el que podem fer es modificar un vi
+ * canviar l'estoc, el preu, etc. Ens permet afeguir vins , modificarlos, cercarlos
+ * i eliminarlos tambe.
+ * Despres te com altres que el que fa es mostrar a benvinguda, els errors, mostra comiat,
+ * mostraPrompt i la ajuda
+ * 
+ */
 
 
 
@@ -36,6 +45,12 @@ public class Entorn {
     private static void mostraErrorComandaDesconeguda() {
         System.out.println("ERROR: comanda no reconeguda. Escriviu help per ajuda");
     }
+    private static void mostraBenvinguda() {
+        System.out.println("Celler La Bona Estrella. Escriviu ajuda per veure opcions.");
+    }
+    private static void mostraPrompt() {
+        System.out.print("botiga> ");
+    }
     
     private static void mostraAjuda() {
         System.out.println("Comandes disponibles:");
@@ -48,14 +63,14 @@ public class Entorn {
     }
     
      private void processaCerca() {
-        system.out.print("nom (enter cancel·la)> ");
+        System.out.print("nom (enter cancel·la)> ");
         String nom= Entrada.readLine();
         if (nom.isEmpty()){
             return;
         }
         nom = Vi.normalitzaNom(nom);
         
-        Vi vi = Botiga.cerca(nom);
+        Vi vi = botiga.cerca(nom);
         if (vi==null){
             System.out.println("No trobat");
             return;
@@ -65,7 +80,6 @@ public class Entorn {
 
      }
 
-    
     
     public void processaAfegeix(){
         System.out.print("nom (enter cancel·la)> ");
@@ -108,8 +122,8 @@ public class Entorn {
     
     public void processaModifica(){
         System.out.print("nom (enter cancel·la)> ");
+        String nom= Entrada.readLine();
         if (nom.isEmpty()) return;
-        
         nom=Vi.normalitzaNom(nom);
         Vi vi = botiga.cerca(nom);
         if (vi == null) {
@@ -120,10 +134,11 @@ public class Entorn {
             
         System.out.printf("preu (enter %s)> ",vi.getPreu());
         String num = Entrada.readLine();
+        int preu=0;
         if (num.isEmpty()){
-            int preu = Integer.parseInt(vi.getPreu());
+            preu = vi.getPreu();
         }else{
-            int preu = Integer.parseInt(num);
+            preu = Integer.parseInt(num);
         }
         if (preu<0) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
@@ -134,10 +149,11 @@ public class Entorn {
         
         System.out.printf("estoc (enter %s)> ",vi.getEstoc());
         String text = Entrada.readLine();
+        int estoc=0;
         if (text.isEmpty()){
-            int estoc = Integer.parseInt(vi.getEstoc());
+            estoc = vi.getEstoc();
         }else{
-            int estoc = Integer.parseInt(text);
+            estoc = Integer.parseInt(text);
         }
         if (estoc<0) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
@@ -164,9 +180,9 @@ public class Entorn {
         System.out.println("A eliminar:");
         System.out.println(vi);
         System.out.print("Segur?> ");
-        String resposta = Entrada.readLine();
+        String text = Entrada.readLine();
         
-        if (!UtilitatsConfirmacio.respostaABoolean(resposta)) {
+        if (!UtilitatsConfirmacio.respostaABoolean(text)) {
             System.out.println("No eliminat");
             return;
         }
