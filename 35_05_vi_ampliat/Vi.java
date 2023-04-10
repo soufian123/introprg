@@ -23,39 +23,89 @@ public class Vi{
     
     public String getRef(){return ref;}
     public void setRef(String ref){
-        this.ref=normalitzaNom(ref);
+        if(ref != null){
+            ref = normalitzaString(ref);
+            if (!ref.isEmpty()){
+                this.ref = ref;
+            } else {
+                this.ref = null;
+            }
+        }
     }
     
     
     public String getLloc(){return lloc;}
     public void setLloc(String lloc){
-        this.lloc=normalitzaNom(lloc);
+        if (lloc != null){
+            lloc = normalitzaString(lloc);
+            if (!lloc.isEmpty()) {
+                this.lloc = lloc;
+            } else {
+                this.lloc = null;
+            }
+        }
     }
     
     public String getOrigen(){return origen;}
     public void setOrigen(String origen){
-        this.origen=normalitzaNom(origen);
+        if (origen != null){
+            origen = normalitzaString(origen);
+            if (!origen.isEmpty()) {
+                this.origen = origen;
+            } else {
+                this.origen = null;
+            }
+        }
     }
     
     public String getTipus(){return tipus;}
     public void setTipus(String tipus){
-        this.tipus=normalitzaNom(tipus);
+        if (tipus != null){
+            tipus = normalitzaString(tipus);
+            if (!tipus.isEmpty()) {
+                this.tipus = tipus;
+            } else {
+                this.tipus = null;
+            }
+        }
     }
     
     public String getCollita(){return collita;}
     public void setCollita(String collita){
-        this.collita=normalitzaNom(collita);
+        if (collita != null){
+            collita = normalitzaString(collita);
+            if (!collita.isEmpty()) {
+                this.collita = collita;
+            } else {
+                this.collita = null;
+            }
+        }
     }
     
+        
+        
+        
+        
+        
     public Vi(String nom, int preu){
         setNom(nom);
         setPreu(preu);
         setEstoc(0);
+        this.ref = null;
+        this.lloc = null;
+        this.origen = null;
+        this.tipus = null;
+        this.collita = null;
     }
     public Vi(String nom, int preu, int estoc){
         setNom(nom);
         setPreu(preu);
         setEstoc(estoc);
+        this.ref = null;
+        this.lloc = null;
+        this.origen = null;
+        this.tipus = null;
+        this.collita = null;
     }
     public Vi( String ref,String nom, int preu, int estoc, String lloc, String origen, String tipus, String collita){
         setNom(nom);
