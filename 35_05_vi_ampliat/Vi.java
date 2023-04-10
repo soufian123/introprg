@@ -38,7 +38,11 @@ public class Vi{
     
     
     public String getCollita(){return collita;}
-      
+    public Vi(String nom, int preu, int estoc){
+        this.nom = normalitzaString(nom);
+        setPreu(preu);
+        setEstoc(estoc);
+    }
 
     public Vi( String ref,String nom, int preu, int estoc, String lloc, String origen, String tipus, String collita){
         this.ref = normalitzaString(ref); 
