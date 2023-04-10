@@ -26,7 +26,7 @@ public class UsaHora {
     }
 
     public static void main(String[] args) throws Exception {
-
+        
         Hora hora = new Hora();
         System.out.println("Inicialment " + hora);
         System.out.println("Si intentem assignar a hores un -1");

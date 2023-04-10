@@ -19,14 +19,8 @@ public class Hora{
     public int getHores() { return hores; }
     public int getMinuts() { return minuts; }
     public int getSegons() { return segons; }
-    public Hora() throws Exception{
-        try {
-            setHores(hores);
-            setMinuts(minuts);
-            setSegons(segons);
-            } catch (Exception e) {
-                throw e;
-            }
+    public Hora() {
+        
     }
     public Hora(int hores, int minuts, int segons) throws Exception{
         if (hores==24 || hores<0 || minuts==60 || minuts<0 || segons==60 || segons<0){
