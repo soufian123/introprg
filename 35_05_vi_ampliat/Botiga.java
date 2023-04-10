@@ -140,7 +140,7 @@ public class Botiga{
             return null;
         }
 
-        while (vins[getContador()] == null && getContador() < vins.length - 1) {
+        while (vins[getContador()] == null && getContador() < vins.length) {
             setContador(getContador() + 1);
         }
 
