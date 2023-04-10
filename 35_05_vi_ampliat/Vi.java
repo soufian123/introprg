@@ -1,114 +1,194 @@
-public class Vi {
 
-    private String ref;
+/*
+ * programa o archiu que el que fa es que gestionar el nom, el preu i el estoc
+ * estiguin ven escrits, per exemple que el nom no tingui espais o altres coses
+ * li posem nom als vins, estoc i preu
+ *
+ */
+
+
+
+
+
+
+public class Vi{
     private String nom;
-    private int preu = -1;
-    private int estoc = -1; // Duele Moises, duele
+    private int preu;
+    private int estoc;
+    private String ref;
     private String lloc;
     private String origen;
     private String tipus;
     private String collita;
-
-
-    // Constructor que tiene en cuenta todo
-    public Vi(String ref,String nom, int preu,int estoc, String lloc, String origen, String tipus, String collita) {
-        this.ref = normalitzaString(ref); 
-        this.nom = normalitzaString(nom);
+    
+    public String getRef(){return ref;}
+    public void setRef(String ref){
+        if(ref != null){
+            ref = normalitzaString(ref);
+            if (!ref.isEmpty()){
+                this.ref = ref;
+            }
+        }
+    }
+    
+    
+    public String getLloc(){return lloc;}
+    public void setLloc(String lloc){
+        lloc = normalitzaString(lloc);
+        if(lloc!=null){
+            this.lloc = lloc;
+        }
+    }
+    
+    public String getOrigen(){return origen;}
+    public void setOrigen(String origen){
+        if (origen != null){
+            origen = normalitzaString(origen);
+            if (!origen.isEmpty()) {
+                this.origen = origen;
+            }
+        }
+    }
+    
+    public String getTipus(){return tipus;}
+    public void setTipus(String tipus){
+        if (tipus != null){
+            tipus = normalitzaString(tipus);
+            if (!tipus.isEmpty()) {
+                this.tipus = tipus;
+            }
+        }
+    }
+    
+    public String getCollita(){return collita;}
+    public void setCollita(String collita){
+        if (collita != null){
+            collita = normalitzaString(collita);
+            if (!collita.isEmpty()) {
+                this.collita = collita;
+            }
+        }
+    }
+        
+        
+        
+        
+        
+    public Vi(String nom, int preu){
+        setNom(nom);
+        setPreu(preu);
+        setEstoc(0);
+        this.ref = null;
+        this.lloc = null;
+        this.origen = null;
+        this.tipus = null;
+        this.collita = null;
+    }
+    public Vi(String nom, int preu, int estoc){
+        setNom(nom);
         setPreu(preu);
         setEstoc(estoc);
-        this.lloc = normalitzaString(lloc);
-        this.origen = normalitzaString(origen);
-        this.tipus = normalitzaString(tipus);
-        this.collita = normalitzaString(collita);
+        this.ref = null;
+        this.lloc = null;
+        this.origen = null;
+        this.tipus = null;
+        this.collita = null;
     }
-
-    // Getters
-    public String getRef() {return ref;}
-
-    public String getNom() {return nom;}
-
-    public int getPreu() {return preu;}
-
-    public int getEstoc() {return estoc;}
-
-    public String getLloc() {return lloc;}
-
-    public String getOrigen() {return origen;}
-
-    public String getTipus() {return tipus;}
-
-    public  String getCollita() {return collita;}
-
-    // Setters
-    public void setNom(String nom) {
-        this.nom = normalitzaString(nom);
+    public Vi( String ref,String nom, int preu, int estoc, String lloc, String origen, String tipus, String collita){
+        setNom(nom);
+        setPreu(preu);
+        setEstoc(estoc);
+        setRef(ref);
+        setLloc(lloc);
+        setOrigen(origen);
+        setTipus(tipus);
+        setCollita(collita);
     }
-    public void setPreu(int preu) {
-        if (preu >= 0) {
-            this.preu = preu;
-        }
-    }
-    public void setEstoc(int stock) {
-        if(stock >= 0) {
-            this.estoc = stock;
-        }
-    }
-    public void setLloc(String nouLloc) {
-        nouLloc = normalitzaString(nouLloc);
-        if(nouLloc!=null){
-            this.lloc = nouLloc;
-        }
-    }
-    // Normaliza String del nombre
-    public static String normalitzaString(String nom) {
-        if (nom == null) {return null;}
-        if (nom.isBlank()) {
-            return null;
-        }
-        nom = nom.trim();
-        nom = String.format(nom.replaceAll(" +"," "));
+    
+    public String getNom(){
         return nom;
     }
-    // Determina si el preu d'un vi es valid o no
+    public void setNom(String nom){
+        this.nom=normalitzaNom(nom);
+    }
+    
+    
+    public int getPreu(){
+        return preu;
+    }
+    public void setPreu(int preu){
+        if (preu>=0){
+            this.preu=preu;
+        }
+    }
+    
+    public int getEstoc(){
+        return estoc;
+    }
+    public void setEstoc(int estoc){
+        if (estoc<0){
+            //this.estoc=-1;
+            return;
+        }
+        this.estoc=estoc;
+    }
+    
+    
+    
+    public static String normalitzaNom(String nom){
+        nom=nom.trim();
+        if (!nom.isEmpty() || nom==null){
+            
+            nom= nom.replaceAll(" +"," ");
+            return nom;
+        }
+        return "NOM NO VÀLID!";
+    }
+    public static String normalitzaString(String text){
+        text=text.trim();
+        if (!text.isEmpty() || text==null){
+            
+            text= text.replaceAll(" +"," ");
+            return text;
+        }
+        return "NOM NO VÀLID!";
+    }
     public boolean esValid() {
-        if (preu < 0 || estoc < 0) {
-            return false;
-        } 
-        /*if (getNom().isBlank()||getCollita().isBlank()||getLloc().isBlank()||getLloc().isBlank()||getTipus().isBlank()||getOrigen().isBlank()){
-            return false;
-        }*/
-        if (getNom() == null || getCollita() == null || getLloc() == null || getRef() == null || getTipus() == null || getOrigen() == null) {
-            return false;
-        } 
-        return true;
+        return (nom != null && nom.length() > 0 && ref != null && ref.length() > 0 && preu >= 0 && estoc >= 0 && lloc != null && lloc.length() > 0 && origen != null && origen.length() > 0 && tipus != null && tipus.length() > 0 && collita != null && collita.length() > 0);
     }
-    // Funcion que recibe un array de Strings y los convierte en un vino
+    
 
-    /** PENDIENTE ARREGLAR */
-    public static Vi deArrayString(String[] vins) {
-        if(vins.length != 8){return null;}
-        if (vins[0].isBlank()|| vins[0]==null ||
-            vins[1].isBlank()|| vins[1]==null ||
-            vins[4].isBlank()|| vins[4]==null ||
-            vins[5].isBlank()|| vins[5]==null ||
-            vins[6].isBlank()|| vins[6]==null ||
-            vins[7].isBlank()|| vins[7]==null ){return null;}
-        if(!UtilString.esEnter(vins[3])|| vins[3]==null){return null;}
-        if(!UtilString.esEnter(vins[2])||vins[2]==null){return null;}
-        Vi nouVi = new Vi(normalitzaString(vins[0]),normalitzaString(vins[1]),Integer.parseInt(vins[2]),Integer.parseInt(vins[3]),normalitzaString(vins[4]),normalitzaString(vins[5]),normalitzaString(vins[6]),normalitzaString(vins[7]));
-        if (nouVi.esValid()) {return nouVi;}
-        else {return null;}
+    @Override
+    public String toString() {
+        String text = String.format("\n    Ref: %s\n    Nom: %s\n    Preu: %s\n    Estoc: %s\n    Lloc: %s\n    D.O.: %s\n    Tipus: %s\n    Collita: %s\n",getRef(), getNom(),getPreu(),getEstoc(),getLloc(),getOrigen(),getTipus(),getCollita());
+        return text;
     }
-    // Convierte las instancias de un vino en un array de Strings 
+    
+    public static Vi deArrayString(String[] vins) {
+        if(vins.length != 8) return null;
+        for(int a=0; a<8; a++){
+            if(a!=2 && a!=3){
+                if(vins[a].isBlank()|| vins[a]==null) return null;
+            }else{
+                if(!UtilString.esEnter(vins[a])|| vins[a]==null) return null;
+            }
+        }
+
+        Vi nou = new Vi(normalitzaString(vins[0]),normalitzaString(vins[1]),Integer.parseInt(vins[2]),Integer.parseInt(vins[3]),normalitzaString(vins[4]),normalitzaString(vins[5]),normalitzaString(vins[6]),normalitzaString(vins[7]));
+        if (nou.esValid()) {
+            return nou;
+        } else {
+            return null;
+        }
+    }
+
+
+
     public String[] aArrayString() {
-        String[] viString ={getRef(),getNom(),Integer.toString(getPreu()),Integer.toString(getEstoc()),getLloc(),getOrigen(),getTipus(),getCollita()};
+        String[] viString ={ getRef(), getNom(),Integer.toString(getPreu()),Integer.toString(getEstoc()), getLloc(), getOrigen(), getTipus(), getCollita()};
         return viString;
         
     }
 
-    @Override
-    public String toString() {
-        String vino = String.format("\n    Ref: %s\n    Nom: %s\n    Preu: %s\n    Estoc: %s\n    Lloc: %s\n    D.O.: %s\n    Tipus: %s\n    Collita: %s\n",getRef(), getNom(),getPreu(),getEstoc(),getLloc(),getOrigen(),getTipus(),getCollita(),getCollita());
-        return vino;
-    }
+
 }
