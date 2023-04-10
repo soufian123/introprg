@@ -52,7 +52,7 @@ public class Entorn {
             if (comanda.isEmpty()) continue;
             if (comanda.equals("surt")) break;
             switch (comanda) {
-                case "ajuda": ;//mostraAjuda();
+                case "ajuda": mostraAjuda();
                              break;
                 case "afegeix": entorn.processaAfegeix();
                            break;
