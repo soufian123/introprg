@@ -13,8 +13,8 @@
 
 public class Vi{
     private String nom;
-    private int preu;
-    private int estoc;
+    private int preu=-1;
+    private int estoc=-1;
     private String ref;
     private String lloc;
     private String origen;
@@ -22,15 +22,6 @@ public class Vi{
     private String collita;
     
     public String getRef(){return ref;}
-    public void setRef(String ref){
-        if(ref != null){
-            ref = normalitzaString(ref);
-            if (!ref.isEmpty()){
-                this.ref = ref;
-            }
-        }
-    }
-    
     
     public String getLloc(){return lloc;}
     public void setLloc(String lloc){
@@ -41,35 +32,13 @@ public class Vi{
     }
     
     public String getOrigen(){return origen;}
-    public void setOrigen(String origen){
-        if (origen != null){
-            origen = normalitzaString(origen);
-            if (!origen.isEmpty()) {
-                this.origen = origen;
-            }
-        }
-    }
+    
     
     public String getTipus(){return tipus;}
-    public void setTipus(String tipus){
-        if (tipus != null){
-            tipus = normalitzaString(tipus);
-            if (!tipus.isEmpty()) {
-                this.tipus = tipus;
-            }
-        }
-    }
+    
     
     public String getCollita(){return collita;}
-    public void setCollita(String collita){
-        if (collita != null){
-            collita = normalitzaString(collita);
-            if (!collita.isEmpty()) {
-                this.collita = collita;
-            }
-        }
-    }
-        
+      
 
     public Vi( String ref,String nom, int preu, int estoc, String lloc, String origen, String tipus, String collita){
         this.ref = normalitzaString(ref); 
