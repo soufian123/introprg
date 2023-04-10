@@ -135,14 +135,25 @@ public class Vi{
     
     
     
+    public static String normalitzaString(String nom){
+        nom=nom.trim();
+        if (!nom.isEmpty() || nom==null){
+            
+            nom= nom.replaceAll(" +"," ");
+            return nom;
+        }
+        return "NOM NO VÀLID!";
+    }
+/*
     public static String normalitzaString(String text){
-        if (text == null) {return null;}
-        if (text.isBlank()) {
+        if (nom == null) {return null;}
+        if (nom.isBlank()) {
             return null;
         }
         text= text.replaceAll(" +"," ");
         return text;
     }
+*/
     public boolean esValid() {
         return (nom != null && nom.length() > 0 && ref != null && ref.length() > 0 && preu >= 0 && estoc >= 0 && lloc != null && lloc.length() > 0 && origen != null && origen.length() > 0 && tipus != null && tipus.length() > 0 && collita != null && collita.length() > 0);
     }
