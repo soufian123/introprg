@@ -79,23 +79,12 @@ public class Vi{
         this.estoc=estoc;
     }
     
-    
-   /* 
-    public static String normalitzaString(String nom){
-        nom=nom.trim();
-        if (!nom.isEmpty() || nom==null){
-            
-            nom= nom.replaceAll(" +"," ");
-            return nom;
-        }
-        return "NOM NO VÀLID!";
-    }
-    */
     public static String normalitzaString(String nom) {
-        if (nom == null) {return null;}
+        if (nom == null) return null;
         if (nom.isBlank()) {
             return null;
         }
+        
         nom = nom.trim();
         nom = String.format(nom.replaceAll(" +"," "));
         return nom;
