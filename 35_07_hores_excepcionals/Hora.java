@@ -19,48 +19,56 @@ public class Hora{
     public int getHores() { return hores; }
     public int getMinuts() { return minuts; }
     public int getSegons() { return segons; }
-    public Hora(){
-        setHores(hores);
-        setMinuts(minuts);
-        setSegons(segons);
+    public Hora() throws Exception{
+        try {
+            setHores(hores);
+            setMinuts(minuts);
+            setSegons(segons);
+            } catch (Exception e) {
+                throw e;
+            }
     }
-    public Hora(int hores, int minuts, int segons){
+    public Hora(int hores, int minuts, int segons) throws Exception{
         if (hores==24 || hores<0 || minuts==60 || minuts<0 || segons==60 || segons<0){
             hores=0;
             minuts=0;
             segons=0;
         }else{
+            try {
             setHores(hores);
             setMinuts(minuts);
             setSegons(segons);
+            } catch (Exception e) {
+                throw e;
+            }
         }
     }
     
     
-    public boolean setHores(int hores) {
+    public void setHores(int hores) throws Exception {
         if (hores >= 0 && hores < 24) {
             this.hores = hores;
-            return true;
+
         } else {
-            return false;
+            throw new Exception("hores fora de rang: " + hores);
         }
     }
 
-    public boolean setMinuts(int minuts) {
+    public void setMinuts(int minuts) throws Exception {
         if (minuts >= 0 && minuts < 60) {
             this.minuts = minuts;
-            return true;
+
         } else {
-            return false;
+            throw new Exception("minuts fora de rang: " + minuts);
         }
     }
 
-    public boolean setSegons(int segons) {
+    public void setSegons(int segons) throws Exception {
         if (segons >= 0 && segons < 60) {
             this.segons = segons;
-            return true;
+
         } else {
-            return false;
+            throw new Exception("segons fora de rang: " + segons);
         }
     }
     
