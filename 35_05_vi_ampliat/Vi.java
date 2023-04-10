@@ -153,52 +153,41 @@ public class Vi{
         }
         return "NOM NO VÀLID!";
     }
-     public boolean esValid() {
+    public boolean esValid() {
         return (nom != null && nom.length() > 0 && ref != null && ref.length() > 0 && preu >= 0 && estoc >= 0 && lloc != null && lloc.length() > 0 && origen != null && origen.length() > 0 && tipus != null && tipus.length() > 0 && collita != null && collita.length() > 0);
     }
+    
 
-        //format del vi per ser mostrat com String
     @Override
     public String toString() {
-        return "\n    Ref: " + getRef() + "\n    Nom: " + getNom() + "\n    Preu: " + getPreu() + "\n    Estoc: " + getEstoc() + "\n    Lloc: " + getLloc() + "\n    D.O.: " + getOrigen() + "\n    Tipus: " + getTipus() + "\n    Collita: " + getCollita()  +"\n";
+        String text = String.format("\n    Ref: %s\n    Nom: %s\n    Preu: %s\n    Estoc: %s\n    Lloc: %s\n    D.O.: %s\n    Tipus: %s\n    Collita: %s\n",getRef(), getNom(),getPreu(),getEstoc(),getLloc(),getOrigen(),getTipus(),getCollita());
+        return text;
     }
     
-    //rep un array de Strings amb els atributs del vi i retorna un vi amb aquests atributs
-    public static Vi deArrayString(String[] vi){
-        if (vi.length != 8) {
-            return null;
-        }
-        try {
-            vi[0] = normalitzaString(vi[0]);
-            vi[1] = normalitzaString(vi[1]);
-            int preu = Integer.parseInt(vi[2]);
-            int estoc = Integer.parseInt(vi[3]);
-            vi[4] = normalitzaString(vi[4]);
-            vi[5] = normalitzaString(vi[5]);
-            vi[6] = normalitzaString(vi[6]);
-            vi[7] = normalitzaString(vi[7]);
-            if (preu < 0 || estoc < 0 || vi[0] == null || vi[1] == null || vi[4] == null || vi[5] == null || vi[6] == null || vi[7] == null) {
-                return null;
+    public static Vi deArrayString(String[] vins) {
+        if(vins.length != 8) return null;
+        for(int a=0; a<8; a++){
+            if(a!=2 && a!=3){
+                if(vins[a].isBlank()|| vins[a]==null) return null;
+            }else{
+                if(!UtilString.esEnter(vins[a])|| vins[a]==null) return null;
             }
-            return new Vi(vi[0], vi[1],preu, estoc, vi[4], vi[5], vi[6], vi[7]);
-        } catch (Exception e) {
+        }
+
+        Vi nou = new Vi(normalitzaString(vins[0]),normalitzaString(vins[1]),Integer.parseInt(vins[2]),Integer.parseInt(vins[3]),normalitzaString(vins[4]),normalitzaString(vins[5]),normalitzaString(vins[6]),normalitzaString(vins[7]));
+        if (nou.esValid()) {
+            return nou;
+        } else {
             return null;
         }
     }
-    
-    //rep una instància de vi i retorna un array de strings amb els atributs del vi
-    
-    public String[] aArrayString(){
-        String[] vi = new String[8];
-        vi[0] = getRef();
-        vi[1] = getNom();
-        vi[2] = Integer.toString(getPreu());
-        vi[3] = Integer.toString(getEstoc());
-        vi[4] = getLloc(); 
-        vi[5] = getOrigen();
-        vi[6] = getTipus();
-        vi[7] = getCollita();
-        return vi;
+
+
+
+    public String[] aArrayString() {
+        String[] viString ={ getRef(), getNom(),Integer.toString(getPreu()),Integer.toString(getEstoc()), getLloc(), getOrigen(), getTipus(), getCollita()};
+        return viString;
+        
     }
 
 
