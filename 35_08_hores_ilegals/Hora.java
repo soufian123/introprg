@@ -27,7 +27,7 @@ public class Hora{
             setHores(hores);
             setMinuts(minuts);
             setSegons(segons);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException  e) {
                 throw e;
             }
 
