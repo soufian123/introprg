@@ -12,9 +12,9 @@
 
 
 public class Vi{
-    private String nom="Roura blanc";
-    private int preu=-1;
-    private int estoc=-1;
+    private String nom;
+    private int preu;
+    private int estoc;
     private String ref;
     private String lloc;
     private String origen;
