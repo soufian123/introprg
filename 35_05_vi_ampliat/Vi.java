@@ -136,29 +136,35 @@ public class Vi{
     }
     
 
+
     @Override
     public String toString() {
-        String text = String.format("\n    Ref: %s\n    Nom: %s\n    Preu: %s\n    Estoc: %s\n    Lloc: %s\n    D.O.: %s\n    Tipus: %s\n    Collita: %s\n",getRef(), getNom(),getPreu(),getEstoc(),getLloc(),getOrigen(),getTipus(),getCollita());
-        return text;
+        String vino = String.format("\n    Ref: %s\n    Nom: %s\n    Preu: %s\n    Estoc: %s\n    Lloc: %s\n    D.O.: %s\n    Tipus: %s\n    Collita: %s\n",getRef(), getNom(),getPreu(),getEstoc(),getLloc(),getOrigen(),getTipus(),getCollita(),getCollita());
+        return vino;
     }
     
     public static Vi deArrayString(String[] vins) {
-        if(vins.length != 8){return null;}
-        if (vins[0].isBlank()|| vins[0]==null ||
-            vins[1].isBlank()|| vins[1]==null ||
-            vins[4].isBlank()|| vins[4]==null ||
-            vins[5].isBlank()|| vins[5]==null ||
-            vins[6].isBlank()|| vins[6]==null ||
-            vins[7].isBlank()|| vins[7]==null ){return null;}
-        if(!UtilString.esEnter(vins[3])|| vins[3]==null){return null;}
-        if(!UtilString.esEnter(vins[2])||vins[2]==null){return null;}
-        Vi nouVi = new Vi(normalitzaString(vins[0]),normalitzaString(vins[1]),Integer.parseInt(vins[2]),Integer.parseInt(vins[3]),normalitzaString(vins[4]),normalitzaString(vins[5]),normalitzaString(vins[6]),normalitzaString(vins[7]));
-        if (nouVi.esValid()) {return nouVi;}
-        else {return null;}
+        if(vins.length != 8) return null;
+        for(int a=0; a<8; a++){
+            if(a!=2 && a!=3){
+                if(vins[a].isBlank()|| vins[a]==null) return null;
+            }else{
+                if(!UtilString.esEnter(vins[a])|| vins[a]==null) return null;
+            }
+        }
+
+        Vi nou = new Vi(normalitzaString(vins[0]),normalitzaString(vins[1]),Integer.parseInt(vins[2]),Integer.parseInt(vins[3]),normalitzaString(vins[4]),normalitzaString(vins[5]),normalitzaString(vins[6]),normalitzaString(vins[7]));
+        if (nou.esValid()) {
+            return nou;
+        } else {
+            return null;
+        }
     }
-    // Convierte las instancias de un vino en un array de Strings 
+
+
+
     public String[] aArrayString() {
-        String[] viString ={getRef(),getNom(),Integer.toString(getPreu()),Integer.toString(getEstoc()),getLloc(),getOrigen(),getTipus(),getCollita()};
+        String[] viString ={ getRef(), getNom(),Integer.toString(getPreu()),Integer.toString(getEstoc()), getLloc(), getOrigen(), getTipus(), getCollita()};
         return viString;
         
     }
