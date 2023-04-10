@@ -74,7 +74,7 @@ public class Botiga{
         return null;
     }
     
-    public Vi cerca (Vi plantilla) {
+    public Vi cerca(Vi plantilla) {
         for(Vi vi: vins) {
             
             if(vi == null) continue; 

@@ -166,7 +166,7 @@ public class Entorn {
                 break;
             }
             Vi busca = botiga.cerca(new Vi(ref,nom,preu,estoc,lloc,origen,tipus,collita));
-            
+            System.out.println("1sdfdsf");
             if (busca == null) {
                 busca = botiga.cerca();
                 if(busca !=null){
