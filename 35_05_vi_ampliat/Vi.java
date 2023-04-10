@@ -1,6 +1,16 @@
+
 /*Classe Vi que té com a propietats privades nom, preu i estoc i mètodes per construir una instància, setters i getters, metode toString per imprimir 
 la informació com volem i nomNormalitza que treu els espais al nom del vi, també té esValida, per saber si l'instància és vàlida */
 public class Vi {
+public static String normalitzaNom(String nom){
+        nom=nom.trim();
+        if (!nom.isEmpty() || nom==null){
+            
+            nom= nom.replaceAll(" +"," ");
+            return nom;
+        }
+        return "NOM NO VÀLID!";
+    }
     private String nom;
     private int preu;
     private int estoc;
