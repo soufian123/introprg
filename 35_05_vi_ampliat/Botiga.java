@@ -62,6 +62,7 @@ public class Botiga{
     
     
     public Vi cerca(String ref) {
+        System.out.println("dfghsdfgfds");
         ref = Vi.normalitzaString(ref);
         if(vins.length == 0) {return null;}
         for(int i=0;i<vins.length;i++) {
