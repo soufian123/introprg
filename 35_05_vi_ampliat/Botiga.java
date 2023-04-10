@@ -75,6 +75,7 @@ public class Botiga{
     }
     
     public Vi cerca (Vi plantilla) {
+        System.out.println("sadfoihuoasdifuhasd");
         for(Vi vi: vins) {
             if(vi == null) continue; 
             if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
