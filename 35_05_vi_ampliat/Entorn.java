@@ -106,7 +106,7 @@ public class Entorn {
         String tipus="";
         String collita="";
         
-        System.out.print("reflfzkdjghnfzxc> ");
+        System.out.print("ref> ");
         ref = Entrada.readLine();
         if(ref.equals("!")) return;
         if(!ref.isBlank()) {
