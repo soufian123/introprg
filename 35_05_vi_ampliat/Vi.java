@@ -88,7 +88,7 @@ public static String normalitzaNom(String nom){
             if (!collita.isEmpty()) {
                 this.collita = collita;
             } else {
-                this.collita = null;
+                //this.collita = null;
             }
         }     
     }
