@@ -6,148 +6,126 @@
  */
 
 
-
-public class Botiga{
-    private int DEFAULT_MAX_VINS=10;
+public class Botiga {
+    private int DEFAULT_MAX_VINS = 10;
     private Vi[] vins;
-    private int contador = -1;
-    
-    public Botiga(){
-    vins = new Vi[DEFAULT_MAX_VINS];
+    private int posicioArray = -1;
+
+    public Botiga() {
+        vins = new Vi[DEFAULT_MAX_VINS];
     }
-    public Botiga(int maxVins){
-    vins = new Vi[maxVins];
+    // Constructor sense vins per defecte
+    public Botiga(int maxVins) {
+        vins = new Vi[maxVins];
     }
-    
-    
-    public Vi afegeix(Vi vi) {
-        boolean esta = true;
-        if (vi.esValid()) {
-            for (int v = 0; v < vins.length; v++) {
-                if (vins[v] != null) {
-                    if (vins[v].getNom().equals(vi.getNom())) {
-                        esta = false;
+
+    // Modul que afegeix vins
+    public Vi afegeix(Vi nouVi) {
+        if (!viEnLlista(vins, nouVi.getRef(),nouVi.getNom())) {
+            for(int i=0;i<vins.length;i++) {
+                if(vins[i]==null) {
+                    if(nouVi.esValid()) {
+                        vins[i] = nouVi;
+                        return vins[i];
                     }
+                } else {
+                    continue;
                 }
             }
-            if (esta) {
-                for (int v = 0; v < vins.length; v++) {
-                    if (vins[v] == null) {
-                        vins[v] = vi;
-                        return vi;
-                    }
-                }
-            }
+            return null;
+        } else {
+            return null;
         }
-        return null;
     }
-    
+
+    // Elimina vi
     public Vi elimina(String ref) {
         ref = Vi.normalitzaString(ref);
-        for (int v = 0; v < vins.length; v++) {
-            if (vins[v] != null) {
-                if (vins[v].getRef().equals(ref)) {
-                    if (vins[v].getEstoc() > 0) {
-                        return null;
-                    } else {
-                        Vi vi = vins[v];
-                        vins[v] = null;
-                        return vi;
-                    }
-                }
+        for(int i=0;i<vins.length;i++) {
+            if (vins[i]==null){
+                continue;
+            } else if(vins[i].getRef().equalsIgnoreCase(ref) && vins[i].getEstoc() <= 0) {
+                Vi viEliminat = vins[i];
+                vins[i] = null;
+                return viEliminat;
             }
         }
         return null;
     }
-    
-    
-    public Vi cerca(String ref){
-        ref = Vi.normalitzaString(ref).toLowerCase();
-        for (int v = 0; v < vins.length; v++) {
-            if (vins[v] != null) {
-                String vi = vins[v].getRef().toLowerCase();
-                if (vi.equals(ref)) {
-                    return vins[v];
-                }
+    // Cerca vi segons la referencia
+    public Vi cerca(String ref) {
+        ref = Vi.normalitzaString(ref);
+        if(vins.length == 0) {return null;}
+        for(int i=0;i<vins.length;i++) {
+            if(vins[i] == null) {
+                continue;
+            } else if (vins[i].getRef()==null){
+                continue;
+            } else if (vins[i].getRef().toLowerCase().equals(ref.toLowerCase())) {
+                return vins[i];
             }
         }
-        return null;
-    }
-
-    
-    
-    
-    public Vi cerca(Vi plantilla) {
-        for(Vi vi: vins) {
-            
-            if(vi == null) continue; 
-      //      System.out.println("1");
-            
-      
-            if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
-       //     System.out.println("2");
-            if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))) continue;
-            
-         //   System.out.println("3");
-            if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vi.getPreu())) continue;
-            
-           // System.out.println("4");
-            if((plantilla.getEstoc()!=-1) && (plantilla.getEstoc() > vi.getEstoc())) continue;
-            
-           // System.out.println("5");
-            if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))) continue;
-            
-           // System.out.println("6");
-            if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))) continue;
-            
-           // System.out.println("7");
-            if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))) continue;
-            
-           // System.out.println("9");
-            if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
-            
-            //System.out.println("10");
-            return vi;
-        }
-        
         return null;
     }
     public Vi cerca() {
-        if(vins[0]!=null) return vins[0];
+        if(vins[0]!=null){return vins[0];}
         return null;
     }
-
-    
-
-
-    public int getContador() {
-        return this.contador;
+    // Busca un vino comparando con una instancia de vino
+    public Vi cerca (Vi viBuscat) {
+        for(Vi vi: vins) {
+            if(vi == null) {continue;}
+            if(!(viBuscat.getRef()==null) && !(viBuscat.getRef().equalsIgnoreCase(vi.getRef()))){continue;}
+            if(!(viBuscat.getNom()==null) && !(viBuscat.getNom().equalsIgnoreCase(vi.getNom()))){continue;}
+            if((viBuscat.getPreu()!=-1) && (viBuscat.getPreu() < vi.getPreu())){continue;}
+            if((viBuscat.getEstoc()!=-1) && (viBuscat.getEstoc() > vi.getEstoc())){continue;}
+            if(!(viBuscat.getLloc() ==null) && !(viBuscat.getLloc().equalsIgnoreCase(vi.getLloc()))){continue;}
+            if(!(viBuscat.getOrigen()==null) && !(viBuscat.getOrigen().equalsIgnoreCase(vi.getOrigen()))){continue;}
+            if(!(viBuscat.getTipus()==null) && !(viBuscat.getTipus().equalsIgnoreCase(vi.getTipus()))){continue;}
+            if(!(viBuscat.getCollita()==null) && !(viBuscat.getCollita().equalsIgnoreCase(vi.getCollita()))){continue;}
+            return vi;
+        }
+        return null;
     }
+    // Cerca vi comparant amb una instancia de Vip 
+    public Vi modificaVi(String nom, int preu, int estoc) {
+        nom = Vi.normalitzaString(nom);
+        for(int i=0;i<vins.length;i++) {
+            if(vins[i] == null) {
+                continue;
+            } else if (vins[i].getNom().toLowerCase().equals(nom.toLowerCase())) {
+                vins[i].setEstoc(estoc);
+                vins[i].setPreu(preu);
+                return vins[i];
+            }
+        }
+        return null;
+    }  
 
-    public void setContador(int contador) {
-        this.contador = contador;
+    // Comprova si el vi esta en la llista
+    private boolean viEnLlista (Vi[] vins, String ref, String nom) {
+        for(int i=0;i<vins.length;i++) {
+            if(vins[i] == null) {
+                continue;
+            } else if (vins[i].getRef().equals(ref)) {
+                return true;
+            } else if (vins[i].getNom().equals(nom)){
+                return true;    
+            }
+        }
+        return false;
     }
-     public void iniciaRecorregut() {
-        setContador(-1);
+    public void iniciaRecorregut() {
+        posicioArray = -1;
     }
-
-
     public Vi getSeguent() {
-        if (getContador() < vins.length) {
-            setContador(getContador() + 1);
+        while (true) {
+            posicioArray = posicioArray + 1;
+            if(posicioArray == vins.length) {return null;}
+            if (vins[posicioArray]==null) {continue;} 
+            else {
+            return vins[posicioArray];
+            }
         }
-        if (getContador() == vins.length) {
-            return null;
-        }
-
-        while (vins[getContador()] == null && getContador() < vins.length - 1) {
-            setContador(getContador() + 1);
-        }
-
-        return vins[getContador()];
     }
-
 }
-
-
-
