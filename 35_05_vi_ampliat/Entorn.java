@@ -310,12 +310,12 @@ public class Entorn {
         String linia ="";
         while (true) {
             linia = input.readLine();
-            if (linia == null) {break;}
-            else {
-                String[] viAr = linia.split(";");
-                if(Vi.deArrayString(viAr)==null){continue;}
-                else {num++;}
-            }
+            if (linia == null) break;
+            
+            String[] viAr = linia.split(";");
+            if(Vi.deArrayString(viAr)==null) continue;
+            num++;
+            
         }
         input.close();
         return num;
