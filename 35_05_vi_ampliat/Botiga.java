@@ -87,7 +87,7 @@ public class Botiga{
             if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
             return vi;
         }
-        System.out.println("sadfoihuoasdifuhasd");
+        //System.out.println("sadfoihuoasdifuhasd");
         return null;
     }
     public Vi cerca() {

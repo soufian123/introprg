@@ -98,9 +98,9 @@ public class Entorn {
         String ref =null;
         String nom=null;
         int preu = -1;
-        String textPreu=null;
+        String textPreu="";
         int estoc = -1;
-        String textEstoc=null;
+        String textEstoc="";
         String lloc=null;
         String origen=null;
         String tipus=null;
