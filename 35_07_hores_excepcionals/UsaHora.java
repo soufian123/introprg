@@ -3,7 +3,7 @@
 
 public class UsaHora {
 
-    private static void canviaHora(Hora hora, int hores, int minuts, int segons){
+    private static void canviaHora(Hora hora, int hores, int minuts, int segons) throws Exception{
         
         try {
             hora.setHores(hores);
@@ -25,7 +25,7 @@ public class UsaHora {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         
         Hora hora = new Hora();
         System.out.println("Inicialment " + hora);
