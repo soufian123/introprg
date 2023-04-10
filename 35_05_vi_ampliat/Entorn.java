@@ -22,7 +22,8 @@ import java.io.IOException;
 
 
 public class Entorn {
-    private final Botiga botiga = new Botiga();
+    private final static Botiga botiga = new Botiga();
+    
     public static void main(String[] args) throws IOException {
         int vins = 0;
         String file = "botiga.csv";
@@ -43,7 +44,7 @@ public class Entorn {
         input.close();
 
         mostraBenvinguda();
-        System.out.printf("Referències llegides: %s\n",contarVins());
+        System.out.printf("Referències llegides: %s\n",comptaReferencies());
         while (true) {
             mostraPrompt();
             String comanda = Entrada.readLine().strip();
@@ -304,10 +305,10 @@ public class Entorn {
 
     
     public static int contarVins() throws IOException {
-        String file = "botiga.csv";
-        BufferedReader input = new BufferedReader(new FileReader(file));
         int num = 0;
         String linia ="";
+        String file = "botiga.csv";
+        BufferedReader input = new BufferedReader(new FileReader(file));
         while (true) {
             linia = input.readLine();
             if (linia == null) break;
@@ -320,7 +321,28 @@ public class Entorn {
         input.close();
         return num;
     }
-
+    public static int comptaReferencies() throws IOException {
+        File fitxer = new File("botiga.csv");
+        botiga.iniciaRecorregut();
+        if (fitxer.isFile()) {
+            BufferedReader input = new BufferedReader(new FileReader("botiga.csv"));
+            String line = input.readLine();
+            int i = 0;
+            while (true) {
+                if (line == null) {
+                    break;
+                }
+                String[] parts = line.split(";");
+                if (parts.length == 8 && UtilString.esEnter(parts[2]) && UtilString.esEnter(parts[3]) && UtilString.esEnter(parts[7])) {
+                    i++;
+                }
+                line = input.readLine();
+            }
+            input.close();
+            return i;
+        }
+        return 0;
+    }
 
     private void guardarVins() throws IOException {
         BufferedWriter output = new BufferedWriter(new FileWriter("botiga.csv"));
