@@ -1,5 +1,5 @@
 
-//programa que ens permetra introduir una hora i probar el llançament de les excepcions
+//programa que ens permet comprobar el exercici dhora per validar si tot ha anat be
 
 
 

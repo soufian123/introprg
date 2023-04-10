@@ -1,11 +1,12 @@
-//programa que ens permetra introduir una hora i probar el llançament de les excepcions
+//programa que ens permet comprobar el exercici dhora per validar si tot ha anat be
 
 
 public class UsaHora {
 
     private static void canviaHora(Hora hora, int hores, int minuts, int segons) {
-
-        // XXX TODO: encara no implementat
+        Hora hora = new Hora();
+        hora.setHora(hora)
+        
 
     }
 
