@@ -72,14 +72,14 @@ public class Vi{
         
 
     public Vi( String ref,String nom, int preu, int estoc, String lloc, String origen, String tipus, String collita){
-        setNom(nom);
+        this.ref = normalitzaString(ref); 
+        this.nom = normalitzaString(nom);
         setPreu(preu);
         setEstoc(estoc);
-        setRef(ref);
-        setLloc(lloc);
-        setOrigen(origen);
-        setTipus(tipus);
-        setCollita(collita);
+        this.lloc = normalitzaString(lloc);
+        this.origen = normalitzaString(origen);
+        this.tipus = normalitzaString(tipus);
+        this.collita = normalitzaString(collita);
     }
     
     public String getNom(){
@@ -136,12 +136,12 @@ public class Vi{
     }
     
 
-
     @Override
     public String toString() {
-        String vino = String.format("\n    Ref: %s\n    Nom: %s\n    Preu: %s\n    Estoc: %s\n    Lloc: %s\n    D.O.: %s\n    Tipus: %s\n    Collita: %s\n",getRef(), getNom(),getPreu(),getEstoc(),getLloc(),getOrigen(),getTipus(),getCollita(),getCollita());
-        return vino;
+        String text = String.format("\n    Ref: %s\n    Nom: %s\n    Preu: %s\n    Estoc: %s\n    Lloc: %s\n    D.O.: %s\n    Tipus: %s\n    Collita: %s\n",getRef(), getNom(),getPreu(),getEstoc(),getLloc(),getOrigen(),getTipus(),getCollita());
+        return text;
     }
+    
     
     public static Vi deArrayString(String[] vins) {
         if(vins.length != 8) return null;
