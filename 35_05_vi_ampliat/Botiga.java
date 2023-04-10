@@ -146,6 +146,19 @@ public class Botiga{
 
         return vins[getContador()];
     }
+    public Vi modificaVi(String nom, int preu, int estoc) {
+        nom = Vi.normalitzaString(nom);
+        for(int i=0;i<vins.length;i++) {
+            if(vins[i] == null) {
+                continue;
+            } else if (vins[i].getNom().toLowerCase().equals(nom.toLowerCase())) {
+                vins[i].setEstoc(estoc);
+                vins[i].setPreu(preu);
+                return vins[i];
+            }
+        }
+        return null;
+    } 
 
 }
 
