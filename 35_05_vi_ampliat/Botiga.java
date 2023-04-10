@@ -74,6 +74,15 @@ public class Botiga{
         return null;
     }
     
+    
+
+    
+    
+    
+    
+    
+    
+    
     public Vi cerca(Vi plantilla) {
         for(Vi vi: vins) {
             
@@ -82,10 +91,11 @@ public class Botiga{
             
       
             if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
-            if (vi.getRef() == plantilla.getRef()) return vi;
        //     System.out.println("2");
             if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))) continue;
-            if (!(vi.getNom() == plantilla.getNom())) continue;
+            if (!(plantilla.getNom().isEmpty())){
+                if (!(vi.getNom() == plantilla.getNom())) continue;
+            }
          //   System.out.println("3");
             if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vi.getPreu())) continue;
             if (!(vi.getPreu() >= plantilla.getPreu())) continue;
@@ -94,16 +104,24 @@ public class Botiga{
             if (!(vi.getEstoc() <= plantilla.getEstoc())) continue;
            // System.out.println("5");
             if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))) continue;
-            if (!(vi.getLloc() == plantilla.getLloc())) continue;
+            if (!(plantilla.getLloc().isEmpty())){
+                if (!(vi.getLloc() == plantilla.getLloc())) continue;
+            }
            // System.out.println("6");
             if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))) continue;
-            if (!(vi.getOrigen() == plantilla.getOrigen())) continue;
+            if (!(plantilla.getOrigen().isEmpty())){
+                if (!(vi.getOrigen() == plantilla.getOrigen())) continue;
+            }
            // System.out.println("7");
             if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))) continue;
-            if (!(vi.getTipus() == plantilla.getTipus())) continue;
+            if (!(plantilla.getTipus().isEmpty())){
+                if (!(vi.getTipus() == plantilla.getTipus())) continue;
+            }
            // System.out.println("9");
             if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
-            if (!(vi.getCollita() == plantilla.getCollita())) continue;
+            if (!(plantilla.getCollita().isEmpty())){
+                if (!(vi.getCollita() == plantilla.getCollita())) continue;
+            }
             //System.out.println("10");
             return vi;
         }
