@@ -27,8 +27,6 @@ public class Vi{
             ref = normalitzaString(ref);
             if (!ref.isEmpty()){
                 this.ref = ref;
-            } else {
-                this.ref = null;
             }
         }
     }
@@ -36,13 +34,9 @@ public class Vi{
     
     public String getLloc(){return lloc;}
     public void setLloc(String lloc){
-        if (lloc != null){
-            lloc = normalitzaString(lloc);
-            if (!lloc.isEmpty()) {
-                this.lloc = lloc;
-            } else {
-                this.lloc = null;
-            }
+        lloc = normalitzaString(lloc);
+        if(lloc!=null){
+            this.lloc = lloc;
         }
     }
     
@@ -52,8 +46,6 @@ public class Vi{
             origen = normalitzaString(origen);
             if (!origen.isEmpty()) {
                 this.origen = origen;
-            } else {
-                this.origen = null;
             }
         }
     }
@@ -64,8 +56,6 @@ public class Vi{
             tipus = normalitzaString(tipus);
             if (!tipus.isEmpty()) {
                 this.tipus = tipus;
-            } else {
-                this.tipus = null;
             }
         }
     }
@@ -76,8 +66,6 @@ public class Vi{
             collita = normalitzaString(collita);
             if (!collita.isEmpty()) {
                 this.collita = collita;
-            } else {
-                this.collita = null;
             }
         }
     }
