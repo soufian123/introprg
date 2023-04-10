@@ -95,16 +95,16 @@ public class Entorn {
     }
     
     public void processaCerca() {
-        String ref =null;
-        String nom=null;
+        String ref ="";
+        String nom="";
         int preu = -1;
         String textPreu="";
         int estoc = -1;
         String textEstoc="";
-        String lloc=null;
-        String origen=null;
-        String tipus=null;
-        String collita=null;
+        String lloc="";
+        String origen="";
+        String tipus="";
+        String collita="";
         
         System.out.print("ref> ");
         ref = Entrada.readLine();

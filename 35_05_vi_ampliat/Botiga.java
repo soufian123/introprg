@@ -77,14 +77,14 @@ public class Botiga{
     public Vi cerca (Vi plantilla) {
         for(Vi vi: vins) {
             if(vi == null) continue; 
-            if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
-            if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))) continue;
+            if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef())) || (plantilla.getRef().isEmpty())) continue;
+            if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))|| (plantilla.getNom().isEmpty())) continue;
             if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vi.getPreu())) continue;
             if((plantilla.getEstoc()!=-1) && (plantilla.getEstoc() > vi.getEstoc())) continue;
-            if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))) continue;
-            if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))) continue;
-            if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))) continue;
-            if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
+            if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))|| (plantilla.getLloc().isEmpty())) continue;
+            if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))|| (plantilla.getOrigen().isEmpty())) continue;
+            if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))|| (plantilla.getTipus().isEmpty())) continue;
+            if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))|| (plantilla.getCollita().isEmpty())) continue;
             return vi;
         }
         //System.out.println("sadfoihuoasdifuhasd");
