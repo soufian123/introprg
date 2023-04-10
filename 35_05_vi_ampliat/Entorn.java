@@ -22,7 +22,8 @@ import java.io.IOException;
 
 
 public class Entorn {
-    private final static Botiga botiga = new Botiga();
+    private final static Botiga sbotiga = new Botiga();
+    private final Botiga botiga = new Botiga();
     
     public static void main(String[] args) throws IOException {
         int vins = 0;
@@ -323,7 +324,7 @@ public class Entorn {
     }
     public static int comptaReferencies() throws IOException {
         File fitxer = new File("botiga.csv");
-        botiga.iniciaRecorregut();
+        sbotiga.iniciaRecorregut();
         if (fitxer.isFile()) {
             BufferedReader input = new BufferedReader(new FileReader("botiga.csv"));
             String line = input.readLine();
