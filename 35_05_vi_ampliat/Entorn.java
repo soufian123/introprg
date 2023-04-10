@@ -122,7 +122,7 @@ public class Entorn {
                 nom = Entrada.readLine();
                 if(nom.equals("!")) break;
                 
-                System.out.print("Preu max.> ");
+                System.out.print("preu max.> ");
                 textPreu = Entrada.readLine();
                 if(textPreu.equals("!")) break;
                 
