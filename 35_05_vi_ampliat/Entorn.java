@@ -93,7 +93,7 @@ public class Entorn {
         System.out.println("surt");
     }
     
-         public void processaCerca() {
+    public void processaCerca() {
         String ref ="";
         String nom="";
         int preu = -1;
@@ -327,19 +327,19 @@ public class Entorn {
         if (fitxer.isFile()) {
             BufferedReader input = new BufferedReader(new FileReader("botiga.csv"));
             String line = input.readLine();
-            int i = 0;
+            int a = 0;
             while (true) {
                 if (line == null) {
                     break;
                 }
-                String[] parts = line.split(";");
-                if (parts.length == 8 && UtilString.esEnter(parts[2]) && UtilString.esEnter(parts[3]) && UtilString.esEnter(parts[7])) {
-                    i++;
+                String[] array = line.split(";");
+                if (array.length == 8 && UtilString.esEnter(array[2]) && UtilString.esEnter(array[3]) && UtilString.esEnter(array[7])) {
+                    a++;
                 }
                 line = input.readLine();
             }
             input.close();
-            return i;
+            return a;
         }
         return 0;
     }

@@ -61,18 +61,22 @@ public class Botiga{
     }
     
     
-    public Vi cerca(String ref){
-        ref = Vi.normalitzaNom(ref).toLowerCase();
-        for (int v = 0; v < vins.length; v++) {
-            if (vins[v] != null) {
-                String vi = vins[v].getRef().toLowerCase();
-                if (vi.equals(ref)) {
-                    return vins[v];
-                }
+    public Vi cerca(String ref) {
+        ref = Vi.normalitzaString(ref);
+        if(vins.length == 0) {return null;}
+        for(int i=0;i<vins.length;i++) {
+            if(vins[i] == null) {
+                continue;
+            } else if (vins[i].getRef()==null){
+                continue;
+            } else if (vins[i].getRef().toLowerCase().equals(ref.toLowerCase())) {
+                return vins[i];
             }
         }
         return null;
     }
+    
+    
     public Vi cerca (Vi plantilla) {
         for(Vi vi: vins) {
             if(vi == null) continue; 
