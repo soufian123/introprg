@@ -39,7 +39,7 @@ public class Hora{
             this.hores = hores;
 
         } else {
-            throw new Exception("hores fora de rang: " + hores);
+            throw new IllegalArgumentException("hores fora de rang: " + hores);
         }
     }
 
@@ -48,7 +48,7 @@ public class Hora{
             this.minuts = minuts;
 
         } else {
-            throw new Exception("minuts fora de rang: " + minuts);
+            throw new IllegalArgumentException("minuts fora de rang: " + minuts);
         }
     }
 
@@ -57,7 +57,7 @@ public class Hora{
             this.segons = segons;
 
         } else {
-            throw new Exception("segons fora de rang: " + segons);
+            throw new IllegalArgumentException("segons fora de rang: " + segons);
         }
     }
     
