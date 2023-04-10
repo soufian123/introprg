@@ -3,7 +3,7 @@
 
 public class UsaHora {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws Exception{
 
         System.out.println("Intentarem crear una hora amb valors no vàlids");
 
