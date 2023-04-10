@@ -43,10 +43,10 @@ public class Botiga{
     }
     
     public Vi elimina(String ref) {
-        ref = Vi.normalitzaString(ref);
+        ref = Vi.normalitzaString(ref).toLowerCase();
         for (int v = 0; v < vins.length; v++) {
             if (vins[v] != null) {
-                if (vins[v].getRef().equals(ref)) {
+                if (vins[v].getRef().equals(ref.toLowerCase())) {
                     if (vins[v].getEstoc() > 0) {
                         return null;
                     } else {
