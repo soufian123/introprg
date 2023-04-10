@@ -42,16 +42,17 @@ public class Botiga{
         return null;
     }
     
-    public Vi elimina(String ref) {
-        ref = Vi.normalitzaString(ref);
-        for (int v = 0; v < vins.length; v++) {
-            if (vins[v] != null) {
-                if (vins[v].getRef().equalsIgnoreCase(ref)) {
-                    if (vins[v].getEstoc() > 0) {
+        public Vi elimina(String ref) {
+        // ordena();
+        ref = Vi.normalitzaString(ref).toLowerCase();
+        for (int i = 0; i < vins.length; i++) {
+            if (vins[i] != null) {
+                if (vins[i].getRef().toLowerCase().equals(ref)) {
+                    if (vins[i].getEstoc() > 0) {
                         return null;
                     } else {
-                        Vi vi = vins[v];
-                        vins[v] = null;
+                        Vi vi = vins[i];
+                        vins[i] = null;
                         return vi;
                     }
                 }
@@ -140,7 +141,7 @@ public class Botiga{
             return null;
         }
 
-        while (vins[getContador()] == null && getContador() < vins.length) {
+        while (vins[getContador()] == null && getContador() < vins.length - 1) {
             setContador(getContador() + 1);
         }
 
