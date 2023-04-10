@@ -66,7 +66,7 @@ public class Entorn {
         entorn.botiga.iniciaRecorregut();
         entorn.guardarVins();
         vins = contarVins();
-        System.out.printf("Referències guardades: %s\n",vins);
+        //System.out.printf("Referències guardades: %s\n",vins);
         mostraComiat();
     }
     private static void mostraComiat() {
