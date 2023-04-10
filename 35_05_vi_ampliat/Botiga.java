@@ -78,23 +78,23 @@ public class Botiga{
         for(Vi vi: vins) {
             
             if(vi == null) continue; 
-            System.out.println("1");
+      //      System.out.println("1");
             if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
-            System.out.println("2");
+       //     System.out.println("2");
             if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))) continue;
-            System.out.println("3");
+         //   System.out.println("3");
             if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vi.getPreu())) continue;
-            System.out.println("4");
+           // System.out.println("4");
             if((plantilla.getEstoc()!=-1) && (plantilla.getEstoc() > vi.getEstoc())) continue;
-            System.out.println("5");
+           // System.out.println("5");
             if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))) continue;
-            System.out.println("6");
+           // System.out.println("6");
             if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))) continue;
-            System.out.println("7");
+           // System.out.println("7");
             if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))) continue;
-            System.out.println("9");
+           // System.out.println("9");
             if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
-            System.out.println("10");
+           // System.out.println("10");
             return vi;
         }
         
