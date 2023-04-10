@@ -95,78 +95,86 @@ public class Entorn {
     }
     
     public void processaCerca() {
-        String entrada = "";
-        int precio = -1;
-        int estoc = -1;
+        String ref ="";
         String nom="";
-        String preu="";
-        String stock="";
+        int preu = -1;
+        String textPreu="";
+        int estoc = -1;
+        String textEstoc="";
         String lloc="";
-        String deo="";
+        String origen="";
         String tipus="";
         String collita="";
-        System.out.print("ref> ");
-        entrada = Entrada.readLine();
-        if(entrada.equals("!")){return;}
-        if(!entrada.isBlank()) {
-            Vi cercat = botiga.cerca(entrada);
-            if (cercat == null) {
-                return; 
-                //System.out.println("No trobat");
+        
+        System.out.print("reflfzkdjghnfzxc> ");
+        ref = Entrada.readLine();
+        if(ref.equals("!")) return;
+        if(!ref.isBlank()) {
+            Vi busca = botiga.cerca(ref);
+            if (busca == null) {
+                return;
             } else {
-                System.out.println("Trobat:\n"+cercat);
+                System.out.println("Trobat:\n"+busca);
             }
         } else {
             while(true) {
                 System.out.print("nom> ");
                 nom = Entrada.readLine();
-                if(nom.equals("!")){break;}
-                System.out.print("preu max.> ");
-                preu = Entrada.readLine();
-                if(preu.equals("!")){break;}
-                if(UtilString.esEnter(preu)) {
-                    precio = Integer.parseInt(preu);
-                } else if (preu.isBlank()){
-                    precio = -1;
+                if(nom.equals("!")) break;
+                
+                System.out.print("Preu max.> ");
+                textPreu = Entrada.readLine();
+                if(textPreu.equals("!")) break;
+                
+                if(UtilString.esEnter(textPreu)) {
+                    preu = Integer.parseInt(textPreu);
+                } else if (textPreu.isBlank()){
+                    preu = -1;
                 } else {
                     System.out.println("ERROR: el valor ha de ser un enter positiu");
                     return;
                 }
+                
                 System.out.print("estoc min.> ");
-                stock = Entrada.readLine();
-                if(stock.equals("!")){break;}
-                if(UtilString.esEnter(stock)) {
-                    estoc = Integer.parseInt(stock);
-                }else if(stock.isBlank()) {
+                textEstoc = Entrada.readLine();
+                if(textEstoc.equals("!")) break;
+                
+                if(UtilString.esEnter(textEstoc)) {
+                    estoc = Integer.parseInt(textEstoc);
+                }else if(textEstoc.isBlank()) {
                     estoc = -1;
                 } else {
                     System.out.println("ERROR: el valor ha de ser un enter positiu");
                     return;
                 }
+                
                 System.out.print("lloc> ");
                 lloc = Entrada.readLine();
-                if(lloc.equals("!")){break;}
+                if(lloc.equals("!")) break;
+                
                 System.out.print("D.O.> ");
-                deo = Entrada.readLine();
-                if(deo.equals("!")){break;}
+                origen = Entrada.readLine();
+                if(origen.equals("!")) break;
+                
                 System.out.print("tipus> ");
                 tipus =Entrada.readLine();
-                if(tipus.equals("!")){break;}
+                if(tipus.equals("!")) break;
+                
                 System.out.print("collita> ");
                 collita = Entrada.readLine();
-                if(collita.equals("!")){break;}
+                if(collita.equals("!")) break;
                 break;
             }
-            Vi viABuscar = new Vi(entrada,nom,precio,estoc,lloc,deo,tipus,collita);
-            Vi cercat = botiga.cerca(viABuscar);
-            if (cercat == null) {
-                cercat = botiga.cerca();
-                if(cercat !=null){
-                    System.out.println("Trobat:\n"+cercat);
+            Vi busca = botiga.cerca(new Vi(ref,nom,preu,estoc,lloc,origen,tipus,collita));
+            
+            if (busca == null) {
+                busca = botiga.cerca();
+                if(busca !=null){
+                    System.out.println("Trobat:\n"+busca);
                 }
                 return;
             } else {
-                System.out.println("Trobat:\n"+cercat);
+                System.out.println("Trobat:\n"+busca);
             }
         }
     }
