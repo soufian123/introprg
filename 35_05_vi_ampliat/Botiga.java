@@ -137,12 +137,7 @@ public class Botiga{
             setContador(getContador() + 1);
         }
         
-        if (getContador() == vins.length) {
-            return vins[getContador()];
-        }
-        if (getContador() > vins.length) {
-            return null;
-        }
+      
         
         
 
