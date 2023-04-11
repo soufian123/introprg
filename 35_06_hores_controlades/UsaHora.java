@@ -1,8 +1,3 @@
-
-//programa que ens permet comprobar el exercici dhora per validar si tot ha anat be
-
-
-
 public class UsaHora {
     public static void main(String[] args) {
         Hora hora = new Hora();
