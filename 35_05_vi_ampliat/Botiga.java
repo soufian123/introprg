@@ -5,8 +5,6 @@
  *
  */
 
-
-
 public class Botiga{
     private int DEFAULT_MAX_VINS=10;
     private Vi[] vins;
@@ -61,7 +59,6 @@ public class Botiga{
         return null;
     }
     
-    
     public Vi cerca(String ref){
         ref = Vi.normalitzaString(ref).toLowerCase();
         for (int v = 0; v < vins.length; v++) {
@@ -74,45 +71,39 @@ public class Botiga{
         }
         return null;
     }
-
-    
-    
-    
+/*
     public Vi cerca(Vi plantilla) {
         for(Vi vi: vins) {
-            
             if(vi == null) continue; 
-      //      System.out.println("1");
-            
-      
             if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
-       //     System.out.println("2");
             if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))) continue;
-            
-         //   System.out.println("3");
             if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vi.getPreu())) continue;
-            
-           // System.out.println("4");
             if((plantilla.getEstoc()!=-1) && (plantilla.getEstoc() > vi.getEstoc())) continue;
-            
-           // System.out.println("5");
             if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))) continue;
-            
-           // System.out.println("6");
             if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))) continue;
-            
-           // System.out.println("7");
             if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))) continue;
-            
-           // System.out.println("9");
             if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
-            
-            //System.out.println("10");
             return vi;
         }
         
         return null;
+    }*/
+    public Vi cerca(Vi plantilla) {
+        for(Vi vi: vins) {
+            if(vi == null) continue; 
+            if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
+            if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))) continue;
+            if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vi.getPreu())) continue;
+            if((plantilla.getEstoc()!=-1) && (plantilla.getEstoc() > vi.getEstoc())) continue;
+            if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))) continue;
+            if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))) continue;
+            if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))) continue;
+            if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
+            return vi;
+        }
+        return null;
     }
+
     public Vi cerca() {
         if(vins[0]!=null) return vins[0];
         return null;
@@ -132,7 +123,6 @@ public class Botiga{
         setContador(-1);
     }
 
-
     public Vi getSeguent() {
 
         while (true) {
@@ -143,8 +133,6 @@ public class Botiga{
             return vins[getContador()];
         }
     }
-
-
 }
 
 
