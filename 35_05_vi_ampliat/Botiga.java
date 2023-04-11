@@ -133,14 +133,14 @@ public class Botiga{
 
 
     public Vi getSeguent() {
-        setContador(-1);
+
         while (true) {
             setContador(getContador()+1);
             if (getContador() >= vins.length) return null;
             if (vins[getContador()] == null) continue;
             return vins[getContador()];
         }
-    }
+}
 
 
 }
