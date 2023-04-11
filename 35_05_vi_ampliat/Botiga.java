@@ -13,13 +13,14 @@ public class Botiga{
     private int contador = -1;
     
     public Botiga(){
-    vins = new Vi[DEFAULT_MAX_VINS];
+        vins = new Vi[DEFAULT_MAX_VINS];
+        this.contador = -1;
     }
     public Botiga(int maxVins){
-    vins = new Vi[maxVins];
+        vins = new Vi[maxVins];
+        this.contador = -1;
     }
-    
-    
+   
     public Vi afegeix(Vi vi) {
         boolean esta = true;
         if (vi.esValid()) {
