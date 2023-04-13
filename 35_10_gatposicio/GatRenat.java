@@ -4,7 +4,7 @@
 public class GatRenat{
     
     private GatPosicio posicio= GatPosicio.ESTIRAT;
-
+    public GatRenat(){}
     public GatRenat(GatPosicio text){
         setPosicio(text);
     }
