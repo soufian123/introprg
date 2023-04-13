@@ -18,7 +18,7 @@ public class Botiga{
         vins = new Vi[maxVins];
         this.contador = -1;
     }
-   /*
+   
     public Vi afegeix(Vi vi) {
         boolean esta = true;
         if (vi.esValid()) {
@@ -40,32 +40,7 @@ public class Botiga{
         }
         return null;
     }
-    */
-    public Vi afegeix(Vi vi) {
-        boolean esta = true;
 
-        if (vi.esValid()) {
-            for (int v = 0; v < vins.length; v++) {
-                if (vins[v] != null) {
-                    if (vins[v].getNom().equals(vi.getNom())) {
-                        esta = false;
-                    }
-                }
-            }
-
-            if (esta) {
-                for (int v = 0; v < vins.length; v++) {
-                    if (vins[v] == null) {
-                        vins[v] = vi;
-                        contador++; // Actualizar contador después de agregar el vino
-                        return vi;
-                    }
-                }
-            }
-        }
-
-        return null;
-    }
 
     
     public Vi elimina(String ref) {
@@ -134,7 +109,7 @@ public class Botiga{
      public void iniciaRecorregut() {
         setContador(-1);
     }
-/*
+
     public Vi getSeguent() {
 
         while (true) {
@@ -143,14 +118,6 @@ public class Botiga{
             
             if (vins[getContador()] == null) continue;
             return vins[getContador()];
-        }
-    }*/
-    public Vi getSeguent() {
-        while (true) {
-            contador++;
-            if (getContador() >= vins.length) return null;
-            if (vins[contador] == null) continue;
-            return vins[contador];
         }
     }
 
