@@ -1,3 +1,9 @@
+/*
+ * es un progrma de usa hores que has posat tu en la teva pag, per poder verificar tot el funcionament
+ * del meu programa hora
+ *
+ */
+
 public class UsaHora {
     public static void main(String[] args) {
         Hora hora = new Hora();
