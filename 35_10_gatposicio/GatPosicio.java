@@ -15,7 +15,7 @@ public enum GatPosicio{
         for (GatPosicio pos: GatPosicio.values()) {
              if (pos.name().equalsIgnoreCase(posicio)) return pos;
          }
-         throw new IllegalArgumentException(String.format("valor \"%s\" no soporat per GatPosicio", posicio));
+         throw new IllegalArgumentException(String.format("Valor \"%s\" no suportat per GatPosicio", posicio));
     }
 }
 
