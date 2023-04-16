@@ -19,7 +19,7 @@ public class Botiga{
         this.contador = -1;
     }
    
-    public Vi afegeix(Vi vi) {
+/*    public Vi afegeix(Vi vi) {
         boolean esta = true;
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
@@ -40,6 +40,36 @@ public class Botiga{
         }
         return null;
     }
+    
+    */
+    public Vi afegeix(Vi vi) {
+    boolean esta = true;
+
+    if (vi.esValid()) {
+        for (int v = 0; v < vins.length; v++) {
+            if (vins[v] != null) {
+                if (vins[v].getNom().equals(vi.getNom())) {
+                    esta = false;
+                }
+            }
+        }
+
+        if (esta) {
+            for (int v = 0; v < vins.length; v++) {
+                if (vins[v] == null) {
+                    vins[v] = vi;
+                    contador++; 
+                    return vi;
+                }
+            }
+        }
+    }
+
+    return null;
+}
+
+    
+    
 
 
     
@@ -117,8 +147,6 @@ public class Botiga{
             if (getContador() >= vins.length) return null;
             
             if (vins[getContador()] == null) continue;
-            setContador(getContador()+1);
-            if (getContador() >= vins.length) return null;
             return vins[getContador()];
         }
     }
