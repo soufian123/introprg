@@ -111,16 +111,14 @@ public class Botiga{
     }
 
     public Vi getSeguent() {
-        iniciaRecorregut();
-        if (getContador() < vins.length) {
-            setContador(getContador() + 1);
-        }
 
-        while (vins[getContador()] == null && getContador() < vins.length - 1) {
-            setContador(getContador() + 1);
+        while (true) {
+            contador++;
+            if (getContador() >= vins.length) return null;
+            
+            while (vins[getContador()] == null) contador++;
+            return vins[getContador()];
         }
-
-        return vins[getContador()];
     }
 
 }
