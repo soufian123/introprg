@@ -75,18 +75,18 @@ public class Botiga{
     }
 
     public Vi cerca(Vi plantilla) {
-        for (int v=0; v<vins.length; v++){
-       //for(Vi vi: vins) {
-            if(vins[v] == null) continue; 
-            if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vins[v].getRef()))) continue;
-            if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vins[v].getNom()))) continue;
-            if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vins[v].getPreu())) continue;
-            if((plantilla.getEstoc()!=-1) && (plantilla.getEstoc() > vins[v].getEstoc())) continue;
-            if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vins[v].getLloc()))) continue;
-            if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vins[v].getOrigen()))) continue;
-            if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vins[v].getTipus()))) continue;
-            if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vins[v].getCollita()))) continue;
-            return vins[v];
+        
+        for(Vi vi: vins) {
+            if(vi == null) continue; 
+            if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
+            if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))) continue;
+            if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vi.getPreu())) continue;
+            if((plantilla.getEstoc()!=-1) && (plantilla.getEstoc() > vi.getEstoc())) continue;
+            if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))) continue;
+            if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))) continue;
+            if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))) continue;
+            if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
+            return vi;
         }
         
         return null;
@@ -115,7 +115,7 @@ public class Botiga{
 
         while (true) {
             setContador(getContador()+1);
-            if (getContador() >= vins.length) return null;
+            if (getContador() > vins.length) return null;
             
             if (vins[getContador()] == null) continue;
             return vins[getContador()];
