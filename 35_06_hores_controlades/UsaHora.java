@@ -1,8 +1,3 @@
-/*programa que el que fa es posar hores, minuts i segons al programa de hora, el que fa tambe es
- * pasar tots aquestes dades per verificar el prgtest es el mateix i si ho tinc be
- */
-
-
 public class UsaHora {
     public static void main(String[] args) {
         Hora hora = new Hora();
