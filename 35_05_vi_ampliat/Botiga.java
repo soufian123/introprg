@@ -20,11 +20,12 @@ public class Botiga{
     }
    
     public Vi afegeix(Vi vi) {
+    System.out.printf("XXX afegeix(vi: %s) entra", vi);
         boolean esta = true;
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
                 if (vins[v] != null) {
-                    if (vins[v].getNom().equals(vi.getNom())) {
+                    if (vins[v].getRef().equals(vi.getRef())) {
                         esta = false;
                     }
                 }
@@ -33,6 +34,7 @@ public class Botiga{
                 for (int v = 0; v < vins.length; v++) {
                     if (vins[v] == null) {
                         vins[v] = vi;
+                        //System.out.println("xxx \t afegint ara posicio "+v);
                         return vi;
                     }
                 }
@@ -112,12 +114,17 @@ public class Botiga{
     }
 
     public Vi getSeguent() {
-
+        
         while (true) {
             setContador(getContador()+1);
+            //System.out.printf("XXX getSeguent() amb contador incrementat: %d%n", getContador());
+
             if (getContador() >= vins.length) return null;
+            //System.out.printf("XXX \tgetSeguent() dins de limit  %d%n", getContador());
             
             if (vins[getContador()] == null) continue;
+           // System.out.printf("XXX \tgetSeguent() hi ha vi a posicio: %d%n", getContador());
+
             return vins[getContador()];
         }
     }
