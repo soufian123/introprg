@@ -20,7 +20,7 @@ public class Botiga{
     }
    
     public Vi afegeix(Vi vi) {
-    System.out.printf("XXX afegeix(vi: %s) entra", vi);
+    //System.out.printf("XXX afegeix(vi: %s) entra", vi);
         boolean esta = true;
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
@@ -120,7 +120,7 @@ public class Botiga{
             //System.out.printf("XXX getSeguent() amb contador incrementat: %d%n", getContador());
 
             if (getContador() >= vins.length) return null;
-            //System.out.printf("XXX \tgetSeguent() dins de limit  %d%n", getContador());
+            //System.out.printf(" \tgetSeguent() dins de limit  %d%n", getContador());
             
             if (vins[getContador()] == null) continue;
            // System.out.printf("XXX \tgetSeguent() hi ha vi a posicio: %d%n", getContador());
