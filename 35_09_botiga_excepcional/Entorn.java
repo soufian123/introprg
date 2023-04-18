@@ -358,6 +358,11 @@ public class Entorn {
                     a++;
                 }
                 line = input.readLine();
+                if (a> sbotiga.getMax()){
+                    input.close();
+                    System.out.print("ERROR: massa entrades a botiga.csv");
+                    return botiga.getMax();
+                }
             }
             input.close();
             return a;

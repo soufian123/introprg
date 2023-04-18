@@ -20,9 +20,12 @@ public class Botiga{
     }
     public int getMax(){
         return DEFAULT_MAX_VINS;
-    }
     
     public Vi afegeix(Vi vi) throws Exception{
+        if (Entorn.comptaReferencies()> getMax()){
+            System.out.print("ERROR: massa entrades a botiga.csv");
+            return botiga.getMax();
+        }
         try{
             boolean esta = false;
             if (vi.esValid()) {
@@ -48,6 +51,8 @@ public class Botiga{
                 throw new IllegalArgumentException("El vi ha de ser vàlid");
             }
             return null;
+        } catch (BotigaException e) {
+            throw new BotigaException("Botiga plena");
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;
@@ -71,9 +76,8 @@ public class Botiga{
             
                 if (vins[v].getRef().equalsIgnoreCase(ref)) {
                     if (vins[v].getEstoc() > 0) {
-                    
                         throw new IllegalArgumentException("El vi a eliminar no pot tenir estoc");
-                        //return null;
+                        return null;
                     } else {
                         Vi vi = vins[v];
                         vins[v] = null;
@@ -83,7 +87,7 @@ public class Botiga{
             }
         }
         throw new IllegalArgumentException("La instància a eliminar ha d'estar present");
-        //return null;
+        return null;
     }
     
     
