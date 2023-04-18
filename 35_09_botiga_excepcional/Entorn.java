@@ -39,7 +39,11 @@ public class Entorn {
             Vi nouVi = Vi.deArrayString(viAr);
             if(nouVi == null){continue;}
             else {
-                entorn.botiga.afegeix(nouVi);
+                try{
+                    entorn.botiga.afegeix(nouVi);
+                } catch (Exception e){
+                    System.out.println(e);
+                }
             }
         }
         input.close();
@@ -110,11 +114,16 @@ public class Entorn {
         ref = Entrada.readLine();
         if(ref.equals("!")) return;
         if(!ref.isBlank()) {
-            Vi busca = botiga.cerca(ref);
-            if (busca == null) {
-                return;
-            } else {
-                System.out.println("Trobat:\n"+busca);
+            try{
+                Vi busca = botiga.cerca(ref);
+            
+                if (busca == null) {
+                    return;
+                } else {
+                    System.out.println("Trobat:\n"+busca);
+                }
+            } catch (Exception e){
+                    System.out.println(e);
             }
         } else {
             while(true) {
@@ -165,16 +174,20 @@ public class Entorn {
                 if(collita.equals("!")) break;
                 break;
             }
-            Vi busca = botiga.cerca(new Vi(ref,nom,preu,estoc,lloc,origen,tipus,collita));
-           // System.out.println("1sdfdsf");
-            if (busca == null) {
-                busca = botiga.cerca();
-                if(busca !=null){
+            try{
+                Vi busca = botiga.cerca(new Vi(ref,nom,preu,estoc,lloc,origen,tipus,collita));        
+               // System.out.println("1sdfdsf");
+                if (busca == null) {
+                    busca = botiga.cerca();
+                    if(busca !=null){
+                        System.out.println("Trobat:\n"+busca);
+                    }
+                    return;
+                } else {
                     System.out.println("Trobat:\n"+busca);
                 }
-                return;
-            } else {
-                System.out.println("Trobat:\n"+busca);
+            } catch (Exception e){
+                    System.out.println(e);
             }
         }
     }
@@ -182,6 +195,7 @@ public class Entorn {
     
 
     public void processaAfegeix(){
+        
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
         if (nom.isEmpty()) {
@@ -211,13 +225,17 @@ public class Entorn {
         
         
         Vi vi = new Vi(nom,preu,estoc);
-        if (botiga.afegeix(vi) == null) {
-            System.out.println("ERROR: no s'ha pogut afegir");
-            return;
+        try{
+            if (botiga.afegeix(vi) == null) {
+                System.out.println("ERROR: no s'ha pogut afegir");
+                return;
+            }
+        } catch (Exception e){
+            System.out.println(e);
+        }finally{
+            System.out.println("Introduït:");
+            System.out.println(vi);
         }
-        
-        System.out.println("Introduït:");
-        System.out.println(vi);
     }
     
     public void processaModifica(){
@@ -225,48 +243,57 @@ public class Entorn {
         String nom= Entrada.readLine();
         if (nom.isEmpty()) return;
         nom=Vi.normalitzaString(nom);
-        Vi vi = botiga.cerca(nom);
-        if (vi == null) {
-            System.out.println("No trobat");
-            return;
-        }
+        
+        try{
+            Vi vi = botiga.cerca(nom);
+            if (vi == null) {
+                System.out.println("No trobat");
+                return;
+            }
+                
+                
+            System.out.printf("preu (enter %s)> ",vi.getPreu());
+            String num = Entrada.readLine();
+            int preu=0;
+            if (num.isEmpty()){
+                preu = vi.getPreu();
+            }else{
+                preu = Integer.parseInt(num);
+            }
+            if (preu<0) {
+                System.out.println("ERROR: el valor ha de ser un enter positiu");
+                return;
+            }
+            vi.setPreu(preu);
             
             
-        System.out.printf("preu (enter %s)> ",vi.getPreu());
-        String num = Entrada.readLine();
-        int preu=0;
-        if (num.isEmpty()){
-            preu = vi.getPreu();
-        }else{
-            preu = Integer.parseInt(num);
+            System.out.printf("estoc (enter %s)> ",vi.getEstoc());
+            String text = Entrada.readLine();
+            int estoc=0;
+            if (text.isEmpty()){
+                estoc = vi.getEstoc();
+            }else{
+                estoc = Integer.parseInt(text);
+            }
+            if (estoc<0) {
+                System.out.println("ERROR: el valor ha de ser un enter positiu");
+                return;
+            }
+            vi.setEstoc(estoc);
+            
+            System.out.println("Modificat:");
+            System.out.println(vi);
+            
+        } catch (Exception e){
+            System.out.println(e);
         }
-        if (preu<0) {
-            System.out.println("ERROR: el valor ha de ser un enter positiu");
-            return;
-        }
-        vi.setPreu(preu);
+    
         
-        
-        System.out.printf("estoc (enter %s)> ",vi.getEstoc());
-        String text = Entrada.readLine();
-        int estoc=0;
-        if (text.isEmpty()){
-            estoc = vi.getEstoc();
-        }else{
-            estoc = Integer.parseInt(text);
-        }
-        if (estoc<0) {
-            System.out.println("ERROR: el valor ha de ser un enter positiu");
-            return;
-        }
-        vi.setEstoc(estoc);
-        
-        System.out.println("Modificat:");
-        System.out.println(vi);
     
     
     }
     private void processaElimina() {
+        try{
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
         if (nom.isEmpty()) return;
@@ -292,6 +319,9 @@ public class Entorn {
             System.out.println("ERROR: no s'ha pogut eliminar");
         } else {
             System.out.println("Eliminat");
+        }
+        }catch (Exception e){
+        System.out.println(e);
         }
     }
     
