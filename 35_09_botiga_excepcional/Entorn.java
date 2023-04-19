@@ -372,6 +372,29 @@ public class Entorn {
         }
         return 0;
     }
+    public static int comptaReferenciesTotal() throws IOException {
+        File fitxer = new File("botiga.csv");
+        Entorn entorn=new Entorn();
+        sbotiga.iniciaRecorregut();
+        if (fitxer.isFile()) {
+            BufferedReader input = new BufferedReader(new FileReader("botiga.csv"));
+            String line = input.readLine();
+            int a = 0;
+            while (true) {
+                if (line == null) {
+                    break;
+                }
+                String[] array = line.split(";");
+                if (array.length == 8 && UtilString.esEnter(array[2]) && UtilString.esEnter(array[3]) && UtilString.esEnter(array[7])) {
+                    a++;
+                }
+                line = input.readLine();
+            }
+            input.close();
+            return a;
+        }
+        return 0;
+    }
 
     private void guardarVins() throws IOException {
         BufferedWriter output = new BufferedWriter(new FileWriter("botiga.csv"));
