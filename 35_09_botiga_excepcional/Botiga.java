@@ -32,23 +32,19 @@ public class Botiga{
     }
     
     public Vi afegeix(Vi vi) throws Exception{
-        /*
-        if (Entorn.comptaReferencies()> getMax()){
-            System.out.print("ERROR: massa entrades a botiga.csv");
-            return botiga.getMax();
-        }
-        */
         boolean esta = false;
         if (vi==null){
             throw new IllegalArgumentException("El vi no pot ser null");
         }
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
-                if (vins[v].getRef().equals(vi.getRef())) {
-                    esta = true;
-                    throw new IllegalArgumentException("Referència de vi repetida");
+            if (vins[v] != null) {
+                    if (vins[v].getRef().equals(vi.getRef())) {
+                        esta = true;
+                        throw new IllegalArgumentException("Referència de vi repetida");
+                    }
+                    
                 }
-                
             }
             if (!esta) {
                 for (int v = 0; v < vins.length; v++) {
