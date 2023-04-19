@@ -47,7 +47,7 @@ public class Botiga{
                     }
 
                 }
-                if (contador >= vins.length - 1) throw new BotigaException();
+                if (contador >= vins.length) throw new BotigaException();
             }
         }else{
             throw new IllegalArgumentException("El vi ha de ser vàlid");

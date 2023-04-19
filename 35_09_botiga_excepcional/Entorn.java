@@ -366,7 +366,7 @@ public class Entorn {
             input.close();
             if (a> entorn.botiga.getMax()){
                 System.out.println("ERROR: massa entrades a botiga.csv");
-                a=entorn.botiga.getMax();
+                return entorn.botiga.getMax();
             }
             return a;
         }
