@@ -9,21 +9,27 @@
 public class EnvoltaString {
     private String valor;
 
-    public EnvoltaString(String valor) { this.valor = valor; }
-
-
-    public boolean equals(EnvoltaString altre) {
-        return valor.equals(altre.valor);
+    public EnvoltaString(String valor) {
+        this.valor = valor;
     }
-    @Override
-     public String toString() { return String.format("ENVOLTAT(\"%s\")", valor); }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof EnvoltaString) {  // si ja ni tant sols és ni un EnvoltaString malament
-            EnvoltaString altre = (EnvoltaString) obj;
-            return valor.equalsIgnoreCase(altre.valor);
+    public String toString() {
+        return String.format("ENVOLTAT(\"%s\")", valor);
+    }
+
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
         }
-        return false;
+        if (!(o instanceof EnvoltaString)) {
+            return false;
+        }
+        EnvoltaString altre = (EnvoltaString) o;
+        return this.valor.equalsIgnoreCase(altre.valor);
+    }
+
+    public boolean equals(String s) {
+        return this.valor.equalsIgnoreCase(s);
     }
 }
+
