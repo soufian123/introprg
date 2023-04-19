@@ -5,13 +5,7 @@
  *
  */
  
- /*
-  el mètode Botiga.afegeix() llençarà l'excepció BotigaException quan la botiga estigui plena.
-  Es tracta d'una nova excepció que hem de crear, que heretarà directament de Exception i que 
-  oferirà un constructor específic per determinar el missatge, i un per defecte que establirà 
-  com a missatge "Botiga plena".
- */
- 
+
  
 public class Botiga{
     private int DEFAULT_MAX_VINS=10;
