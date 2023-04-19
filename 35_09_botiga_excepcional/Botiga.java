@@ -25,7 +25,7 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws IOException, BotigaException{
+    public Vi afegeix(Vi vi) throws IOException{
         boolean esta = false;
 
         
