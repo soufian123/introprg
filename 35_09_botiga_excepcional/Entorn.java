@@ -328,7 +328,7 @@ public class Entorn {
     //    }
     }
     
-    public static int contarVins() throws IOException {
+    public static int contarVins() throws IOException,Exception {
         int num = 0;
         String linia ="";
         String file = "botiga.csv";
@@ -345,7 +345,7 @@ public class Entorn {
         input.close();
         return num;
     }
-    public static int comptaReferencies() throws IOException {
+    public static int comptaReferencies() throws IOException,Exception {
         File fitxer = new File("botiga.csv");
         Entorn entorn=new Entorn();
         sbotiga.iniciaRecorregut();
@@ -373,7 +373,7 @@ public class Entorn {
         return 0;
     }
 
-    private void guardarVins() throws IOException {
+    private void guardarVins() throws IOException ,Exception {
         BufferedWriter output = new BufferedWriter(new FileWriter("botiga.csv"));
         while(true) {
             Vi vi = botiga.getSeguent();

@@ -103,7 +103,7 @@ public class Botiga{
     }
 
     
-    public Vi cerca(Vi plantilla) {
+    public Vi cerca(Vi plantilla) throws Exception{
         if (plantilla==null){
             throw new IllegalArgumentException("La plantilla no pot ser null");
         }
@@ -126,7 +126,7 @@ public class Botiga{
 
     
     
-    public Vi cerca() {
+    public Vi cerca() throws Exception{
         if(vins[0]!=null) return vins[0];
         return null;
     }
@@ -146,7 +146,7 @@ public class Botiga{
     }
 
 
-    public Vi getSeguent() {
+    public Vi getSeguent() throws Exception{
         if (getContador() < vins.length) {
             setContador(getContador() + 1);
         }
