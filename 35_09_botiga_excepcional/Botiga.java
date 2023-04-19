@@ -29,7 +29,7 @@ public class Botiga{
 
         boolean esta = false;
         if (Entorn.comptaReferenciesTotal() >= DEFAULT_MAX_VINS+1) throw new BotigaException();
-        if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
+        //if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
                 if (vins[v] != null) {
@@ -49,6 +49,7 @@ public class Botiga{
                     }
 
                 }
+                throw new BotigaException();
             }
         }else{
             throw new IllegalArgumentException("El vi ha de ser vàlid");
