@@ -27,7 +27,7 @@ public class Botiga{
     
     public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException{
         boolean esta = false;
-        if (vi==null) new IllegalArgumentException("El vi no pot ser null");
+        if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
                 if (vins[v] != null) {
@@ -47,7 +47,7 @@ public class Botiga{
                     }
 
                 }
-                //if (contador >= vins.length - 1) throw new BotigaException();
+                if (contador >= vins.length - 1) throw new BotigaException();
             }
         }else{
             throw new IllegalArgumentException("El vi ha de ser vàlid");
