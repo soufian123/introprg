@@ -13,7 +13,7 @@ public class EnvoltaString {
 
 
     public boolean equals(EnvoltaString altre) {
-        return valor.equalsIgnoreCase(altre.valor);
+        return valor.equals(altre.valor);
     }
     @Override
      public String toString() { return String.format("ENVOLTAT(\"%s\")", valor); }
