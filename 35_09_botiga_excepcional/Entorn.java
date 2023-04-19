@@ -42,11 +42,11 @@ public class Entorn {
             Vi nouVi = Vi.deArrayString(viAr);
             if(nouVi == null){continue;}
             else {
-               // try{
+                try{
                     entorn.botiga.afegeix(nouVi);
-              //  } catch (Exception e){
-              //      System.out.println(e);
-              //  }
+                } catch (Exception e){
+                    System.out.println(e);
+                }
             }
         }
         input.close();
@@ -117,7 +117,7 @@ public class Entorn {
         ref = Entrada.readLine();
         if(ref.equals("!")) return;
         if(!ref.isBlank()) {
-          //  try{
+            try{
                 Vi busca = botiga.cerca(ref);
             
                 if (busca == null) {
@@ -125,9 +125,9 @@ public class Entorn {
                 } else {
                     System.out.println("Trobat:\n"+busca);
                 }
-           //} catch (Exception e){
-           //         System.out.println(e);
-           // }
+           } catch (Exception e){
+                    System.out.println(e);
+            }
         } else {
             while(true) {
                 System.out.print("nom> ");
@@ -228,17 +228,17 @@ public class Entorn {
         
         
         Vi vi = new Vi(nom,preu,estoc);
-        //try{
+        try{
             if (botiga.afegeix(vi) == null) {
                 System.out.println("ERROR: no s'ha pogut afegir");
                 return;
             }
-       // } catch (Exception e){
-       //     System.out.println(e);
-       // }finally{
+        } catch (Exception e){
+            System.out.println(e);
+        }finally{
             System.out.println("Introduït:");
             System.out.println(vi);
-       // }
+        }
     }
     
     public void processaModifica()  throws Exception{
@@ -247,7 +247,7 @@ public class Entorn {
         if (nom.isEmpty()) return;
         nom=Vi.normalitzaString(nom);
         
-       // try{
+        try{
             Vi vi = botiga.cerca(nom);
             if (vi == null) {
                 System.out.println("No trobat");
@@ -287,16 +287,16 @@ public class Entorn {
             System.out.println("Modificat:");
             System.out.println(vi);
             
-       // } catch (Exception e){
-       //     System.out.println(e);
-       // }
+        } catch (Exception e){
+            System.out.println(e);
+        }
     
         
     
     
     }
     private void processaElimina()  throws Exception{
-      //  try{
+        try{
             System.out.print("nom (enter cancel·la)> ");
             String nom = Entrada.readLine();
             if (nom.isEmpty()) return;
@@ -323,9 +323,9 @@ public class Entorn {
             } else {
                 System.out.println("Eliminat");
             }
-      //  }catch (Exception e){
-   //     System.out.println(e);
-    //    }
+        }catch (Exception e){
+        System.out.println(e);
+        }
     }
     
     public static int contarVins() throws IOException {
