@@ -39,11 +39,11 @@ public class Botiga{
         }
         */
         boolean esta = false;
+        if (vi==null){
+            throw new IllegalArgumentException("El vi no pot ser null");
+        }
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
-                if (vins[v] == null) {
-                    throw new IllegalArgumentException("El vi no pot ser null");
-                }
                 if (vins[v].getRef().equals(vi.getRef())) {
                     esta = true;
                     throw new IllegalArgumentException("Referència de vi repetida");
