@@ -15,7 +15,7 @@ public class Botiga{
     public Botiga(){
     vins = new Vi[DEFAULT_MAX_VINS];
     }
-    public Botiga(int maxVins){
+    public Botiga(int maxVins) throws IllegalArgumentException{
         if (maxVins < 1) {
             throw new IllegalArgumentException("No es pot crear una botiga amb menys d'un vi");
         }
@@ -25,7 +25,7 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws BotigaException{
+    public Vi afegeix(Vi vi) throws BotigaException, IllegalArgumentException{
         boolean esta = false;
         if (contador >= DEFAULT_MAX_VINS) {
             throw new BotigaException("La botiga està plena");
@@ -67,7 +67,6 @@ public class Botiga{
         
         for (int v = 0; v < vins.length; v++) {
             if (vins[v] != null) {
-            
                 if (vins[v].getRef().equalsIgnoreCase(ref)) {
                     if (vins[v].getEstoc() > 0) {
                         throw new IllegalArgumentException("El vi a eliminar no pot tenir estoc");
@@ -85,7 +84,7 @@ public class Botiga{
     }
     
     
-    public Vi cerca(String ref){
+    public Vi cerca(String ref) throws IllegalArgumentException{
         ref = Vi.normalitzaString(ref).toLowerCase();
         for (int v = 0; v < vins.length; v++) {
             if (vins[v] == null) {
@@ -101,7 +100,7 @@ public class Botiga{
     }
 
     
-    public Vi cerca(Vi plantilla) {
+    public Vi cerca(Vi plantilla) throws IllegalArgumentException {
         if (plantilla==null){
             throw new IllegalArgumentException("La plantilla no pot ser null");
         }
