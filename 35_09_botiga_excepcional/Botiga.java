@@ -21,7 +21,7 @@ public class Botiga{
     public Botiga(){
     vins = new Vi[DEFAULT_MAX_VINS];
     }
-    public Botiga(int maxVins) throws Exception{
+    public Botiga(int maxVins){
         if (maxVins < 1) {
             throw new IllegalArgumentException("No es pot crear una botiga amb menys d'un vi");
         }
@@ -62,7 +62,7 @@ public class Botiga{
     }
     
     
-    public Vi elimina(String ref) throws Exception {
+    public Vi elimina(String ref) {
         if (ref==null) throw new IllegalArgumentException("La referència no pot ser null");
         ref = Vi.normalitzaString(ref);
         
@@ -87,7 +87,7 @@ public class Botiga{
     }
     
     
-    public Vi cerca(String ref)throws Exception{
+    public Vi cerca(String ref){
         ref = Vi.normalitzaString(ref).toLowerCase();
         for (int v = 0; v < vins.length; v++) {
             if (vins[v] == null) {
