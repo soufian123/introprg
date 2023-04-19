@@ -25,7 +25,7 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException, IOException{
+    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException{
 
         boolean esta = false;
         
@@ -53,7 +53,7 @@ public class Botiga{
         }else{
             throw new IllegalArgumentException("El vi ha de ser vàlid");
         }
-        if (Entorn.comptaReferenciesTotal() >= DEFAULT_MAX_VINS+1) throw new BotigaException();
+       // if (Entorn.comptaReferenciesTotal() = DEFAULT_MAX_VINS+1) throw new BotigaException();
         return null;
         
         
