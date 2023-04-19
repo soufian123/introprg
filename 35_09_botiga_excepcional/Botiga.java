@@ -25,13 +25,11 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws IOException, BotigaException{
+    public Vi afegeix(Vi vi) throws BotigaException{
         boolean esta = false;
 
         if (contador >= vins.length - 1) throw new BotigaException();
-        if (vi==null){
-            throw new IllegalArgumentException("El vi no pot ser null");
-        }
+        if (vi==null) new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
                 if (vins[v] != null) {
