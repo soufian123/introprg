@@ -4,5 +4,8 @@ git clone git@github.com:soufian123/introprg
 
 diff introprg introprg_antic/
 
-
 bash introprg/.introprg/install_junit.sh
+
+cd introprg
+
+git config pull.rebase false
