@@ -4,7 +4,7 @@
  * els productes que volguem, en aquest cas es el vi.
  *
  */
- 
+ import java.io.IOException;
 
  
 public class Botiga{
@@ -25,10 +25,10 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws BotigaException{
+    public Vi afegeix(Vi vi) throws IOException, BotigaException{
         boolean esta = false;
 
-        
+        int hola=Entorn.comptaReferencies();
         if (vi==null){
             throw new IllegalArgumentException("El vi no pot ser null");
         }
