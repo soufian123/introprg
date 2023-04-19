@@ -10,7 +10,7 @@
 
 
 @SuppressWarnings("serial")
-    public class BotigaException extends Exception {
+    public class BotigaException extends Exception throws Exception {
         public BotigaException(){
             super("Botiga plena");
         }
