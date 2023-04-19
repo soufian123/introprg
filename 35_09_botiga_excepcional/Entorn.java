@@ -53,7 +53,7 @@ public class Entorn {
 
         mostraBenvinguda();
         if (entorn.comptaReferencies()> entorn.botiga.getMax()){
-            System.out.print("ERROR: massa entrades a botiga.csv");
+            System.out.println("ERROR: massa entrades a botiga.csv");
             //return entorn.botiga.getMax();
         }
         System.out.printf("Referències llegides: %s\n",comptaReferencies());
@@ -351,6 +351,7 @@ public class Entorn {
     }
     public static int comptaReferencies() throws IOException {
         File fitxer = new File("botiga.csv");
+        Entorn entorn=new Entorn();
         sbotiga.iniciaRecorregut();
         if (fitxer.isFile()) {
             BufferedReader input = new BufferedReader(new FileReader("botiga.csv"));
@@ -367,6 +368,9 @@ public class Entorn {
                 line = input.readLine();
             }
             input.close();
+            if (a> entorn.botiga.getMax()){
+                a=entorn.botiga.getMax();
+            }
             return a;
         }
         return 0;
