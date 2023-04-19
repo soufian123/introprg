@@ -25,13 +25,19 @@ public class Entorn {
     private final static Botiga sbotiga = new Botiga();
     private final Botiga botiga = new Botiga();
     
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, Exception {
         int vins = 0;
         String file = "botiga.csv";
         Entorn entorn = new Entorn();
         FileWriter fitxer = new FileWriter(file,true);
         fitxer.close();
         BufferedReader input = new BufferedReader(new FileReader(file));
+        
+        if (entorn.comptaReferencies()> entorn.botiga.getMax()){
+            System.out.print("ERROR: massa entrades a botiga.csv");
+            //return entorn.botiga.getMax();
+        }
+        
         while (true) {
             String vi = input.readLine();
             if(vi==null){break;} 
@@ -39,11 +45,11 @@ public class Entorn {
             Vi nouVi = Vi.deArrayString(viAr);
             if(nouVi == null){continue;}
             else {
-                try{
+               // try{
                     entorn.botiga.afegeix(nouVi);
-                } catch (Exception e){
-                    System.out.println(e);
-                }
+              //  } catch (Exception e){
+              //      System.out.println(e);
+              //  }
             }
         }
         input.close();
@@ -98,7 +104,7 @@ public class Entorn {
         System.out.println("surt");
     }
     
-    public void processaCerca() {
+    public void processaCerca()  throws Exception{
         String ref ="";
         String nom="";
         int preu = -1;
@@ -114,7 +120,7 @@ public class Entorn {
         ref = Entrada.readLine();
         if(ref.equals("!")) return;
         if(!ref.isBlank()) {
-            try{
+          //  try{
                 Vi busca = botiga.cerca(ref);
             
                 if (busca == null) {
@@ -122,9 +128,9 @@ public class Entorn {
                 } else {
                     System.out.println("Trobat:\n"+busca);
                 }
-            } catch (Exception e){
-                    System.out.println(e);
-            }
+           //} catch (Exception e){
+           //         System.out.println(e);
+           // }
         } else {
             while(true) {
                 System.out.print("nom> ");
@@ -174,7 +180,7 @@ public class Entorn {
                 if(collita.equals("!")) break;
                 break;
             }
-            try{
+           // try{
                 Vi busca = botiga.cerca(new Vi(ref,nom,preu,estoc,lloc,origen,tipus,collita));        
                // System.out.println("1sdfdsf");
                 if (busca == null) {
@@ -186,15 +192,15 @@ public class Entorn {
                 } else {
                     System.out.println("Trobat:\n"+busca);
                 }
-            } catch (Exception e){
-                    System.out.println(e);
-            }
+         //   } catch (Exception e){
+         //           System.out.println(e);
+          //  }
         }
     }
 
     
 
-    public void processaAfegeix(){
+    public void processaAfegeix()  throws Exception{
         
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
@@ -225,26 +231,26 @@ public class Entorn {
         
         
         Vi vi = new Vi(nom,preu,estoc);
-        try{
+        //try{
             if (botiga.afegeix(vi) == null) {
                 System.out.println("ERROR: no s'ha pogut afegir");
                 return;
             }
-        } catch (Exception e){
-            System.out.println(e);
-        }finally{
+       // } catch (Exception e){
+       //     System.out.println(e);
+       // }finally{
             System.out.println("Introduït:");
             System.out.println(vi);
-        }
+       // }
     }
     
-    public void processaModifica(){
+    public void processaModifica()  throws Exception{
         System.out.print("nom (enter cancel·la)> ");
         String nom= Entrada.readLine();
         if (nom.isEmpty()) return;
         nom=Vi.normalitzaString(nom);
         
-        try{
+       // try{
             Vi vi = botiga.cerca(nom);
             if (vi == null) {
                 System.out.println("No trobat");
@@ -284,45 +290,45 @@ public class Entorn {
             System.out.println("Modificat:");
             System.out.println(vi);
             
-        } catch (Exception e){
-            System.out.println(e);
-        }
+       // } catch (Exception e){
+       //     System.out.println(e);
+       // }
     
         
     
     
     }
-    private void processaElimina() {
-        try{
-        System.out.print("nom (enter cancel·la)> ");
-        String nom = Entrada.readLine();
-        if (nom.isEmpty()) return;
-        nom = Vi.normalitzaString(nom);
-        Vi vi = botiga.cerca(nom);
-        if (vi == null) {
-            System.out.println("No trobat");
-            return;
+    private void processaElimina()  throws Exception{
+      //  try{
+            System.out.print("nom (enter cancel·la)> ");
+            String nom = Entrada.readLine();
+            if (nom.isEmpty()) return;
+            nom = Vi.normalitzaString(nom);
+            Vi vi = botiga.cerca(nom);
+            if (vi == null) {
+                System.out.println("No trobat");
+                return;
+                
+            }
+            System.out.println("A eliminar:");
+            System.out.println(vi);
+            System.out.print("Segur?> ");
+            String text = Entrada.readLine();
             
-        }
-        System.out.println("A eliminar:");
-        System.out.println(vi);
-        System.out.print("Segur?> ");
-        String text = Entrada.readLine();
-        
-        if (!UtilitatsConfirmacio.respostaABoolean(text)) {
-            System.out.println("No eliminat");
-            return;
-        }
-        
-        vi = botiga.elimina(nom);
-        if (vi == null) {
-            System.out.println("ERROR: no s'ha pogut eliminar");
-        } else {
-            System.out.println("Eliminat");
-        }
-        }catch (Exception e){
-        System.out.println(e);
-        }
+            if (!UtilitatsConfirmacio.respostaABoolean(text)) {
+                System.out.println("No eliminat");
+                return;
+            }
+            
+            vi = botiga.elimina(nom);
+            if (vi == null) {
+                System.out.println("ERROR: no s'ha pogut eliminar");
+            } else {
+                System.out.println("Eliminat");
+            }
+      //  }catch (Exception e){
+   //     System.out.println(e);
+    //    }
     }
     
     public static int contarVins() throws IOException {
@@ -358,11 +364,6 @@ public class Entorn {
                     a++;
                 }
                 line = input.readLine();
-                if (a> sbotiga.getMax()){
-                    input.close();
-                    System.out.print("ERROR: massa entrades a botiga.csv");
-                    return botiga.getMax();
-                }
             }
             input.close();
             return a;

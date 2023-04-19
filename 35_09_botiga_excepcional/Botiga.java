@@ -4,6 +4,15 @@
  * els productes que volguem, en aquest cas es el vi.
  *
  */
+ 
+ /*
+  el mètode Botiga.afegeix() llençarà l'excepció BotigaException quan la botiga estigui plena.
+  Es tracta d'una nova excepció que hem de crear, que heretarà directament de Exception i que 
+  oferirà un constructor específic per determinar el missatge, i un per defecte que establirà 
+  com a missatge "Botiga plena".
+ */
+ 
+ 
 public class Botiga{
     private int DEFAULT_MAX_VINS=10;
     private Vi[] vins;
@@ -13,57 +22,48 @@ public class Botiga{
     vins = new Vi[DEFAULT_MAX_VINS];
     }
     public Botiga(int maxVins) throws Exception{
-        if (maxVins <= 1) {
+        if (maxVins < 1) {
             throw new IllegalArgumentException("No es pot crear una botiga amb menys d'un vi");
         }
         vins = new Vi[maxVins];
     }
     public int getMax(){
         return DEFAULT_MAX_VINS;
+    }
     
     public Vi afegeix(Vi vi) throws Exception{
+        /*
         if (Entorn.comptaReferencies()> getMax()){
             System.out.print("ERROR: massa entrades a botiga.csv");
             return botiga.getMax();
         }
-        try{
-            boolean esta = false;
-            if (vi.esValid()) {
-                for (int v = 0; v < vins.length; v++) {
-                    if (vins[v] == null) {
+        */
+        boolean esta = false;
+        if (vi.esValid()) {
+            for (int v = 0; v < vins.length; v++) {
+                if (vins[v] == null) {
                     throw new IllegalArgumentException("El vi no pot ser null");
                 }
-                        if (vins[v].getRef().equals(vi.getRef())) {
-                            esta = true;
-                            throw new IllegalArgumentException("Referència de vi repetida");
-                        }
-                    
+                if (vins[v].getRef().equals(vi.getRef())) {
+                    esta = true;
+                    throw new IllegalArgumentException("Referència de vi repetida");
                 }
-                if (!esta) {
-                    for (int v = 0; v < vins.length; v++) {
-                        if (vins[v] == null) {
-                            vins[v] = vi;
-                            return vi;
-                        }
+                
+            }
+            if (!esta) {
+                for (int v = 0; v < vins.length; v++) {
+                    if (vins[v] == null) {
+                        vins[v] = vi;
+                        return vi;
                     }
                 }
-            }else{
-                throw new IllegalArgumentException("El vi ha de ser vàlid");
             }
-            return null;
-        } catch (BotigaException e) {
-            throw new BotigaException("Botiga plena");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+        }else{
+            throw new IllegalArgumentException("El vi ha de ser vàlid");
         }
+        return null;
+        
     }
-
-
-    
-    
-    
-    
     
     
     public Vi elimina(String ref) throws Exception {
@@ -77,7 +77,7 @@ public class Botiga{
                 if (vins[v].getRef().equalsIgnoreCase(ref)) {
                     if (vins[v].getEstoc() > 0) {
                         throw new IllegalArgumentException("El vi a eliminar no pot tenir estoc");
-                        return null;
+                        //return null;
                     } else {
                         Vi vi = vins[v];
                         vins[v] = null;
@@ -87,7 +87,7 @@ public class Botiga{
             }
         }
         throw new IllegalArgumentException("La instància a eliminar ha d'estar present");
-        return null;
+        //return null;
     }
     
     
@@ -107,50 +107,24 @@ public class Botiga{
     }
 
     
-    
-    
-    public Vi cerca(Vi plantilla) throws Exception{
-        
-        try{
-            for(Vi vi: vins) {
-                if(vi == null) continue; 
-          //      System.out.println("1");
-                
-          
-                if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
-           //     System.out.println("2");
-                if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))) continue;
-                
-             //   System.out.println("3");
-                if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vi.getPreu())) continue;
-                
-               // System.out.println("4");
-                if((plantilla.getEstoc()!=-1) && (plantilla.getEstoc() > vi.getEstoc())) continue;
-                
-               // System.out.println("5");
-                if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))) continue;
-                
-               // System.out.println("6");
-                if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))) continue;
-                
-               // System.out.println("7");
-                if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))) continue;
-                
-               // System.out.println("9");
-                if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
-                
-                //System.out.println("10");
-                return vi;
-            }
-            
-            return null;
-        } catch (IllegalArgumentException e) {
-            System.out.println("La plantilla no pot ser null");
-            return null;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+    public Vi cerca(Vi plantilla) {
+        if (plantilla==null){
+            throw new IllegalArgumentException("La plantilla no pot ser null");
         }
+        for(Vi vi: vins) {
+            if(vi == null) continue; 
+            if(!(plantilla.getRef()==null) && !(plantilla.getRef().equalsIgnoreCase(vi.getRef()))) continue;
+            if(!(plantilla.getNom()==null) && !(plantilla.getNom().equalsIgnoreCase(vi.getNom()))) continue;
+            if((plantilla.getPreu()!=-1) && (plantilla.getPreu() < vi.getPreu())) continue;
+            if((plantilla.getEstoc()!=-1) && (plantilla.getEstoc() > vi.getEstoc())) continue;
+            if(!(plantilla.getLloc() ==null) && !(plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))) continue;
+            if(!(plantilla.getOrigen()==null) && !(plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))) continue;
+            if(!(plantilla.getTipus()==null) && !(plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))) continue;
+            if(!(plantilla.getCollita()==null) && !(plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))) continue;
+            return vi;
+        }
+        
+        return null;
     }
     
 
