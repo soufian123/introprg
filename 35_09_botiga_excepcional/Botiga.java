@@ -31,7 +31,7 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws Exception{
+    public Vi afegeix(Vi vi) throws BotigaException{
         boolean esta = false;
         if (contador >= DEFAULT_MAX_VINS-1) {
             throw new BotigaException("La botiga està plena");
