@@ -49,7 +49,7 @@ public class Botiga{
                         vins[v] = vi;
                         return vi;
                     }
-                    throw new BotigaException("La botiga està plena");
+                    //throw new BotigaException("La botiga està plena");
                 }
             }
         }else{
