@@ -15,7 +15,7 @@ public class Botiga{
     public Botiga(){
     vins = new Vi[DEFAULT_MAX_VINS];
     }
-    public Botiga(int maxVins) throws IllegalArgumentException{
+    public Botiga(int maxVins){
         if (maxVins < 1) {
             throw new IllegalArgumentException("No es pot crear una botiga amb menys d'un vi");
         }
@@ -25,7 +25,7 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws BotigaException, IllegalArgumentException{
+    public Vi afegeix(Vi vi) throws BotigaException{
         boolean esta = false;
         if (contador >= DEFAULT_MAX_VINS) {
             throw new BotigaException("La botiga està plena");
@@ -62,15 +62,13 @@ public class Botiga{
     
     
     public Vi elimina(String ref) throws IllegalArgumentException {
-        if (ref==null) throw new IllegalArgumentException("La referència no pot ser null");
+        if (ref == null) throw new IllegalArgumentException("La referència no pot ser null");
         ref = Vi.normalitzaString(ref);
-        
         for (int v = 0; v < vins.length; v++) {
             if (vins[v] != null) {
                 if (vins[v].getRef().equalsIgnoreCase(ref)) {
                     if (vins[v].getEstoc() > 0) {
                         throw new IllegalArgumentException("El vi a eliminar no pot tenir estoc");
-                        //return null;
                     } else {
                         Vi vi = vins[v];
                         vins[v] = null;
@@ -80,11 +78,10 @@ public class Botiga{
             }
         }
         throw new IllegalArgumentException("La instància a eliminar ha d'estar present");
-        //return null;
     }
     
     
-    public Vi cerca(String ref) throws IllegalArgumentException{
+    public Vi cerca(String ref){
         ref = Vi.normalitzaString(ref).toLowerCase();
         for (int v = 0; v < vins.length; v++) {
             if (vins[v] == null) {
@@ -100,7 +97,7 @@ public class Botiga{
     }
 
     
-    public Vi cerca(Vi plantilla) throws IllegalArgumentException {
+    public Vi cerca(Vi plantilla) {
         if (plantilla==null){
             throw new IllegalArgumentException("La plantilla no pot ser null");
         }
