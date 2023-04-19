@@ -31,7 +31,7 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws Exception{
+    public Vi afegeix(Vi vi){
         boolean esta = false;
         if (vi==null){
             throw new IllegalArgumentException("El vi no pot ser null");
