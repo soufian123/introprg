@@ -27,10 +27,6 @@ public class Botiga{
     
     public Vi afegeix(Vi vi) throws BotigaException{
         boolean esta = false;
-        
-        if (DEFAULT_MAX_VINS >= vins.length) {
-            throw new BotigaException("La botiga està plena");
-        }
 
         
         if (vi==null){
@@ -47,11 +43,13 @@ public class Botiga{
                 }
             }
             if (!esta) {
+            
                 for (int v = 0; v < vins.length; v++) {
                     if (vins[v] == null) {
                         vins[v] = vi;
                         return vi;
                     }
+                    throw new BotigaException("La botiga està plena");
                 }
             }
         }else{
