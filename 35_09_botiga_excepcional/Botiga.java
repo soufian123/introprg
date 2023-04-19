@@ -28,7 +28,7 @@ public class Botiga{
     public Vi afegeix(Vi vi) throws IOException, BotigaException{
         boolean esta = false;
 
-        int hola=Entorn.comptaReferencies();
+        
         if (vi==null){
             throw new IllegalArgumentException("El vi no pot ser null");
         }
@@ -55,7 +55,9 @@ public class Botiga{
         }else{
             throw new IllegalArgumentException("El vi ha de ser vàlid");
         }
+        if(Entorn.comptaReferencies() >= DEFAULT_MAX_VINS) throw new BotigaException();
         return null;
+        
         
     }
     
