@@ -177,7 +177,7 @@ public class Entorn {
                 if(collita.equals("!")) break;
                 break;
             }
-           // try{
+            try{
                 Vi busca = botiga.cerca(new Vi(ref,nom,preu,estoc,lloc,origen,tipus,collita));        
                // System.out.println("1sdfdsf");
                 if (busca == null) {
@@ -189,9 +189,9 @@ public class Entorn {
                 } else {
                     System.out.println("Trobat:\n"+busca);
                 }
-         //   } catch (Exception e){
-         //           System.out.println(e);
-          //  }
+            } catch (Exception e){
+                    System.out.println(e);
+            }
         }
     }
 
