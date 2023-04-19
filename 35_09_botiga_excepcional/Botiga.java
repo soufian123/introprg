@@ -25,20 +25,27 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException {
-        boolean esta = true;
-		if (contador >= vins.length - 1) throw new BotigaException();
-		if (vi == null) throw new IllegalArgumentException("El vi no pot ser null");
+    public Vi afegeix(Vi vi) throws BotigaException{
+        boolean esta = false;
+        if (contador >= vins.length) {
+            throw new BotigaException("La botiga està plena");
+        }
+
+        
+        if (vi==null){
+            throw new IllegalArgumentException("El vi no pot ser null");
+        }
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
                 if (vins[v] != null) {
                     if (vins[v].getRef().equals(vi.getRef())) {
-                        esta = false;
-						throw new IllegalArgumentException("Referència de vi repetida");
+                        esta = true;
+                        throw new IllegalArgumentException("Referència de vi repetida");
                     }
+                    
                 }
             }
-            if (esta) {
+            if (!esta) {
                 for (int v = 0; v < vins.length; v++) {
                     if (vins[v] == null) {
                         vins[v] = vi;
@@ -47,9 +54,10 @@ public class Botiga{
                 }
             }
         }else{
-			throw new IllegalArgumentException("El vi ha de ser vàlid");
-		}
+            throw new IllegalArgumentException("El vi ha de ser vàlid");
+        }
         return null;
+        
     }
     
     
@@ -72,18 +80,36 @@ public class Botiga{
         throw new IllegalArgumentException("La instància a eliminar ha d'estar present");
     }
     
-    
-    public Vi cerca(String ref){
+    /*
+        public Vi elimina(String ref) throws IllegalArgumentException {
+		if (ref == null) throw new IllegalArgumentException("La referència no pot ser null");
+        ref = Vi.normalitzaString(ref);
+        for (int v = 0; v < vins.length; v++) {
+            if (vins[v] != null) {
+                if (vins[v].getRef().equalsIgnoreCase(ref)) {
+                    if (vins[v].getEstoc() > 0) {
+                        throw new IllegalArgumentException("El vi a eliminar no pot tenir estoc");
+                    } else {
+                        Vi vi = vins[v];
+                        vins[v] = null;
+                        return vi;
+                    }
+                }
+            }
+        }
+        throw new IllegalArgumentException("La instància a eliminar ha d'estar present");
+    }
+    */
+    public Vi cerca(String ref) throws IllegalArgumentException {
+		if (ref == null) throw new IllegalArgumentException("La referència no pot ser null");
         ref = Vi.normalitzaString(ref).toLowerCase();
         for (int v = 0; v < vins.length; v++) {
-            if (vins[v] == null) {
-                throw new IllegalArgumentException("La referència no pot ser null");
-            }
+            if (vins[v] != null) {
                 String vi = vins[v].getRef().toLowerCase();
                 if (vi.equals(ref)) {
                     return vins[v];
                 }
-            
+            }
         }
         return null;
     }
@@ -152,8 +178,10 @@ public class Botiga{
 
 
 
-/*
 
+
+
+/*
 public class Botiga{
     private int DEFAULT_MAX_VINS=10;
     private Vi[] vins;
