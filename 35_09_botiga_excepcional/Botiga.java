@@ -61,13 +61,12 @@ public class Botiga{
     }
     
     
-    public Vi elimina(String ref) {
+    public Vi elimina(String ref) throws IllegalArgumentException {
         if (ref==null) throw new IllegalArgumentException("La referència no pot ser null");
         ref = Vi.normalitzaString(ref);
         
         for (int v = 0; v < vins.length; v++) {
             if (vins[v] != null) {
-            
             
                 if (vins[v].getRef().equalsIgnoreCase(ref)) {
                     if (vins[v].getEstoc() > 0) {
