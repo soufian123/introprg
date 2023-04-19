@@ -38,7 +38,7 @@ public class Botiga{
         }
         if (vi.esValid()) {
             for (int v = 0; v < vins.length; v++) {
-            if (vins[v] != null) {
+                if (vins[v] != null) {
                     if (vins[v].getRef().equals(vi.getRef())) {
                         esta = true;
                         throw new IllegalArgumentException("Referència de vi repetida");
@@ -103,7 +103,7 @@ public class Botiga{
     }
 
     
-    public Vi cerca(Vi plantilla) throws Exception{
+    public Vi cerca(Vi plantilla) {
         if (plantilla==null){
             throw new IllegalArgumentException("La plantilla no pot ser null");
         }
@@ -126,7 +126,7 @@ public class Botiga{
 
     
     
-    public Vi cerca() throws Exception{
+    public Vi cerca() {
         if(vins[0]!=null) return vins[0];
         return null;
     }
@@ -146,7 +146,7 @@ public class Botiga{
     }
 
 
-    public Vi getSeguent() throws Exception{
+    public Vi getSeguent() {
         if (getContador() < vins.length) {
             setContador(getContador() + 1);
         }
