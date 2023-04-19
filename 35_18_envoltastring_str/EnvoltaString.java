@@ -28,8 +28,8 @@ public class EnvoltaString {
         return this.valor.equalsIgnoreCase(altre.valor);
     }
 
-    public boolean equals(String s) {
-        return this.valor.equalsIgnoreCase(s);
+    public boolean equals(EnvoltaString altre) {
+        return valor.equalsIgnoreCase(altre.valor);
     }
 }
 
