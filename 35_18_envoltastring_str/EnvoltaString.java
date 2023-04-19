@@ -15,4 +15,13 @@ public class EnvoltaString {
     public boolean equals(EnvoltaString altre) {
         return valor.equalsIgnoreCase(altre.valor);
     }
+    @Override
+
+    public boolean equals(Object obj) {
+        if (obj instanceof EnvoltaString) {  // si ja ni tant sols és ni un EnvoltaString malament
+            EnvoltaString altre = (EnvoltaString) obj;
+            return valor.equals(altre.valor);
+        }
+        return false;
+    }
 }
