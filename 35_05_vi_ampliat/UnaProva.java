@@ -1,3 +1,6 @@
+/* es per comprovar lexercici que hi habia una prova del junit que no em pasava, pero ja esta solucionat, gracies.*/
+
+
 import java.util.*;
 
 public class UnaProva {

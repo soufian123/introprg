@@ -1,3 +1,8 @@
+/*son les proves del junit que he haggut dextreure per saber el que li pases per comporvar un error que no em pasaba el junit, pero ja esta solucionat, gracies.*/
+
+
+
+
 import java.lang.reflect.Type;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.DisplayName;
