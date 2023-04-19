@@ -11,10 +11,10 @@
 
 @SuppressWarnings("serial")
     public class BotigaException extends Exception  {
-        public BotigaException() throws Exception{
+        public BotigaException(){
             super("Botiga plena");
         }
-        public BotigaException(String missatge) throws Exception{
+        public BotigaException(String missatge){
             super(missatge);
         }
     }

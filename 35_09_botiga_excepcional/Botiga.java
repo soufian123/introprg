@@ -31,8 +31,13 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi){
+    public Vi afegeix(Vi vi) throws BotigaException{
         boolean esta = false;
+        if (vins.length >= DEFAULT_MAX_VINS-1) {
+            throw new BotigaException("La botiga està plena");
+        }
+
+        
         if (vi==null){
             throw new IllegalArgumentException("El vi no pot ser null");
         }
