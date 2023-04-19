@@ -27,8 +27,8 @@ public class Entorn {
         int vins = 0;
         String file = "botiga.csv";
         Entorn entorn = new Entorn();
-     //   FileWriter fitxer = new FileWriter(file,true);
-     //   fitxer.close();
+        FileWriter fitxer = new FileWriter(file,true);
+        fitxer.close();
         BufferedReader input = new BufferedReader(new FileReader(file));
         while (true) {
             String vi = input.readLine();
