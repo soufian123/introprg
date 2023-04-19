@@ -228,17 +228,17 @@ public class Entorn {
         
         
         Vi vi = new Vi(nom,preu,estoc);
-        try{
+        //try{
             if (botiga.afegeix(vi) == null) {
                 System.out.println("ERROR: no s'ha pogut afegir");
                 return;
             }
-        } catch (Exception e){
-            System.out.println(e);
-        }finally{
+       // } catch (Exception e){
+       //     System.out.println(e);
+      //  }finally{
             System.out.println("Introduït:");
             System.out.println(vi);
-        }
+     //  }
     }
     
     public void processaModifica()  throws Exception{
