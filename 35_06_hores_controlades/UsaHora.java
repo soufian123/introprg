@@ -1,3 +1,7 @@
+
+/*es el famos usa hora que em pasa el moises per comprobar el meu programa de Hora per si no em surten les hores be*/
+
+
 public class UsaHora {
     public static void main(String[] args) {
         Hora hora = new Hora();
