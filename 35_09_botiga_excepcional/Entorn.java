@@ -197,7 +197,7 @@ public class Entorn {
 
     
 
-    public void processaAfegeix()  {
+    public void processaAfegeix() throws Exception {
         
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
