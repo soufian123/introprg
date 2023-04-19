@@ -55,7 +55,6 @@ public class Botiga{
         }else{
             throw new IllegalArgumentException("El vi ha de ser vàlid");
         }
-        if(Entorn.contarVins() >= DEFAULT_MAX_VINS) throw new BotigaException();
         return null;
         
         
