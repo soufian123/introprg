@@ -18,7 +18,7 @@ public class EnvoltaString {
     }
 
     public boolean equals(Object o) {
-        if (o == this) {
+        if (o == valor) {
             return true;
         }
         if (!(o instanceof EnvoltaString)) {
