@@ -65,7 +65,7 @@ public class Botiga{
     }
     
     
-    public Vi afegeixx(Vi vi) throws IOException,IllegalArgumentException, BotigaException{
+    public Vi afegeixx(Vi vi) throws IllegalArgumentException, BotigaException{
         //if ( contador == DEFAULT_MAX_VINS+1) throw new BotigaException();
         boolean esta = false;
         if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
