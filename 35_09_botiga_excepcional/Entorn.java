@@ -44,7 +44,7 @@ public class Entorn {
             if(nouVi == null){continue;}
             else {
                 try{
-                    entorn.botiga.afegeix(nouVi);
+                    entorn.botiga.afegeixx(nouVi);
                 } catch (Exception e){
                     System.out.println(e);
                 }
