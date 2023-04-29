@@ -5,6 +5,12 @@
  *
  */
  import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.File;
+import java.io.IOException;
 
  
 public class Botiga{
@@ -25,8 +31,9 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException{
-        if ( vins.length >= DEFAULT_MAX_VINS-1) throw new BotigaException();
+    public Vi afegeix(Vi vi) throws IOException,IllegalArgumentException, BotigaException{
+        Entorn entorn=new Entorn();
+        if ( entorn.comptaReferenciesTotal() >= DEFAULT_MAX_VINS-1) throw new BotigaException();
         boolean esta = false;
         if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
@@ -56,7 +63,9 @@ public class Botiga{
         
         
     }
-    public Vi afegeixx(Vi vi) throws IllegalArgumentException, BotigaException{
+    
+    
+    public Vi afegeixx(Vi vi) throws IOException,IllegalArgumentException, BotigaException{
         //if ( contador == DEFAULT_MAX_VINS+1) throw new BotigaException();
         boolean esta = false;
         if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
