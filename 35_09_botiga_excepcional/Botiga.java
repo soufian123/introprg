@@ -35,7 +35,7 @@ public class Botiga{
     public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException{
         Entorn entorn=new Entorn();
         
-        if ( contadorAfegir >= DEFAULT_MAX_VINS) throw new BotigaException();
+        if ( contadorAfegir >= DEFAULT_MAX_VINS-1) throw new BotigaException();
         
         boolean esta = false;
         if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
