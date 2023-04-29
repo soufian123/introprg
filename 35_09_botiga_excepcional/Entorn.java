@@ -43,7 +43,7 @@ public class Entorn {
             if(nouVi == null){continue;}
             else {
                 try{
-                    entorn.botiga.afegeix(nouVi);
+                    entorn.botiga.afegeixx(nouVi);
                 } catch (Exception e){
                     System.out.println(e);
                 }
@@ -229,7 +229,7 @@ public class Entorn {
         
         Vi vi = new Vi(nom,preu,estoc);
         try{
-            if (botiga.afegeix(vi) == null) {
+            if (botiga.afegeixx(vi) == null) {
                 System.out.println("ERROR: no s'ha pogut afegir");
                 return;
             }
