@@ -17,6 +17,7 @@ public class Botiga{
     private int DEFAULT_MAX_VINS=10;
     private Vi[] vins;
     private int contador = -1;
+    private int contadorAfegir = 0;
     
     public Botiga(){
     vins = new Vi[DEFAULT_MAX_VINS];
@@ -31,9 +32,11 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws IOException,IllegalArgumentException, BotigaException{
+    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException{
         Entorn entorn=new Entorn();
-        if ( entorn.comptaReferenciesTotal() >= DEFAULT_MAX_VINS-1) throw new BotigaException();
+        
+        if ( contadorAfegir >= DEFAULT_MAX_VINS) throw new BotigaException();
+        
         boolean esta = false;
         if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
@@ -51,6 +54,7 @@ public class Botiga{
                 for (int v = 0; v < vins.length; v++) {
                     if (vins[v] == null) {
                         vins[v] = vi;
+                        contadorAfegir++;
                         return vi;
                     }
 

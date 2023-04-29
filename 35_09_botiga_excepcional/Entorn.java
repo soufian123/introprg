@@ -24,6 +24,7 @@ import java.io.IOException;
 public class Entorn {
     private final static Botiga sbotiga = new Botiga();
     private final Botiga botiga = new Botiga();
+    private int referenciess;
     
     public static void main(String[] args) throws IOException, Exception {
         int vins = 0;
@@ -372,6 +373,7 @@ public class Entorn {
         }
         return 0;
     }
+
     public static int comptaReferenciesTotal() throws IOException {
         File fitxer = new File("botiga.csv");
         Entorn entorn=new Entorn();
@@ -391,8 +393,10 @@ public class Entorn {
                 line = input.readLine();
             }
             input.close();
+
             return a;
         }
+
         return 0;
     }
 
