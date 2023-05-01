@@ -34,7 +34,9 @@ public class Entorn {
         fitxer.close();
         BufferedReader input = new BufferedReader(new FileReader(file));
         
-        
+        if (comptaReferencies()> entorn.botiga.getMax()){
+            System.out.println("ERROR: massa entrades a botiga.csv");
+        }
         
         while (true) {
             String vi = input.readLine();
@@ -365,10 +367,6 @@ public class Entorn {
                 line = input.readLine();
             }
             input.close();
-            if (a> entorn.botiga.getMax()){
-                System.out.println("ERROR: massa entrades a botiga.csv");
-                return entorn.botiga.getMax();
-            }
             return a;
         }
         return 0;
