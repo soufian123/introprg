@@ -73,7 +73,7 @@ public class Botiga{
                     }
 
                 }
-                if (  contarVins() >= DEFAULT_MAX_VINS) throw new BotigaException();
+                if (  contador >= DEFAULT_MAX_VINS) throw new BotigaException();
             }
         }else{
             throw new IllegalArgumentException("El vi ha de ser vàlid");
