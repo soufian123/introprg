@@ -36,8 +36,7 @@ public class Entorn {
         mostraBenvinguda();
         if (comptaReferenciesTotal()> entorn.botiga.getMax()){
             System.out.println("ERROR: massa entrades a botiga.csv");
-            
-            for(int a=0; a<=entorn.botiga.getMax();a++) {
+            for(int a=0; a<entorn.botiga.getMax();a++) {
                 String vi = input.readLine();
                 if(vi==null){break;} 
                 String[] viAr = vi.split(";");
