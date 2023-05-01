@@ -36,8 +36,9 @@ public class Entorn {
         mostraBenvinguda();
         if (comptaReferenciesTotal()> entorn.botiga.getMax()){
             System.out.println("ERROR: massa entrades a botiga.csv");
+            
         }
-        
+        /*
         while (true) {
             String vi = input.readLine();
             if(vi==null){break;} 
@@ -53,7 +54,7 @@ public class Entorn {
             }
         }
         input.close();
-
+*/
         
         System.out.printf("Referències llegides: %s\n",comptaReferencies());
         while (true) {
