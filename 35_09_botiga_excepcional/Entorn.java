@@ -55,21 +55,21 @@ public class Entorn {
             
         }else{
         
-        while (true) {
-            String vi = input.readLine();
-            if(vi==null){break;} 
-            String[] viAr = vi.split(";");
-            Vi nouVi = Vi.deArrayString(viAr);
-            if(nouVi == null){continue;}
-            else {
-                try{
-                    entorn.botiga.afegeix(nouVi);
-                } catch (Exception e){
-                    System.out.println(e);
+            while (true) {
+                String vi = input.readLine();
+                if(vi==null){break;} 
+                String[] viAr = vi.split(";");
+                Vi nouVi = Vi.deArrayString(viAr);
+                if(nouVi == null){continue;}
+                else {
+                    try{
+                        entorn.botiga.afegeix(nouVi);
+                    } catch (Exception e){
+                        System.out.println(e);
+                    }
                 }
             }
-        }
-        input.close();
+            input.close();
         }
         
         System.out.printf("Referències llegides: %s\n",comptaReferencies());
