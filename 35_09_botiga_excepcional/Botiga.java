@@ -48,39 +48,43 @@ public class Botiga{
     
     
     
-    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException{
-        
-        
-        boolean esta = false;
-        if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
-        if (vi.esValid()) {
-            for (int v = 0; v < vins.length; v++) {
-                if (vins[v] != null) {
-                    if (vins[v].getRef().equals(vi.getRef())) {
-                        esta = true;
-                        throw new IllegalArgumentException("Referència de vi repetida");
-                    }
-                    
-                }
-            }
-            if (!esta) {
-            
-                for (int v = 0; v < vins.length; v++) {
-                    if (vins[v] == null) {
-                        vins[v] = vi;
-                        contadorAfegir++;
-                        if (  contarVins() >= DEFAULT_MAX_VINS) throw new BotigaException();
-                        return vi;
-                    }
 
-                }
+    public Vi afegeix(Vi vi) throws Exception {
+        try {
+            boolean elegible = true;
+            if (vi == null) {
+                throw new Exception("El vi no pot ser null");
             }
-        }else{
-            throw new IllegalArgumentException("El vi ha de ser vàlid");
+            if (contador == vins.length - 1) {
+                throw new BotigaException();
+            }
+            if (vi.esValid()) {
+                for (int i = 0; i < vins.length; i++) {
+                    if (vins[i] != null) {
+                        if (vins[i].getRef().equals(vi.getRef())) {
+                            elegible = false;
+                            throw new Exception("Referència de vi repetida");
+                        }
+                    }
+                }
+                if (elegible) {
+                    for (int i = 0; i < vins.length; i++) {
+                        if (vins[i] == null) {
+                            vins[i] = vi;
+                            return vi;
+                        }
+                    }
+                }
+            } else {
+                throw new Exception("El vi ha de ser vàlid");
+            }
+            return null;
+        } catch (BotigaException e) {
+            throw new BotigaException("Botiga plena");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
         }
-        return null;
-        
-        
     }
     
     
