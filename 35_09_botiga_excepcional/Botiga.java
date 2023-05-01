@@ -18,6 +18,7 @@ public class Botiga{
     private Vi[] vins;
     private int contador = -1;
     private int contadorAfegir = 0;
+    private int num = 0;
     
     public Botiga(){
     vins = new Vi[DEFAULT_MAX_VINS];
@@ -32,9 +33,34 @@ public class Botiga{
         return DEFAULT_MAX_VINS;
     }
     
-    public Vi afegeix(Vi vi) throws IllegalArgumentException, BotigaException{
+     public static int contarVins() throws IOException {
+        int num = 0;
+        String linia ="";
+        String file = "botiga.csv";
+        BufferedReader input = new BufferedReader(new FileReader(file));
+        while (true) {
+            linia = input.readLine();
+            if (linia == null) break;
+            
+            String[] viAr = linia.split(";");
+            if(Vi.deArrayString(viAr)==null) continue;
+            num++;
+            
+        }
+        input.close();
+        return num;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    public Vi afegeix(Vi vi) throws IOException,IllegalArgumentException, BotigaException{
         
-        if (  vins.length >= DEFAULT_MAX_VINS-1) throw new BotigaException();
+        if (  contarVins() >= DEFAULT_MAX_VINS-1) throw new BotigaException();
         boolean esta = false;
         if (vi==null) throw new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
