@@ -19,9 +19,7 @@
             }
         }
         for (int a= args.length; a<4; a++){
-            if (UtilString.esEnter(args[a])){
-                xy[a]="0";
-            }
+            xy[a]="0";
         }
 
         x1 = Integer.parseInt(xy[0]);
