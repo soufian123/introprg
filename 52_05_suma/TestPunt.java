@@ -48,6 +48,14 @@ public class TestPunt {
         assertEquals(42, p.getY());
     }
     @Test
+    public void constructorEspecific() {
+        Punt p = new Punt(1, 2);
+        Assertions.assertAll(
+            () -> Assertions.assertEquals(1, p.getX()),
+            () -> Assertions.assertEquals(2, p.getY())
+        );
+    }
+    @Test
     public void testSuma() {
         Punt p1 = new Punt();
         Punt p2 = new Punt(1, 2);
