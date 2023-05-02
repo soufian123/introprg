@@ -14,6 +14,11 @@ public class TestPunt {
         // comprova que Punt() pugui ser cridat
         new Punt();
     }
+    @Test
+    public void constructorXY() {
+        // comprova que Punt() pugui ser cridat
+        new Punt(0,0);
+    }
 
     @Test
     public void constructorDefecteXZero() {
