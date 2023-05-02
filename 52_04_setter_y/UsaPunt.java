@@ -9,10 +9,10 @@
 public class UsaPunt {
     public static void main(String[] args){
         Punt punt = new Punt();
-        if (!UtilString.esEnter(args[0])){
+        if (!UtilString.esEnter(args[0]) || args[0]==null){
             args[0]="0";
         }
-        if (!UtilString.esEnter(args[2])){
+        if (!UtilString.esEnter(args[1]) || args[1]==null){
             args[1]="0";
         }
         
