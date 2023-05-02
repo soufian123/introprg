@@ -9,8 +9,8 @@
 public class UsaPunt {
     public static void main(String[] args){
         Punt punt = new Punt();
-        int x = // args[0] si hi és i és enter, o 0 altrament
-        int y = //  args[1] si hi és i és enter, o 0 altrament
+        int x = Integer.parseInt(args[0]); // args[0] si hi és i és enter, o 0 altrament
+        int y = Integer.parseInt(args[1]); //  args[1] si hi és i és enter, o 0 altrament
         punt.setX(x);
         punt.setY(y);
         System.out.printf("punt.getX() -> %d%n", punt.getX());
