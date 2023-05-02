@@ -15,7 +15,8 @@
         if (num<4) num=4;
         String[] xy = new String[4];
 
-        for (int a= 0; a<4; a++){
+        for (int a= 0; a<args.length; a++){
+            if(a==4) break;
             if (UtilString.esEnter(args[a])){
                 xy[a]=args[a];
             }
