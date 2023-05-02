@@ -24,7 +24,10 @@ class Punt{
     public void setX(int x){
         this.x = x;
     }
-    public void suma(Punt p) { x+=p.x; y+=p.y; }
+    public void suma(Punt p) { 
+        x+=p.x;
+        y+=p.y;
+    }
 }
 
 

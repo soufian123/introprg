@@ -7,22 +7,21 @@
 
  public class UsaPunt {
      public static void main(String[] args){
+        int x1 = 0;
+        int y1 = 0;
+        int x2 = 0;
+        int y2 = 0;
         if (args.length==4){
             for (int a= 0; a<args.length; a++){
                     if (!UtilString.esEnter(args[a])){
                         args[a]="0";
                     }
             }
-            int x1 = Integer.parseInt(args[0]);
-            int y1 = Integer.parseInt(args[1]);// args[1] si hi és i és enter, o 0 altrament
-            int x2 = Integer.parseInt(args[2]);// args[2] si hi és i és enter, o 0 altrament
-            int y2 = Integer.parseInt(args[3);// args[3] si hi és i és enter, o 0 altrament
+            x1 = Integer.parseInt(args[0]);
+            y1 = Integer.parseInt(args[1]);// args[1] si hi és i és enter, o 0 altrament
+            x2 = Integer.parseInt(args[2]);// args[2] si hi és i és enter, o 0 altrament
+            y2 = Integer.parseInt(args[3]);// args[3] si hi és i és enter, o 0 altrament
             
-        }else{
-            int x1 = 0;
-            int y1 = 0;// args[1] si hi és i és enter, o 0 altrament
-            int x2 = 0;// args[2] si hi és i és enter, o 0 altrament
-            int y2 = 0;// args[3] si hi és i és enter, o 0 altrament
         }
         Punt p1 = new Punt(x1, y1);
         Punt p2 = new Punt(x2, y2);
