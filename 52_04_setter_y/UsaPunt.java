@@ -9,6 +9,14 @@
 public class UsaPunt {
     public static void main(String[] args){
         Punt punt = new Punt();
+        if (!UtilString.esEnter(args[0])){
+            args[0]="0";
+        }
+        if (!UtilString.esEnter(args[2])){
+            args[1]="0";
+        }
+        
+        
         int x = Integer.parseInt(args[0]); // args[0] si hi és i és enter, o 0 altrament
         int y = Integer.parseInt(args[1]); //  args[1] si hi és i és enter, o 0 altrament
         punt.setX(x);
