@@ -11,18 +11,24 @@
         int y1 = 0;
         int x2 = 0;
         int y2 = 0;
-        if (args.length==4){
-            for (int a= 0; a<args.length; a++){
-                    if (!UtilString.esEnter(args[a])){
-                        args[a]="0";
-                    }
+        String[] xy = new String[4];
+
+        for (int a= 0; a<args.length; a++){
+            if (UtilString.esEnter(args[a])){
+                xy[a]=args[a];
             }
-            x1 = Integer.parseInt(args[0]);
-            y1 = Integer.parseInt(args[1]);// args[1] si hi és i és enter, o 0 altrament
-            x2 = Integer.parseInt(args[2]);// args[2] si hi és i és enter, o 0 altrament
-            y2 = Integer.parseInt(args[3]);// args[3] si hi és i és enter, o 0 altrament
-            
         }
+        for (int a= args.length; a<4; a++){
+            if (UtilString.esEnter(args[a])){
+                xy[a]="0";
+            }
+        }
+
+        x1 = Integer.parseInt(xy[0]);
+        y1 = Integer.parseInt(xy[1]);// args[1] si hi és i és enter, o 0 altrament
+        x2 = Integer.parseInt(xy[2]);// args[2] si hi és i és enter, o 0 altrament
+        y2 = Integer.parseInt(xy[3]);// args[3] si hi és i és enter, o 0 altrament
+            
         Punt p1 = new Punt(x1, y1);
         Punt p2 = new Punt(x2, y2);
         System.out.printf("p1: (%d, %d)%n", p1.getX(), p1.getY());
