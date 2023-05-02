@@ -19,6 +19,8 @@
             if(a==4) break;
             if (UtilString.esEnter(args[a])){
                 xy[a]=args[a];
+            }else{
+                xy[a]="0";
             }
         }
         for (int a= args.length; a<4; a++){
