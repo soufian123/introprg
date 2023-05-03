@@ -9,6 +9,11 @@ class Segment{
     private Punt p1 = new Punt();
     private Punt p2 = new Punt();
     
+    public Segment(){
+        setP1(p1);
+        setP2(p2);
+    }
+    
     public Segment(Punt p1, Punt p2){
         setP1(p1);
         setP2(p2);
@@ -23,7 +28,7 @@ class Segment{
         this.p2 = p2;
     }
     
-    public double Longitud (){
+    public double longitud (){
         return Math.sqrt(Math.pow(p1.getX()-p2.getX(), 2) + Math.pow(p1.getY()-p2.getY(), 2));
     }
     
