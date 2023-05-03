@@ -29,7 +29,7 @@ class Punt{
         y+=p.y;
     }
     public String toString(){
-        return ("Punt("+x+","+y+")");
+        return ("Punt("+x+", "+y+")");
     }
 }
 
