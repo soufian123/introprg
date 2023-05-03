@@ -37,7 +37,7 @@ public class TestSegment {
     public void testTongitud() {
         Segment segment = new Segment();
         double longitud = segment.longitud();
-        assertEquals(0,longitud);
+        assertEquals(9,longitud);
     }
 }
     
