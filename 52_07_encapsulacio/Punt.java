@@ -7,8 +7,6 @@
 
 class Punt{
     private int[] coord= new int[2];
-    private int x=coord[0];
-    private int y=coord[1];
     
     public Punt(){}
     
@@ -16,21 +14,21 @@ class Punt{
         setX(x);
         setY(y);
     }
-    public int getX() { return x; }
-    public int getY() { return y; }
+    public int getX() { return coord[0]; }
+    public int getY() { return coord[1]; }
     
     public void setY(int y){
-        this.y=y;
+        this.coord[1]=y;
     }
     public void setX(int x){
-        this.x = x;
+        this.coord[0] = x;
     }
     public void suma(Punt p) { 
-        x+=p.x;
-        y+=p.y;
+        coord[0]+=p.coord[0];
+        coord[1]+=p.coord[1];
     }
     public String toString(){
-        return ("Punt("+x+", "+y+")");
+        return ("Punt("+coord[0]+", "+coord[1]+")");
     }
 }
 
