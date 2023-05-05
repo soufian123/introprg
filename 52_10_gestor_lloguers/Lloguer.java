@@ -14,7 +14,7 @@ public class Lloguer {
     private Vehicle vehicle;
     
     public Lloguer(Vehicle vehicle,int dies) {
-        this.dies = dies;
+        setDies(dies);
         setVehicle(vehicle);
     }
 
