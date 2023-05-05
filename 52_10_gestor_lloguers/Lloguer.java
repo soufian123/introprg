@@ -11,7 +11,7 @@
 import java.util.*;
 public class Lloguer {
     private int dies;
-    private Vehicle vehicle;;
+    private Vehicle vehicle;
     
     public Lloguer(Vehicle vehicle,int dies) {
         this.dies = dies;
