@@ -11,7 +11,7 @@
 import java.util.*;
 public class Lloguer {
     private int dies;
-    private Vehicle vehicle= new Vehicle("ddasf","sad",Vehicle.GENERAL);
+    private Vehicle vehicle= new Vehicle("ddasf","sad",Vehicle.BASIC);
     
     public Lloguer(Vehicle vehicle,int dies) {
         setDies(dies);
