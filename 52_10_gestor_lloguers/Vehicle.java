@@ -19,7 +19,7 @@ public class Vehicle {
     private int categoria;
     
 
-    public Vehicle(String model, String marca, int categoria) {
+    public Vehicle(String marca, String model, int categoria) {
         this.model = model;
         this.marca = marca;
         this.categoria = categoria;
@@ -30,7 +30,7 @@ public class Vehicle {
     public String getModel()     { return model; }
     public void setModel(String model) { this.model = model; }
     
-    public String getMarca()     { return model; }
+    public String getMarca()     { return marca; }
     public void setMarca(String marca) { this.marca = marca; }
     
     public int getCategoria()     { return categoria; }
