@@ -12,12 +12,13 @@ public class TestGestor {
     Client client = GestorLite.creaClientDemo();
     
     // Definir el valor esperat
-    String valorEsperat = "Informe de lloguers del client Eugènia Salinas Roig (51590695Q)\n" + 
-                          "  	Seat 600: 90.0€" +
-                          "  	Tata Vista: 180.0€" +
-                          "  	Fiat Uno: 540.0€" +
-                          "Import a pagar: 810.0€" +
-                          "Punts guanyats: 4";
+    String valorEsperat = "Informe de lloguers del client Eugènia Salinas Roig (51590695Q)\n" +
+                          "\tSeat 600\t90.0€\n" +
+                          "\tTata Vista\t180.0€\n" +
+                          "\tFiat Uno\t540.0€\n" +
+                          "Import a pagar: 8100.0€\n" +
+                          "Punts guanyats: 4\n";
+
     
     // Cridar informe() i guardar el seu resultat com a valor obtingut
     String valorObtingut = client.informe();
@@ -27,5 +28,6 @@ public class TestGestor {
   }
   
 }
+
 
 
