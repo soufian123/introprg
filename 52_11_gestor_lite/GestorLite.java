@@ -16,18 +16,25 @@ class GestorLite{
         mostraClient(demo);
     }
     public static Client creaClientDemo(){
-        return new Client("51590695Q","Eugènia Salinas Roig","93614214242");
+        Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");     
+        client.addLloguers(new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC),2));
+        client.addLloguers(new Lloguer(new Vehicle("Tata","Vista",Vehicle.BASIC),5));
+        client.addLloguers(new Lloguer(new Vehicle("Fiat","Uno",Vehicle.BASIC),3));
+        return client;
     }
     
     public static void mostraClient(Client client){
         System.out.println("Client: " + client.getNom());
         System.out.println("\t" + client.getNif());
         System.out.println("\t" + client.getTelefon());
+        System.out.println("Lloguers: " + client.getLloguers().size());
+        for (int a=0; a<client.getLloguers().size(); a++){
+            
+            System.out.println("\t"+(a+1)+". vehicle: " + client.getLloguers().get(a).getVehicle().getMarca()+ " "+ client.getLloguers().get(a).getVehicle().getModel());
+            System.out.println("\t   dies llogats: " + client.getLloguers().get(a).getDies());
+        }
     }
-    
 
-    
-    
 }
 
 

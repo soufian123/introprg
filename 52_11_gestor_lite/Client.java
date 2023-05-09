@@ -24,6 +24,11 @@ public class Client {
     public String getNom()     { return nom; }
     public String getTelefon() { return telefon; }
     public ArrayList<Lloguer> getLloguers() { return lloguers; }
+    public void addLloguers(Lloguer lloguer) { 
+        lloguers.add(lloguer);
+    }
+
+    
     public void setNif(String nif) { this.nif = nif; }
     public void setNom(String nom) { this.nom = nom; }
     public void setTelefon(String telefon) { this.telefon = telefon; }
