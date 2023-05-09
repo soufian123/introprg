@@ -17,8 +17,8 @@ class GestorLite{
     }
     public static Client creaClientDemo(){
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");     
-        client.addLloguers(new Lloguer(new Vehicle("Seat","600",Vehicle.LUXE),2));
-        client.addLloguers(new Lloguer(new Vehicle("Tata","Vista",Vehicle.BASIC),5));
+        client.addLloguers(new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC),2));
+        client.addLloguers(new Lloguer(new Vehicle("Tata","Vista",Vehicle.GENERAL),5));
         client.addLloguers(new Lloguer(new Vehicle("Fiat","Uno",Vehicle.LUXE),3));
         return client;
     }
