@@ -10,10 +10,14 @@
 import java.util.*;
 public class Vehicle {
     
-    public static int BASIC=1;
-    public static int GENERAL=2;
-    public static int LUXE=3;
-    
+    public static final int BASIC = 1;
+    public static final int GENERAL = 2;
+    public static final int LUXE = 3;
+    public boolean gps;
+    public boolean getGPS() {
+         return this.gps;
+    }
+
     private String model;
     private String marca;
     private int categoria;
