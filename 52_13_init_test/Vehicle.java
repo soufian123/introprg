@@ -13,10 +13,7 @@ public class Vehicle {
     public static final int BASIC = 1;
     public static final int GENERAL = 2;
     public static final int LUXE = 3;
-    public boolean gps;
-    public boolean getGPS() {
-         return this.gps;
-    }
+
 
     private String model;
     private String marca;

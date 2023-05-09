@@ -1,4 +1,4 @@
-
+/*es una classe que el que fa es provar el meu gestor lite per veure si va be i fer els testos per que els pasi*/
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,10 +13,10 @@ public class TestGestor {
     
     // Definir el valor esperat
     String valorEsperat = "Informe de lloguers del client Eugènia Salinas Roig (51590695Q)\n" + 
-                          "\tSeat 600\t2.0\n" +
-                          "\tTata Vista\t5.0\n" +
-                          "\tFiat Uno\t3.0\n" +
-                          "Import a pagar: 195.0€\n" +
+                          "\tSeat 600\t90.0€\n" +
+                          "\tTata Vista\t180.0€\n" +
+                          "\tFiat Uno\t540.0€\n" +
+                          "Import a pagar: 810.0€\n" +
                           "Punts guanyats: 4\n";
     
     // Cridar informe() i guardar el seu resultat com a valor obtingut
