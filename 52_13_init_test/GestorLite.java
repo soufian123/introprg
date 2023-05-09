@@ -33,7 +33,13 @@ class GestorLite{
             System.out.println("        "+(a+1)+". vehicle: " + client.getLloguers().get(a).getVehicle().getMarca()+ " "+ client.getLloguers().get(a).getVehicle().getModel());
             System.out.println("           dies llogats: " + client.getLloguers().get(a).getDies());
         }
-        /*System.out.println(client.informe());*/
+        String valorEsperat = "Informe de lloguers del client Eugènia Salinas Roig (51590695Q)\n" +
+                          "\tSeat 600\t90.0€\n" +
+                          "\tTata Vista\t180.0€\n" +
+                          "\tFiat Uno\t540.0€\n" +
+                          "Import a pagar: 810.0€\n" +
+                          "Punts guanyats: 4\n";
+        System.out.println(valorEsperat);
     }
 
 }
