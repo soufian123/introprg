@@ -30,8 +30,8 @@ class GestorLite{
         System.out.println("Lloguers: " + client.getLloguers().size());
         for (int a=0; a<client.getLloguers().size(); a++){
             
-            System.out.println("\t"+(a+1)+". vehicle: " + client.getLloguers().get(a).getVehicle().getMarca()+ " "+ client.getLloguers().get(a).getVehicle().getModel());
-            System.out.println("\t   dies llogats: " + client.getLloguers().get(a).getDies());
+            System.out.println("        "+(a+1)+". vehicle: " + client.getLloguers().get(a).getVehicle().getMarca()+ " "+ client.getLloguers().get(a).getVehicle().getModel());
+            System.out.println("  	   dies llogats: " + client.getLloguers().get(a).getDies());
         }
     }
 
