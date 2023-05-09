@@ -31,7 +31,7 @@ public class TestGestor {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");     
         client.addLloguers(new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC),1));
         
-        assertEquals(client.getLloguers().get(1), new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC),1));
+        assertEquals(client.getLloguers().get(0), new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC),1));
     }
 }
 
