@@ -25,7 +25,7 @@ class GestorLite{
     
     public static void mostraClient(Client client){
         System.out.println("Client: " + client.getNom());
-        System.out.println("        " + client.getNif());
+        System.out.println("\t" + client.getNif());
         System.out.println("        " + client.getTelefon());
         System.out.println("Lloguers: " + client.getLloguers().size());
         for (int a=0; a<client.getLloguers().size(); a++){
