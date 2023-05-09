@@ -33,7 +33,7 @@ class GestorLite{
             System.out.println("        "+(a+1)+". vehicle: " + client.getLloguers().get(a).getVehicle().getMarca()+ " "+ client.getLloguers().get(a).getVehicle().getModel());
             System.out.println("           dies llogats: " + client.getLloguers().get(a).getDies());
         }
-        System.out.println(client.informe());
+        /*System.out.println(client.informe());*/
     }
 
 }
