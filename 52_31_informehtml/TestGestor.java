@@ -33,19 +33,17 @@ public class TestGestor {
         Client client = GestorLite.creaClientDemo();
 
         // Definir el valor esperat
-        String valorEsperat = "<p>Informe de lloguers del client <em>Ken Robinson</em> (<strong>43092837A</strong>)</p>" +
-                    "\n<table>" +
-                    "\n  <tr>" +
-                    "\n    <td><strong>Marca</strong></td>" + 
-                    "\n    <td><strong>Model</strong></td>" + 
-                    "\n    <td><strong>Import</strong></td>" + 
-                    "\n  </tr>" + 
-                    "\n  <tr><td>Tata</td><td>Vista</td><td>90.0€</td></tr>" + 
-                    "\n  <tr><td>Wolswagen</td><td>Passat</td><td>270.0€</td></tr>" + 
-                    "\n  <tr><td>Mercedes</td><td>SLK 2.0</td><td>360.0€</td></tr>" + 
-                    "\n</table>" + 
-                    "\n<p>Import a pagar: <em>720.0€</em></p>" + 
-                    "\n<p>Punts guanyats: <em>4</em></p>";
+        String valorEsperat =  "<p>Informe de lloguers del client <em>Eugènia Salinas Roig</em> (<strong>51590695Q</strong>)</p>\n"
+    +"<table>\n"
+    +"  <tr>\n"
+    +"    <td><strong>Marca</strong></td>\n"
+    +"    <td><strong>Model</strong></td>\n"
+    +"    <td><strong>Import</strong></td>\n"
+    +"  </tr>\n"
+    +"  <tr><td>Seat</td><td>600</td><td>90.0€</td></tr>\n"
+    +"  <tr><td>Tata</td><td>Vista</td><td>180.0€</td></tr>\n"
+    + "  <tr><td>Fiat</td><td>Uno</td><td>540.0€</td></tr>\n"
+    +"</table>\n";
 
 
         // Cridar informe() i guardar el seu resultat com a valor obtingut
