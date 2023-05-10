@@ -44,7 +44,7 @@ public class TestGestor {
     +"  <tr><td>Tata</td><td>Vista</td><td>180.0€</td></tr>\n"
     + "  <tr><td>Fiat</td><td>Uno</td><td>540.0€</td></tr>\n"
     +"</table>\n"
-    +"<p>Import a pagar: <em>720.0€</em></p>\n"
+    +"<p>Import a pagar: <em>810.0€</em></p>\n"
     +"<p>Punts guanyats: <em>4</em></p>";
 
 
