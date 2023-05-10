@@ -134,7 +134,7 @@ public class Client {
         for (Lloguer lloguer: lloguers) {
 
             // composa els resultats d'aquest lloguer
-            resultat += "\t  <tr><td>" +
+            resultat += "  <tr><td>" +
                 lloguer.getVehicle().getMarca() +
                 "</td><td>" +
                 lloguer.getVehicle().getModel() + "</td><td>" +
