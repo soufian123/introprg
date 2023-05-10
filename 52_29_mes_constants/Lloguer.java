@@ -20,23 +20,29 @@ public class Lloguer {
     
     public Lloguer() {
     }
+    private static final double DIES_BASIC = 3;
+    private static final double DIES_GENERAL = 2;
+    private static final double MULTIPLE_BASIC = 1.5;
+    private static final double QUANTITAT_GENERAL = 4;
+    private static final double MULTIPLE_GENERAL = 2.5;
+    private static final double MULTIPLE_LUXE = 6;
     public static double quantitat(Lloguer lloguer){
         double quantitat = 0;
         switch (lloguer.getVehicle().getCategoria()) {
             case Vehicle.BASIC:
-                quantitat += 3;
-                if (lloguer.getDies() > 3) {
-                    quantitat += (lloguer.getDies() - 3) * 1.5;
+                quantitat += DIES_BASIC;
+                if (lloguer.getDies() > DIES_BASIC) {
+                    quantitat += (lloguer.getDies() - DIES_BASIC) * MULTIPLE_BASIC;
                 }
                 break;
             case Vehicle.GENERAL:
-                quantitat += 4;
-                if (lloguer.getDies() > 2) {
-                    quantitat += (lloguer.getDies() - 2) * 2.5;
+                quantitat += QUANTITAT_GENERAL;
+                if (lloguer.getDies() > DIES_GENERAL) {
+                    quantitat += (lloguer.getDies() - DIES_GENERAL) * MULTIPLE_GENERAL;
                 }
                 break;
             case Vehicle.LUXE:
-                quantitat += lloguer.getDies() * 6;
+                quantitat += lloguer.getDies() * MULTIPLE_LUXE;
                 break;
         }
         
