@@ -99,47 +99,48 @@ public class TestGestor {
 
         assertEquals(lloguer, client.getLloguers().get(0));
     }
-    /*dsfkjdsahfljksdhflkjdsahflkdsajhfsaldkjhflkdsajfhdsalkjh*/
+    /*rgsfdughfdsilkhgslfdkjghfdslkjh*/
     @Test
     public void testVehicleBasicDosVehicles() {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
-        Lloguer lloguer = new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 1);
-        client.addLloguers(lloguer);
-        lloguer = new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 1);
-        client.addLloguers(lloguer);
-        assertEquals(lloguer, client.getLloguers().get(0));
-        assertEquals(lloguer, client.getLloguers().get(1));
+        Lloguer lloguer1 = new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 1);
+        client.addLloguers(lloguer1);
+        Lloguer lloguer2 = new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 1);
+        client.addLloguers(lloguer2);
+        assertEquals(lloguer1, client.getLloguers().get(0));
+        assertEquals(lloguer2, client.getLloguers().get(1));
     }
     
     @Test
     public void testVehicleBasicDosVehiclesDos() {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
-        Lloguer lloguer = new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 2);
-        client.addLloguers(lloguer);
-        lloguer = new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 2);
-        client.addLloguers(lloguer);
-        assertEquals(lloguer, client.getLloguers().get(0));
-        assertEquals(lloguer, client.getLloguers().get(1));
+        Lloguer lloguer1 = new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 2);
+        client.addLloguers(lloguer1);
+        Lloguer lloguer2 = new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 2);
+        client.addLloguers(lloguer2);
+        assertEquals(lloguer1, client.getLloguers().get(0));
+        assertEquals(lloguer2, client.getLloguers().get(1));
     }
     @Test
     public void testVehicleBasicDosVehiclesTres() {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
-        Lloguer lloguer = new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 3);
-        client.addLloguers(lloguer);
-        lloguer = new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 3);
-        client.addLloguers(lloguer);
-        assertEquals(lloguer, client.getLloguers().get(0));
-        assertEquals(lloguer, client.getLloguers().get(1));
+        Lloguer lloguer1 = new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 3);
+        client.addLloguers(lloguer1);
+        Lloguer lloguer2 = new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 3);
+        client.addLloguers(lloguer2);
+        assertEquals(lloguer1, client.getLloguers().get(0));
+        assertEquals(lloguer2, client.getLloguers().get(1));
     }
     
     @Test
     public void testVehicleBasicDosVehiclesCinco() {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
-        Lloguer lloguer = new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 5);
-        client.addLloguers(lloguer);
-        client.addLloguers(new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 5));
-        assertEquals(lloguer, client.getLloguers().get(0));
-        assertEquals(lloguer, client.getLloguers().get(1));
+        Lloguer lloguer1 = new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 5);
+        client.addLloguers(lloguer1);
+        Lloguer lloguer2 = new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 5);
+        client.addLloguers(lloguer2);
+        assertEquals(lloguer1, client.getLloguers().get(0));
+        assertEquals(lloguer2, client.getLloguers().get(1));
     }
 
 }
