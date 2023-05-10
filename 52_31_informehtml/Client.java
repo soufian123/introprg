@@ -125,9 +125,8 @@ public class Client {
 
     }
     public String composaCapsaleraHTML(){
-        return "<p>Informe de lloguers del client <em>" +
-            getNom() +
-            "</em> (<strong>" + getNif() + "</strong>)</p>\n";
+        String test= ("<p>Informe de lloguers del client <em>" + getNom() +"</em> (<strong>" + getNif() + "</strong>)</p>\n");
+        return test;
     }
     public String composaDetallHTML(){
         String resultat="<table>\n  <tr>\n    <td><strong>Marca</strong></td>\n    <td><strong>Model</strong></td>\n    <td><strong>Import</strong></td>\n  </tr>\n";
