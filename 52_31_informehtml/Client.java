@@ -144,6 +144,6 @@ public class Client {
     }
     public String composaPeuHTML(){
         return "<p>Import a pagar: <em>" + importTotal() + "€</em></p>\n" +
-            "<p>Punts guanyats: <em>" + bonificacionsTotal() + "</em></p>\n";
+            "<p>Punts guanyats: <em>" + bonificacionsTotal() + "</em></p>";
     }
 }
