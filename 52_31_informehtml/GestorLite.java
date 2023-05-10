@@ -50,7 +50,9 @@ class GestorLite{
     +"  <tr><td>Seat</td><td>600</td><td>90.0€</td></tr>\n"
     +"  <tr><td>Tata</td><td>Vista</td><td>180.0€</td></tr>\n"
     + "  <tr><td>Fiat</td><td>Uno</td><td>540.0€</td></tr>\n"
-    +"</table>\n";
+    +"</table>\n"
+    +"<p>Import a pagar: <em>720.0€</em></p>\n"
+    +"<p>Punts guanyats: <em>4</em></p>";
             System.out.println(valorEsperat);
     }
 
