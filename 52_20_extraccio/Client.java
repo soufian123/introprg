@@ -72,6 +72,20 @@ public class Client {
         return resultat;
     }
     */
+    
+    public int bonificacionsDeLloguer(Lloguer lloguer){
+        int bonificacions=0;
+        // afegeix lloguers freqüents
+        bonificacions ++;
+
+        // afegeix bonificació per dos dies de lloguer de Luxe
+        if (lloguer.getVehicle().getCategoria() == Vehicle.LUXE &&
+                lloguer.getDies()>1 ) {
+            bonificacions ++;
+        }
+        return bonificacions;
+    }
+    
     public String informe() {
         double total = 0;
         int bonificacions = 0;
