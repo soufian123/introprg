@@ -72,8 +72,13 @@ public class Client {
         return resultat;
     }
     */
+
     public double importTotal(){
-        return lloguer.quantitat(lloguer) * 30;
+        int total=0;
+        for (Lloguer lloguer: lloguers) {
+            total += lloguer.quantitat(lloguer) * 30;
+        }
+        return total;
     }
 
     public String informe() {
