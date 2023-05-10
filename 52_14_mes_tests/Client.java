@@ -9,15 +9,17 @@
 
 import java.util.ArrayList;
     public class Client {
-        private String nif;
-        private String nom;
-        private String telefon;
+        private String nif="null";
+        private String nom="null";
+        private String telefon="null";
         private ArrayList<Lloguer> lloguers;
         public Client(String nif, String nom, String telefon) {
             this.nif = nif;
             this.nom = nom;
             this.telefon = telefon;
             this.lloguers = new ArrayList<Lloguer>();
+        }
+        public Client() {
         }
 
         public String getNif()     { return nif; }

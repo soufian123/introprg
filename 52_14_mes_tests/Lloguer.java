@@ -10,12 +10,15 @@
 
 import java.util.*;
 public class Lloguer {
-    private int dies;
-    private Vehicle vehicle= new Vehicle("ddasf","sad",Vehicle.LUXE);
+    private int dies=0;
+    private Vehicle vehicle= new Vehicle("cap","vehicle",Vehicle.LUXE);
     
     public Lloguer(Vehicle vehicle,int dies) {
         setDies(dies);
         setVehicle(vehicle);
+    }
+    
+    public Lloguer() {
     }
 
     public int getDies()     { return dies; }

@@ -15,11 +15,14 @@ public class Vehicle {
     public static final int LUXE = 3;
 
 
-    private String model;
-    private String marca;
-    private int categoria;
+    private String model="null";
+    private String marca="null";
+    private int categoria=1;
     
 
+    public Vehicle() {
+        
+    }
     public Vehicle(String marca, String model, int categoria) {
         this.model = model;
         this.marca = marca;

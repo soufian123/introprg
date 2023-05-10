@@ -26,6 +26,45 @@ public class TestGestor {
         // Comparar el valor esperat amb el valor obtingut
         assertEquals(valorEsperat, valorObtingut);
     }
+    
+    @Test
+    public void capLloguer(){
+        new Lloguer();
+    } 
+    
+    
+    @Test
+    public void constructor() {
+        new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 1);
+    }
+    
+    
+    @Test
+    public void capClient(){
+        new Client();
+    } 
+    
+    
+    @Test
+    public void constructorClient() {
+        new Client("51590695Q","Eugènia Salinas Roig","93614214242");
+    }
+    
+    @Test
+    public void capVehicle(){
+        new Vehicle();
+    } 
+    
+    
+    @Test
+    public void constructorVehicle() {
+        new Vehicle("Seat","600",Vehicle.BASIC);
+    }
+    
+    
+    
+    
+    
     @Test
     public void testVehicleBasicUn() {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
