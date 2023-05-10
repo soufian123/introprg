@@ -140,7 +140,7 @@ public class Client {
                 lloguer.getVehicle().getModel() + "</td><td>" +
                 ( lloguer.sumaQuantitats(lloguer) * EUROS_PER_UNITAT_DE_COST) + "€</td></tr>" + "\n";
         }
-        resultat += "</table>";
+        resultat += "</table>\n";
         return resultat;
     }
     public String composaPeuHTML(){
