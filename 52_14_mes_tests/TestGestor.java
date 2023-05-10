@@ -99,7 +99,7 @@ public class TestGestor {
 
         assertEquals(lloguer, client.getLloguers().get(0));
     }
-    /*
+    /*dsfkjdsahfljksdhflkjdsahflkdsajhfsaldkjhflkdsajfhdsalkjh*/
     @Test
     public void testVehicleBasicDosVehicles() {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
@@ -137,12 +137,11 @@ public class TestGestor {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
         Lloguer lloguer = new Lloguer(new Vehicle("Seat","600",Vehicle.BASIC), 5);
         client.addLloguers(lloguer);
-        lloguer = new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 5);
-        client.addLloguers(lloguer);
+        client.addLloguers(new Lloguer(new Vehicle("Seattt","60000",Vehicle.BASIC), 5));
         assertEquals(lloguer, client.getLloguers().get(0));
         assertEquals(lloguer, client.getLloguers().get(1));
     }
-*/
+
 }
 
 
