@@ -20,7 +20,7 @@ public class Lloguer {
     
     public Lloguer() {
     }
-    public double quantitatPerLloguer(Lloguer lloguer){
+    public double quantitat(Lloguer lloguer){
             double quantitat = 0;
             switch (lloguer.getVehicle().getCategoria()) {
                 case Vehicle.BASIC:
