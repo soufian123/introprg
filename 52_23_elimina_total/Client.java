@@ -74,7 +74,7 @@ public class Client {
     */
 
     public double importTotal(){
-        int total=0;
+        double total=0;
         for (Lloguer lloguer: lloguers) {
             total += lloguer.quantitat(lloguer) * 30;
         }
