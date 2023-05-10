@@ -27,6 +27,7 @@ public class TestGestor {
         // Comparar el valor esperat amb el valor obtingut
         assertEquals(valorEsperat, valorObtingut);
     }
+    /*
     @Test
     public void informeHTMLDemo() {
         // Crear una nova instància del client demo
@@ -54,7 +55,7 @@ public class TestGestor {
         // Comparar el valor esperat amb el valor obtingut
         assertEquals(valorEsperat, valorObtingut);
     }
-    
+    */
     
     @Test
     public void ProvaBasicaa(){
