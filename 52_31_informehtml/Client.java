@@ -130,7 +130,7 @@ public class Client {
             "</em> (<strong>" + getNif() + "</strong>)</p>\n";
     }
     public String composaDetallHTML(){
-        String resultat="<table>\n  <tr>\n    <td><strong>Marca</strong></td>\n    <td><strong>Model</strong></td>\n    <td><strong>Import</strong></td>\n  </tr>";
+        String resultat="<table>\n  <tr>\n    <td><strong>Marca</strong></td>\n    <td><strong>Model</strong></td>\n    <td><strong>Import</strong></td>\n";
         for (Lloguer lloguer: lloguers) {
 
             // composa els resultats d'aquest lloguer
