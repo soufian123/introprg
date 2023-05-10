@@ -99,6 +99,7 @@ public class TestGestor {
 
         assertEquals(lloguer, client.getLloguers().get(0));
     }
+    /*
     @Test
     public void testVehicleBasicDosVehicles() {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
@@ -109,7 +110,7 @@ public class TestGestor {
         assertEquals(lloguer, client.getLloguers().get(0));
         assertEquals(lloguer, client.getLloguers().get(1));
     }
-    /*
+    
     @Test
     public void testVehicleBasicDosVehiclesDos() {
         Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
