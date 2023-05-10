@@ -28,6 +28,17 @@ public class TestGestor {
         assertEquals(valorEsperat, valorObtingut);
     }
     
+    
+    @Test
+    public void ProvaBasicaa(){
+        Client client = new Client("12341234A", "Eugènia Salinas Roig", "93614214242");
+        Vehicle vehicle = new Vehicle("Seat", "600", Vehicle.BASIC);
+        Lloguer lloguer = new Lloguer(vehicle, 5);
+        client.getLloguers().add(lloguer);
+        assertEquals(lloguer, client.getLloguers().get(0));
+    }
+    
+    
     @Test
     public void capLloguer(){
         new Lloguer();
