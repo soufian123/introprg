@@ -20,17 +20,19 @@ public class Lloguer {
     
     public Lloguer() {
     }
+    private static final double QUANTITAT_BASIC = 3;
     private static final double DIES_BASIC = 3;
-    private static final double DIES_GENERAL = 2;
     private static final double MULTIPLE_BASIC = 1.5;
     private static final double QUANTITAT_GENERAL = 4;
+    private static final double DIES_GENERAL = 2;
     private static final double MULTIPLE_GENERAL = 2.5;
     private static final double MULTIPLE_LUXE = 6;
+     
     public double quantitat(){
         double quantitat = 0;
         switch (getVehicle().getCategoria()) {
             case Vehicle.BASIC:
-                quantitat += DIES_BASIC;
+                quantitat += QUANTITAT_BASIC;
                 if (getDies() > DIES_BASIC) {
                     quantitat += (getDies() - DIES_BASIC) * MULTIPLE_BASIC;
                 }

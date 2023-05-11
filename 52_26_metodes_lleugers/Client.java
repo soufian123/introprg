@@ -73,14 +73,14 @@ public class Client {
     }
     */
 
-    public double importTotal(){
+    private double importTotal(){
         double total=0;
         for (Lloguer lloguer: lloguers) {
             total += lloguer.quantitat() * 30;
         }
         return total;
     }
-    public int bonificacionsTotal(){
+    private double bonificacionsTotal(){
         int bonificacions=0;
         for (Lloguer lloguer: lloguers) {
             bonificacions += lloguer.bonificacions();
