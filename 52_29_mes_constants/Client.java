@@ -84,16 +84,16 @@ public class Client {
     public int bonificacionsTotal(){
         int bonificacions=0;
         for (Lloguer lloguer: lloguers) {
-            bonificacions += lloguer.bonificacionsDeLloguer();
+            bonificacions += lloguer.bonificacions();
         }
         return bonificacions;
     }
-    public String composaCapsalera(){
+    private String composaCapsalera(){
         return "Informe de lloguers del client " +
             getNom() +
             " (" + getNif() + ")\n";
     }
-    public String composaDetall(){
+    private String composaDetall(){
         String resultat="";
         for (Lloguer lloguer: lloguers) {
 
@@ -106,7 +106,7 @@ public class Client {
         }
         return resultat;
     }
-    public String composaPeu(){
+    private String composaPeu(){
         return "Import a pagar: " + importTotal() + "€\n" +
             "Punts guanyats: " + bonificacionsTotal() + "\n";
     }
