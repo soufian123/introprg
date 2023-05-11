@@ -20,36 +20,36 @@ public class Lloguer {
     
     public Lloguer() {
     }
-    public double quantitat(Lloguer lloguer){
+    public double quantitat(){
         double quantitat = 0;
-        switch (lloguer.getVehicle().getCategoria()) {
+        switch (getVehicle().getCategoria()) {
             case Vehicle.BASIC:
                 quantitat += 3;
-                if (lloguer.getDies() > 3) {
-                    quantitat += (lloguer.getDies() - 3) * 1.5;
+                if (getDies() > 3) {
+                    quantitat += (getDies() - 3) * 1.5;
                 }
                 break;
             case Vehicle.GENERAL:
                 quantitat += 4;
-                if (lloguer.getDies() > 2) {
-                    quantitat += (lloguer.getDies() - 2) * 2.5;
+                if (getDies() > 2) {
+                    quantitat += (getDies() - 2) * 2.5;
                 }
                 break;
             case Vehicle.LUXE:
-                quantitat += lloguer.getDies() * 6;
+                quantitat += getDies() * 6;
                 break;
         }
         
         return quantitat;
     }
-    public static int bonificacionsDeLloguer(Lloguer lloguer){
+    public int bonificacionsDeLloguer(){
         int bonificacions=0;
         // afegeix lloguers freqüents
         bonificacions ++;
 
         // afegeix bonificació per dos dies de lloguer de Luxe
-        if (lloguer.getVehicle().getCategoria() == Vehicle.LUXE &&
-                lloguer.getDies()>1 ) {
+        if (getVehicle().getCategoria() == Vehicle.LUXE &&
+                getDies()>1 ) {
             bonificacions ++;
         }
         return bonificacions;
