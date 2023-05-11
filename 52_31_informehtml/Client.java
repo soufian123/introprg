@@ -84,16 +84,16 @@ public class Client {
     public int bonificacionsTotal(){
         int bonificacions=0;
         for (Lloguer lloguer: lloguers) {
-            bonificacions += lloguer.bonificacionsDeLloguer();
+            bonificacions += lloguer.bonificacions();
         }
         return bonificacions;
     }
-    public String composaCapsalera(){
+    private String composaCapsalera(){
         return "Informe de lloguers del client " +
             getNom() +
             " (" + getNif() + ")\n";
     }
-    public String composaDetall(){
+    private String composaDetall(){
         String resultat="";
         for (Lloguer lloguer: lloguers) {
 
@@ -106,7 +106,7 @@ public class Client {
         }
         return resultat;
     }
-    public String composaPeu(){
+    private String composaPeu(){
         return "Import a pagar: " + importTotal() + "€\n" +
             "Punts guanyats: " + bonificacionsTotal() + "\n";
     }
@@ -124,11 +124,11 @@ public class Client {
            composaPeuHTML();
 
     }
-    public String composaCapsaleraHTML(){
+    private String composaCapsaleraHTML(){
         String test= "<p>Informe de lloguers del client <em>" + getNom() +"</em> (<strong>" + getNif() + "</strong>)</p>\n";
         return test;
     }
-    public String composaDetallHTML(){
+    private String composaDetallHTML(){
         String resultat="<table>\n  <tr>\n    <td><strong>Marca</strong></td>\n    <td><strong>Model</strong></td>\n    <td><strong>Import</strong></td>\n  </tr>\n";
         for (Lloguer lloguer: lloguers) {
 
@@ -142,7 +142,7 @@ public class Client {
         resultat += "</table>\n";
         return resultat;
     }
-    public String composaPeuHTML(){
+    private String composaPeuHTML(){
         return "<p>Import a pagar: <em>" + importTotal() + "€</em></p>\n" +
             "<p>Punts guanyats: <em>" + bonificacionsTotal() + "</em></p>";
     }
