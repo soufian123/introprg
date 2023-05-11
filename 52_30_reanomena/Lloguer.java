@@ -48,7 +48,7 @@ public class Lloguer {
         
         return quantitatTotal;
     }
-    public int bonificacionsDeLloguer(){
+    public int bonificacions(){
         int bonificacions=0;
         // afegeix lloguers freqüents
         bonificacions ++;
