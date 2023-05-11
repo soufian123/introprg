@@ -62,8 +62,8 @@ public class Client {
                 lloguer.getVehicle().getMarca() +
                 " " +
                 lloguer.getVehicle().getModel() + ": " +
-                (lloguer.quantitat(lloguer) * 30) + "€" + "\n";
-            total += lloguer.quantitat(lloguer) * 30;
+                (lloguer.quantitat() * 30) + "€" + "\n";
+            total += lloguer.quantitat() * 30;
         }
 
         // afegeix informació final
