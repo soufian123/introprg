@@ -20,12 +20,12 @@ public class Lloguer {
     
     public Lloguer() {
     }
-    private static final double DIES_BASIC = 3;
-    private static final double DIES_GENERAL = 2;
+    private static final int DIES_BASIC = 3;
+    private static final int DIES_GENERAL = 2;
     private static final double MULTIPLE_BASIC = 1.5;
-    private static final double QUANTITAT_GENERAL = 4;
+    private static final int QUANTITAT_GENERAL = 4;
     private static final double MULTIPLE_GENERAL = 2.5;
-    private static final double MULTIPLE_LUXE = 6;
+    private static final int MULTIPLE_LUXE = 6;
     public double sumaQuantitats(){
         double quantitatTotal = 0;
         switch (getVehicle().getCategoria()) {
