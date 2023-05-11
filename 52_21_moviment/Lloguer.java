@@ -42,14 +42,13 @@ public class Lloguer {
         
         return quantitat;
     }
-    public static int bonificacionsDeLloguer(){
+    public int bonificacionsDeLloguer(){
         int bonificacions=0;
         // afegeix lloguers freqüents
         bonificacions ++;
 
         // afegeix bonificació per dos dies de lloguer de Luxe
-        if (getVehicle().getCategoria() == Vehicle.LUXE &&
-                getDies()>1 ) {
+        if (getVehicle().getCategoria() == Vehicle.LUXE && getDies()>1 ) {
             bonificacions ++;
         }
         return bonificacions;
