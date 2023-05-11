@@ -76,14 +76,14 @@ public class Client {
     public double importTotal(){
         double total=0;
         for (Lloguer lloguer: lloguers) {
-            total += lloguer.quantitat(lloguer) * 30;
+            total += lloguer.quantitat() * 30;
         }
         return total;
     }
     public int bonificacionsTotal(){
         int bonificacions=0;
         for (Lloguer lloguer: lloguers) {
-            bonificacions += lloguer.bonificacionsDeLloguer(lloguer);
+            bonificacions += lloguer.bonificacionsDeLloguer();
         }
         return bonificacions;
     }
@@ -101,7 +101,7 @@ public class Client {
                 lloguer.getVehicle().getMarca() +
                 " " +
                 lloguer.getVehicle().getModel() + ": " +
-                ( lloguer.quantitat(lloguer) * 30) + "€" + "\n";
+                ( lloguer.quantitat() * 30) + "€" + "\n";
         }
         return resultat;
     }
