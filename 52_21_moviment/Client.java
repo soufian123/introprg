@@ -81,14 +81,14 @@ public class Client {
             getNom() +
             " (" + getNif() + ")\n";
         for (Lloguer lloguer: lloguers) {
-            bonificacions += lloguer.bonificacionsDeLloguer(lloguer);
+            bonificacions += lloguer.bonificacionsDeLloguer();
             // composa els resultats d'aquest lloguer
             resultat += "\t" +
                 lloguer.getVehicle().getMarca() +
                 " " +
                 lloguer.getVehicle().getModel() + ": " +
-                ( lloguer.quantitat(lloguer) * 30) + "€" + "\n";
-            total += lloguer.quantitat(lloguer) * 30;
+                ( lloguer.quantitat() * 30) + "€" + "\n";
+            total += lloguer.quantitat() * 30;
         }
 
         // afegeix informació final
