@@ -46,7 +46,7 @@ import java.util.ArrayList;
             getNom() +
             " (" + getNif() + ")\n";
         for (Lloguer lloguer: lloguers) {
-            double quantitat = lloguer.quantitat(lloguer);
+            double quantitat = lloguer.quantitat();
 
             // afegeix lloguers freqüents
             bonificacions ++;

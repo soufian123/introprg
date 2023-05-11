@@ -20,28 +20,29 @@ public class Lloguer {
     
     public Lloguer() {
     }
-    public double quantitat(Lloguer lloguer){
-            double quantitat = 0;
-            switch (lloguer.getVehicle().getCategoria()) {
-                case Vehicle.BASIC:
-                    quantitat += 3;
-                    if (lloguer.getDies() > 3) {
-                        quantitat += (lloguer.getDies() - 3) * 1.5;
-                    }
-                    break;
-                case Vehicle.GENERAL:
-                    quantitat += 4;
-                    if (lloguer.getDies() > 2) {
-                        quantitat += (lloguer.getDies() - 2) * 2.5;
-                    }
-                    break;
-                case Vehicle.LUXE:
-                    quantitat += lloguer.getDies() * 6;
-                    break;
-            }
-            
-            return quantitat;
+    public double quantitat(){
+    
+        double quantitat = 0;
+        switch (getVehicle().getCategoria()) {
+            case Vehicle.BASIC:
+                quantitat += 3;
+                if (getDies() > 3) {
+                    quantitat += (getDies() - 3) * 1.5;
+                }
+                break;
+            case Vehicle.GENERAL:
+                quantitat += 4;
+                if (getDies() > 2) {
+                    quantitat += (getDies() - 2) * 2.5;
+                }
+                break;
+            case Vehicle.LUXE:
+                quantitat += getDies() * 6;
+                break;
         }
+        
+        return quantitat;
+    }
 
     public int getDies()     { return dies; }
     public void setDies(int dies) { this.dies = dies; }
