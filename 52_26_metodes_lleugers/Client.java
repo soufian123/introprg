@@ -80,7 +80,7 @@ public class Client {
         }
         return total;
     }
-    private double bonificacionsTotal(){
+    private int bonificacionsTotal(){
         int bonificacions=0;
         for (Lloguer lloguer: lloguers) {
             bonificacions += lloguer.bonificacions();
