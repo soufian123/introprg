@@ -26,7 +26,7 @@ public class Lloguer {
     private static final double QUANTITAT_GENERAL = 4;
     private static final double MULTIPLE_GENERAL = 2.5;
     private static final double MULTIPLE_LUXE = 6;
-    public static double sumaQuantitats(Lloguer lloguer){
+    public double sumaQuantitats(Lloguer lloguer){
         double quantitatTotal = 0;
         switch (lloguer.getVehicle().getCategoria()) {
             case Vehicle.BASIC:
