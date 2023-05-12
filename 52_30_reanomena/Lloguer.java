@@ -26,11 +26,12 @@ public class Lloguer {
     private static final int QUANTITAT_GENERAL = 4;
     private static final double MULTIPLE_GENERAL = 2.5;
     private static final int MULTIPLE_LUXE = 6;
+    private static final int QUANTITAT_BASIC = 3;
     public double sumaQuantitats(){
         double quantitatTotal = 0;
         switch (getVehicle().getCategoria()) {
             case Vehicle.BASIC:
-                quantitatTotal += DIES_BASIC;
+                quantitatTotal += QUANTITAT_BASIC;
                 if (getDies() > DIES_BASIC) {
                     quantitatTotal += (getDies() - DIES_BASIC) * MULTIPLE_BASIC;
                 }
