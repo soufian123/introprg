@@ -73,7 +73,7 @@ public class Client {
     }
     */
     
-    public int bonificacionsDeLloguer(Lloguer lloguer){
+    private int bonificacionsDeLloguer(Lloguer lloguer){
         int bonificacions=0;
         // afegeix lloguers freqüents
         bonificacions ++;
