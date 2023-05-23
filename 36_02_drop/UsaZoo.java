@@ -33,32 +33,4 @@ public class UsaZoo {
         zoo.desconnecta();
         System.out.println("desconnectat");
     }
-    public void creaTaulaCategories() throws SQLException {
-        String sql = "CREATE TABLE  CATEGORIES (" +
-                     "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
-                     "       nom       VARCHAR(40))";
-        Statement st = null;
-        try {
-            st = conn.createStatement();
-            st.executeUpdate(sql);
-        } finally {
-            if (st != null) {
-                st.close();
-            }
-        }
-    }
-    public void eliminaTaulaCategories() throws SQLException {
-        String sql = "DROP TABLE IF EXISTS CATEGORIES;";
-        //Statement st = null;
-       // try {
-        //    st = conn.createStatement();
-            st.executeUpdate(sql);
-      //  } finally {
-      //      if (st != null) {
-      //          st.close();
-     //       }
-        }
-    }
-    
-    
 }
