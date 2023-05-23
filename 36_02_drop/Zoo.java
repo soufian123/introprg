@@ -27,7 +27,8 @@ public class Zoo {
         conn = null;
     }
         public void creaTaulaCategories() throws SQLException {
-        String sql = "CREATE TABLE IN NOT EXIST CATEGORIES (" +
+        String sql = "DROP TABLE IF EXISTS CATEGORIES;"+
+                     "CREATE TABLE CATEGORIES (" +
                      "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
                      "       nom       VARCHAR(40))";
         Statement st = null;
