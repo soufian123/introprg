@@ -45,7 +45,7 @@ public class Zoo {
         Statement st = null;
         try {
             st = conn.createStatement();
-           st.executeUpdate(sql);
+            st.executeUpdate(sql);
         } finally {
             if (st != null) {
                 st.close();
