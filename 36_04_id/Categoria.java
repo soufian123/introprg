@@ -30,7 +30,7 @@ public class Categoria {
     public boolean idIndefinit() { return id < 0; }
     public void setId(int id){
         if (id<0) {
-            this.id=0;
+            throw new IllegalArgumentException("L'identificador ha de ser positiu");
         }else{
             this.id=id;
         }
