@@ -28,6 +28,13 @@ public class Categoria {
         this.id = id;
     }
     public boolean idIndefinit() { return id < 0; }
+    public void setId(int id){
+        if (id<0) {
+            this.id=0;
+        }else{
+            this.id=id;
+        }
+    }
     public int getId() {
         if (idIndefinit()) {
             throw new UnsupportedOperationException("L'identificador no està disponible");

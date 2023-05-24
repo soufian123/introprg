@@ -60,10 +60,12 @@ public class Zoo {
         String sql = String.format(
                 "INSERT INTO CATEGORIES (nom) VALUES ('%s')",
                 categoria.getNom());
+
         Statement st = null;
         try {
             st = conn.createStatement();
             st.executeUpdate(sql);
+            categoria = obteCategoriaPerNom(categoria.getNom());
         } finally {
             if (st != null) {
                 st.close();
