@@ -9,3 +9,7 @@ bash introprg/.introprg/install_junit.sh
 cd introprg
 
 git config pull.rebase false
+
+bash .introprg/install_sqlite_jdbc.sh
+
+source ~/.bashrc
