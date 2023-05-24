@@ -4,28 +4,29 @@ Indica quines de les següents afirmacions són certes respecte JDBC. Intenta ar
 
 1. És un sistema que ens permet accedir des d'una base de dades relacional, a un programa fet en Java.
 
-
+No és veritat, ja que JDBC és l'Interfície de Programació d'Aplicacions que permet accedir i tractar dades emmagatzemades en un SGBD
 
 
 
 2. Per a poder accedir a un SGBD concret, ens caldrà una implementació adequada del JDBC, doncs JDBC per si sol només defineix interfaces i poc més.
 
-
+És correcte. per que necessitarem una implementació específica del controlador o driver per tal de poder accedir a un Sistema de Gestió de Bases de Dades (SGBD) concret. De fet, el JDBC per si sol només proporciona les interfícies i les especificacions necessàries per interactuar amb el SGBD, però és la implementació del controlador o driver la que ens permetrà establir la connexió amb el SGBD i executar les operacions de lectura, escriptura i actualització de dades.
 
 
 
 3. Si els nostres programes fan servir les interfícies definides per JDBC en comptes de les classes concretes dels drivers, hauria de ser raonablement fàcil canviar de SGBD sense haver de modificar els nostres programes.
 
-
+És cert, si el nostre codi utilitza les interfícies de JDBC en lloc de les implementacions concretes dels drivers, serà fàcil canviar de SGBD sense haver de modificar el nostre codi. Això és possible perquè JDBC proporciona una interfície estàndard que és comuna a tots els SGBD compatibles. Sense aquesta compartició de codi, JDBC no seria utilitzat.
 
 
 
 4. Donada una implementació concreta de JDBC, coneguda com a driver, podríem accedir a diverses fonts de dades, no només bases de dades.
 
-
+És cert, amb una implementació específica de JDBC, anomenada driver, és possible accedir a diverses fonts de dades, no només bases de dades.
 
 
 
 
 5. Amb el driver adequat, el nostre programa hauria de poder accedir a un full de càlcul fent servir JDBC.
+És veritat, ja que JDBC és un controlador i, si ja en té un, pot ser utilitzat per si sol.
 
