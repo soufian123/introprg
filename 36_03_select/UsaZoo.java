@@ -32,7 +32,7 @@ public class UsaZoo {
         zoo.afegeixCategoria(ocell);
         zoo.afegeixCategoria(mamifer);
 
-        System.out.println()
+        System.out.println();
         System.out.println("Mostrem les categories disponibles ara");
         ZooUtils.mostraCategories(zoo.recuperaCategories());
         System.out.println();
