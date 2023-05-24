@@ -56,7 +56,7 @@ public class UsaZoo {
 
         System.out.println();
 
-        System.out.println("Un cop inserides les categories queden:");
+        System.out.println("Un cop inserides les categories queden: ");
 
         System.out.println("\t"+ ocell);
 
