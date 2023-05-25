@@ -81,26 +81,6 @@ public class Animal{
         }
     }
 
-    
-    public void afegeixCategoria(Categoria categoria) throws SQLException {
-        String sql = String.format(
-                "INSERT INTO ANIMALS (nom) VALUES ('%s')",
-                categoria.getNom());
-
-        Statement st = null;
-        try {
-            st = conn.createStatement();
-            st.executeUpdate(sql);
-            ResultSet rs = st.getGeneratedKeys();
-            rs.next();
-            int id = rs.getInt(1);
-            categoria.setId(id);
-        } finally {
-            if (st != null) {
-                st.close();
-            }
-        }
-    }
     public boolean idIndefinit() { return categoria.getId() < 0; }
 
 
