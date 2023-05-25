@@ -139,13 +139,12 @@ public class Zoo {
 
 
     public void creaTaulaAnimals() throws SQLException {
-        creaTaulaCategories();
         String sql = "DROP TABLE IF EXISTS ANIMALS;"+
                      "CREATE TABLE ANIMALS (" +
                      "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
-                     "nom TEXT,"+
-                     "categoria INTEGER,"+
-                     "FOREIGN KEY(categoria) REFERENCES CATEGORIES(id)";
+                     "       nom       TEXT,"+
+                     "       categoria INTEGER,"+
+                     "FOREIGN KEY(categoria) REFERENCES CATEGORIES(id))";
         Statement st = null;
         try {
             st = conn.createStatement();
