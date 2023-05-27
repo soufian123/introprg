@@ -103,6 +103,7 @@ class UsaZoo{
         for (Animal animal: animals) {
 
             zoo.afegeixAnimal(animal);
+            
 
         }
 
