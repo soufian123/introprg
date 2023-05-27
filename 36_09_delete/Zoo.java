@@ -361,12 +361,29 @@ public class Zoo {
             System.out.println("Cap animal");       
         }
     }
+    public void eliminaAnimalId(int id) throws SQLException{
+        if (id>0){
+            String sql = "DELETE FROM ANIMALS WHERE id = '"+id+"';";
+            Statement st = null;
+            try {
+                st = conn.createStatement();
+                st.executeUpdate(sql);
+            } finally {
+                if (st != null) {
+                    st.close();
+                }
+            }
+        } else {
+            System.out.println("Cap animal");       
+        }
+    }
     
     public void eliminaCategoria(Categoria categoria) throws SQLException{
         
         if (categoria.idIndefinit()) return;
-        
+       
         if (categoria.getId()>0){
+            eliminaAnimalId(categoria.getId());
             String sql = "DELETE FROM CATEGORIES WHERE id = '"+categoria.getId()+"';";
             Statement st = null;
             try {

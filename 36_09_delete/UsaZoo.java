@@ -118,7 +118,7 @@ class UsaZoo{
         System.out.println("Eliminem " + ocell);
 
         zoo.eliminaCategoria(ocell);
-
+/*
         ZooUtils.mostraAnimals(zoo.recuperaAnimals());
 
         ZooUtils.mostraCategories(zoo.recuperaCategories());
@@ -156,7 +156,7 @@ class UsaZoo{
         zoo.desconnecta();
 
         System.out.println("desconnectat");
-
+*/
     }
 
 }
