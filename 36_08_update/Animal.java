@@ -86,7 +86,7 @@ public class Animal{
         }
     }
 
-    public boolean idIndefinit() { return categoria.getId() < 0; }
+    public boolean idIndefinit() { return id() < 0; }
 
 
     @Override
