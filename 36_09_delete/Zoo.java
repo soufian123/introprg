@@ -269,17 +269,23 @@ public class Zoo {
     
     
     public List<Animal> recuperaAnimals() throws SQLException {
-        String sql = "SELECT * FROM ANIMALS ORDER BY nom";
+        String sql = "SELECT ANIMALS.id as idAnimal, "+
+        "ANIMALS.nom as nomAnimal, "+
+        "CATEGORIES.id as idCategoria, "+
+        "CATEGORIES.nom as nomCategoria "+
+        "FROM ANIMALS JOIN CATEGORIES ON (ANIMALS.id=CATEGORIES.id) "+
+        "ORDER BY ANIMALS.nom";
         Statement st = null;
         try {
             st = conn.createStatement();
             ResultSet rs = st.executeQuery(sql);
             List<Animal> animals = new LinkedList<>();
             while (rs.next()) {
-                int bdId = rs.getInt("id");
-                String nom = rs.getString("nom");
-                int bdCategoria = rs.getInt("categoria");
-                Categoria categoria = obteCategoriaPerId(bdCategoria);
+                int bdId = rs.getInt("idAnimal");
+                String nom = rs.getString("nomAnimal");
+                int bdCategoria = rs.getInt("idCategoria");
+                String nomCategria = rs.getString("nomCategoria");
+                Categoria categoria = new Categoria(bdCategoria,nomCategria);
                 Animal animal = new Animal(bdId, nom,categoria);
                 animals.add(animal);
             }
@@ -291,6 +297,8 @@ public class Zoo {
             }
         }
     }
+    
+
     
     
     public void canviaCategoria(Animal animal, Categoria categoria) throws SQLException{
@@ -344,7 +352,6 @@ public class Zoo {
     
     
     public void eliminaAnimal(Animal animal) throws SQLException{
-        if (animal.idIndefinit()) return;
         
         if (animal.getId()>0){
             String sql = "DELETE FROM ANIMALS WHERE id = '"+animal.getId()+"';";
@@ -361,41 +368,23 @@ public class Zoo {
             System.out.println("Cap animal");       
         }
     }
-    public void eliminaAnimalId(int id) throws SQLException{
-        if (id>0){
-            String sql = "DELETE FROM ANIMALS WHERE id = '"+id+"';";
-            Statement st = null;
-            try {
-                st = conn.createStatement();
-                st.executeUpdate(sql);
-            } finally {
-                if (st != null) {
-                    st.close();
-                }
-            }
-        } else {
-            System.out.println("Cap animal");       
-        }
-    }
+    
     
     public void eliminaCategoria(Categoria categoria) throws SQLException{
-        
-        if (categoria.idIndefinit()) return;
-       
-        if (categoria.getId()>0){
-            eliminaAnimalId(categoria.getId());
-            String sql = "DELETE FROM CATEGORIES WHERE id = '"+categoria.getId()+"';";
-            Statement st = null;
-            try {
-                st = conn.createStatement();
-                st.executeUpdate(sql);
+        if (categoria.idIndefinit()) {
+            return;
+        }
+        String sql = String.format("DELETE FROM ANIMALS WHERE id = %d;", categoria.getId());
+        String sqlDos = String.format("DELETE FROM CATEGORIES WHERE id = %d;", categoria.getId());
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(sql);
+            st.executeUpdate(sqlDos);
             } finally {
-                if (st != null) {
-                    st.close();
-                }
+            if (st != null) {
+                st.close();
             }
-        } else {
-            System.out.println("Cap categoria");       
         }
     }
 
