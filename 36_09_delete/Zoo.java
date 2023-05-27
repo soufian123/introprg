@@ -367,7 +367,7 @@ public class Zoo {
         if (categoria.idIndefinit()) return;
         
         if (categoria.getId()>0){
-            String sql = "DELETE FROM CATEGORIA WHERE id = '"+categoria.getId()+"';";
+            String sql = "DELETE FROM CATEGORIES WHERE id = '"+categoria.getId()+"';";
             Statement st = null;
             try {
                 st = conn.createStatement();
