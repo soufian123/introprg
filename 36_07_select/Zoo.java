@@ -238,7 +238,7 @@ public class Zoo {
     
     public String obteAnimalPerNom(String nom) throws SQLException {
         String sql = String.format(
-                "SELECT * FROM ANIMAL WHERE nom='%s' ORDER BY id LIMIT 1", nom);
+                "SELECT * FROM ANIMALS WHERE nom='%s' ORDER BY id LIMIT 1", nom);
         Statement st = null;
         try {
             st = conn.createStatement();
@@ -269,7 +269,7 @@ public class Zoo {
     
     
     public List<Animal> recuperaAnimals() throws SQLException {
-        String sql = "SELECT * FROM ANIMAL ORDER BY nom";
+        String sql = "SELECT * FROM ANIMALS ORDER BY nom";
         Statement st = null;
         try {
             st = conn.createStatement();
@@ -291,7 +291,6 @@ public class Zoo {
             }
         }
     }
-
 
 
 
