@@ -191,7 +191,7 @@ public class Zoo {
         if (categoria==null) {
             afegeixCategoria(animal.getCategoria());
             categoria =animal.getCategoria();
-            System.out.println("dins indefiniit");
+
         }
         animal.setCategoria(categoria);
         String sql = String.format(
@@ -199,7 +199,7 @@ public class Zoo {
         animal.getNom(),
         animal.getCategoria().getId());
         Statement st = null;
-        System.out.println("fora indefiniit");
+
         try {
             st = conn.createStatement();
             st.executeUpdate(sql);
