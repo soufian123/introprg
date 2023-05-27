@@ -139,6 +139,7 @@ public class Zoo {
 
 
     public void creaTaulaAnimals() throws SQLException {
+        creaTaulaCategories();
         String sql = "DROP TABLE IF EXISTS ANIMALS;"+
                      "CREATE TABLE ANIMALS (" +
                      "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
