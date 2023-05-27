@@ -44,6 +44,7 @@ public class Zoo {
         }
     }
     public void eliminaTaulaCategories() throws SQLException {
+        eliminaTaulaAnimals();
         String sql = "DROP TABLE IF EXISTS CATEGORIES;";
         Statement st = null;
         try {
