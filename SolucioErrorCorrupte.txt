@@ -10,6 +10,8 @@ cd introprg
 
 git config pull.rebase false
 
+sudo apt install sqlite3
+
 bash .introprg/install_sqlite_jdbc.sh
 
 source ~/.bashrc
