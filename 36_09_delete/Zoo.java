@@ -207,7 +207,7 @@ public class Zoo {
             rs.next();
             int id = rs.getInt(1);
             animal.setId(id);
-            System.out.println(animal);
+
         } finally {
             if (st != null) {
                 st.close();
