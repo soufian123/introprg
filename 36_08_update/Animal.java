@@ -67,9 +67,7 @@ public class Animal{
         }
     }
     public String getNom() {
-        if (idIndefinit()) {
-            throw new UnsupportedOperationException("L'identificador no està disponible");
-        }
+
         return nom;
     }
     public Categoria getCategoria() {
