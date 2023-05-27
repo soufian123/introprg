@@ -297,7 +297,6 @@ public class Zoo {
         if (animal.idIndefinit()) {
             animal.setCategoria(categoria);
             afegeixAnimal(animal);
-            return;
         }
         if (categoria.idIndefinit()) {
             afegeixCategoria(categoria);
