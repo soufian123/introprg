@@ -272,24 +272,19 @@ public class Zoo {
     
     
     public List<Animal> recuperaAnimals() throws SQLException {
-        String sql = "SELECT ANIMALS.id as idAnimal, "+
-        "ANIMALS.nom as nomAnimal, "+
-        "CATEGORIES.id as idCategoria, "+
-        "CATEGORIES.nom as nomCategoria "+
-        "FROM ANIMALS JOIN CATEGORIES ON (ANIMALS.id=CATEGORIES.id) "+
-        "ORDER BY ANIMALS.nom";
+        String sql = "SELECT ANIMALS.id as idAnimal, ANIMALS.nom as nomAnimal, CATEGORIES.id as idCategoria, CATEGORIES.nom as nomCategoria FROM ANIMALS JOIN CATEGORIES ON (ANIMALS.categoria=CATEGORIES.id) ORDER BY ANIMALS.nom";
+
         Statement st = null;
         try {
             st = conn.createStatement();
             ResultSet rs = st.executeQuery(sql);
             List<Animal> animals = new LinkedList<>();
             while (rs.next()) {
-                int bdId = rs.getInt("idAnimal");
-                String nom = rs.getString("nomAnimal");
-                int bdCategoria = rs.getInt("idCategoria");
-                String nomCategria = rs.getString("nomCategoria");
-                Categoria categoria = new Categoria(bdCategoria,nomCategria);
-                Animal animal = new Animal(bdId, nom,categoria);
+                int idAnimal = rs.getInt("idAnimal");
+                String nomAnimal = rs.getString("nomAnimal");
+                int idCategoria = rs.getInt("idCategoria");
+                String nomCategoria = rs.getString("nomCategoria");
+                Animal animal = new Animal(idAnimal, nomAnimal,new Categoria(idCategoria,nomCategoria));
                 animals.add(animal);
             }
             rs.close();

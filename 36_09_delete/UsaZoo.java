@@ -106,7 +106,7 @@ class UsaZoo{
             
 
         }
-
+    
         ZooUtils.mostraAnimals(zoo.recuperaAnimals());
 
         ZooUtils.mostraCategories(zoo.recuperaCategories());
