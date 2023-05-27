@@ -19,7 +19,7 @@ import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
 public class Animal{
-    private int id;
+    private int id =-1;
     private String nom;
     private Categoria categoria;
     private Connection conn = null;
