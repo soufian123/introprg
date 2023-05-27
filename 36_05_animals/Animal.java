@@ -25,7 +25,9 @@ public class Animal{
     private Connection conn = null;
     
     public Animal(String nom, Categoria categoria){
+        if(nom==null || nom.isEmpty()) throw new IllegalArgumentException("El nom no pot ser null ni blanc");
         setNom(nom);
+        if (categoria==null) throw new IllegalArgumentException("La categoria no pot ser null");
         setCategoria(categoria);
         
     }
@@ -33,7 +35,9 @@ public class Animal{
 
     public Animal(int id, String nom, Categoria categoria){
         setId(id);
+        if(nom==null || nom.isEmpty()) throw new IllegalArgumentException("El nom no pot ser null ni blanc");
         setNom(nom);
+        if (categoria==null) throw new IllegalArgumentException("La categoria no pot ser null");
         setCategoria(categoria);
         
     }
