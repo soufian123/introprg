@@ -26,20 +26,20 @@ public class Animal{
     
     public Animal(String nom, Categoria categoria){
         if(nom==null || nom.isBlank()) throw new IllegalArgumentException("El nom no pot ser null ni blanc");
-        setNom(nom);
+        this.nom=nom;
         if (categoria==null) throw new IllegalArgumentException("La categoria no pot ser null");
-        setCategoria(categoria);
+        this.categoria=categoria;
         
     }
 
 
     public Animal(int id, String nom, Categoria categoria){
         if (id<0) throw new IllegalArgumentException("L'identificador ha de ser positiu");
-        setId(id);
+        this.id=id;
         if(nom==null || nom.isBlank()) throw new IllegalArgumentException("El nom no pot ser null ni blanc");
-        setNom(nom);
+        this.nom=nom;
         if (categoria==null) throw new IllegalArgumentException("La categoria no pot ser null");
-        setCategoria(categoria);
+        this.categoria=categoria;
         
     }
     
