@@ -347,7 +347,7 @@ public class Zoo {
         if (animal.idIndefinit()) return;
         
         if (animal.getId()>0){
-            String sql = "DELETE FROM ANIMALS WHERE = '"+animal.getId()+"';";
+            String sql = "DELETE FROM ANIMALS WHERE id = '"+animal.getId()+"';";
             Statement st = null;
             try {
                 st = conn.createStatement();
@@ -367,7 +367,7 @@ public class Zoo {
         if (categoria.idIndefinit()) return;
         
         if (categoria.getId()>0){
-            String sql = "DELETE FROM CATEGORIA WHERE = '"+categoria.getId()+"';";
+            String sql = "DELETE FROM CATEGORIA WHERE id = '"+categoria.getId()+"';";
             Statement st = null;
             try {
                 st = conn.createStatement();
