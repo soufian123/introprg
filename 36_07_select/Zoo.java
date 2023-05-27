@@ -212,7 +212,31 @@ public class Zoo {
             }
         }
     }
-    public Animal obteAnimalPerNom(String nom) throws SQLException {
+    
+    private Categoria obteCategoriaPerId(int bdCategoria) {
+        String sql = String.format(
+                "SELECT * FROM CATEGORIES WHERE id=%d", bdCategoria);
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                int bdId = rs.getInt("id");
+                String nomCategoria = rs.getString("nom");
+                Categoria categoria = new Categoria(bdId, nomCategoria);
+                rs.close();
+                return categoria;
+            } else {
+                rs.close();
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    
+    public String obteAnimalPerNom(String nom) throws SQLException {
         String sql = String.format(
                 "SELECT * FROM ANIMAL WHERE nom='%s' ORDER BY id LIMIT 1", nom);
         Statement st = null;
@@ -222,9 +246,11 @@ public class Zoo {
             if (rs.next()) {
                 int bdId = rs.getInt("id");
                 String nomAnimal = rs.getString("nom");
-                Animal animal = new Animal(bdId, nomAnimal);
+                int bdCategoria = rs.getInt("categoria");
+                Categoria categoria = obteCategoriaPerId(bdCategoria);
+                Animal animal = new Animal(bdId, nomAnimal, categoria);
                 rs.close();
-                return animal;
+                return animal.toString();
             } else {
                 rs.close();
                 return null;
@@ -252,7 +278,9 @@ public class Zoo {
             while (rs.next()) {
                 int bdId = rs.getInt("id");
                 String nom = rs.getString("nom");
-                Animal animal = new Animal(bdId, nom);
+                int bdCategoria = rs.getInt("categoria");
+                Categoria categoria = obteCategoriaPerId(bdCategoria);
+                Animal animal = new Animal(bdId, nom,categoria);
                 animals.add(animal);
             }
             rs.close();

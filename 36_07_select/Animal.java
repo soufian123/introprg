@@ -89,7 +89,12 @@ public class Animal{
     public boolean idIndefinit() { return categoria.getId() < 0; }
 
 
-
+    @Override
+    public String toString() {
+        return "Animal(id:" +
+            (id < 0 ? "indefinit" : id) +
+            ", " + nom + ", " + categoria + ")";
+    }
 
 
 
