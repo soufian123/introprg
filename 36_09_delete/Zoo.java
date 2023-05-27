@@ -364,8 +364,6 @@ public class Zoo {
                     st.close();
                 }
             }
-        } else {
-            System.out.println("Cap animal");       
         }
     }
     
