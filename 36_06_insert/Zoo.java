@@ -189,39 +189,14 @@ public class Zoo {
         if (categoria == null) {
             afegeixCategoria(animal.getCategoria());
         } else {
-            animal.getCategoria().setId(cate.getId());
+            animal.getCategoria().setId(categoria.getId());
         }
         if (!animal.getCategoria().idIndefinit()) {
-        String sql = String.format(
-                "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
-                animal.getNom(),
-                animal.getCategoria().getId());
-
-        Statement st = null;
-        try {
-            st = conn.createStatement();
-            st.executeUpdate(sql);
-            ResultSet rs = st.getGeneratedKeys();
-            rs.next();
-            int id = rs.getInt(1);
-            categoria.setId(id);
-        } finally {
-            if (st != null) {
-                st.close();
-            }
-        }
-    }
-    public void afegeixAnimal(Animal animal) throws SQLException {
-        Categoria cate = obteCategoriaPerNom(animal.getCategoria().getNom());
-            if (cate == null) {
-                afegeixCategoria(animal.getCategoria());
-            } else {
-                animal.getCategoria().setId(cate.getId());
-            }
-        if (! animal.getCategoria().idIndefinit()) {
             String sql = String.format(
-                "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', %d)",
-                animal.getNom(), animal.getCategoria().getId());
+                    "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
+                    animal.getNom(),
+                    animal.getCategoria().getId());
+
             Statement st = null;
             try {
                 st = conn.createStatement();
@@ -229,7 +204,7 @@ public class Zoo {
                 ResultSet rs = st.getGeneratedKeys();
                 rs.next();
                 int id = rs.getInt(1);
-                animal.setId(id);
+                categoria.setId(id);
             } finally {
                 if (st != null) {
                     st.close();
@@ -237,7 +212,6 @@ public class Zoo {
             }
         }
     }
-
 
 
 
