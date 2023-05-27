@@ -140,6 +140,8 @@ public class Zoo {
 
 
     public void creaTaulaAnimals() throws SQLException {
+        eliminaTaulaAnimals();
+        eliminaTaulaCategories();
         creaTaulaCategories();
         String sql = "DROP TABLE IF EXISTS ANIMALS;"+
                      "CREATE TABLE ANIMALS (" +
@@ -170,7 +172,7 @@ public class Zoo {
         }
     }
 
-    /* retorna el nom de les taules definides a la bd */
+
     public String getNomTaules() throws SQLException {
         String sql = "SELECT name FROM sqlite_schema " +
                      "WHERE name NOT LIKE 'sqlite%' " +
@@ -186,32 +188,30 @@ public class Zoo {
 
     public void afegeixAnimal(Animal animal) throws SQLException {
         Categoria categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
-        if (categoria == null) {
+        if (categoria==null) {
             afegeixCategoria(animal.getCategoria());
-        } else {
-            animal.getCategoria().setId(categoria.getId());
+            categoria =animal.getCategoria();
         }
-        if (!animal.getCategoria().idIndefinit()) {
-            String sql = String.format(
-                    "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
-                    animal.getNom(),
-                    animal.getCategoria().getId());
-
-            Statement st = null;
-            try {
-                st = conn.createStatement();
-                st.executeUpdate(sql);
-                ResultSet rs = st.getGeneratedKeys();
-                rs.next();
-                int id = rs.getInt(1);
-                animal.setId(id);
-            } finally {
-                if (st != null) {
-                    st.close();
-                }
+        animal.setCategoria(categoria);
+        String sql = String.format(
+        "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')", animal.getNom(), categoria.getId(),
+        animal.getNom(),
+        animal.getCategoria().getId());
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(sql);
+            ResultSet rs = st.getGeneratedKeys();
+            rs.next();
+            int id = rs.getInt(1);
+            animal.setId(id);
+        } finally {
+            if (st != null) {
+                st.close();
             }
         }
     }
+
     
     private Categoria obteCategoriaPerId(int bdCategoria) {
         String sql = String.format(
