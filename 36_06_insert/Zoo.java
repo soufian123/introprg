@@ -204,7 +204,7 @@ public class Zoo {
                 ResultSet rs = st.getGeneratedKeys();
                 rs.next();
                 int id = rs.getInt(1);
-                categoria.setId(id);
+                animal.setId(id);
             } finally {
                 if (st != null) {
                     st.close();
