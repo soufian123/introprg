@@ -272,7 +272,7 @@ public class Zoo {
     
    
     public List<Animal> recuperaAnimals() throws SQLException {
-        String sql = "SELECT ANIMALS.id as idAnimal, ANIMALS.nom as nomAnimal, CATEGORIES.id as idCategoria, CATEGORIES.nom as nomCategoria FROM ANIMALS JOIN CATEGORIES ON (ANIMALS.id=CATEGORIES.id) ORDER BY ANIMALS.nom";
+        String sql = "SELECT ANIMALS.id as idAnimal, ANIMALS.nom as nomAnimal, CATEGORIES.id as idCategoria, CATEGORIES.nom as nomCategoria FROM ANIMALS JOIN CATEGORIES ON (ANIMALS.categoria=CATEGORIES.id) ORDER BY ANIMALS.nom";
 
         Statement st = null;
         try {
@@ -369,7 +369,7 @@ public class Zoo {
         if (categoria.idIndefinit()) {
             return;
         }
-        String sql = String.format("DELETE FROM ANIMALS WHERE categoria = %d;", categoria.getId());
+        String sql = String.format("DELETE FROM ANIMALS WHERE id = %d;", categoria.getId());
         String sqlDos = String.format("DELETE FROM CATEGORIES WHERE id = %d;", categoria.getId());
         Statement st = null;
         try {
