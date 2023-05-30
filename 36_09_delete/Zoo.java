@@ -370,7 +370,7 @@ public class Zoo {
         if (categoria.idIndefinit()) {
             return;
         }
-        String sql = String.format("DELETE FROM ANIMALS WHERE id = %d;", categoria.getId());
+        String sql = String.format("DELETE FROM ANIMALS WHERE categoria = %d;", categoria.getId());
         String sqlDos = String.format("DELETE FROM CATEGORIES WHERE id = %d;", categoria.getId());
         Statement st = null;
         try {
