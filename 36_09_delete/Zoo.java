@@ -270,7 +270,7 @@ public class Zoo {
     
 
     
-    
+   /* 
     public List<Animal> recuperaAnimals() throws SQLException {
         String sql = "SELECT ANIMALS.id as idAnimal, ANIMALS.nom as nomAnimal, CATEGORIES.id as idCategoria, CATEGORIES.nom as nomCategoria FROM ANIMALS JOIN CATEGORIES ON (ANIMALS.categoria=CATEGORIES.id) ORDER BY ANIMALS.nom";
 
@@ -295,6 +295,32 @@ public class Zoo {
             }
         }
     }
+    */
+    public List<Animal> recuperaAnimals() throws SQLException {
+        String sql = "SELECT * FROM ANIMALS JOIN CATEGORIES ON (ANIMALS.categoria=CATEGORIES.id) ORDER BY ANIMALS.nom";
+
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            List<Animal> animals = new LinkedList<>();
+            while (rs.next()) {
+                int idAnimal = rs.getInt("ANIMALS.id");
+                String nomAnimal = rs.getString("ANIMALS.nom");
+                int idCategoria = rs.getInt("CATEGORIA.id");
+                String nomCategoria = rs.getString("CATEGORIA.nom");
+                Animal animal = new Animal(idAnimal, nomAnimal,new Categoria(idCategoria,nomCategoria));
+                animals.add(animal);
+            }
+            rs.close();
+            return animals;
+        } finally {
+            if (st != null) {
+                st.close();
+            }
+        }
+    }
+    
     
 
     
