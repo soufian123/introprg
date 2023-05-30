@@ -307,8 +307,8 @@ public class Zoo {
             while (rs.next()) {
                 int idAnimal = rs.getInt("ANIMALS.id");
                 String nomAnimal = rs.getString("ANIMALS.nom");
-                int idCategoria = rs.getInt("CATEGORIA.id");
-                String nomCategoria = rs.getString("CATEGORIA.nom");
+                int idCategoria = rs.getInt("CATEGORIES.id");
+                String nomCategoria = rs.getString("CATEGORIES.nom");
                 Animal animal = new Animal(idAnimal, nomAnimal,new Categoria(idCategoria,nomCategoria));
                 animals.add(animal);
             }
